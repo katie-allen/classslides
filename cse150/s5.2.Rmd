@@ -1,0 +1,41 @@
+---
+title: "Comparing groups"
+---
+
+
+# Supplemental Reading: {data-background=#6897bb}
+
+## [Confidence Intervals](https://byuistats.github.io/BYUI_CSE150_StatBook/inferential-decision-making.html#confidence-interval)
+
+- Everyone take a 1-minute to explain a confidence interval to your grandma.  In one minute, I will have you enter your answer on Slack.
+
+## Coin Flips and Confidence Intervals
+
+> - [Coin Flip and probability Vs. Confidence Intervals](https://www.random.org/coins/)
+- What is the probability that I get heads?
+- I flipped, what is the probability I have a head?
+- How many heads will we have if we flip the coin ten times?
+
+## Understanding Confidence Intervals
+
+Confidence intervals are like coin flips, just that the probabilities move from 50-50 to 95-5. 
+
+> - [App to help us understand confidence intervals](https://istats.shinyapps.io/ExploreCoverage/) - *You might try adjusting the sample size and observing the effect that has on the size of each interval.*
+
+- Point Estimators Vs. Parameters:  Discuss the WHO child heights data.
+    - Point Estimators: Sample mean
+    - Parameters: Population mean
+- [Interval Estimators](https://en.wikipedia.org/wiki/Interval_estimation): Why do we need interval estimators? 
+
+# Case Study {data-background=#6897bb}
+
+## [Comparing Proportional Measures](https://byuistats.github.io/BYUI_CSE150_StatBook/inferential-decision-making.html#comparing-proportions)
+
+*Lets see if we can have a zoom meeting and a slack meeting going at the same time*
+
+> - Moving from the idea of the Matthew effect to measuring the Matthew effect.
+> - How could we use a proportion test to test if the Matthew effect is real?
+> - What are our Null and Alternative hypotheses?
+> - How else could we set up the comparison?
+
+## Data time

@@ -1,0 +1,35 @@
+---
+title: "Data vs. Summaries"
+---
+
+
+# Good Reads {data-background=#6897bb}
+
+## Chapter 4: Better Charts in a couple of hours (87-108)
+
+![](images/gc/Ch4_process_iterative.png)
+
+# Supplemental Reading {data-background=#6897bb}
+
+## [Graphical Summaries](https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#graphical-summaries)
+
+**Are all of these graphical summaries?**
+
+> - [Bar Chart](https://byuistats.github.io/BYUI_CSE150_StatBook/CSE150_StatBook_files/figure-html/barchart-1.png)
+> - [Box Plots](https://byuistats.github.io/BYUI_CSE150_StatBook/CSE150_StatBook_files/figure-html/boxplot-1.png)
+> - [Histograms](https://byuistats.github.io/BYUI_CSE150_StatBook/CSE150_StatBook_files/figure-html/histogram-1.png)
+> - [Scatter Plots](https://byuistats.github.io/BYUI_CSE150_StatBook/CSE150_StatBook_files/figure-html/scatterplot-1.png)
+> - [Scatter Box Plot](https://byuistats.github.io/BYUI_CSE150_StatBook/CSE150_StatBook_files/figure-html/boxplot_w_data-1.png)
+
+## Numerical Gestalt
+
+**Gestalt:** an organized whole that is perceived as more than the sum of its parts.
+
+> Saul has slain his thousands. And David his ten thousands (1 Sam. 18.7).
+
+Cassirer observes, ... the owner of a herd of four to five hundred cattle could recognize even at a distance whether any were missing and which ones. Here individual groups are recognized and differentiated by some individual characteristic: in so far as one can speak of 'number', it appears not in the form of a specified measured magnitude, but as a kind of concrete 'numerical gestalt', an intuitive quality adhering to a totally unarticulated general impression of quantity. [Hebrew Thought Compared with Greek (Pg. 166)](https://www.goodreads.com/book/show/958876.Hebrew_Thought_Compared_with_Greek)
+
+# Activity {data-background=#6897bb}
+
+## Let's play with LEGO
+

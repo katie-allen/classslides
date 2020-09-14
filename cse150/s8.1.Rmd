@@ -1,0 +1,31 @@
+---
+title: "Resumes and Cover Letters"
+---
+
+## Background
+
+For [Case Study 8: Do you want to be a data scientist?](../project.html#Case_Study_8:_Do_you_want_to_be_a_data_scientist) you need to submit a resume, references you used to build your resume, and a cover letter.  Each being no longer than one page.
+
+## Resumes
+
+Here are the [links to help you with your resume](../resume.html).
+
+_You are writing a 'dream resume' as a graduating data science major from BYU-I. Not a resume on your current skills._ [Here are example resumes of BYU-I data science students.](https://byuidatascience.github.io/resume_example.html#dylan_mcdowell).
+
+**Grading:** I am going to grade you on finding the correct elements to have as well as the layout, look, and feel of your resume. You are trying to get a job with this resume, not just turn in an assignment.
+
+## Resume reference material
+
+As you read through the links and resumes in the previous slide, keep a page of notes.  Good links, good tips, other advice.  This page needs to be submitted as well.
+
+
+## Cover Letter
+
+This letter is no more than a page.  It should address items related to the following.
+
+> 1. What you learned from the class.
+> 2. Things you would change about the class.
+> 3. Things you really liked about the class.
+> 4. Your favorite topic from Good Reads.
+> 5. Your favorite concept from statistics reading.
+> 6. What you like about Tableau.

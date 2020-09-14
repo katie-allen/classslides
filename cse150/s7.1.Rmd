@@ -1,0 +1,53 @@
+---
+title: "Call Centers and Data Requests"
+---
+
+
+
+# Extra Readings {data-background=#6897bb}
+
+## The readings
+
+- [How to ask for data sets](https://medium.com/@ckreibich/how-to-ask-for-datasets-d5ef791cb38c) 
+- [Call Centers and Data Requests](https://byuistats.github.io/CSE150/files/FSCPD_Donahue_callcenter.pdf)  
+
+## How to ask for data (the same process as borowing someones car)
+
+> - Don't be shy.
+> - State your purpose.
+> - Make sure you've done your homework (Explain your understanding of their data)
+> - Identify your affiliation
+> - Your data responsibility
+>    - The data sharer becomes a team member.
+>    - You are not the data owner.
+>    - Make the proper acknowledgments.
+
+## Call Center Conversation.
+
+- How much did he have to work with when management contracted with him?
+- How many times did he have to ask for data?
+- What prompted him to ask for data?
+- Who helped him come up with the questions?
+- What were some of your favorite questions.
+
+# Case Study {data-background=#6897bb}
+
+##  Next 4 days 
+
+- Case Study 7: Messy data and data science
+   - How do we want to pick partners?
+   - Partners can work heavily together on the data request.
+   - Each person needs to do their own slides and research on the data science languages and tools.
+- This Thursday will be spent with you guys requesting data and figuring out what needs to be cleaned.
+- Next Tuesday, we will have significant time for your project work with discussion about resumes.
+- Next Thursday, we will have an in [class data challenge](https://byuistats.github.io/CSE150/syllabus.html#Grading) which is worth 10% of your final grade. 
+
+## Case Study 7
+
+The Bill and Melinda Gates Foundation wants to eradicate Tuberculosis (Links to an external site.) (TB).  They have asked your team to use the World Health Organization’s report on TB to guide them on their next steps in fighting this disease. Address the following questions;
+
+> 1. Which countries require our attention?
+> 2. What age groups are of the most concern?
+> 3. Are there differences between males and females?
+> 4. What data science programming language should we use moving forward?
+
