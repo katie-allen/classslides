@@ -1,0 +1,181 @@
+---
+title: "R and MATH/CS 335"
+author: ""
+params:
+  day: 2
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Becoming the Critic. {data-background=#e8d725}
+
+```{r}
+vday <- params$day - 1
+vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
+titlelink <- paste0('{data-background-iframe="', vlink, '"}')
+```
+
+## `r titlelink`
+
+[Visualization of the Day](`r vlink`)
+
+
+# John Rauser's Talk {data-background=#e8d725}
+
+## Rauser Recap
+
+6 minutes to share in breakout rooms the most important or interesting things learned.
+
+Can you recite the 7 ways to encode data, ordered by accuracy of perceptual estimation
+
+## 7 methods of encoding data, ordered by accuracy of perceptual estimation
+
+1. Position along a common scale
+2. Position on common, non-aligned scale
+3. Length
+4. Angle or slope
+5. Area
+6. Volume/density/saturation of "color"
+7. Color hue
+
+What other points did you find help?
+
+# tidyverse {data-background=#e8d725}
+
+## tidyverse
+
+This is a group of packages that are designed to work together all using a "tidy" framework (we'll learn about later). Loading the tidyverse loads all the packages at once.
+
+It also loads many datasets. Find a dataset you are interested in: data()
+
+## Viewing data
+
+Compare these methods for your chosen dataset
+
+> - simpling typing the dataset's name
+> - head()
+> - str()
+> - glimpse() (only available in tidyverse)
+> - View()
+
+## The pipe `%>%`
+
+You can read it as a series of imperative statements: group, then summarize, then filter. As suggested by the reading, a good way to pronounce %>% when reading code is **"then"**.
+
+* Behind the scenes, x %>% f(y) turns into f(x, y), and x %>% f(y) %>% g(z) turns into g(f(x, y), z) and so on. 
+* You can use the pipe to rewrite multiple operations in a way that you can read left-to-right, top-to-bottom. 
+* We'll use piping frequently from now on because it considerably improves the readability of code.
+
+simple example: pipe your chosen dataset into one of the functions on the previous slide
+
+## Manuevering in R
+
+- Make sure you note what `Alt + Shift + K` does?
+<!-- I like ctrl + shift + c, to comment blocks of code and add comments in an Rmd file -->
+<!-- I also like the command/control enter to run a line of code -->
+- Your favorite shortcut keys?
+- Edit the options in Tools
+
+
+# The skill of debugging? {data-background=#e8d725}
+
+
+## Newbie Coding Mistakes
+
+- [Which common mistake are you most guilty of?](https://jscomplete.com/learn/pro-programmer/beginner-programmers-mistakes)
+
+## Interpret these error statements
+
+Take some time at your table to work out what the error statement is saying about your code. Fix the error and get the code to run.
+
+```{R, eval=FALSE}
+ggplot(dota = mpg) + 
++   geom_point(mapping = aes(x = displ, y = hwy))
+#> Error in structure(list(data = data, layers = list(), 
+#> scales = scales_list(),  : 
+#>  argument "data" is missing, with no default
+```
+
+```{r, eval=FALSE}
+fliter(mpg, cyl = 8)
+#> Error in fliter(mpg, cyl = 8) : could not find function "fliter"
+```
+
+```{r, eval=FALSE}
+filter(diamond, carat > 3)
+#> Error in filter(diamond, carat > 3) : object 'diamond' not found
+```
+
+```{r, eval=FALSE}
+data.frame(1:10,10:1,)
+#> Error in data.frame(1:10, 10:1, ) : argument is missing, with no default
+```
+
+
+## Alan Perlis
+
+> There are two ways to write error-free programs; only the third one works.
+
+https://www.r-bloggers.com/common-r-programming-errors-faced-by-beginners/
+
+
+## Learning and Debugging in the wild
+
+> - Treating class like a team meeting
+> - The expense of training and experts in the real world
+
+![](http://i0.kym-cdn.com/photos/images/newsfeed/001/297/214/908.jpg)
+
+## R-Lab and Stack Overflow Channel
+
+> - R-Lab: [https://byuistats.github.io/M335/lab.html]
+> - Online lab: Stack Overflow and Slack
+>     - <https://stackoverflow.com/c/byui/join>
+
+# Upcoming Work {data-background=#e8d725}
+
+## Study Strategy for Success
+
+- Before Tuesday
+    - Complete the being readings, taking notes as you go
+    - Complete "doing" reading for Tuesday's task.
+    - Read Tuesday's class task. Spend 15 minutes digging into it
+    - Read Thursday's class task
+    - Read Case Study
+- Before Thursday
+    - Complete Thursday's "doing" reading
+    - Complete Case Study "doing" reading
+    - Spend 30 minutes on Thursday's class task before class
+    - Spend 20 minutes on Case Study before class
+
+## Look ahead
+
+> - Read with your group task 2, task 3, and Case Study 1 (due this Saturday). Make sure your group understands the deliverables and has a good picture of how to complete them.
+
+> - [Submit GitHub usernames](https://docs.google.com/spreadsheets/d/13aQsQYnGTQXyyBUGzE1V9MExEvG5woAmygtkdjltdjk/edit#gid=59053514)
+
+> - [submit names to be a leader next week](https://webmailbyui-my.sharepoint.com/:x:/g/personal/drp36_byui_edu/EVHSwJjW-91Fm7vUr-fpjBgBvGAyqDC4csYqdXzrANdiNA?e=7bO4PF)
+
+# (Jump Start on Next Lesson) The Grammar of Graphics {data-background=#e8d725}
+
+## Introduction to the Grammar
+
+<iframe width="760" height="445" src="https://www.youtube.com/embed/uiTc55clwuA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+## Introduction to ggplot2 
+
+<iframe width="760" height="445" src="https://www.youtube.com/embed/PiY9hwOkL8U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+## ggplot2 and iris data
+
+Use the `iris` data to create a faceted visualization. Encode data in a `color`, `shape`, and `size` layer or geometry.
+
+Add a layer that pulls from a different data set
+<!-- ggplot(iris) + geom_point(aes(x=Sepal.Length, y= Sepal.Width, color = Species, shape = Species, size = Petal.Length)) + facet_wrap(vars(Species)) + scale_shape_manual(values =  c(1, 5, 7)) + geom_hline(data = avgwid, aes(yintercept = avg)) -->
+
+

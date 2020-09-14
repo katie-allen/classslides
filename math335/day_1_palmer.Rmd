@@ -1,0 +1,171 @@
+---
+title: "Introduction to Math 335"
+author: J. Hathaway
+params:
+  day: 1
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+# What is a data scientist? {data-background=#6897bb}
+
+## A blend of programmer, statistician, and communicator that burns with curiosity.
+
+- [Medium.com on data science](https://medium.com/towards-data-science/what-makes-a-good-data-scientist-engineer-a8b4d7948a86){target="blank"}
+    - **Read through the bulleted items and rank the bolded phrases in order of importance.**
+- **The truth:**  The definition is settling, but the professional title of data science still covers a broad set of people and skills.
+
+## When we say "blend" we can just as easily be saying:
+
+<span style="font-size:75px"><span style="color:darkorange">
+An almost scientist that can't quite program, often isn't the best statistician in the room and asks too many questions.
+</span></span>
+
+## {data-background-iframe="http://www.byui.edu/mathematics/data-science"}
+
+> * [BYU-I Data Science](http://www.byui.edu/mathematics/data-science)
+
+# Learning & Grading {data-background=#6897bb}
+
+## Why do we attend college?
+
+## {data-background-iframe="https://www.youtube.com/embed/kO8x8eoU3L4?rel=0&amp;start=0"}
+
+[Father Sarduci](https://www.youtube.com/embed/kO8x8eoU3L4?rel=0&amp;start=0){target="blank"}
+
+## [A Message to Garcia](https://courses.csail.mit.edu/6.803/pdf/hubbard1899.pdf) {data-background=#6897bb}
+
+<div align="center"; style="color:white;font-size:40px">The point I wish to make is this: McKinley gave Rowan a letter to be delivered to Garcia; Rowan took the letter and did not ask, 'Where is he at?' <br>
+
+By the Eternal! there is a *person* whose form should be cast in deathless bronze and the statue placed in every college of the land. It is not book-learning *students* need, nor instruction about this and that, but a stiffening of the vertebrae which will cause them to be loyal to a trust, to act promptly, concentrate their energies: do the thing - 'Carry a message to Garcia!'</div>
+
+
+
+## On Education
+
+Anthropologists have reported that the hunter-gatherer groups they studied did not distinguish between work and play--essentially all of life was understood as play.
+
+With the rise of schooling, people began to think of learning as children's work. The same power-assertive methods that had been used to make children work in fields and factories were quite naturally transferred to the classroom.
+
+If children learn nothing else in school, they learn the difference between work and play and that learning is work, not play.
+
+> - [Peter Gray](https://www.psychologytoday.com/us/blog/freedom-learn/200808/brief-history-education)
+
+## [Jeffry R. Holland on learning](https://www.churchofjesuschrist.org/study/ensign/2018/12/making-your-life-a-soul-stirring-journey-of-personal-growth?lang=eng)
+
+So let's talk about learning. As a teacher at heart, I love the word and the idea, though I do think we should define it a little better than we usually do. ... I don't just mean the accumulation of knowledge, though that is part of it. I also don't just mean passively listening to a lecture or memorizing facts. **I mean learning in the sense of growth and change, of insight leading to improvement, of knowing the truth, which in turn leads us closer to the God of all truth.**
+
+<span style="font-size:45px"><span style="color:darkorange">
+- What is the difference between *'accumulation of knowledge'* and *'knowing the truth'*?
+</span></span>
+
+## Syllabus {data-background=#6897bb}
+ 
+### [MATH/CS 335 Syllabus](https://byuistats.github.io/M335/syllabus.html){target="blank"}
+
+> * Preparation: **What are the class expectations on preparation?**
+> * Performance: **How will assignments be "graded"?**
+> * Semester Grade:  **How will you know what grade you earn?**
+
+## MATH/CS 335 Philosophy
+
+> - In a specifications-grading system all tasks are evaluated on a high-standards pass/fail basis using detailed checklists of task requirements and expectations. 
+> - Letter grades are earned by passing marks on a set of tasks. 
+> - This system provides for a variety of choice and is closer to how learning, and work, is done in the real world.
+> - It will be easy for us to tell if work is complete, done in good faith, and consistent with the requirements.
+
+# Understanding R & R-Studio {data-background=#6897bb}
+
+## The big picture of R & R-Studio
+
+> - [Socrative.com](https://socrative.com/) **Room ID: BYUICLASS**
+
+## Getting R-Studio under control
+
+- Tweaking the settings
+    - [Google R Style Guide](https://google.github.io/styleguide/Rguide.xml){target="blank"}
+- [Building our first .`Rmd` file](https://byuistats.github.io/M335/rmarkdown_help.html){target="blank"}
+    - Understanding projects
+    - Understanding `yaml`
+    - knitting vs console
+    - keeping the `.md` file
+    
+## Coding in groups & R-lab
+
+> -https://byuistats.github.io/M335/lab.html
+
+# Is there an art to making visualizations? {data-background=#6897bb}
+
+## How humans see data -- John Rauser
+
+> Above all else, show the data
+
+**Tufte**
+
+## {data-background-iframe="https://docs.google.com/spreadsheets/d/13YcmNLdbrk3QiOLdDs7RP8t9bKpvz83bXGq-rt5yhCc/edit#gid=0"}
+
+> - [Google Spreadsheet](https://docs.google.com/spreadsheets/d/13YcmNLdbrk3QiOLdDs7RP8t9bKpvz83bXGq-rt5yhCc/edit#gid=0){target="blank"}
+> - [Rasuer's Presentation](https://www.youtube.com/embed/fSgEeI2Xpdc?rel=0&amp;start=0){target="blank"}
+
+## {data-background-iframe="https://www.youtube.com/embed/fSgEeI2Xpdc?rel=0&amp;start=1740"}
+
+[Rasuer's Presentation](https://www.youtube.com/embed/fSgEeI2Xpdc?rel=0&amp;start=0){target="blank"}
+
+## Hathaway highlights from Rauser
+
+> - [notes](https://byuistats.github.io/M335/presentations_class/rauser_notes.html){target="blank"}
+
+# Weekly Process {data-background=#6897bb}
+
+## Class Tasks
+
+*These tasks can be challenging but should be less time consuming than the weekly case studies. The first two weeks are not as consistent as the remaining weeks.*
+
+> - Take notes on your reading of the specified 'R for Data Science' chapter in the README.md or in a '.R' script in the class task folder
+
+or
+
+> - Take notes on your reading of the new R package in the README.md or in a '.R' script in the class task folder
+
+## Case Study Format
+
+- [Week 1](https://byuistats.github.io/M335/weekly_projects/cs01_details.html){target="blank"} and [Week 2](https://byuistats.github.io/M335/weekly_projects/cs02_details.html){target="blank"} are slightly different.
+- [Week 3](https://byuistats.github.io/M335/weekly_projects/cs03_details.html){target="blank"} begins the standard case study format.
+    1. Open ended question to answer with data provided    
+    ...   
+    2. Compile your `.md` and `.html` file into your git repository
+    3. Find two other student's compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)
+    4. Address 1-2 of the issues posted on your project and push the updates to GitHub
+
+# Class workload {data-background=#6897bb}
+
+## To get an A
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=14}
+library(tidyverse)
+
+weeks <- tibble(Week = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), 
+       low  = c(4, 8, 10, 10, 12, 11, 9, 5, 6, 6, 6, 6, 6),
+       high = c(6, 12, 14, 14, 16, 14, 12, 9, 9, 9, 9, 11, 11))
+
+
+weeks %>%
+  ggplot(aes(x = Week)) +
+  geom_point(aes(y = low, color = "Minimum"), size = 2.5) +
+  geom_line(aes(y = low, color = "Minimum")) +
+  geom_point(aes(y = high, color = "Max"), size = 2.5) +
+  geom_line(aes(y = high, color = "Max")) +
+  labs(y = "Hours per week", x = "Week of semester", title = "Number of hours to earn an A") +
+  theme_bw() + theme(panel.grid.minor.x = element_blank()) +
+  coord_cartesian(ylim = c(0, 20)) + 
+  scale_x_continuous(breaks = 1:13) + scale_color_manual("Range", values = c("dodgerblue3", "orange3"))
+
+```
+
+## To get a B
+
+### You don't do **B** work on all the tasks and case studies - You do **A** work on half of them.
+
+* Focus on the first 5-weeks material. Pick and choose work after the foundation material.
+* I know everyone can earn a B or higher.
