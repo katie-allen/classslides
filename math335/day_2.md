@@ -7,75 +7,75 @@ params:
   dtype: "none"
 ---
 
-# Welcome to class! {data-background=#6897bb}
+# Welcome to class! {data-background=#f7d754}
 
 ## Today's Outline:
 
-> - Answer questions from Task 1
-> - Finish discussing syllabus
+> - Finish syllabus review
+> - Questions from Task 1/Setting up R-Studio
 > - Reading discussion
 > - Prepare for Task 2 and Case Study
 
-# Task 1 {data-background=#6897bb}
+## My family
 
-## Questions about R and/or R-Studio?
-
-## 
+![](images/crazy_family.jpg)
 
 
+## What is data science?
 
-# Understanding R & R-Studio {data-background=#6897bb}
+Answer: A venn diagram ( [here](https://www.omnisci.com/learn/data-science), [here](https://data36.com/what-is-data-science/), and [here](https://www.innoarchitech.com/blog/what-is-data-science-does-data-scientist-do))
 
+["The Business of Data" video](https://www.youtube.com/watch?v=eMOY79x6drA)
 
-## Getting R-Studio under control
+Hadley Wickham's [diagram](https://r4ds.had.co.nz/)
 
-- Tweaking the settings
-    - [Google R Style Guide](https://google.github.io/styleguide/Rguide.xml){target="blank"}
-- [Building our first .`Rmd` file](https://byuistats.github.io/M335/rmarkdown_help.html){target="blank"}
-    - Understanding projects
-    - Understanding `yaml`
-    - knitting vs console
-    - keeping the `.md` file
-    
-## Coding in groups & R-lab
+# Syllabus (continued from Day 1)  {data-background=#f7d754}
 
-> -https://byuistats.github.io/M335/lab.html
+## Specifications Grading
 
+![](images/grade_sets.png)
 
+## Workload to get an "A"
+
+![](day_2_files/figure-revealjs/unnamed-chunk-1-1.png)
 
 
-# Syllabus (continued from Day 1)  {data-background=#6897bb}
+## To get a "B"
 
-## Semester Project
+You don't do **B** work on all the tasks and case studies - You do **A** work on half of them.
 
-## Coding Challenge
+* Focus on the first 5-weeks material. Pick and choose work after the foundation material.
+* I know everyone can earn a B or higher.
 
 ## How to get help
 
-### R-Lab
+> - Slack 
+> - R-Lab
+> - My office hours
 
-## R-Lab and Stack Overflow Channel
+## Questions about the syllabus?
 
-> - R-Lab: [https://byuistats.github.io/M335/lab.html]
-> - Online lab: Stack Overflow and Slack
->     - <https://stackoverflow.com/c/byui/join>
+# Task 1 {data-background=#f7d754}
 
+## Questions about R and/or R-Studio?
 
+## Getting R-Studio under control
 
-# Reading Discussion  {data-background=#6897bb}
+# Reading Discussion  {data-background=#f7d754}
 
+## How Humans See Data
 
+[John Rauser Video](https://www.youtube.com/embed/fSgEeI2Xpdc?rel=0&amp;start=0){target="blank"}
 
+[Class comments.](https://docs.google.com/spreadsheets/d/1Dfj68hm77XwnQgV5mSw3ja3cRTJgcOYYEDKD5RmKjBY/edit?usp=sharing)
 
-# John Rauser's Talk {data-background=#e8d725}
+> - What did you learn?
+> - Were you surprised by anything?
+> - Do you disagree with anything he said?
 
-## Rauser Recap
+## 7 methods of encoding data
 
-6 minutes to share in breakout rooms the most important or interesting things learned.
-
-Can you recite the 7 ways to encode data, ordered by accuracy of perceptual estimation
-
-## 7 methods of encoding data, ordered by accuracy of perceptual estimation
+#### Ordered by accuracy of perceptual estimation.
 
 1. Position along a common scale
 2. Position on common, non-aligned scale
@@ -85,53 +85,23 @@ Can you recite the 7 ways to encode data, ordered by accuracy of perceptual esti
 6. Volume/density/saturation of "color"
 7. Color hue
 
-What other points did you find help?
-
-
-
-# Is there an art to making visualizations? {data-background=#6897bb}
-
-## How humans see data -- John Rauser
+## Quote from Tufte
 
 > Above all else, show the data
 
-**Tufte**
+## [Being a Better Online Reader](https://www.newyorker.com/science/maria-konnikova/being-a-better-online-reader)
 
-## {data-background-iframe="https://docs.google.com/spreadsheets/d/13YcmNLdbrk3QiOLdDs7RP8t9bKpvz83bXGq-rt5yhCc/edit#gid=0"}
+What do you agree with? Disagree?
 
-> - [Google Spreadsheet](https://docs.google.com/spreadsheets/d/13YcmNLdbrk3QiOLdDs7RP8t9bKpvz83bXGq-rt5yhCc/edit#gid=0){target="blank"}
-> - [Rasuer's Presentation](https://www.youtube.com/embed/fSgEeI2Xpdc?rel=0&amp;start=0){target="blank"}
+What's your plan to succeed this semester?
 
-## {data-background-iframe="https://www.youtube.com/embed/fSgEeI2Xpdc?rel=0&amp;start=1740"}
-
-[Rasuer's Presentation](https://www.youtube.com/embed/fSgEeI2Xpdc?rel=0&amp;start=0){target="blank"}
-
-## Hathaway highlights from Rauser
-
-> - [notes](https://byuistats.github.io/M335/presentations_class/rauser_notes.html){target="blank"}
-
-
-
-
-
-
-
-
-# Looking Ahead
+# Looking Ahead {data-background=#f7d754}
 
 ## Task 2
 
-### Github
-
-### Professional Photo
-
-### Data Science Society
-
-## Case Study 1
-
-### Join slack if you haven't already
-
-
+> - Github
+> - Professional Photo
+> - Data Science Society
 
 ## Before next class...
 > - Sign up for a one-on-one interview with Sister Larson
