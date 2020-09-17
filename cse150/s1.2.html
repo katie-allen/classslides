@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>Using Data for Visualization</title>
+  <title>s1.2.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -449,38 +449,48 @@ document.getElementsByTagName('head')[0].appendChild(style);
   <div class="reveal">
     <div class="slides">
 
-<section>
-    <h1 class="title">Using Data for Visualization</h1>
-</section>
 
+<section>
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Welcome to Class!</h1>
+
+</section>
 <section id="canvas-or-course-structure-questions" class="slide level2">
 <h2>Canvas or course structure questions?</h2>
 </section>
+<section id="teams" class="slide level2">
+<h2>Teams</h2>
+</section></section>
 <section>
-<section id="is-there-an-art-to-making-visualizations" class="title-slide slide level1" data-background="#6897bb">
-<h1 data-background="#6897bb">Is there an art to making visualizations?</h1>
+<section id="is-there-an-art-to-making-visualizations" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Is there an art to making visualizations?</h1>
 
 </section>
 <section id="how-humans-see-data-john-rauser" class="slide level2">
 <h2>How humans see data – John Rauser</h2>
-<blockquote>
-<p>Above all else, show the data</p>
-</blockquote>
-<p><strong>Tufte</strong></p>
-</section>
-<section id="section" class="slide level2" data-background-iframe="https://www.youtube.com/embed/fSgEeI2Xpdc?rel=0&amp;start=1740">
-<h2 data-background-iframe="https://www.youtube.com/embed/fSgEeI2Xpdc?rel=0&amp;start=1740"></h2>
-<p><a href="https://www.youtube.com/embed/fSgEeI2Xpdc?rel=0&amp;start=0" target="blank">Rasuer’s Presentation</a></p>
-</section>
-<section id="hathaway-highlights-from-rauser" class="slide level2">
-<h2>Hathaway highlights from Rauser</h2>
+<p>What did you learn from this video? Anything you disagreed with?</p>
 <ul>
-<li><a href="https://byuistats.github.io/M335/presentations_class/rauser_notes.html" target="blank">notes</a></li>
+<li class="fragment">“Your goal with a visualization is to make new ideas appear in the heads of other people.”</li>
+<li class="fragment">“Good visualizations optimize for the human visual system.”</li>
+<li class="fragment">“Above all else, show the data” <em>Tufte</em></li>
 </ul>
+</section>
+<section id="methods-of-encoding-data" class="slide level2">
+<h2>7 methods of encoding data</h2>
+<h4 id="ordered-by-accuracy-of-perceptual-estimation.">Ordered by accuracy of perceptual estimation.</h4>
+<ol type="1">
+<li class="fragment">Position along a common scale</li>
+<li class="fragment">Position on common, non-aligned scale</li>
+<li class="fragment">Length</li>
+<li class="fragment">Angle or slope</li>
+<li class="fragment">Area</li>
+<li class="fragment">Volume/density/saturation of “color”</li>
+<li class="fragment">Color hue</li>
+</ol>
 </section></section>
 <section>
-<section id="good-charts" class="title-slide slide level1" data-background="#6897bb">
-<h1 data-background="#6897bb">Good Charts</h1>
+<section id="good-charts" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Good Charts</h1>
 
 </section>
 <section id="good-charts-chapter-2-when-charts-hit-our-eyes" class="slide level2">
@@ -491,12 +501,12 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li class="fragment">Doubts?</li>
 </ul>
 </section>
-<section id="hathaway-takeaways" class="slide level2">
-<h2>Hathaway takeaways</h2>
+<section id="five-ideas-to-know" class="slide level2">
+<h2>Five ideas to know</h2>
 <ol type="1">
 <li class="fragment">We don’t go in order</li>
 <li class="fragment">We see what stands out</li>
-<li class="fragment">Don’t fill up the plot</li>
+<li class="fragment">We only see a few things at once</li>
 <li class="fragment">Humans yearn for patterns</li>
 <li class="fragment">Communication only happens through metaphor</li>
 </ol>
@@ -504,11 +514,10 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li class="fragment"><em>keep track: close your eyes then take note where you looked first</em></li>
 </ul>
 </section>
-<section id="section-1" class="slide level2" data-background-image="images/gc/Ch1_waldo_noheat_example.jpg">
-<h2 data-background-image="images/gc/Ch1_waldo_noheat_example.jpg"></h2>
-<ul>
-<li class="fragment"><a href="https://docs.google.com/spreadsheets/d/1pWnULMce4ERZhv9lobDzvF-ZTN-vwVF6i7MdoymPdUs/edit?usp=sharing">Where did you look?</a></li>
-</ul>
+<section id="section" class="slide level2">
+<h2></h2>
+<p><img data-src="images/Vaccines_Wall_Street_Journal.png" /></p>
+<p><a href="https://generalassemb.ly/blog/the-best-topical-data-visualizations-of-2015/">Source</a></p>
 </section>
 <section id="where-do-people-look" class="slide level2">
 <h2>Where do people look?</h2>
@@ -540,12 +549,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section>
 <section id="metaphor-highlights" class="slide level2">
 <h2>Metaphor highlights</h2>
+<p>“The influence of the brain and expectation are far greater than the raw data.”</p>
 <ul>
-<li class="fragment">South is down?</li>
-<li class="fragment">Lighter color shades are “emptier” or lower than darker ones.</li>
-<li class="fragment">Lines imply ordered relationship</li>
-<li class="fragment">Time moves from left to right.</li>
-<li class="fragment"><strong>After reading the chapter, what other metaphors could you use to describe visualization or elements of a visualization?</strong></li>
+<li class="fragment"><p>South is down?</p></li>
+<li class="fragment"><p>Lighter color shades are “emptier” or lower than darker ones.</p></li>
+<li class="fragment"><p>Lines imply ordered relationship</p></li>
+<li class="fragment"><p>Time moves from left to right.</p></li>
+<li class="fragment"><p><strong>What other metaphors could you use to describe data visualization?</strong></p></li>
 </ul>
 </section>
 <section id="good-charts-matrix" class="slide level2">
@@ -553,8 +563,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <p><img data-src="images/gc/Intro_chartquadrant.png" /></p>
 </section></section>
 <section>
-<section id="tidy-data-section-1.1" class="title-slide slide level1">
-<h1>Tidy Data (<a href="https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#tidy-data">Section 1.1</a>)</h1>
+<section id="tidy-data-section-1.1" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Tidy Data (<a href="https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#tidy-data">Section 1.1</a>)</h1>
 
 </section>
 <section id="how-data-is-stored." class="slide level2">
@@ -584,8 +594,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <p><em>Using multiple tabs or sheets can make this possible but still not recommended.</em></p>
 </section></section>
 <section>
-<section id="google-sheets-section" class="title-slide slide level1">
-<h1>Google Sheets (<a href="https://byuistats.github.io/BYUI_CSE150_StatBook/tools.html#sheets">Section</a>)</h1>
+<section id="google-sheets-section" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Google Sheets (<a href="https://byuistats.github.io/BYUI_CSE150_StatBook/tools.html#sheets">Section</a>)</h1>
 
 </section>
 <section id="what-we-have-to-do-with-google-sheets." class="slide level2">
@@ -596,6 +606,22 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li class="fragment"><p><a href="https://support.google.com/docs/table/25273">Maybe create a few simple formulas</a></p></li>
 </ul>
 <p><strong>Sheets is a sidenote, not our primary tool.</strong></p>
+</section></section>
+<section>
+<section id="looking-ahead" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Looking Ahead</h1>
+
+</section>
+<section id="case-study" class="slide level2">
+<h2>Case Study</h2>
+</section>
+<section id="before-next-class" class="slide level2">
+<h2>Before next class…</h2>
+<ul>
+<li>Sign up for a one-on-one interview with Sister Larson</li>
+<li>Complete Reading Quiz 1.2</li>
+<li>Complete Case Study 1</li>
+</ul>
 </section></section>
     </div>
   </div>
