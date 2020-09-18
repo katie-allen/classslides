@@ -127,4 +127,4 @@ data.frame(1:10,10:1,)
 
 ## Looking ahead
 
-- For Case Study 1, upload the *md** file to **our class** slack channel
+- For Case Study 1, upload the **md** file to **our class** slack channel
