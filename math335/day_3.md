@@ -1,5 +1,5 @@
 ---
-title: "R and MATH/CS 335"
+title: ""
 author: ""
 params:
   day: 2
@@ -10,43 +10,26 @@ params:
 
 
 
-# Becoming the Critic. {data-background=#e8d725}
+# Welcome to class! {data-background=#f7d754}
 
+## Housekeeping
 
-```r
-vday <- params$day - 1
-vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
-titlelink <- paste0('{data-background-iframe="', vlink, '"}')
-```
+- You do not need to submit anything for task 2
+- Are you in slack?
+- Data Science Society
+- Did you share your github name?
+- Sign up for a one-on-one
+- Sign up for presentations next week
 
-## {data-background-iframe="http://www.perceptualedge.com/example1.php"}
+# tidyverse {data-background=#f7d754}
 
-[Visualization of the Day](http://www.perceptualedge.com/example1.php)
+## What is a package?
 
+"In R, the fundamental unit of shareable code is the package. A package bundles together code, data, documentation, and tests, and is easy to share with others. As of June 2019, there were over 14,000 packages available on the Comprehensive R Archive Network, or CRAN, the public clearing house for R packages. This huge variety of packages is one of the reasons that R is so successful: **the chances are that someone has already solved a problem that you're working on**, and you can benefit from their work by downloading their package." 
 
-# John Rauser's Talk {data-background=#e8d725}
+[*source*](https://r-pkgs.org/intro.html)
 
-## Rauser Recap
-
-6 minutes to share in breakout rooms the most important or interesting things learned.
-
-Can you recite the 7 ways to encode data, ordered by accuracy of perceptual estimation
-
-## 7 methods of encoding data, ordered by accuracy of perceptual estimation
-
-1. Position along a common scale
-2. Position on common, non-aligned scale
-3. Length
-4. Angle or slope
-5. Area
-6. Volume/density/saturation of "color"
-7. Color hue
-
-What other points did you find help?
-
-# tidyverse {data-background=#e8d725}
-
-## tidyverse
+## [tidyverse](https://www.tidyverse.org/)
 
 This is a group of packages that are designed to work together all using a "tidy" framework (we'll learn about later). Loading the tidyverse loads all the packages at once.
 
@@ -64,15 +47,17 @@ Compare these methods for your chosen dataset
 
 ## The pipe `%>%`
 
-You can read it as a series of imperative statements: group, then summarize, then filter. As suggested by the reading, a good way to pronounce %>% when reading code is **"then"**.
+You can read it as a series of imperative statements: group, then summarize, then filter. A good way to pronounce %>% when reading code is **"then"**.
 
 * Behind the scenes, x %>% f(y) turns into f(x, y), and x %>% f(y) %>% g(z) turns into g(f(x, y), z) and so on. 
 * You can use the pipe to rewrite multiple operations in a way that you can read left-to-right, top-to-bottom. 
 * We'll use piping frequently from now on because it considerably improves the readability of code.
 
-simple example: pipe your chosen dataset into one of the functions on the previous slide
+**Simple example: pipe your chosen dataset into one of the functions on the previous slide**
 
-## Manuevering in R
+# Working in R {data-background=#f7d754}
+
+## Shortcuts
 
 - Make sure you note what `Alt + Shift + K` does?
 <!-- I like ctrl + shift + c, to comment blocks of code and add comments in an Rmd file -->
@@ -80,13 +65,12 @@ simple example: pipe your chosen dataset into one of the functions on the previo
 - Your favorite shortcut keys?
 - Edit the options in Tools
 
-
-# The skill of debugging? {data-background=#e8d725}
-
+## The skill of debugging
 
 ## Newbie Coding Mistakes
 
-- [Which common mistake are you most guilty of?](https://jscomplete.com/learn/pro-programmer/beginner-programmers-mistakes)
+> - [Which common mistake are you most guilty of?](https://jscomplete.com/learn/pro-programmer/beginner-programmers-mistakes)
+> - [Common R Errors](https://www.r-bloggers.com/common-r-programming-errors-faced-by-beginners/)
 
 ## Interpret these error statements
 
@@ -119,14 +103,6 @@ data.frame(1:10,10:1,)
 #> Error in data.frame(1:10, 10:1, ) : argument is missing, with no default
 ```
 
-
-## Alan Perlis
-
-> There are two ways to write error-free programs; only the third one works.
-
-https://www.r-bloggers.com/common-r-programming-errors-faced-by-beginners/
-
-
 ## Learning and Debugging in the wild
 
 > - Treating class like a team meeting
@@ -134,51 +110,23 @@ https://www.r-bloggers.com/common-r-programming-errors-faced-by-beginners/
 
 ![](http://i0.kym-cdn.com/photos/images/newsfeed/001/297/214/908.jpg)
 
-## R-Lab and Stack Overflow Channel
+## Remember:
 
-> - R-Lab: [https://byuistats.github.io/M335/lab.html]
-> - Online lab: Stack Overflow and Slack
->     - <https://stackoverflow.com/c/byui/join>
+"There are two ways to write error-free programs; only the third one works." *Alan Perlis*
 
-# Upcoming Work {data-background=#e8d725}
-
-## Study Strategy for Success
-
-- Before Tuesday
-    - Complete the being readings, taking notes as you go
-    - Complete "doing" reading for Tuesday's task.
-    - Read Tuesday's class task. Spend 15 minutes digging into it
-    - Read Thursday's class task
-    - Read Case Study
-- Before Thursday
-    - Complete Thursday's "doing" reading
-    - Complete Case Study "doing" reading
-    - Spend 30 minutes on Thursday's class task before class
-    - Spend 20 minutes on Case Study before class
-
-## Look ahead
-
-> - Read with your group task 2, task 3, and Case Study 1 (due this Saturday). Make sure your group understands the deliverables and has a good picture of how to complete them.
-
-> - [Submit GitHub usernames](https://docs.google.com/spreadsheets/d/13aQsQYnGTQXyyBUGzE1V9MExEvG5woAmygtkdjltdjk/edit#gid=59053514)
-
-> - [submit names to be a leader next week](https://webmailbyui-my.sharepoint.com/:x:/g/personal/drp36_byui_edu/EVHSwJjW-91Fm7vUr-fpjBgBvGAyqDC4csYqdXzrANdiNA?e=7bO4PF)
-
-# (Jump Start on Next Lesson) The Grammar of Graphics {data-background=#e8d725}
-
-## Introduction to the Grammar
-
-<iframe width="760" height="445" src="https://www.youtube.com/embed/uiTc55clwuA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-## Introduction to ggplot2 
-
-<iframe width="760" height="445" src="https://www.youtube.com/embed/PiY9hwOkL8U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-## ggplot2 and iris data
-
-Use the `iris` data to create a faceted visualization. Encode data in a `color`, `shape`, and `size` layer or geometry.
-
-Add a layer that pulls from a different data set
-<!-- ggplot(iris) + geom_point(aes(x=Sepal.Length, y= Sepal.Width, color = Species, shape = Species, size = Petal.Length)) + facet_wrap(vars(Species)) + scale_shape_manual(values =  c(1, 5, 7)) + geom_hline(data = avgwid, aes(yintercept = avg)) -->
+![](images/frizzle.png)
 
 
+# Let's Practice! {data-background=#f7d754}
+
+## Idaho and COVID-19
+
+- [Exploring the data](https://covidtracking.com/data/state/idaho) (.R)
+- [Communicating results](https://rmarkdown.rstudio.com/lesson-2.html) (.Rmd, .md, .html)
+- YAML headers and R chunks
+- [Rmarkdown template](https://byuistats.github.io/M335/rpages.html#rmd_template)
+- [Projects in R](https://r4ds.had.co.nz/workflow-projects.html)
+
+## Looking ahead
+
+- For Case Study 1, upload the *md** file to **our class** slack channel
