@@ -1,0 +1,249 @@
+---
+title: "Github and Math/CS 335"
+author: ""
+params:
+  day: 4
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(magrittr)
+library(ggrepel)
+library(knitr)
+library(stringr)
+
+invisible(purl("../backgrounds.Rmd", output = "temp", quiet = TRUE))
+read_chunk("temp")
+
+
+# case study completed
+cso <- ceiling(params$day/2) - 1
+csn <- ceiling(params$day/2) 
+
+casename_old <-  paste0("cs-", str_pad(cso, 2, "left", "0"))
+casename_new <-  paste0("cs-", str_pad(csn, 2, "left", "0"))
+
+link_old <- paste0("> - [Case Study ", cso, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_old,"-",""), "_details.html)")
+link_new <- paste0("> - [Case Study ", csn, "](https://byuistats.github.io/M335/weekly_projects/", str_replace(casename_new,"-",""), "_details.html)")
+
+# How did we do?
+hdwd <- "> - [How did we do?](https://github.com/BYUI335/hathaway)"
+
+# current task
+# 
+taskname <- paste0("task-", str_pad(params$day, 2, "left", "0"))
+link_task <- paste0("> - [Task ", params$day, "](https://byuistats.github.io/M335/class_tasks/", str_replace(taskname,"-",""), "_details.html)")
+```
+
+# Becoming the Critic. {data-background=#e8d725}
+
+```{r nextone}
+vday <- params$day - 1
+vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
+titlelink <- paste0('{data-background-iframe="', vlink, '"}')
+```
+
+## Present Case Studies
+
+
+
+## `r titlelink`
+
+[Visualization of the Day](`r vlink`)
+
+<!-- 7 minutes -->
+
+
+
+#  Learning, Slack, & Stack Overflow {data-background=#e8d725}
+
+<!-- 3 minutes  -->
+
+## {data-background-image="http://mediaassets.ktnv.com/photo/2016/09/08/rupaul_1473370557202_45993103_ver1.0_640_480.jpg"}
+
+<span style="font-size:45px; color:black">
+RuPaul on Learning
+</span>
+
+<mark>
+<span style="font-size:75px; color: black">
+Your fear of looking stupid is making you look stupid.
+</span>
+</mark>
+
+
+## Seriously!
+
+### How do you get people to percieve you are smart?
+
+> - [Time magazine on Looking Stupid Study](http://time.com/3158889/ask-for-advice-competent/)
+
+<!-- 3 minutes -->
+
+## Slack 
+
+This space is for us to build a team and support each other.  This is where we learn to ask questions and reach out for support and quick responses. 
+
+## Stack Overflow
+
+Stack Overflow 
+
+- **[Stack Overflow Background and Tips](http://duncanlock.net/blog/2013/06/14/the-smart-guide-to-stack-overflow-zero-to-hero/):**  This is a great page to help you understand how Stack Overflow works. Please read the **Ask Good Questions** section.
+- [Create a Stack Overflow Account](https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent&utm_source=stackoverflow.com&utm_medium=dev-story&utm_campaign=signup-redirect)
+- [Join our BYUI Channel](https://stackoverflow.com/c/byui/join)
+
+
+```{r csold, ref.label=casename_old, echo=FALSE, include=FALSE }
+# For case study due last Saturday
+```
+
+
+
+# Wrangling Data {data-background=#e8d725}
+
+## Data Manipulation Verbs
+
+<!-- 3 minutes -->
+> - `filter`  - 
+> - `arrange`(commonly called sort) - 
+> - `select`  - 
+> - `mutate`  - 
+
+## Data Manipulation Verbs
+
+> - `filter`  - filter your data to a smaller set of important rows.
+> - `arrange`(commonly called sort) - Organize the row order of my data
+> - `select`  - select specific columns to keep or remove 
+> - `mutate`  - add new mutated (changed) variables as columns to my data.
+
+## Data Manipulation Verbs for Summaries
+
+> - `summarise` - 
+> - `group by`  - 
+
+## Data Manipulation Verbs for Summaries
+
+> - `summarise` - build summaries of the columns specified, you supply the function of the summary (i.e. mean, max, sum, count, etc.)
+> - `group by`  - divide your data into groups. Often used with `summarise`
+
+
+## Practice reading code
+
+With your group, write this code out in an English paragraph.
+<!-- 5 minutes -->
+
+```{r weirdname, eval=FALSE, echo=TRUE}
+delays <- flights %>% 
+  group_by(dest) %>% 
+  summarise(
+    count = n(),
+    dist = mean(distance, na.rm = TRUE),
+    delay = mean(arr_delay, na.rm = TRUE)
+  ) %>% 
+  filter(count > 20, dest != "HNL")
+```
+
+## Practice using dplyr
+
+Use the dplyr verbas to tackle the following challenges.
+
+1 person types in R who is sharing their screen, take turns telling the "driver" what to type
+
+<!-- 10 minutes -->
+> 1. Arrange the `iris` data by `Sepal.Length` and display the first six rows.
+> 2. Select the `Species` and `Petal.Width` columns and put them into a new data set called `testdat`.
+> 3. Create a new variable/column in the dataset that contains the petal widths in milimeters instead of centimeters.
+> 4. Create a new table that has the mean for each variable by Species.
+> 5. Read about the `?summarise_all()` function and get a new table with the means and standard deviations for each Species.
+> 6. Look at the examples in the `summarise_all()` help file and see if you can find other use cases for the `summarise_` or `mutate_` functions.
+
+
+# Review of ggplot
+
+## Open activity on I-learn
+<!-- 20-25 minutes -->
+Walk through the ggplot activity in your team. Have one "driver" who shares their screen and types. 
+
+Take turns telling the driver what to type to fill in the blanks. Try not to work ahead, move forward as a group.
+
+https://raw.githubusercontent.com/byuistats/M335/master/docs/presentations_class_palmer/day_4_files/Day_4_iris_practice.R?token=ADMULC4DFZU26JD5FDUW37S6WR3O6
+
+
+# Look Ahead and Look Back {data-background=#e8d725}
+
+## Case Study 2
+<!-- 3 minutes -->
+
+> - [submit names to be a leader next week](https://webmailbyui-my.sharepoint.com/:x:/g/personal/drp36_byui_edu/ETd8UhXxM5tKpc6Gecu0wY4Bf_T1pVhdZLJ7srzHm7A8nA?e=kSJ6hD)
+
+Sign-up in a group with individuals you haven't been with yet.
+
+
+## Case Study 2, planning
+
+<!-- 3 minutes, the second part is optional -->
+* [CS3](https://byuistats.github.io/M335/weekly_projects/cs03_details.html)
+    *Issues to be done next week*
+
+* With a small group, talk through what the data will need to look like to create the plot. Then use the data verbs approach to develop a plan on how to wrangle data.
+
+# GitHub and Git
+
+## Really do I have to learn Git and GitHub
+
+[2015 Wired Magazine Article](https://www.wired.com/2015/03/github-conquered-google-microsoft-everyone-else/)
+
+- GitHub now boasts almost 9 million registered users. Each month, about 20 million others visit without registering. ... among the **top 100 most popular sites on earth**.
+- everyone hosts their open source projects on GitHub, including Google, Facebook, Twitter, and even Microsoft. 
+- the site as a kind of bazaar that offers just about any piece of code you might want-and so much of it free. "If you need something, you just go to GitHub," he says. "You will find it there."
+
+##  Making sure we are all on the same page
+
+<!-- Just do a quick demo to repeat what is in the video, then just ask for questions. -->
+<!-- Here's a link to the video:  -->
+
+<!-- I have created a video that walks through installing git on your computer and linking your github account to an RStudio project. I highly recommend you watch the video and try these steps before coming to class. Though the video follows the instructions in the Task 4 reading, there is a small difference. Namely, in Step 1 of Test Drive RStudio and Github, it asks you to create a repository, but we have actually already created your repositories for you already. -->
+<!-- https://www.loom.com/share/f4304f98d8474e30bf6da03718ed4ca5 -->
+<!-- If you run into trouble, do not worry. We'll use the last 30-40 minutes of class to help those who are having trouble. But if you get it done in advance without problems you will be able to leave early, you won't be stuck waiting around. Thanks -->
+
+Let's take a few minutes to make sure everyone is up to date with the following tasks.
+
+[Class Task 4 Checklist](https://byuistats.github.io/M335/class_tasks/task04_details.html)
+
+> - Install git on your computer
+> - Create a GitHub account
+> - Work through readings on git and github
+
+## Free private repos
+
+> -  It would benefit you to use the free repos to manage all of your class work.
+> - https://education.github.com/discount_requests/new
+
+## The Github Mentality
+
+[The workflow](../images/Git_workflow_diagram.png)
+
+```{R nextone2, eval=FALSE}
+# Move to your git managed folder
+git pull
+git add *
+git commit -m "My great work"
+git push
+
+```
+
+## Github and R-Studio
+
+### Class Task Items
+
+- Get GitHub working properly
+    - Create an account
+    - Accept invitations to group and repository
+
+- Open R-Studio and try the git process using the graphical user interface (GUI).
+    - Clone repository
+    - Edit your README.md and push changes
