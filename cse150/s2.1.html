@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>Swimming in data</title>
+  <title>s2.1.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -59,6 +59,7 @@
 
     <style type="text/css">code{white-space: pre;}</style>
 
+    <link rel="stylesheet" href="custom.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -442,61 +443,109 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
-    <script src="externals/header-attrs-2.1.2/header-attrs.js"></script>
+    <script src="externals/header-attrs-2.1/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
-<section>
-    <h1 class="title">Swimming in data</h1>
-</section>
 
+<section>
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Welcome to Class!</h1>
+
+</section>
 <section id="xkcd-for-the-day" class="slide level2">
 <h2>xkcd for the day</h2>
 <p><img data-src="https://imgs.xkcd.com/comics/convincing.png" /></p>
-</section>
+</section></section>
 <section>
-<section id="good-reads" class="title-slide slide level1" data-background="#6897bb">
-<h1 data-background="#6897bb">Good Reads</h1>
+<section id="good-reads" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Good Reads</h1>
 
 </section>
 <section id="chapter-3-two-questions-to-four-types" class="slide level2">
 <h2>Chapter 3: Two questions to four types</h2>
+<p>“When it comes to information visualization, the impulse is to immediately choose a chart type and click a button to create it. You should resist this impulse and instead…”</p>
 </section>
-<section id="conceptual-visualizations" class="slide level2">
-<h2>Conceptual Visualizations</h2>
+<section id="the-two-questions" class="slide level2">
+<h2>The Two Questions</h2>
+<ol type="1">
+<li class="fragment">Is the information <em>conceptual</em> or <em>data-driven</em>? (What do you have?)</li>
+<li class="fragment">Am I <em>declaring something</em> or <em>exploring something</em>? (What are you doing?)</li>
+</ol>
+</section>
+<section id="the-four-types" class="slide level2">
+<h2>The Four Types</h2>
 <ul>
 <li class="fragment"><a href="https://www.google.com/search?q=best+powerpoint+diagrams&amp;tbm=isch&amp;ved=2ahUKEwjB-pXl2f_oAhVSlJ4KHU86CXEQ2-cCegQIABAA&amp;oq=best+powerpoint+diagrams&amp;gs_lcp=CgNpbWcQAzIECAAQGDoECCMQJzoECAAQQzoCCAA6BQgAEIMBOgYIABAFEB46BggAEAgQHlC1_AZYtp0HYKeeB2gAcAB4AIABXogBmQ6SAQIyNJgBAKABAaoBC2d3cy13aXotaW1n&amp;sclient=img&amp;ei=tSSiXoHMKtKo-gTP9KSIBw&amp;bih=867&amp;biw=1614&amp;hl=en">Consultant Visualization (Conceptual &amp; Declarative)</a> and <a href="sin_example/sin.html">doctrine visualization</a></li>
 <li class="fragment"><a href="https://seattlebusinessmag.com/technology/why-live-drawing-replacing-powerpoint-top-companies">Design Thinking Visualization (Conceptual &amp; Exploratory)</a></li>
-<li class="fragment"><a href="https://www.google.com/search?q=Power+BI+visualization&amp;tbm=isch&amp;hl=en&amp;ved=2ahUKEwiEo5Ce2P_oAhWQh54KHc7nBsoQBXoECAEQNg&amp;biw=1614&amp;bih=867">PowerBI and Excel Users (Declarative &amp; Data-Driven)</a></li>
-<li class="fragment"><a href="https://www.google.com/search?q=best+ggplot2+visualizations&amp;tbm=isch&amp;ved=2ahUKEwic8eim2P_oAhWR154KHdURDF0Q2-cCegQIABAA&amp;oq=best+ggplot2+visualizations&amp;gs_lcp=CgNpbWcQAzICCAA6BAgjECc6BAgAEEM6BggAEAgQHjoECAAQGFCj6BZYtIUXYLWGF2gAcAB4AIABiwGIAd8RkgEEMjIuNZgBAKABAaoBC2d3cy13aXotaW1n&amp;sclient=img&amp;ei=JiOiXpzGHpGv-wTVo7DoBQ&amp;bih=867&amp;biw=1614&amp;hl=en">Data Scientists or Scientists with programming experience</a></li>
+<li class="fragment"><a href="https://www.google.com/search?q=Power+BI+visualization&amp;tbm=isch&amp;hl=en&amp;ved=2ahUKEwiEo5Ce2P_oAhWQh54KHc7nBsoQBXoECAEQNg&amp;biw=1614&amp;bih=867">PowerBI and Excel Users (Data-Driven &amp; Declarative)</a></li>
+<li class="fragment"><a href="https://www.google.com/search?q=best+ggplot2+visualizations&amp;tbm=isch&amp;ved=2ahUKEwic8eim2P_oAhWR154KHdURDF0Q2-cCegQIABAA&amp;oq=best+ggplot2+visualizations&amp;gs_lcp=CgNpbWcQAzICCAA6BAgjECc6BAgAEEM6BggAEAgQHjoECAAQGFCj6BZYtIUXYLWGF2gAcAB4AIABiwGIAd8RkgEEMjIuNZgBAKABAaoBC2d3cy13aXotaW1n&amp;sclient=img&amp;ei=JiOiXpzGHpGv-wTVo7DoBQ&amp;bih=867&amp;biw=1614&amp;hl=en">Data Scientists or Scientists with programming experience (Data-Driven &amp; Exploratory)</a></li>
 </ul>
 </section>
 <section id="where-do-you-think-we-will-be" class="slide level2">
 <h2>Where do you think we will be?</h2>
-<p>/poll “Which quadrant will we be in?” “Consultant (top left)” “Design Thinking (bottom right)” “PowerBI (top right)” “Data Science (bottom right)”</p>
+<p>Answer the question in Teams.</p>
+<ul>
+<li>Which quadrant will we spend the most time in?
+<ul>
+<li>Consultant (top left)</li>
+<li>Design Thinking (bottom right)</li>
+<li>PowerBI (top right)</li>
+<li>Data Science (bottom right)</li>
+</ul></li>
+</ul>
 </section></section>
 <section>
-<section id="supplemental-reading" class="title-slide slide level1" data-background="#6897bb">
-<h1 data-background="#6897bb">Supplemental Reading</h1>
+<section id="supplemental-reading" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Supplemental Reading</h1>
 
 </section>
-<section id="measures-of-center-discussion" class="slide level2">
-<h2><a href="https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#measures-of-center">Measures of Center</a> Discussion</h2>
-<p><img data-src="images/other/measures_of_center.png" /></p>
+<section id="measures-of-center" class="slide level2">
+<h2>Measures of Center</h2>
+<p><img data-src="images/center/Slide5.PNG" /></p>
+</section>
+<section id="measures-of-center-1" class="slide level2" data-transition="none">
+<h2 data-transition="none">Measures of Center</h2>
+<p><img data-src="images/center/Slide6.PNG" /></p>
+</section>
+<section id="measures-of-center-2" class="slide level2" data-transition="none">
+<h2 data-transition="none">Measures of Center</h2>
+<p><img data-src="images/center/Slide7.PNG" /></p>
+</section>
+<section id="measures-of-center-3" class="slide level2" data-transition="none">
+<h2 data-transition="none">Measures of Center</h2>
+<p><img data-src="images/center/Slide8.PNG" /></p>
+</section>
+<section id="measures-of-center-4" class="slide level2">
+<h2>Measures of Center</h2>
+<p><img data-src="images/center/insect_spray.png" /></p>
+</section>
+<section id="different-types-of-center" class="slide level2">
+<h2>Different Types of Center</h2>
+<p><img data-src="images/center/meanmedian_learningstatisticswithr.png" /></p>
+<p><a href="https://learningstatisticswithr.com/book/descriptives.html"><em>source</em></a></p>
 </section>
 <section id="measures-of-center-activity" class="slide level2">
 <h2>Measures of Center Activity</h2>
 <ul>
-<li><a href="https://hathawayj.github.io/playing_cards/index.html#display=one_deck&amp;nrow=4&amp;ncol=13&amp;arr=row&amp;pg=1&amp;labels=paths,suite,hand7_1,hand6_1&amp;sort=suite;asc&amp;filter=&amp;sidebar=-1&amp;fv=">Trelliscope Cards</a></li>
-<li><a href="https://docs.google.com/spreadsheets/d/1Bqw047XaG-gdcUrBIYLlAT8NuGcQaRkCK5q7_Qzyau0/template/preview">Measures of Center Sheet</a></li>
-<li><a href="https://docs.google.com/document/d/1ASADV4H_vYFA4hZs_J11C3ZcdW17sKfrzP6XFYQ2xhE/edit?usp=sharing">Activity Description</a></li>
+<li><strong>Instructions:</strong>
+<ul>
+<li>Generate 10 random numbers between 1 and 10</li>
+<li>Plot the numbers on your graph</li>
+<li>Calculate the mean and median. Cirlce them on your graph.</li>
+</ul></li>
+</ul>
+<ul>
+<li>This will be easier if you pick one person to be the writer, one person to generate the random numbers, and one person to do the math.</li>
+<li><a href="https://jamboard.google.com/d/1zLvnfW7fe9ZVnUrUEjjnO_CrFCe5NOk6dFJuMxfdn5w/edit?usp=sharing">Jam Board</a></li>
+<li><a href="https://www.google.com/search?q=random+number+between+1+and+10&amp;rlz=1C1GCEJ_enUS882US882&amp;oq=random+number+between+1+and+10&amp;aqs=chrome..69i57j0l7.3815j0j9&amp;sourceid=chrome&amp;ie=UTF-8">Random Number Generator</a></li>
 </ul>
 </section>
-<section id="measures-of-center" class="slide level2">
+<section id="measures-of-center-5" class="slide level2">
 <h2><a href="https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#measures-of-center">Measures of Center</a></h2>
-<p><strong>Break into groups and decide an answer to the following question</strong></p>
+<p><strong>Break into new groups and answer to the following questions:</strong></p>
 <ul>
 <li>What does the phrase ‘measures of center’ mean?</li>
 <li>What do you notice about the mean’s location relative to the median?</li>
@@ -504,41 +553,23 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </li>
 <li>Which measure of center do you prefer?</li>
 <li>Which measure would represent a typical net worth of people living in Seattle better?</li>
-<li><a href="https://introductorystats.wordpress.com/2011/09/04/when-bill-gates-walks-into-a-bar/">Bill Gates walks into a bar</a></li>
+</ul>
+<ul>
+<li class="fragment"><a href="https://introductorystats.wordpress.com/2011/09/04/when-bill-gates-walks-into-a-bar/">Bill Gates walks into a bar</a></li>
 </ul>
 </section>
 <section id="questions-on-measures-of-center" class="slide level2">
-<h2>Questions on Measures of Center</h2>
-<p><img data-src="images/other/cards_balance_moc.png" /></p>
-</section>
-<section id="tools-tableau" class="slide level2">
-<h2><a href="https://byuistats.github.io/BYUI_CSE150_StatBook/tools.html#tableau">Tools: Tableau</a></h2>
-<p><strong>Two tools: Both should work</strong></p>
-<ul>
-<li><a href="https://www.tableau.com/tft/activation">Full Tableau Tool</a></li>
-<li><a href="https://public.tableau.com/en-us/s/">Tableau Public</a></li>
-</ul>
-<p><strong>First Try</strong></p>
-<p><em>We have curated a list of tools readings and videos. I would not skip the material we have picked.</em></p>
-<ul>
-<li><a href="https://www.tableau.com/about/blog/2016/5/connect-directly-your-google-sheets-tableau-10-53954">Connecting to Google Sheets</a></li>
-<li><a href="https://www.tableau.com/learn/tutorials/on-demand/understanding-pill-types">Registered Training (pill types)</a>: Their videos are great and should be used.</li>
-</ul>
-</section>
-<section id="working-with-tableau" class="slide level2">
-<h2>Working with Tableau</h2>
-<ul>
-<li><a href="https://docs.google.com/spreadsheets/d/1uPunkpysrF773ce2QxwqXiYQ3MkxaLCbXBHu3yeASfU/edit#gid=37313239">Let’s use the government_data_data4</a></li>
-</ul>
-<p><strong>Tackle the following questions</strong></p>
-<ul>
-<li><em>Create a bar chart of the top 20 merchants by sales. Which are the top 2 merchants by sales?</em></li>
-</ul>
+<h2>Questions on Measures of Center?</h2>
 </section></section>
-<section id="case-study" class="title-slide slide level1" data-background="#6897bb">
-<h1 data-background="#6897bb">Case Study</h1>
+<section>
+<section id="case-study-2" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Case Study 2</h1>
+
+</section>
+<section id="case-study-2-overview" class="slide level2">
+<h2>Case Study 2 Overview</h2>
 <ul>
-<li><a href="https://byuistats.github.io/CSE150/project.html#Case_Study_2:_Lego_my_data">Measuring LEGO case study</a> questions?<br />
+<li><a href="https://byuistats.github.io/CSE150/project.html#Case_Study_2:_Lego_my_data">Measuring LEGO case study</a><br />
 </li>
 <li>Working with a partner but presenting and submitting individually.
 <ul>
@@ -548,6 +579,12 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </ul></li>
 </ul>
 </section>
+<section id="questions-about-the-case-study" class="slide level2">
+<h2>Questions about the case study?</h2>
+</section>
+<section id="working-with-tableau" class="slide level2">
+<h2>Working with Tableau</h2>
+</section></section>
     </div>
   </div>
 
