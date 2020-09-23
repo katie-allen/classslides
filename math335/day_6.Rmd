@@ -12,24 +12,28 @@ params:
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 ```
 
-# Github {data-background=#f7d754}
+# Welcome to class! {data-background=#f7d754}
 
-Welcome to class!
+Try to recreate this plot using the `` dataset in R.
+
+
+##
 
 ## Today's Outline
 
-> - Reading Discussion
+> - Semester Project
+> - Looking Ahead
 > - Connect GitHub to R
-- Maybe, some ggplot examples
 
-# Reading Discussion {data-background=#f7d754}
+# Semester Project {data-background=#f7d754}
 
+
+# Looking Ahead {data-background=#f7d754}
 
 
 # Github {data-background=#f7d754}
 
 
-# ggplot {data-background=#f7d754}
 
 
 
@@ -40,52 +44,6 @@ Welcome to class!
 
 
 
-
-
-## Hans Rosling: Show Variation
-
-- Hans showed that [Swedish top students know statistically significantly less about the world than the chimpanzees](https://www.youtube.com/embed/usdJgEwMinM?rel=0&amp;start=80)
-
-- My favorite quote, "**The problem was not ignorance it was preconceived ideas.**" What point is he trying to make?
-
-- According to Hans, what is driving these [false] preconceived ideas?
-<!-- Relying on the mean too much -->
-<!-- He shows this with Africa. Such a lot of difference within countries -->
-
-- Can you think of instances in your own life where this occurs?
-<!-- The age of my kids, compared to Octomom's kids -->
-<!-- Cash flow (personal or of a business) averages one thing, but big positives and negatives. -->
-
-## Hans Rosling Thesis
-
-- In one sentence, what would you say is Hans' thesis statement?
-
-- Don't oversummarize the data. Showing variation is even better, but first and foremost, show the data (correctly).
-
-
-## Stephen Few's Steps (Effectively Communicating Numbers)
-<!-- This is good in theory, but I don't know if I believe it in practice. -->
-<!-- It seems to work well for big presentations: conferences, papers, client meetings. But the lines get really blurry daily meetings with boss, stakeholders, etc. Where does exploratory data analysis fit in to this?(great question to ask students) -->
-> 1. Message
-> 2. Graphics
-> 3. Data munging.
-> 4. Fine tune the message.
-> 5. Clarify the point.
-
-1. Determine your message and needed data
-2. Table or graph? (Graph!)
-3. Best means to encode the values (Think of our heirarchy - Position, length, area, color, etc.)
-4. Where to display each variable
-5. Remaining objects
-6. Featured data?
-
-
-- How does this process differ from what may commonly be done?
-
-- What will be the impact of following this process instead?
-
-- I'm not sure how this works in practice. Works well for big presentations. However, lines get really blurred between daily meetings with boss, stakeholders, etc. Where does exploratory data analysis fit in this graph?
-<!-- "The simple graph has brought more information to the data analyst's mind than any other device." ~John Tukey -->
 
 
 ## Asking the right questions
