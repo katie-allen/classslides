@@ -1,0 +1,158 @@
+---
+title: ""
+author: ""
+params:
+  day: 2
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+# Github {data-background=#f7d754}
+
+Welcome to class!
+
+## Today's Outline
+
+> - Reading Discussion
+> - Connect GitHub to R
+- Maybe, some ggplot examples
+
+# Reading Discussion {data-background=#f7d754}
+
+
+
+# Github {data-background=#f7d754}
+
+
+# ggplot {data-background=#f7d754}
+
+
+
+
+
+
+
+
+
+
+
+
+## Hans Rosling: Show Variation
+
+- Hans showed that [Swedish top students know statistically significantly less about the world than the chimpanzees](https://www.youtube.com/embed/usdJgEwMinM?rel=0&amp;start=80)
+
+- My favorite quote, "**The problem was not ignorance it was preconceived ideas.**" What point is he trying to make?
+
+- According to Hans, what is driving these [false] preconceived ideas?
+<!-- Relying on the mean too much -->
+<!-- He shows this with Africa. Such a lot of difference within countries -->
+
+- Can you think of instances in your own life where this occurs?
+<!-- The age of my kids, compared to Octomom's kids -->
+<!-- Cash flow (personal or of a business) averages one thing, but big positives and negatives. -->
+
+## Hans Rosling Thesis
+
+- In one sentence, what would you say is Hans' thesis statement?
+
+- Don't oversummarize the data. Showing variation is even better, but first and foremost, show the data (correctly).
+
+
+## Stephen Few's Steps (Effectively Communicating Numbers)
+<!-- This is good in theory, but I don't know if I believe it in practice. -->
+<!-- It seems to work well for big presentations: conferences, papers, client meetings. But the lines get really blurry daily meetings with boss, stakeholders, etc. Where does exploratory data analysis fit in to this?(great question to ask students) -->
+> 1. Message
+> 2. Graphics
+> 3. Data munging.
+> 4. Fine tune the message.
+> 5. Clarify the point.
+
+1. Determine your message and needed data
+2. Table or graph? (Graph!)
+3. Best means to encode the values (Think of our heirarchy - Position, length, area, color, etc.)
+4. Where to display each variable
+5. Remaining objects
+6. Featured data?
+
+
+- How does this process differ from what may commonly be done?
+
+- What will be the impact of following this process instead?
+
+- I'm not sure how this works in practice. Works well for big presentations. However, lines get really blurred between daily meetings with boss, stakeholders, etc. Where does exploratory data analysis fit in this graph?
+<!-- "The simple graph has brought more information to the data analyst's mind than any other device." ~John Tukey -->
+
+
+## Asking the right questions
+
+> - [Harness the power of questions & Clarify Terms](https://www.lynda.com/Business-Skills-tutorials/Harness-power-questions/477451/574315-4.html)
+> - A truly wise person may not have the answers, but knows which questions to ask.
+
+> - I encourage you to sharpen you ability to ask questions, by asking questions of your own graphs?
+
+
+
+
+
+
+# GitHub and Git
+
+## Really do I have to learn Git and GitHub
+
+[2015 Wired Magazine Article](https://www.wired.com/2015/03/github-conquered-google-microsoft-everyone-else/)
+
+- GitHub now boasts almost 9 million registered users. Each month, about 20 million others visit without registering. ... among the **top 100 most popular sites on earth**.
+- everyone hosts their open source projects on GitHub, including Google, Facebook, Twitter, and even Microsoft. 
+- the site as a kind of bazaar that offers just about any piece of code you might want-and so much of it free. "If you need something, you just go to GitHub," he says. "You will find it there."
+
+##  Making sure we are all on the same page
+
+<!-- Just do a quick demo to repeat what is in the video, then just ask for questions. -->
+<!-- Here's a link to the video:  -->
+
+<!-- I have created a video that walks through installing git on your computer and linking your github account to an RStudio project. I highly recommend you watch the video and try these steps before coming to class. Though the video follows the instructions in the Task 4 reading, there is a small difference. Namely, in Step 1 of Test Drive RStudio and Github, it asks you to create a repository, but we have actually already created your repositories for you already. -->
+<!-- https://www.loom.com/share/f4304f98d8474e30bf6da03718ed4ca5 -->
+<!-- If you run into trouble, do not worry. We'll use the last 30-40 minutes of class to help those who are having trouble. But if you get it done in advance without problems you will be able to leave early, you won't be stuck waiting around. Thanks -->
+
+Let's take a few minutes to make sure everyone is up to date with the following tasks.
+
+[Class Task 4 Checklist](https://byuistats.github.io/M335/class_tasks/task04_details.html)
+
+> - Install git on your computer
+> - Create a GitHub account
+> - Work through readings on git and github
+
+## Free private repos
+
+> -  It would benefit you to use the free repos to manage all of your class work.
+> - https://education.github.com/discount_requests/new
+
+## The Github Mentality
+
+[The workflow](../images/Git_workflow_diagram.png)
+
+```{R nextone2, eval=FALSE}
+# Move to your git managed folder
+git pull
+git add *
+git commit -m "My great work"
+git push
+
+```
+
+## Github and R-Studio
+
+### Class Task Items
+
+- Get GitHub working properly
+    - Create an account
+    - Accept invitations to group and repository
+
+- Open R-Studio and try the git process using the graphical user interface (GUI).
+    - Clone repository
+    - Edit your README.md and push changes

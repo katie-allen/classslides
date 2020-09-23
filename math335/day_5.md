@@ -8,9 +8,7 @@ params:
   dtype: "none"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
-```
+
 
 # Github {data-background=#f7d754}
 
@@ -109,7 +107,8 @@ Welcome to class!
 
 With your table, write this code out in an English paragraph.
 
-```{r weirdname, eval=FALSE, echo=TRUE}
+
+```r
 delays <- flights %>% 
   group_by(dest) %>% 
   summarise(
