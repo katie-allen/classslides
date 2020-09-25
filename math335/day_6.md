@@ -8,9 +8,7 @@ params:
   dtype: "none"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
-```
+
 
 # Welcome to class! {data-background=#f7d754}
 
