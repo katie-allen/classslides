@@ -1,0 +1,233 @@
+---
+title: " and the Critique"
+author: " "
+params:
+  day: 6
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+if (params$day %% 2 == 0) md_intro_format <- "even_intro_format.Rmd"
+if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
+
+```
+
+# Becoming the Critic. {data-background=#e8d725}
+
+```{r nextone}
+vday <- params$day - 1
+vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
+titlelink <- paste0('{data-background-iframe="', vlink, '"}')
+```
+
+## `r titlelink`
+
+[Visualization of the Day](`r vlink`)
+
+# Displaying multiple distributions {data-background=#e8d725}
+
+<!-- This is code example code below, but the script is empty -->
+
+<!-- ## Open this script -->
+
+<!-- Copy and paste this code to get the R script file: -->
+
+<!-- ```{r eval = FALSE} -->
+<!-- #install.packages("downloader") -->
+<!-- downloader::download("https://raw.githubusercontent.com/byuistats/M335/master/docs/presentations_class_palmer/day_6_files/Lesson_6_Notes.R?token=ADMULC7DPFVF4UDCHNMSKYS6HHKX2", destfil = "script6.R", mode="wb") -->
+<!-- file.edit('script6.R') -->
+<!-- ``` -->
+
+## Univariate distributions
+
+Let's look at carrier and departure delays.
+
+Do carrier first.
+
+Live coding demo
+
+
+## Clarity vs. Complication
+
+> - What do we know after looking at this plot?
+> **How do we provide depth of variability understanding without overwhelming the visualization user?**
+
+
+```{r cc1, echo=FALSE, fig.height= 3}
+library(nycflights13)
+library(tidyverse)
+library(magrittr)
+library(forcats)
+
+flights %>% 
+  group_by(carrier) %>% 
+  summarise(dep_delay = mean(dep_delay, na.rm = TRUE)) %>%
+  ggplot(aes(x = fct_reorder(carrier, dep_delay), y = dep_delay)) +
+  geom_col() +
+  labs(x = "Airline Carrier Short Name", y = "Average Departure Delay", title = "Typical Delay of Flights by Airport") + theme_bw()
+
+```
+
+
+
+Remember, data can get complicated very fast. 
+
+
+```{r, echo=FALSE, results=FALSE, message=FALSE, warning=FALSE}
+pacman::p_load(ggbeeswarm, lvplot)
+
+```
+
+
+## Histograms (1)
+
+What don't we like about this plot?
+
+```{r bbbb3, echo=FALSE, fig.height=4, fig.width=8, cache=TRUE}
+# plot code for histograms
+
+flights %>% 
+    ggplot(aes(x = dep_delay)) +
+    facet_wrap(~carrier) +
+    geom_histogram(bins = 150, color = "white") +
+    coord_cartesian(xlim = c(-50, 250)) +
+    theme_bw()
+
+```
+
+
+## Histograms (2)
+
+* What changed in this histogram?
+* What don't we like about this plot?
+
+```{r bbbbb5, echo=FALSE, fig.height=4, fig.width=8, cache=TRUE}
+# plot code for histograms
+
+flights %>% 
+    ggplot(aes(x = dep_delay)) +
+    facet_wrap(~carrier, scales = "free_y") +
+    geom_histogram(bins = 150, color = "white") +
+    coord_cartesian(xlim = c(-50, 250)) +
+    theme_bw()
+
+```
+
+## Boxplots
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
+```{r bbbbbb444, echo=FALSE, fig.height=4, fig.width=8, cache=TRUE}
+
+gg_base <- flights %>%
+  ggplot(aes(x = carrier, y = dep_delay)) +
+#    coord_cartesian(ylim = c(-50, 250)) +
+    theme_bw()
+# Now add varied distribution geoms
+
+gg_base + geom_boxplot() 
+```
+
+
+## Distribution background
+
+> * [violin plots (`geom_violin()`)](http://eamoncaddigan.net/dataviz/r/psych/2015/09/26/violin-plots/)
+> * [beeswarm plots (`ggbeeswarm::geom_quasirandom()`)](https://github.com/eclarke/ggbeeswarm)
+> * [letter-value boxplots `lvplot::geom_lv()`](https://github.com/hadley/lvplot). [Here](https://mgimond.github.io/ES218/Week08b.html) is a description.
+
+Another package that makes flipping the axes easier in ggplot -- [rotating axes (`ggstance`)](https://github.com/lionel-/ggstance)
+
+
+
+## Violin plots
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
+```{r violin, echo=FALSE, fig.height=4, fig.width=8, cache=TRUE}
+
+# Now add varied distribution geoms
+gg_base + geom_violin()
+
+```
+
+## Beeswarm plots (1)
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
+```{r beeswarm, echo=FALSE, fig.height=4, fig.width=8, cache=TRUE}
+# Now add varied distribution geoms
+library(ggbeeswarm)
+gg_base + geom_quasirandom(alpha = .6, size = .75)
+
+```
+
+## Beeswarm plots (1)
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
+```{r beeswarm2, echo=FALSE, fig.height=4, fig.width=8, cache=TRUE}
+# Now add varied distribution geoms
+library(ggbeeswarm)
+gg_base + geom_quasirandom(alpha = .6, size = .75) + 
+  coord_cartesian(ylim = c(-50, 500)) 
+
+```
+
+## Letter-Value boxplots (1)
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
+```{r lettervalue, echo=FALSE, fig.height=4, fig.width=8, cache=TRUE}
+# Now add varied distribution geoms
+library(lvplot)
+gg_base + geom_lv(aes(fill = ..LV..)) + scale_fill_lv()
+
+```
+
+## Letter-Value boxplots (2)
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
+```{r lettervalue2, echo=FALSE, fig.height=4, fig.width=8, cache=TRUE}
+# Now add varied distribution geoms
+library(lvplot)
+gg_base + geom_lv(aes(fill = ..LV..)) + 
+  scale_fill_lv() + 
+  coord_cartesian(ylim = c(-50, 500)) 
+
+```
+
+## Letter-Value boxplots (3)
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
+```{r lv3, echo=FALSE, fig.height=4, fig.width=8, cache=TRUE}
+# Now add varied distribution geoms
+library(lvplot)
+gg_base + geom_lv(aes(fill = ..LV..)) + 
+  scale_fill_lv() + 
+  coord_cartesian(ylim = c(-50, 1500)) 
+
+```
+
+## Tuesday Team Lead Sign-up
+
+Sign-up on google sheet as a "Team Lead" or just as a group member.
+
+[sign-up sheet](https://webmailbyui-my.sharepoint.com/:x:/g/personal/drp36_byui_edu/ETd8UhXxM5tKpc6Gecu0wY4Bf_T1pVhdZLJ7srzHm7A8nA?e=zj92ME)
+
+Sign-up in a group with individuals you haven't been with yet.
+
+Any volunteers to share with the class?
