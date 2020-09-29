@@ -23,6 +23,10 @@ title: "Presenting Data"
 # Activity {data-background=#6897bb}
 
 
+## Numerical Gestalt
+
+**Gestalt:** an organized whole that is perceived as more than the sum of its parts.
+
 ## Submitting case studies
 
 Canvas structure.  Questions?
