@@ -1,12 +1,18 @@
 ---
-title: "Presenting Data & Histograms"
+title: ""
 ---
+
+# Welcome to class!  {data-background=#f7d754}
+
+Open your LEGO case study presentation and be ready to share.  
+
+## Syllabus: Teach One Another
+
 
 
 # Good Reads {data-background=#6897bb}
 
 ## Chapter 5: Refine to impress (Pg. 109-120)
-
 
 **The ambiguity is paralyzing! People don't want to crash into your chart.**
 
