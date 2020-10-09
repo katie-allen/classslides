@@ -75,12 +75,14 @@ With bad charts, instead of using the chart to guide the meeting, each member ha
 
 # Supplemental Reading {data-background=#f7d754}
 
-## Questions?
+## You should know how to:
 
 >- Build a histogram
 >- Build a box plot
 >- Build a line chart
 >- Create bins from a continuous measure
+
+Bring questions to class on Thursday.
 
 ## [Building a Histogram](https://help.tableau.com/current/pro/desktop/en-us/buildexamples_histogram.htm)
 
@@ -100,9 +102,11 @@ With bad charts, instead of using the chart to guide the meeting, each member ha
 
 What is normal about marathons?
 
->- How to get the data.
->- Article template.
 >- Make sure you understand the deliverables!
+>- Data dictionary
+>- How to get the data
+>- Article template
+
 
 ## Plotting Marathons
 

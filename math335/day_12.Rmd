@@ -1,0 +1,132 @@
+---
+title: ""
+author: ""
+params:
+  day: 2
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+library(tidyverse)
+```
+
+# Tidy Data, Tibbles, and Vectors {data-background=#f7d754}
+
+Welcome to class!
+
+# Data frames vs. Tibbles {data-background=#f7d754}
+
+## [Data frames](https://www.tutorialspoint.com/r/r_data_frames.htm#:~:text=A%20data%20frame%20is%20a,of%20values%20from%20each%20column.&text=The%20data%20stored%20in%20a,numeric%2C%20factor%20or%20character%20type.)
+
+A data frame is a table or a two-dimensional array-like structure in which each column contains values of one variable and each row contains one set of values from each column.
+
+>- The column names should be non-empty.
+>- The row names should be unique.
+>- The data stored in a data frame can be of numeric, factor or character type.
+>- Each column should contain same number of data items.
+
+## Data frame example
+
+```{r}
+head(mtcars)
+```
+
+## [Tibbles](https://r4ds.had.co.nz/tibbles.html)
+
+Tibbles are data frames, but they tweak some older behaviours to make life a little easier. R is an old language, and some things that were useful 10 or 20 years ago now get in your way. Tibbles:
+
+>- Never change the type of inputs
+>- Never change the names of variables
+>- Never create row names
+
+## Tibble example
+
+```{r, echo=FALSE}
+as_tibble(mtcars)
+```
+## [Tidy data and tibbles](https://r4ds.had.co.nz/tidy-data.html)
+
+Tidy data should be stored in a tibble (or a data frame) with each variable in a column.
+
+There's a specific advantage to placing variables in columns because it "allows R's vectorised nature to shine".
+
+<!--- ![](images\tidy-1.png) --->
+<img src="images/tidy-1.png"  height="300">
+
+## R is "vectorised"
+
+A vector is a collection of values. Most built-in R functions are vectorised, meaning that they can operate on a vector.
+
+```{r}
+c(1,2,3,4,5) + c(0,0,10,10,10)
+c(1,2,3,4,5) + 100
+```
+
+
+## [Vector types](https://r4ds.had.co.nz/vectors.html)
+
+>- **Atomic vectors** are homogeneous. There are 6 types: logical, integer, double, character, complex, and raw.
+>- A **list** is a heterogeneous vector, and can also contain other lists.
+
+<!--- ![](images/data-structures-overview.png) --->
+<img src="images/data-structures-overview.png"  height="350">
+
+## [Vector properties and attributes](https://r4ds.had.co.nz/vectors.html)
+
+Every vector has two key properties: its type `typeof()` and length `length()`.
+
+Vectors can also contain "attributes" which build on additional behaviour.
+
+>- Factors are built on top of integer vectors
+>- Dates and date-times are built on top of numeric vectors
+>- Data frames and tibbles are built on top of lists
+
+## [Tibbles and vectors](https://r4ds.had.co.nz/vectors.html)
+
+Vectors provide the underlying structure of tibbles (and data frames). A tibble is a list of vectors. Each "column" that we use is a vector with a specific data type.
+
+The difference between a tibble and a list is that all the elements of a tibble (or a data frame) must be vectors with *the same length*.
+
+
+## Example: read.csv
+
+`read.csv()` is a base R function that will load a .csv file into a data frame. Base R used to automatically convert strings to factors, although I believe this has changed with [recent updates](https://developer.r-project.org/Blog/public/2020/02/16/stringsasfactors/index.html).
+
+```{r}
+dat1 <- read.csv("./data/heights.csv", stringsAsFactors = TRUE)
+head(dat1)
+```
+
+## Example: read_csv
+
+`read_csv()` comes from the `readr` package, which is a part of the tidyverse. This will load the .csv file into a tibble. What has changed from before?
+
+```{r}
+dat2 <- read_csv("./data/heights.csv")
+head(dat2)
+```
+
+## Example: Are they equal?
+
+```{r}
+str(dat1)
+str(dat2)
+```
+
+# Height Case Study  {data-background=#f7d754}
+
+## [Jenny Bryan](https://twitter.com/JennyBryan)
+
+"Classroom data are like teddy bears and real data are like a grizzly bear with salmon blood dripping out its mouth."
+
+## [Hadley Wickham](http://jstatsoft.org/v59/i10)
+
+"Up to 80% of data analysis is spent on the process of cleaning and preparing data"
+
+
+
+

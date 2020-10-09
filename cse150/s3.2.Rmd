@@ -1,9 +1,9 @@
 ---
-title: "Time Series: Line Charts"
+title: ""
 ---
+# Welcome to class! {data-background=#f7d754}
 
-
-# Good Reads {data-background=#6897bb}
+# Good Charts {data-background=#f7d754}
 
 ## Chapter 5: Refine to impress (Pg. 121-132)
 
@@ -13,7 +13,7 @@ title: "Time Series: Line Charts"
 
 ![](images/gc/Ch5_which_elements.png)
 
-# Tableau Tools {data-background=#6897bb}
+# Tableau Tools {data-background=#f7d754}
 
 ## The tools
 
@@ -24,10 +24,20 @@ title: "Time Series: Line Charts"
 
 ## Tools Activity
 
-> - You and a partner will take one of the following readings and build a 1-minute guide on how to use that option.    
+> - You and your group will take one of the following readings and build a 1-minute guide on how to use that option.    
 >     - You get 5 minutes to review and prep the guide.
-> - Each of you will present your 1-minute guide to the class.
+> - Your group will then present a 1 to 2-minute guide to the class.
 
+## [Using Shelves and Cards](https://help.tableau.com/current/pro/desktop/en-us/buildmanual_shelves.htm)
+
+## [Changing the mark or geometry of the graphic](https://help.tableau.com/current/pro/desktop/en-us/viewparts_marks_marktypes.htm)
+
+## [Editing the marks or geometry](https://help.tableau.com/current/pro/desktop/en-us/viewparts_marks_markproperties.htm)
+
+## [Reference Lines, Bands, Distributions, and Boxes](https://help.tableau.com/current/pro/desktop/en-us/reference_lines.htm#Add_Bullet_Graphs)
+
+
+<!--------------------
 
 ## [Using Shelves and Cards](https://help.tableau.com/current/pro/desktop/en-us/buildmanual_shelves.htm)
 
@@ -47,9 +57,12 @@ This is where we change the geometries shown on the page.
 
 ## [Reference Lines, Bands, Distributions, and Boxes](https://help.tableau.com/current/pro/desktop/en-us/reference_lines.htm#Add_Bullet_Graphs)
 
+
 Check out the Analytics (much more like data summaries tab) next to Data.
 
-# Case Study {data-background=#6897bb}
+--------------------------->
+
+# Case Study {data-background=#f7d754}
 
 ## Examples of data journalism
 
@@ -57,6 +70,9 @@ Check out the Analytics (much more like data summaries tab) next to Data.
 - [Lebron James article](https://www.espn.com/nba/story/_/id/24999715/lebron-james-atlas-kirk-goldsberry-king-evolving-offensive-game)
 - [Most wanted cars in America](https://priceonomics.com/the-most-wanted-cars-in-america/)
 
-## Partner assignments
+## Find your own example!
 
-
+>- [pudding.cool](https://pudding.cool/)
+>- [fivethirtyeight](https://fivethirtyeight.com/)
+>- [Our World in Data](https://ourworldindata.org/)
+>- [priceonomics](https://priceonomics.com/)
