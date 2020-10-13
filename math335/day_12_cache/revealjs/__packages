@@ -1,0 +1,17 @@
+base
+tidyverse
+ggplot2
+tibble
+tidyr
+readr
+purrr
+dplyr
+stringr
+forcats
+ggrepel
+viridisLite
+viridis
+nycflights13
+magrittr
+ggbeeswarm
+lvplot

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>Spatial Data: Maps</title>
+  <title>s3.3.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -443,115 +443,110 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
-    <script src="externals/header-attrs-2.1.4/header-attrs.js"></script>
+    <script src="externals/header-attrs-2.1/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
-<section>
-    <h1 class="title">Spatial Data: Maps</h1>
+
+<section id="the-normal-distribution" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">The Normal Distribution</h1>
+<p>Welcome to class!</p>
 </section>
 
-<section id="outline" class="slide level2">
-<h2>Outline</h2>
-<ol type="1">
-<li>Discuss tidy data</li>
-<li>Review Good Reads (Refining to persuade)</li>
-<li>Highlight visualizing data with maps</li>
-<li>Work on projects</li>
-</ol>
-</section>
 <section>
-<section id="tidy-data" class="title-slide slide level1" data-background="#6897bb">
-<h1 data-background="#6897bb">Tidy data</h1>
+<section id="the-normal-distribution-1" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">The Normal Distribution</h1>
 
 </section>
-<section id="in-tidy-data" class="slide level2">
-<h2>In tidy data:</h2>
-<ol type="1">
-<li>Each variable forms a column.</li>
-<li>Each observation forms a row.</li>
-<li>Each type of observational unit forms a table.</li>
-</ol>
-</section>
-<section id="five-most-common-problems" class="slide level2">
-<h2>Five most common problems</h2>
+<section id="what-is-a-distribution" class="slide level2">
+<h2>What is a “distribution”?</h2>
 <ul>
-<li>Column headers are values, not variable names.</li>
-<li>Multiple variables are stored in one column.</li>
-<li>Variables are stored in both rows and columns.</li>
-<li>Multiple types of observational units are stored in the same table.</li>
-<li>A single observational unit is stored in multiple tables.</li>
-</ul>
-</section>
-<section id="tidy-data-ensures-that-values-of-different-variables-from-the-same-observation-are-always-paired." class="slide level2">
-<h2>Tidy data ensures that values of different variables from the same observation are always paired.</h2>
-<div class="container">
-<div class="col">
-<p><img data-src="images/other/tidy_bad.png" /></p>
-</div>
-<div class="col">
-<p><img data-src="images/other/tidy_good.png" /></p>
-</div>
-</div>
-</section></section>
-<section>
-<section id="good-reads" class="title-slide slide level1" data-background="#6897bb">
-<h1 data-background="#6897bb">Good Reads</h1>
-
-</section>
-<section id="chapter-6-refine-to-persuade-pgs.-133-142" class="slide level2">
-<h2>Chapter 6: Refine to Persuade (pgs. 133-142)</h2>
+<li class="fragment">The distribution of a variable tells us:
 <ul>
-<li>You are trying to reveal truths dormant in the data; to make a case; compete for attention.</li>
-<li>It is often the [data scientists] job to <em>show</em> all the data - to be as objective as possible.
-<ul>
-<li>Data presentation</li>
-<li>Data analysis</li>
-<li>Persuasion with data</li>
+<li class="fragment">What values are possible</li>
+<li class="fragment">How frequently those values occur</li>
 </ul></li>
-<li>We decided that architecture, analytics, and visualization are all equal players.</li>
 </ul>
 </section>
-<section id="chapter-6-line-charts-vs.-bar-charts" class="slide level2">
-<h2>Chapter 6: Line Charts vs. Bar Charts</h2>
-<p><img data-src="images/gc/ch6_barvline.png" /></p>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<p><a href="https://www.google.com/search?q=house+prices+distribution&amp;rlz=1C1GCEJ_enUS882US882&amp;sxsrf=ALeKk03tXT3KdKDrHQSnMdHURLxSwFykTA:1602547328772&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=2ahUKEwjTpJGCorDsAhWOrp4KHa31BYoQ_AUoAnoECBUQBA&amp;biw=1920&amp;bih=937">House Prices</a></p>
 </section>
-<section id="chapter-6-creating-the-thinking-unit" class="slide level2">
-<h2>Chapter 6: Creating the thinking unit</h2>
-<p><img data-src="images/gc/ch6_case_beer.png" /></p>
-</section></section>
-<section>
-<section id="visualizating-variables-on-maps" class="title-slide slide level1" data-background="#6897bb">
-<h1 data-background="#6897bb">Visualizating variables on maps</h1>
-
+<section id="different-types-of-distributions" class="slide level2">
+<h2>Different Types of Distributions</h2>
+<p><img data-src="images/distributions.png" /></p>
 </section>
-<section id="using-geographic-region-chloropleths" class="slide level2">
-<h2>Using geographic region chloropleths</h2>
-<p><img data-src="images/other/NYT_corona_per_map.png" /></p>
-</section>
-<section id="using-dots" class="slide level2">
-<h2>Using dots</h2>
-<p><img data-src="images/other/NYT_corona_cases_map.png" /></p>
-</section>
-<section id="making-maps-in-tableau" class="slide level2">
-<h2>Making maps in Tableau</h2>
+<section id="the-normal-distribution-2" class="slide level2">
+<h2>The Normal Distribution</h2>
 <ul>
-<li><a href="https://help.tableau.com/current/pro/desktop/en-us/buildexamples_maps.htm">Get Started Mapping with Tableau</a></li>
-<li>Multiple data sets in one Tableau file</li>
-<li>Joining data sets in a Tableau file</li>
+<li>The central value (the mean) is the most probable value</li>
+<li>On either side of the mean, the probability of the data decreases symmetrically</li>
+<li>The spread of the data can be described by the standard deviation</li>
+<li>The higher the standard deviation, the more spread out the data is</li>
 </ul>
-</section></section>
-<section>
-<section id="case-study" class="title-slide slide level1" data-background="#6897bb">
-<h1 data-background="#6897bb">Case Study</h1>
-
+<p><img data-src="images/normal_dist.png" /></p>
 </section>
-<section id="data-interrogation-time" class="slide level2">
-<h2>Data interrogation time</h2>
-<p>Can you find an interesting spatial relationship (lat, long, state, elevation) to race times?</p>
+<section id="density-curves" class="slide level2">
+<h2>Density Curves</h2>
+<p>All density curves, including normal density curves, have two basic properties:</p>
+<ul>
+<li>The total area under the curve equals 1.</li>
+<li>The density curve always lies on or above the horizontal axis.</li>
+</ul>
+<p>Because of these two properties, the area under the curve can be treated as a probability.</p>
+</section>
+<section id="the-68-95-99.7-rule" class="slide level2">
+<h2>The 68-95-99.7% Rule</h2>
+<p><img data-src="images/689599_rule.png" /></p>
 </section></section>
+<section id="marathon-case-study" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Marathon Case Study</h1>
+<!--------------
+
+## Marathon Data
+
+## Types of Charts
+
+## Any questions about the upcoming case study?
+
+
+
+
+
+
+
+
+
+
+
+# Visualizating variables on maps {data-background=#6897bb}
+
+## Using geographic region chloropleths
+
+![](images/other/NYT_corona_per_map.png)
+
+## Using dots
+
+![](images/other/NYT_corona_cases_map.png)
+
+
+## Making maps in Tableau
+
+> - [Get Started Mapping with Tableau](https://help.tableau.com/current/pro/desktop/en-us/buildexamples_maps.htm)
+> - Multiple data sets in one Tableau file
+> - Joining data sets in a Tableau file
+
+
+# Case Study {data-background=#6897bb}
+
+## Data interrogation time
+
+Can you find an interesting spatial relationship (lat, long, state, elevation) to race times?
+
+------------->
+</section>
     </div>
   </div>
 

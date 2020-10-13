@@ -10,213 +10,344 @@ params:
 
 
 
-# Tidy Data, Tibbles, and Vectors {data-background=#f7d754}
+# Visualizations for Presentation {data-background=#f7d754}
 
 Welcome to class!
 
-# Data frames vs. Tibbles {data-background=#f7d754}
+## Case Study Review
 
-## [Data frames](https://www.tutorialspoint.com/r/r_data_frames.htm#:~:text=A%20data%20frame%20is%20a,of%20values%20from%20each%20column.&text=The%20data%20stored%20in%20a,numeric%2C%20factor%20or%20character%20type.)
+>- Give a quick overview of your case study to your group.
+>- Use this time to ask questions, provide feedback, and write issues.
 
-A data frame is a table or a two-dimensional array-like structure in which each column contains values of one variable and each row contains one set of values from each column.
+# Labels and Annotations {data-background=#f7d754}
 
->- The column names should be non-empty.
->- The row names should be unique.
->- The data stored in a data frame can be of numeric, factor or character type.
->- Each column should contain same number of data items.
+## Communicate Your Understanding
 
-## Data frame example
+Now that you understand your data, you need to communicate your understanding to others. Your audience will likely not share your background knowledge and will not be deeply invested in the data. To help others quickly build up a good mental model of the data, *you will need to invest considerable effort in making your plots as self-explanatory as possible.*
 
-
-```r
-head(mtcars)
-```
-
-```
-##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
-## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
-## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
-## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
-## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
-## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
-## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
-```
-
-## [Tibbles](https://r4ds.had.co.nz/tibbles.html)
-
-Tibbles are data frames, but they tweak some older behaviours to make life a little easier. R is an old language, and some things that were useful 10 or 20 years ago now get in your way. Tibbles:
-
->- Never change the type of inputs
->- Never change the names of variables
->- Never create row names
-
-## Tibble example
-
-
-```
-## # A tibble: 32 x 11
-##      mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
-##    <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
-##  1  21       6  160    110  3.9   2.62  16.5     0     1     4     4
-##  2  21       6  160    110  3.9   2.88  17.0     0     1     4     4
-##  3  22.8     4  108     93  3.85  2.32  18.6     1     1     4     1
-##  4  21.4     6  258    110  3.08  3.22  19.4     1     0     3     1
-##  5  18.7     8  360    175  3.15  3.44  17.0     0     0     3     2
-##  6  18.1     6  225    105  2.76  3.46  20.2     1     0     3     1
-##  7  14.3     8  360    245  3.21  3.57  15.8     0     0     3     4
-##  8  24.4     4  147.    62  3.69  3.19  20       1     0     4     2
-##  9  22.8     4  141.    95  3.92  3.15  22.9     1     0     4     2
-## 10  19.2     6  168.   123  3.92  3.44  18.3     1     0     4     4
-## # ... with 22 more rows
-```
-## [Tidy data and tibbles](https://r4ds.had.co.nz/tidy-data.html)
-
-Tidy data should be stored in a tibble (or a data frame) with each variable in a column.
-
-There's a specific advantage to placing variables in columns because it "allows R's vectorised nature to shine".
-
-<!--- ![](images\tidy-1.png) --->
-<img src="images/tidy-1.png"  height="300">
-
-## R is "vectorised"
-
-A vector is a collection of values. Most built-in R functions are vectorised, meaning that they can operate on a vector.
+## Getting Started
 
 
 ```r
-c(1,2,3,4,5) + c(0,0,10,10,10)
+#install.packages("nycflights13")
+library(nycflights13)
+
+fl_bp <- flights %>%
+  ggplot(aes(x = carrier, y = dep_delay))
+
+fl_sc <- flights %>%
+  filter(dep_time > 800, dep_time < 900) %>%
+  ggplot(aes(x = dep_time, y = dep_delay))
+
+fl_bp + geom_boxplot()
+fl_sc + geom_point()
 ```
 
-```
-## [1]  1  2 13 14 15
-```
+Get the above code working, and use either the boxplot or the scatter plot in your group's examples.
+
+## Breakout Rooms
+
+>- Room one: [28.2 Label](https://r4ds.had.co.nz/graphics-for-communication.html#label)
+>- Room two: [28.3 Annotations](https://r4ds.had.co.nz/graphics-for-communication.html#annotations)
+>- Room three: [28.4 Scales](https://r4ds.had.co.nz/graphics-for-communication.html#scales)
+
+
+<!-------------
+
+## Labels {data-background=#f7d754}
+
+>- `title`
+>- `subtitle`
+>- `caption`
+>- `x`
+>- `y`
+>- legends
+
+## Annotations {data-background=#f7d754}
+
+## Scales {data-background=#f7d754}
+
+
+
+
+
+## Labelling the outside
+
+Complete the following - **Create clean labels for the x and y axes and zoom in on the y-axis from 50 to 100 minutes. Also have breaks every 15 minutes**
+   
+> - labelling - Axes, Titles, and Legends
+> - xy Scales - `scale_x_`, `scale_y`, `coord_` - Setting breaks and changing labels *or* Transforming scale
+
+
+
+
+## Labelling the inside
+
+Complete the following - 
+
+> 1. Color the points of `fl_sc` by `origin` using the brewer scale. 
+> 2. Color the points of `fl_sc` by `arr_delay`**
+
+> - color & fill scales   
+>     - `scale_color_`
+>     - `scale_fill_`
+>     - `scale_gradient_`
+
+
+
+
+## Putting the legend on the inside
+
+Complete the following - **1) Color the points of `fl_sc` by `origin` using the brewer scale and use the directlabel package to move the labels into the plotting region.**
+
+> * `library(directlabels)`
+>    * http://directlabels.r-forge.r-project.org/examples.html
+>    * `geom_dl()` and `direct.label()`
+
+
+
+
+## Changing the feel
+
+Complete the following - **Use a `theme_()` to create a different look for your graphic and change the orientiation of the x-axis test to 35 degrees**
+
+> * Themes (check out `library(ggthemes)`)
+> * `ggsave()`
+
+
+
+
+## Scales
+
+Each of the aesthetics has a paired scale function - x, y, size, color, fill, linetype, shape, alpha.  All of the scales start with `scale_` and then the respective aesthetic. All the aesthetic scales have an `_continuous`, `_discrete`, and `_manual`.  
+
+> - `scale_x_` & `scale_y_` are the two scales I most often use
+> - `scale_fill_` & `scale_color_` are the next most often used.
+>     - manual()
+>     - gradientn()
+
+## Labelling Elements inside the graphic
+
+The `library(ggrepel)` package is a must for our work. `library(directlabels)` can also be helpful. 
+Here is the [book's graphic](http://r4ds.had.co.nz/communicate-plots_files/figure-html/unnamed-chunk-9-1.png). 
+
+> - What are some concerns you have with this graphic?
+
+## Code and graphic (scales)
+
+Here is the [book's graphic](http://r4ds.had.co.nz/communicate-plots_files/figure-html/unnamed-chunk-9-1.png).  
+Use the [code from 28.3](http://r4ds.had.co.nz/graphics-for-communication.html) and update their graphic to match mine.
+
+
+
+
+## My Code Solution
+
 
 ```r
-c(1,2,3,4,5) + 100
+# library(ggrepel)
+# library(viridis)
+# 
+# best_in_class <- mpg %>% 
+#   group_by(class) %>% 
+#   filter(row_number(desc(hwy)) == 1)
+# 
+# ggplot(mpg, aes(displ, hwy)) +
+#   geom_point(aes(colour = class), size = 3) +
+#   geom_point(size = 1.5, data = best_in_class, color = "white") +
+#   geom_text_repel(aes(label = model, colour = class), 
+#                   data = best_in_class, show.legend = FALSE, 
+#                   nudge_x = -1, nudge_y = -2) +
+#   theme_bw() + theme(panel.grid.minor = element_blank()) +
+#   scale_color_viridis(discrete = TRUE) + 
+#   labs(x = "Engine displacement", y = "Miles per gallon (highway)", 
+#        color = "Vehicle type")
 ```
 
-```
-## [1] 101 102 103 104 105
-```
 
 
-## [Vector types](https://r4ds.had.co.nz/vectors.html)
 
->- **Atomic vectors** are homogeneous. There are 6 types: logical, integer, double, character, complex, and raw.
->- A **list** is a heterogeneous vector, and can also contain other lists.
+# Displaying multiple distributions {data-background=#e8d725}
 
-<!--- ![](images/data-structures-overview.png) --->
-<img src="images/data-structures-overview.png"  height="350">
+## Clarity vs. Complication
 
-## [Vector properties and attributes](https://r4ds.had.co.nz/vectors.html)
+Data can get complicated very fast. How do we provide depth of variability understanding without overwhelming the visualization user?
 
-Every vector has two key properties: its type `typeof()` and length `length()`.
+> * [violin plots (`geom_violin()`)](http://eamoncaddigan.net/dataviz/r/psych/2015/09/26/violin-plots/)
+> * [beeswarm plots (`ggbeeswarm::geom_quasirandom()`)](https://github.com/eclarke/ggbeeswarm)
+> * [letter-value boxplots `lvplot::geom_lv()`](https://github.com/hadley/lvplot). [Here](https://mgimond.github.io/ES218/Week08b.html) is a description.
 
-Vectors can also contain "attributes" which build on additional behaviour.
+Another package that makes flipping the axes easier in ggplot -- [rotating axes (`ggstance`)](https://github.com/lionel-/ggstance)
 
->- Factors are built on top of integer vectors
->- Dates and date-times are built on top of numeric vectors
->- Data frames and tibbles are built on top of lists
+> * [link to last presentation](day_5.html#/displaying-distributions-of-multiple-groups-for-decision-making)
 
-## [Tibbles and vectors](https://r4ds.had.co.nz/vectors.html)
+## Clarity vs. Complication (2)
 
-Vectors provide the underlying structure of tibbles (and data frames). A tibble is a list of vectors. Each "column" that we use is a vector with a specific data type.
-
-The difference between a tibble and a list is that all the elements of a tibble (or a data frame) must be vectors with *the same length*.
+> - What do we know after looking at this plot?
+> **How do we provide depth of variability understanding without overwhelming the visualization user?**
 
 
-## Example: read.csv
 
-`read.csv()` is a base R function that will load a .csv file into a data frame. Base R used to automatically convert strings to factors, although I believe this has changed with [recent updates](https://developer.r-project.org/Blog/public/2020/02/16/stringsasfactors/index.html).
+
+
+
+Remember, data can get complicated very fast. 
+
+
+
+
+
+## Distribution background
+
+* [violin plots](http://eamoncaddigan.net/dataviz/r/psych/2015/09/26/violin-plots/)
+* [beeswarm plots](https://github.com/eclarke/ggbeeswarm)
+* [letter-value box-plots](https://github.com/hadley/lvplot)
+* Another package that makes flipping the axes easier in ggplot -- [rotating axes](https://github.com/lionel-/ggstance)
+
+
+## Histograms (1)
+
+What don't we like about this plot?
 
 
 ```r
-dat1 <- read.csv("./data/heights.csv", stringsAsFactors = TRUE)
-head(dat1)
+# plot code for histograms
+
+flights %>% 
+    ggplot(aes(x = dep_delay)) +
+    facet_wrap(~carrier) +
+    geom_histogram(bins = 150, color = "white") +
+    coord_cartesian(xlim = c(-50, 250)) +
+    theme_bw()
 ```
 
-```
-##    earn   height    sex ed age  race
-## 1 50000 74.42444   male 16  45 white
-## 2 60000 65.53754 female 16  58 white
-## 3 30000 63.62920 female 16  29 white
-## 4 50000 63.10856 female 16  91 other
-## 5 51000 63.40248 female 17  39 white
-## 6  9000 64.39951 female 15  26 white
-```
+![](day_12_files/figure-revealjs/bbbb3-1.png)
 
-## Example: read_csv
 
-`read_csv()` comes from the `readr` package, which is a part of the tidyverse. This will load the .csv file into a tibble. What has changed from before?
+## Histograms (2)
+
+* What changed in this histogram?
+* What don't we like about this plot?
 
 
 ```r
-dat2 <- read_csv("./data/heights.csv")
-head(dat2)
+# plot code for histograms
+
+flights %>% 
+    ggplot(aes(x = dep_delay)) +
+    facet_wrap(~carrier, scales = "free_y") +
+    geom_histogram(bins = 150, color = "white") +
+    coord_cartesian(xlim = c(-50, 250)) +
+    theme_bw()
 ```
 
-```
-## # A tibble: 6 x 6
-##    earn height sex       ed   age race 
-##   <dbl>  <dbl> <chr>  <dbl> <dbl> <chr>
-## 1 50000   74.4 male      16    45 white
-## 2 60000   65.5 female    16    58 white
-## 3 30000   63.6 female    16    29 white
-## 4 50000   63.1 female    16    91 other
-## 5 51000   63.4 female    17    39 white
-## 6  9000   64.4 female    15    26 white
-```
+![](day_12_files/figure-revealjs/bbbbb5-1.png)
 
-## Example: Are they equal?
+## Boxplots
+
+* What don't we like about this plot?
+* How hard is it to explain?
 
 
 ```r
-str(dat1)
+gg_base <- flights %>%
+  ggplot(aes(x = carrier, y = dep_delay)) +
+    coord_cartesian(ylim = c(-50, 250)) +
+    theme_bw()
+# Now add varied distribution geoms
+
+gg_base + geom_boxplot() 
 ```
 
-```
-## 'data.frame':	1192 obs. of  6 variables:
-##  $ earn  : num  50000 60000 30000 50000 51000 9000 29000 32000 2000 27000 ...
-##  $ height: num  74.4 65.5 63.6 63.1 63.4 ...
-##  $ sex   : Factor w/ 2 levels "female","male": 2 1 1 1 1 1 1 2 2 2 ...
-##  $ ed    : int  16 16 16 16 17 15 12 17 15 12 ...
-##  $ age   : int  45 58 29 91 39 26 49 46 21 26 ...
-##  $ race  : Factor w/ 4 levels "black","hispanic",..: 4 4 4 3 4 4 4 4 2 4 ...
-```
+![](day_12_files/figure-revealjs/bbbbbb444-1.png)
+
+## Violin plots
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
 
 ```r
-str(dat2)
+# Now add varied distribution geoms
+gg_base + geom_violin()
 ```
 
-```
-## tibble [1,192 x 6] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
-##  $ earn  : num [1:1192] 50000 60000 30000 50000 51000 9000 29000 32000 2000 27000 ...
-##  $ height: num [1:1192] 74.4 65.5 63.6 63.1 63.4 ...
-##  $ sex   : chr [1:1192] "male" "female" "female" "female" ...
-##  $ ed    : num [1:1192] 16 16 16 16 17 15 12 17 15 12 ...
-##  $ age   : num [1:1192] 45 58 29 91 39 26 49 46 21 26 ...
-##  $ race  : chr [1:1192] "white" "white" "white" "other" ...
-##  - attr(*, "spec")=
-##   .. cols(
-##   ..   earn = col_double(),
-##   ..   height = col_double(),
-##   ..   sex = col_character(),
-##   ..   ed = col_double(),
-##   ..   age = col_double(),
-##   ..   race = col_character()
-##   .. )
+![](day_12_files/figure-revealjs/violin-1.png)
+
+## Beeswarm plots (1)
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
+
+```r
+# Now add varied distribution geoms
+library(ggbeeswarm)
+gg_base + geom_quasirandom(alpha = .6, size = .75)
 ```
 
-# Height Case Study  {data-background=#f7d754}
+![](day_12_files/figure-revealjs/beeswarm-1.png)
 
-## [Jenny Bryan](https://twitter.com/JennyBryan)
+## Beeswarm plots (1)
 
-"Classroom data are like teddy bears and real data are like a grizzly bear with salmon blood dripping out its mouth."
-
-## [Hadley Wickham](http://jstatsoft.org/v59/i10)
-
-"Up to 80% of data analysis is spent on the process of cleaning and preparing data"
+* What don't we like about this plot?
+* How hard is it to explain?
 
 
+```r
+# Now add varied distribution geoms
+library(ggbeeswarm)
+gg_base + geom_quasirandom(alpha = .6, size = .75) + 
+  coord_cartesian(ylim = c(-50, 500)) 
+```
+
+![](day_12_files/figure-revealjs/beeswarm2-1.png)
+
+## Letter-Value boxplots (1)
+
+* What don't we like about this plot?
+* How hard is it to explain?
 
 
+```r
+# Now add varied distribution geoms
+library(lvplot)
+gg_base + geom_lv(aes(fill = ..LV..)) + scale_fill_lv()
+```
+
+![](day_12_files/figure-revealjs/lettervalue-1.png)
+
+## Letter-Value boxplots (2)
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
+
+```r
+# Now add varied distribution geoms
+library(lvplot)
+gg_base + geom_lv(aes(fill = ..LV..)) + 
+  scale_fill_lv() + 
+  coord_cartesian(ylim = c(-50, 500)) 
+```
+
+![](day_12_files/figure-revealjs/lettervalue2-1.png)
+
+## Letter-Value boxplots (3)
+
+* What don't we like about this plot?
+* How hard is it to explain?
+
+
+```r
+# Now add varied distribution geoms
+library(lvplot)
+gg_base + geom_lv(aes(fill = ..LV..)) + 
+  scale_fill_lv() + 
+  coord_cartesian(ylim = c(-50, 1500)) 
+```
+
+![](day_12_files/figure-revealjs/lv3-1.png)
+
+
+-------------->
