@@ -1,58 +1,48 @@
 ---
-title: "Normal Distribution and Z-scores"
+title: ""
 ---
 
+# Welcome to class! {data-background=#f7d754}
 
+# Good Charts {data-background=#f7d754}
 
-
-# Good Reads {data-background=#6897bb}
-
-## Chapter 6: Refine to Persuade (pgs. 133-142)
+## Chapter 6: Refine to Persuade
 
 > - You are trying to reveal truths dormant in the data; to make a case; compete for attention.
 > - It is often the [data scientists] job to *show* all the data - to be as objective as possible.
+> - There is a difference between:
 >    - Data presentation
 >    - Data analysis
 >    - Persuasion with data
-> - We decided that architecture, analytics, and visualization are all equal players.
 
 ## Chapter 6: Line Charts vs. Bar Charts
 
 ![](images/gc/ch6_barvline.png)
 
-## Chapter 6: Creating the thinking unit
+## Chapter 6: Heighten the effect
 
 ![](images/gc/ch6_case_beer.png)
 
-
-
-
-
-
-# Good Reads {data-background=#6897bb}
-
-## Chapter 6: Refine to impress (Pg. 143-152)
-
-- Every chart is a manipulation.
+## Chapter 6: Every chart is a manipulation
 
 ![](images/gc/ch6_same_line.png)
 
-# Supplemental Reading {data-background=#6897bb}
+# Supplemental Reading {data-background=#f7d754}
 
-## [Chapter 2: Introduction to the Normal Distribution and Z-scores](https://byuistats.github.io/BYUI_CSE150_StatBook/introduction-to-the-normal-distribution-and-z-scores.html)
+##  Editing your graphic in Tableau: Part 2
 
-- [Computing Z-scores](https://byuistats.github.io/BYUI_CSE150_StatBook/introduction-to-the-normal-distribution-and-z-scores.html#z-scores):  Who has a more atypical height?
-- [68-95-99.7 Rule](https://byuistats.github.io/BYUI_CSE150_StatBook/introduction-to-the-normal-distribution-and-z-scores.html#rule)
-- [Standard Deviation Estimation](https://byuistats.github.io/BYUI_CSE150_StatBook/introduction-to-the-normal-distribution-and-z-scores.html#standard-deviation-estimation)
+> - [Sorting](https://help.tableau.com/current/pro/desktop/en-us/sortgroup_sorting_computed_howto.htm)
+> - [Filters](https://www.tableau.com/learn/tutorials/on-demand/ways-filter)
+> - [Tooltips](https://www.tableau.com/learn/tutorials/on-demand/tooltips)
+> - [Annotations](https://help.tableau.com/current/pro/desktop/en-us/annotations_annotations_add.htm)
+> - [Grouping](https://www.tableau.com/learn/tutorials/on-demand/grouping)
 
 
 ## Tools Activity
 
-- [Tableau Standard Deviation and Z-score Calculations](https://www.tableau.com/about/blog/2017/5/5-built-stats-functions-you-didnt-know-tableau-had-71047)
+Can you make this chart?
+
+![](images/popular_marathons.png)
 
 
-# Case Study {data-background=#6897bb}
-
-## Partner assignments
-
-
+# Case Study {data-background=#f7d754}
