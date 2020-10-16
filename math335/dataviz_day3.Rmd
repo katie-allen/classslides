@@ -1,0 +1,62 @@
+---
+title: ""
+author: ""
+params:
+  day: 2
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+library(tidyverse)
+```
+
+# Welcome to class! {data-background=#f7d754}
+
+# Case Study 5: Gun Deaths {data-background=#f7d754}
+
+## What is a "seasonal trend"?
+
+## What is a "target audience"?
+
+## What is "pseudo code"?
+
+[A silly example.](https://www.khanacademy.org/computing/computer-programming/programming/good-practices/pt/planning-with-pseudo-code)
+
+## **Reducing Gun Deaths**
+
+I've given you the instructions in English. 
+
+You'll end with a report full of code and images
+
+>- Pseudo code is a bridge between the start and the end
+>- Pseudo code helps with the "structured thinking" we read about last week
+>- Pseudo code is the recipe for our lasagna (ingredients/layers)
+
+## **Reducing Gun Deaths**
+
+Read over the case study. 
+
+Then, in slack, write pseudo code for the entire project.
+
+## A few helpful things
+
+>- I think you will use a lot of `group_by()` and `summarise()`
+>- Use `mutate()` and `case_when()` to create new variables/groups
+>- `lubridate::days_in_month(1:12)` could be interesting/fun
+
+## What does this code do?
+
+```
+data %>% 
+  select_if(is.numeric) %>% 
+  pivot_longer(cols = everything()) %>% 
+  ggplot() +
+  geom_histogram(aes(value)) +
+  facet_wrap(~name, scales = "free")
+```
+
+## Free Time
