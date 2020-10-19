@@ -1,0 +1,168 @@
+---
+title: "Regular Expression"
+author: 
+params:
+  day: 12
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+if (params$day %% 2 == 0) md_intro_format <- "even_intro_format.Rmd"
+if (params$day %% 2 == 1) md_intro_format <- "odd_intro_format.Rmd"
+
+```
+
+# Becoming the Critic {data-background=#e8d725}
+
+```{r nextone}
+vday <- params$day - 1
+vlink <- paste0("http://www.perceptualedge.com/example", vday, ".php")
+titlelink <- paste0('{data-background-iframe="', vlink, '"}')
+```
+
+## `r titlelink`
+
+[Visualization of the Day](`r vlink`)
+
+
+
+## Review Take Me Out to the Ball Game
+
+## Look ahead
+
+> - Question about upcoming case study
+> - Question about upcoming tasks
+
+# Being Reading Discussion {data-background=#e8d725}
+
+## Call Center story
+
+One of my favorite! Take time to review the story of how he obtained the data: Where he started and obstacles he overcame. What the finer data revealed that he would never have realized otherwise.
+
+## The story of call center data visualizations
+
+Who can tell the story of the call center data visualizations?  
+
+> - [reading](http://biostat.mc.vanderbilt.edu/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf){target="blank"}
+
+Of course, I was told the mean time to closure was some number of minutes, either 2 or 20 or 200 or something, I forget; it really doesn't matter for this discussion. They told me the mean, so naturally I asked for the raw, atomic-level data. 
+
+## The data dive
+
+- They gave me the data: a printout from an SQL routine that told me, accurate to twenty decimal places (I am not making this up!), the mean time to closure.
+    - No, I need the data that you used to get these means; do you have that data?
+
+- After several weeks, I was given a data set with hundreds of call durations.
+    - Do you have the start and stop times from which you calculated these durations, the actual times the calls came in and when the cases were opened and closed?
+
+- After several more weeks, I finally got the data: among other things, start and
+stop times for each of the calls. 
+
+## The call center data graphics
+
+> - [All Calls](callcenter_all.png){target="blank"}
+> - [Contractor Calls](callcenter_contract.png){target="blank"}
+> - [Full-Time Calls](callcenter_fulltime.png){target="blank"}
+
+
+
+# Regular Expressions {data-background=#e8d725}
+
+## Some Background on RegEx
+
+Specific, standard textual syntax for representing patterns for matching text
+
+> - Literal characters
+> - Metacharacters (or special characters)
+
+
+**A few jokes**
+
+> - [Really](http://geek-and-poke.com/geekandpoke/2013/12/3/yesterdays-regex)
+> - [Superheros](https://www.explainxkcd.com/wiki/images/7/7b/regular_expressions.png)
+
+
+## Special Characters
+
+> - To treat a special character as a literal character in a string you can use a back slash to "escape" it's special function:
+> - That means if you want to include a literal backslash, you'll need to double it up: "\\\\".
+> - Beware that the printed representation of a string is not the same as string itself, because the printed representation shows the escapes. To see the raw contents of the string, use writeLines():
+
+```{r, echo=TRUE, eval=FALSE}
+x <- c("\"", "\\")
+x
+writeLines(x)
+```
+
+
+## Special Characters (2)
+
+There are a handful of other special characters. The most common are 
+
+```{r eval = FALSE}
+"\n" #newline, 
+"\t" #tab, 
+```
+
+You can see the complete list by requesting help on ": ?'"', or ?"'". 
+<br>
+<br>
+You'll also sometimes see strings like "\\u00b5", this is a way of writing non-English characters that works on all platforms:
+
+
+
+## Using Regex
+
+> - Don't forget that you're in a programming language and you have other tools at your disposal. 
+> - Instead of creating one complex regular expression, it's often easier to write a series of simpler regexps. If you get stuck trying to create a single regexp that solves your problem, take a step back and think if you could break the problem down into smaller pieces, solving each challenge before moving onto the next one.
+> - Use the [stringr cheatsheet](http://edrub.in/CheatSheets/cheatSheetStringr.pdf)
+
+<!-- Talk them through the cheat sheet. The top half lists out some of the most commonly used shortcut functions in stringr package. Walk through most of them. Point out the patter of _all. Also, the benefit of the authofill. Emphasize the importance of str_c(..., collapse = ) 
+
+May be worth pointing out what unlist() does as well
+
+
+The bottom part of the cheat sheet are special expressions to capture certain/common patterns. These are the things you may type into the functions in the tope half for the "pattern" argument. Point out the Venn diagram like structure on the right and what some of them mean-->
+
+## Partner Practice
+
+> - One of you is a problem solver. They give instructions and tell what to type.
+The other is a programmer. They can only do the typing/programming of the proposed solution.
+Switch after each one.
+
+> - **Use <https://byuistats.github.io/M335/data/randomletters.txt> from Task 11**
+
+> 1. Remove all the 'e' and 'a' letters and then tell me how long the string is.
+> 2. How many times is the name 'jim' in the string? Can you find any other names?
+> 3. Show all the sequences with 3 of the same letter in a row. (hardest one?)
+> 4. Tell me which character locations have three "a"'s in a row. 
+> 5. Split the characters so each letter is an individual item in a vector.
+
+<!-- It would be fun to search for 3 letter anagrams: bob, dad, pip, etc. -->
+
+```{r, eval=FALSE, echo = FALSE}
+dat <- readr::read_lines("https://byuistats.github.io/M335/data/randomletters.txt")
+dat %>% str_remove_all("e|a") %>% str_length()
+dat %>% str_remove_all("[ea]") %>% str_length()
+dat %>% str_count("jim")
+dat %>% str_extract_all("(.)\\1\\1")
+dat %>% str_locate_all("aaa") #point out that this is a list!
+#for #5, I first did str_split(patter = ""), but this just splits everything. I think the more correct answer is this. All the alphabet, and then the ^ reverses it to be all non-alphabet characters.
+
+#Here's another example in which I remove all non-letters and then split them up
+dat %>% str_remove_all(pattern = "[[:^alpha:]]") %>% str_split("", simplify = TRUE)   # Add this count if you want to count them up: %>% unlist() %>% length()
+
+```
+
+## Other helpful commands
+
+- unlist()
+- letters[]
+- stringi package
+
+<!-- Ask what each of these do -->
