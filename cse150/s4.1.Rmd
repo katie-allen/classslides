@@ -1,9 +1,21 @@
 ---
-title: "The healthy child"
+title: ""
 ---
 
+# Week 6: Child Health  {data-background=#f7d754}
 
-# Good Reads {data-background=#6897bb}
+Welcome to class! 
+
+Make sure you have the child health data downloaded and Tableau open.
+
+# Good Charts {data-background=#f7d754}
+
+## Group Discussion
+
+In your breakout rooms:
+
+>- Everyone share one insight from the chapter.
+>- Then, discuss the question "How do decide if a chart is persuasive and manipulative?"
 
 ## Chapter 7: Persuasion or Manipulation? (Truncated Axes)
 
@@ -11,15 +23,27 @@ title: "The healthy child"
 
 ![](images/gc/Ch7_truncated_2.png)
 
+
 ## Chapter 7: Persuasion or Manipulation? (Dual Axes)
 
-> - It creates a relationship by [fiat](https://www.google.com/search?sxsrf=ALeKk01gVeWIh-n6E7yRv4vuGSwK3Ggy8A%3A1590605433288&ei=ebbOXoaMEbbP0PEP_LGc8AU&q=fiat+definition&oq=fiat+def&gs_lcp=CgZwc3ktYWIQAxgAMgoIABCRAhBGEPkBMgUIABCRAjICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAOgQIABBHOgQIABBDOgcIABAUEIcCUPEzWOg-YJdSaABwAXgAgAFbiAHQApIBATSYAQCgAQGqAQdnd3Mtd2l6&sclient=psy-ab).
-
 ![](images/gc/Ch7_dual Axes.png)
+
 
 ## Chapter 7: Persuasion or Manipulation? (Maps)
 
 ![](images/gc/Ch7_maps_area_combined.png)
+
+## You decide: Persuasion or Manipulation?
+
+>- [Spurious correlations](https://www.tylervigen.com/spurious-correlations)
+>- [Job losses and gains](https://www.moonofalabama.org/2020/06/cnbc-makes-up-v-shaped-charts-to-support-false-claims-of-economic-recovery.html)
+>- [Tax cuts](https://www.statisticshowto.com/misleading-graphs/)
+
+##
+
+> Persuasion is a knife, and knives can be used in any number of ways: skillfully, carelessly, recklessly, even illicitly.
+
+<!----
 # Tableau Tools {data-background=#6897bb}
 
 ## Tools questions
@@ -27,8 +51,50 @@ title: "The healthy child"
 > - [Grouping](https://www.tableau.com/learn/tutorials/on-demand/grouping)
 > - [Filtering](https://www.tableau.com/learn/tutorials/on-demand/ways-filter)
 > - [Annotations](https://help.tableau.com/current/pro/desktop/en-us/annotations_annotations_add.htm)
+---->
 
-# Case Study {data-background=#6897bb}
+# Case Study {data-background=#f7d754}
+
+## Breakout Rooms
+
+With your group, open these datasets in excel and use the data dictionary to understand the variables. Be preprared to teach the class about your datasets.
+
+<style>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+<div class="container">
+
+<div class="col">
+**Group 1:**
+
+days_365
+
+childhealth_summary
+</div>
+
+<div class="col">
+**Group 2:**
+
+childhealth_dutch
+
+birth_dutch
+</div>
+
+<div class="col">
+**Group 3:**
+
+childhealth_us
+
+birth_us
+</div>
+
+</div>
 
 ## [Why does height measure health?](https://www.who.int/nutgrowthdb/about/introduction/en/index2.html)
 
@@ -36,6 +102,7 @@ title: "The healthy child"
 > - What can we discern about each child?
 > - What can we discern about each country?
 
+<!--------
 ## Understanding Z-scores 
 
 > - How can Z-scores be a measure of health?
@@ -46,4 +113,14 @@ $$Z = \frac{x - \mu}{\sigma}$$
 
 > - Calculated Fields
 > - Plotting LAZ by agedays 
+--------->
 
+# Looking Ahead {data-background=#f7d754}
+
+## Visualization Discussions {data-background=#f7d754}
+
+[Stephen Curry Has a Popcorn Problem](https://www.nytimes.com/interactive/2019/04/12/sports/basketball/stephen-curry-warriors-popcorn.html)
+
+## Z-scores
+
+Start exploring the data, and make sure you do the reading for Thursday!
