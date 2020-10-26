@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>Presenting Charts</title>
+  <title>s4.3.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -443,43 +443,119 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
-    <script src="externals/header-attrs-2.1.4/header-attrs.js"></script>
+    <script src="externals/header-attrs-2.1/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
-<section>
-    <h1 class="title">Presenting Charts</h1>
+
+<section class="slide level2">
+
+<style>
+.reveal section img { background:none; border:none; box-shadow:none; }
+</style>
+</section>
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Welcome to Class!</h1>
+<p>What is your favorite holiday food?</p>
+<p>(Type your answer in the chat!)</p>
 </section>
 
 <section>
-<section id="good-reads" class="title-slide slide level1" data-background="#6897bb">
-<h1 data-background="#6897bb">Good Reads</h1>
+<section id="dimension-vs.-attribute-vs.-measure" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Dimension vs. Attribute vs. Measure</h1>
 
 </section>
-<section id="chapter-8-present-to-persuade-pg.-177-192" class="slide level2">
-<h2>Chapter 8: Present to Persuade (Pg. 177-192)</h2>
-<p><strong>When it’s time to talk, don’t read the picture.</strong></p>
-<p><img data-src="images/gc/Ch8_explainVinsight.png" /></p>
-</section>
-<section id="hans-roslings-idea-discussion" class="slide level2">
-<h2>Hans Rosling’s Idea Discussion</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jbkSRLYSojo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
-</section>
-<section id="voxs-chart-discussion" class="slide level2">
-<h2>Vox’s Chart discussion</h2>
-<p><strong>I worry that Scott has oversold not explaining the chart</strong></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/O-3Mlj3MQ_Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
+<section id="most-often" class="slide level2">
+<h2>Most often:</h2>
+<p><strong>You will often hear variables described as <em>quantitative</em> or <em>qualitative</em>.</strong></p>
 <ul>
-<li class="fragment">What are your thoughts?</li>
+<li class="fragment"><em>Quantitative</em> sounds like “quantity”, which is a number. Also called <em>numerical</em>.</li>
+<li class="fragment"><em>Qualitative</em> sounds like “quality”, which is a description like good/better/best. Also called <em>categorical</em>.</li>
+</ul>
+</section>
+<section id="in-tableau" class="slide level2">
+<h2>In Tableau:</h2>
+<p><strong>Tablaeu has its own vocabulary, which can be annoying.</strong></p>
+<ul>
+<li class="fragment">Quantitative/numerical variables are called <em>measures</em>. (Think “can I measure this?”) Measures can be aggregated (and often are by default).</li>
+<li class="fragment">Qualitative/categorical variables are called <em>dimensions</em>. Dimenions affect the “level of detail” in your graph.</li>
+</ul>
+<p><strong>The color of a variables pill gives us additional information:</strong></p>
+<ul>
+<li class="fragment"><em>Green</em> pills are continuous (can have ANY value).</li>
+<li class="fragment"><em>Blue</em> pills are discrete (can only have specific values).</li>
+</ul>
+</section>
+<section id="but-what-about-attributes" class="slide level2">
+<h2>But what about attributes?</h2>
+<ul>
+<li class="fragment"><strong>Dimensions</strong> affect the “level of detail”.</li>
+<li class="fragment"><strong>Measures</strong> are used to aggregate data.</li>
+<li class="fragment"><strong>Attributes</strong> are also a type of aggregation, meaning they tell you <em>one</em> thing about <em>many</em> data points. Attributes find the <em>common ground</em> between data points.</li>
 </ul>
 </section></section>
 <section>
-<section id="case-study" class="title-slide slide level1" data-background="#6897bb">
-<h1 data-background="#6897bb">Case Study</h1>
+<section id="z-scores" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Z-Scores</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>Calculate the z-score for your own height and add it to the google document.</p>
+<p><a href="https://docs.google.com/spreadsheets/d/1cLXCZBATuC0-jq72ASMtMroFX06ZtkRGSVcfbRLmkyQ/edit?usp=sharing">Link</a></p>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<!---
+https://tasks.illustrativemathematics.org/content-standards/HSS/ID/A/4/tasks/1020#:~:text=The%20heights%20of%20adult%20men,standard%20deviation%20of%202.5%20inches.
+--->
+<ul>
+<li>Heights of adult men in the United States are normally distributed with a mean of 70 inches and a standard deviation of 3 inches.</li>
+</ul>
+<ul>
+<li>Heights of adult women in the United States are normally distributed with a mean of 64.5 inches and a standard deviation of 2.5 inches.</li>
+</ul>
+<p><span class="math display">\[Z = \frac{x - \mu}{\sigma}\]</span></p>
+</section>
+<section id="answer-these-questions" class="slide level2">
+<h2>Answer these questions:</h2>
+<ul>
+<li>Who is the tallest person in our class?</li>
+<li>Who’s height in the most extreme, compared to their own gender?</li>
+</ul>
+</section>
+<section id="z-scores-and-probabilities" class="slide level2">
+<h2>Z-scores and Probabilities</h2>
+<p><img data-src="images/blank_normal.png" /></p>
+<!------------
+
+# Good Reads {data-background=#6897bb}
+
+## Chapter 8: Present to Persuade (Pg. 177-192)
+
+**When it's time to talk, don't read the picture.**
+
+![](images/gc/Ch8_explainVinsight.png)
+
+## Hans Rosling's Idea Discussion
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jbkSRLYSojo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Vox's Chart discussion
+
+**I worry that Scott has oversold not explaining the chart**
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O-3Mlj3MQ_Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+- What are your thoughts?
+
+---->
+</section></section>
+<section>
+<section id="case-study" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Case Study</h1>
 
 </section>
 <section id="why-does-height-measure-health" class="slide level2">
@@ -506,19 +582,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </section>
 <section id="childrens-heights" class="slide level2">
 <h2>Children’s heights</h2>
-<ol type="1">
-<li class="fragment"><p>One slide should explain what a z-score is and how it is calculated for our graphics.<br />
-</p></li>
-<li class="fragment"><p>One slide should show height adjusted z-scores (HAZ) for a few healthy and a few unhealthy children from each gender over all the times using the MAL-ED data.<br />
-</p></li>
-<li class="fragment"><p>1-2 Slides about the health of the children at 365 days (1-year) for multiple countries.</p>
-<ul>
-<li class="fragment">One chart should show the distribution of heights for children from at least 4 countries at ~365 days.</li>
-<li class="fragment">One chart should have visualizations of the health of the children at ~365 days for each country (height adjusted z-scores).</li>
-</ul></li>
-<li class="fragment"><p>Take the time to explain your concerns about the health of the children of the study based on their z-scores.</p></li>
-<li class="fragment"><p>One slide should show a plot of the heights of the dutch children over time. Take the time to describe the key takeaways about their growth.</p></li>
-</ol>
+<p>Any questions about the deliverables?</p>
 </section></section>
     </div>
   </div>
