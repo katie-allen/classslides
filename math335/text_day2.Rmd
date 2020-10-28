@@ -1,0 +1,25 @@
+---
+title: ""
+author: ""
+params:
+  day: 2
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+library(tidyverse)
+```
+
+# Week 7: Text Variables, Day 2 {data-background=#f7d754}
+
+Welcome to class!
+
+# Coding Challenge #1 {data-background=#f7d754}
+
+# Task 13 {data-background=#f7d754}
+
+# Looking Ahead {data-background=#f7d754}
