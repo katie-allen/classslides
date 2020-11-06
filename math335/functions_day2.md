@@ -10,30 +10,31 @@ params:
 
 
 
-# Functions: Day 2 {data-background=#f7d754}
+# Welcome to class! {data-background=#f7d754}
 
-Welcome to class!
+# Functions and purrr {data-background=#f7d754}
 
-# The purrr Package {data-background=#f7d754}
+![](images/programming_cat.gif)
 
-## Who knows what a loop is?
+## What I want you to get out of this week:
+
+- If you copy/paste more than once, consider writing a function.
+- If you copy/page a function more than once, consider using `purrr`
 
 ## Loops vs. purrr
 
->- functions and purrr = GOOD
->- loops = BAD
+- Loops are slow, but highly customizable. Most work can be done without them.
+  - functions and purrr = GOOD
+  - loops = BAD
 
-> Loops are slow, but highly customizable. Most work can be done without them.
+```r
+for(i in 1:10){
+  print(i)
+}
+```
 
 ## purrr is group_by() on steroids
 
->- `group_by() %>% summarise()` worked well for repeating code on chunks of a vector
->- Similarly, `nest() %>% mutate(newvar = map())` will perform functions on chunks of a dataset (actually a list column)
-
-## A visual example.
-
-[See powerpoint.](https://byuistats.github.io/M335/presentations_class_palmer/day_15_purrr.pptx)
-
-Then we'll do the task(s) together.
-
+- `group_by() %>% summarise()` worked well for repeating code on chunks of a vector
+- Similarly, `group_by() %>% nest() %>% mutate(newvar = map())` will perform functions on chunks of a dataset
 
