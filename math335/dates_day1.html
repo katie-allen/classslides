@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>dates_day1.utf8</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="externals/header-attrs-2.1/header-attrs.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section>
+<section id="working-with-time" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Working with Time</h1>
+<p>Welcome to class!</p>
+</section>
+<section id="case-study-presentations" class="slide level2">
+<h2>Case Study Presentations</h2>
+<!---------
+## The movie march
+
+What do we like? dislike?
+
+> - [Movie Performance over Time](http://www.nytimes.com/interactive/2008/02/23/movies/20080223_REVENUE_GRAPHIC.html?_r=0)
+---------------->
+<!--------------
+# The truthful Art by Alberto Cairo {data-background=#f7d754}
+
+## Data Ethics
+
+> We live in a world with a surfeit of information at our service. It is our choice whether we seek out data that reinforce our biases or choose to look at the world in a critical, rational manner, and allow reality to bend our preconceptions. In the long run, the truth will work better for us than our cherished fictions. [-Razib Khan, "The Abortion Stereotype,"](https://books.google.com/books?id=8dKKCwAAQBAJ&pg=PT153&lpg=PT153&dq=We+live+in+a+world+with+a+surfeit+of+information+at+our+service.+It+is+our+choice+whether+we+seek+out+data+that+reinforce+our+biases+or+choose+to+look+at+the+world+in+a+critical,+rational+manner,+and+allow+reality+to+bend+our+preconceptions.+In+the+long+run,+the+truth+will+work+better+for+us+than+our+cherished+fictions.&source=bl&ots=8S-rNM2MHH&sig=ACfU3U181wRraZCUG1660FODaAj6p0xHSA&hl=en&sa=X&ved=2ahUKEwjhz-iog9jgAhWKsp4KHdi-DBEQ6AEwAHoECAoQAQ#v=onepage&q=We%20live%20in%20a%20world%20with%20a%20surfeit%20of%20information%20at%20our%20service.%20It%20is%20our%20choice%20whether%20we%20seek%20out%20data%20that%20reinforce%20our%20biases%20or%20choose%20to%20look%20at%20the%20world%20in%20a%20critical%2C%20rational%20manner%2C%20and%20allow%20reality%20to%20bend%20our%20preconceptions.%20In%20the%20long%20run%2C%20the%20truth%20will%20work%20better%20for%20us%20than%20our%20cherished%20fictions.&f=false)
+
+
+## Paul's Version
+
+> For the time will come when people will not put up with sound doctrine. Instead, to suit their own desires, they will gather around them a great number of teachers to say what their itching ears want to hear. They will turn their ears away from the truth and turn aside to myths. [- Paul (2 Timothy 4:3-4 **NIV**)](https://www.biblegateway.com/passage/?search=2+Timothy+4%3A3-4&version=NIV)
+
+## John A Widstoe's Version
+
+> Intelligent people cannot long endure ... doubts.  It must be resolved ... We set about to remove doubt by gathering information and making tests concerning the subject in question... [- Evidences and Reconciliations, pg. 31](http://www.cumorah.com/etexts/evidencesreconciliations.txt)
+
+## Scientific Discovery
+
+## Defining the terms
+
+1. conjecture
+2. hypothesis
+3. data/test
+4. conclusions
+
+## The process
+
+These steps may open researchers' eyes to new paths to explore, so they don't constitute a process with a beginning and an end point but a loop. ...
+
+* **Good answers lead to more good questions.**
+* The scientific stance will never take us all the way to an absolute, immutable truth.
+* What it may do-and it does it well-is to move us further to the right in the truth continuum.
+
+## The Big Idea
+
+Data always vary randomly because the object of our inquiries, nature itself, is also random. We can analyze and predict events in nature with an increasing amount of precision and accuracy, thanks to improvements in our techniques and instruments, **but a certain amount of random variation, which gives rise to uncertainty, is inevitable.**
+
+## The suspects (Intro)
+
+> * Always be suspicious of studies whose samples have not been randomly chosen
+> * Not all scientific research is based on random sampling, but analyzing a random sample of the population will yield more accurate results than a cherry-picked or self-selected sample.
+
+## The suspects (confounding)
+
+> * Some researchers distinguish between two kinds of extraneous variables. Sometimes we can identify an extraneous variable and incorporate it into our model, in which case we'd be dealing with a **confounding variable**.
+>    * I know that it may affect my results, so I consider it for my inquiry to minimize its impact.
+>    * For example, we could control for population change and for variation in number of motor vehicles when analyzing deaths in traffic accidents.
+
+## The suspects (lurking)
+
+> * There's a second, more insidious kind of extraneous variable. Imagine that I don't know that my friends are indeed geeky. If I were unaware of this, I'd be dealing with a **lurking variable**.
+>    * A lurking variable is an extraneous variable that we don't include in our analysis for the simple reason that its existence is unknown to us, or because we can't explain its connection to the phenomenon we're studying.
+
+--------------->
+</section></section>
+<section>
+<section id="dates-and-times" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Dates and Times</h1>
+
+</section>
+<section id="can-you-answer-these-questions" class="slide level2">
+<h2>Can you answer these questions?</h2>
+<ul>
+<li class="fragment">Does every year have 365 days?</li>
+<li class="fragment">Does every day have 24 hours?</li>
+<li class="fragment">Does every minute have 60 seconds?</li>
+</ul>
+</section>
+<section id="other-fun-things-to-consider" class="slide level2">
+<h2>Other fun things to consider</h2>
+<ul>
+<li class="fragment">Hawaii does not observe Daylight Saving Time and neither does Arizona (although the Navajo Nation, in northeastern Arizona, does).</li>
+<li class="fragment">For many years, most of Indiana did not observe Daylight Saving Time with the exception of 10 counties.</li>
+<li class="fragment">Beginning in 2006, all of Indiana now observes Daylight Saving Time.</li>
+</ul>
+<!-------
+## The challenge question
+
+In 2005, we want to know how much electricity is being consumed at 4:00 pm on Monday April 4th in commercial buildings.  We are looking at suburbs of Louisville, Kentucky.  **What concerns do you have?**
+
+> - [A little history on daylight saving time](https://www.msn.com/en-us/news/us/10-things-you-might-not-know-about-daylight-saving-time/ss-BBK4azQ#image=9)
+---------->
+</section></section>
+<section>
+<section id="the-lubridate-package" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">The lubridate package</h1>
+
+</section>
+<section id="types-of-time" class="slide level2">
+<h2>Types of Time</h2>
+<ul>
+<li class="fragment">A date</li>
+<li class="fragment">A time within a day (<code>hms</code> package)</li>
+<li class="fragment">A date-time</li>
+</ul>
+</section>
+<section id="creator-functions" class="slide level2">
+<h2>Creator Functions</h2>
+<p>For dates:</p>
+<ul>
+<li>ymd(), mdy(), dmy(), ydm()</li>
+<li>make_date()</li>
+</ul>
+<p>For date-times:</p>
+<ul>
+<li>ymd_hms(), etc.</li>
+<li>make_datetime()</li>
+</ul>
+</section>
+<section id="creator-functions-1" class="slide level2">
+<h2>Creator Functions</h2>
+<p>Open R-Studio and Convert the following strings to date objects.</p>
+<p>Try <code>ymd()</code>, <code>mdy()</code>, <code>dmy()</code>, <code>ydm()</code></p>
+<ul>
+<li>“January 21st, 2017”</li>
+<li>“2012-01-01”</li>
+<li>“March 2016 - 23”</li>
+</ul>
+</section>
+<section id="creator-functions-2" class="slide level2">
+<h2>Creator Functions</h2>
+<p>Try <code>make_date()</code> and <code>make_datetime()</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">library</span>(lubridate)</span>
+<span id="cb1-3"><a href="#cb1-3"></a>date_cols &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">month =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">7</span>), </span>
+<span id="cb1-4"><a href="#cb1-4"></a>                    <span class="dt">day =</span> <span class="kw">c</span>(<span class="dv">23</span>, <span class="dv">18</span>, <span class="dv">1</span>), </span>
+<span id="cb1-5"><a href="#cb1-5"></a>                    <span class="dt">year =</span> <span class="kw">c</span>(<span class="dv">2017</span>, <span class="dv">2017</span>, <span class="dv">2016</span>))</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co"># Will this one work in make_date()?</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>date_cols &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">month =</span> <span class="kw">c</span>(<span class="st">&quot;Jaunary&quot;</span>, <span class="st">&quot;March&quot;</span>, <span class="st">&quot;July&quot;</span>), </span>
+<span id="cb1-9"><a href="#cb1-9"></a>                    <span class="dt">day =</span> <span class="kw">c</span>(<span class="dv">23</span>, <span class="dv">18</span>, <span class="dv">1</span>), </span>
+<span id="cb1-10"><a href="#cb1-10"></a>                    <span class="dt">year =</span> <span class="kw">c</span>(<span class="dv">2017</span>, <span class="dv">2017</span>, <span class="dv">2016</span>))</span></code></pre></div>
+</section>
+<section id="accessor-functions" class="slide level2">
+<h2>Accessor Functions</h2>
+<p>You can pull out individual parts of the date with the accessor functions</p>
+<ul>
+<li>year(), month()</li>
+<li>mday() (<em>day of the month</em>)</li>
+<li>yday() (<em>day of the year</em>)</li>
+<li>wday() (<em>day of the week</em>)</li>
+<li>hour(), minute(), second()</li>
+</ul>
+<p><strong>Challenge</strong></p>
+<ul>
+<li>Tell me what weekday “March 23, 2016” falls on.</li>
+<li>What day of the year was it?</li>
+</ul>
+</section>
+<section id="rounding-functions" class="slide level2">
+<h2>Rounding Functions</h2>
+<p>Read the help files to figure out what unit you want to round to.</p>
+<ul>
+<li>floor_date()</li>
+<li>round_date()</li>
+<li>ceiling_date()</li>
+</ul>
+<!--------
+## Challenge
+
+**Tackle the Following**
+
+
+```r
+jan31 <- ymd("2013-01-31")
+```
+
+- Add one month to "January 31st".  
+- Add 27 hours and 15 minutes to "January 31st, 2013 06:35:27" 
+----------->
+</section>
+<section id="time-zones" class="slide level2">
+<h2>Time Zones</h2>
+<ul>
+<li>Your computer’s time zone: <code>Sys.timezone(location = TRUE)</code></li>
+<li>List of timezones: <code>OlsonNames()</code></li>
+<li>with_tz(): Changes the time to match the new timezone.</li>
+<li>force_tz(): Keeps the time, but forces a new timezone label.</li>
+</ul>
+<!--------
+
+```r
+meeting <- ymd_hms("2020-11-01 09:00:00", tz = "Pacific/Auckland")
+with_tz(meeting, "America/Chicago")
+```
+
+```
+## [1] "2020-10-31 15:00:00 CDT"
+```
+
+```r
+force_tz(meeting, "America/Chicago")
+```
+
+```
+## [1] "2020-11-01 09:00:00 CST"
+```
+------------>
+</section>
+<section id="challenge" class="slide level2">
+<h2>Challenge</h2>
+<ol type="1">
+<li>Tell me what quarter this value is in. While the time is recorded in UTC, it is a transaction that happened in the mountain time zone.</li>
+</ol>
+<ol start="2" type="1">
+<li class="fragment">Now suppose that the time read into R as UTC but that you know those times are actually recorded in the mountian time zone.</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>x &lt;-<span class="st"> </span><span class="kw">ymd_hms</span>(<span class="st">&quot;2009-07-01 2:01:59.23&quot;</span>)</span></code></pre></div>
+</section>
+<section id="just-in-case" class="slide level2">
+<h2>Just in case:</h2>
+<p>Note that when you use date-times in a numeric context (like in a histogram), 1 means 1 second, so a binwidth of 86400 means one day. For dates, 1 means 1 day.</p>
+</section></section>
+<section>
+<section id="how-to-visualize-time" class="title-slide slide level1">
+<h1>How to Visualize Time</h1>
+
+</section>
+<section id="time-visualization-examples" class="slide level2">
+<h2>Time Visualization examples</h2>
+<p><a href="https://plotlyblog.tumblr.com/post/117105992082/time-series-graphs-eleven-stunning-ways-you-can">Plotly Blog</a></p>
+</section>
+<section id="the-march-visualization" class="slide level2">
+<h2>The March Visualization</h2>
+<p>In his iconic flow map of Napoleon’s catastrophic 1812 invasion of Russia, Charles Joseph Minard blends and bends temporal and spatial representations. The path and number of outward-bound soldiers is represented by an initially thick tan ribbon while the dwindling numbers of retreating survivors are represented by a narrowing black band. In this visualization, the time it took to march into Russia is not clear. The only time stamps shown are for the return trip and progressing from right to left. In a sense, time is “bent” to advance the impact of the visual narrative.</p>
+<ul>
+<li><a href="http://uxmag.com/sites/default/files/uploads/whitney-its-about-time/Minard.png">The Image</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard_Update.png">In English</a></li>
+</ul>
+</section>
+<section id="the-walmart-march-visualization" class="slide level2">
+<h2>The Walmart March Visualization</h2>
+<ul>
+<li><a href="http://excelcharts.com/wp-content/uploads/2012/06/walmart-growth-micromaps1.png">Small multiples and time</a></li>
+<li><a href="http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png">Without spatial</a></li>
+</ul>
+</section>
+<section id="the-wind-march" class="slide level2">
+<h2>The wind march</h2>
+<ul>
+<li><a href="http://hint.fm/wind/">Current Wind</a></li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="externals/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="externals/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: true,
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+        // Transition style
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: '100%',
+        height: '100%',
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 1,
+        maxScale: 3,
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'externals/reveal.js-3.3.0.1/plugin/search/search.js', async: true },
+          { src: 'externals/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
