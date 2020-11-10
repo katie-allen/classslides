@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>Comparing variables</title>
+  <title>s5.3.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -443,35 +443,39 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
-    <script src="externals/header-attrs-2.1.4/header-attrs.js"></script>
+    <script src="externals/header-attrs-2.1/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
-<section>
-    <h1 class="title">Comparing variables</h1>
+
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Welcome to class!</h1>
+<p>In I-Learn, go to the “Materials” module and open the “Google Sheets Tool”.</p>
 </section>
 
 <section>
-<section id="supplemental-reading" class="title-slide slide level1" data-background="#6897bb">
-<h1 data-background="#6897bb">Supplemental Reading:</h1>
+<section id="supplemental-reading" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Supplemental Reading:</h1>
 
 </section>
 <section id="section-4.5-chi-squared-test-of-independence" class="slide level2">
 <h2><a href="https://byuistats.github.io/BYUI_CSE150_StatBook/inferential-decision-making.html#chi-squared-test-of-independence">Section 4.5 Chi-Squared Test of Independence</a></h2>
 <ul>
-<li class="fragment">Explain the null and alternative hypothesis without using the words from the book.</li>
+<li class="fragment">Null hypothesis: These two variables are independent.</li>
+<li class="fragment">Alternative hypothesis: These two variables are <em>not</em> independent.</li>
 </ul>
 </section>
 <section id="scatterplots-with-two-measures" class="slide level2">
 <h2>Scatterplots with two measures</h2>
-<p>Finish the following sentences for comparing two <em>measures</em></p>
+<p>Finish the following sentences for comparing two measures (or “variables”)</p>
 <ul>
 <li class="fragment"><strong>Positive Correlation:</strong> As x increases y ________.</li>
 <li class="fragment"><strong>Negative Correlation:</strong> As x increases y ________.</li>
 <li class="fragment"><strong>No Correlation:</strong> As x increases y _________.</li>
 <li class="fragment">If there is a relationship between x and y then knowing x gives us information about y.</li>
+<li class="fragment">If x and y are independent then knowing x tells us nothing about y.</li>
 </ul>
 <p><img data-src="images/other/nocorrelation.png" /></p>
 </section>
@@ -480,55 +484,62 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <p>Let’s think about our counts of birth by month and sport data.</p>
 <ul>
 <li class="fragment">Does being in a professional sport provide information about what month they were born in?</li>
-<li class="fragment">If yes, they are correlated or their is a relationship. They are <strong>not independent</strong></li>
+<li class="fragment">If yes, they are correlated or their is a relationship. They are <strong>not independent</strong>.</li>
 <li class="fragment">if no, then birthday months are <strong>independent</strong> of what sport a professional plays.</li>
 </ul>
 </section></section>
 <section>
-<section id="case-study" class="title-slide slide level1" data-background="#6897bb">
-<h1 data-background="#6897bb">Case Study</h1>
+<section id="case-study" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Case Study</h1>
 
 </section>
 <section id="building-our-data-tables-tableau" class="slide level2">
 <h2>Building our data tables (Tableau)</h2>
 <ol type="1">
 <li class="fragment">Build a table that shows the sum of all births for each group and each month.</li>
-<li class="fragment">Build a table that shows the percentage of births by month within each sport. A. Edit table calculations</li>
-<li class="fragment">Build a table that has the counts for the US and Baseball for July and August. A. Filter</li>
+<li class="fragment">Build a table that shows the percentage of births by month within each sport.</li>
+<li class="fragment">Build a table that has the counts for the US and Baseball for July and August.</li>
 </ol>
+</section>
+<section id="are-birthdays-and-sports-related" class="slide level2">
+<h2>Are birthdays and sports related?</h2>
+<p>Let’s test the data in the Google Sheets Tool.</p>
 </section>
 <section id="cut-off-dates" class="slide level2">
 <h2>Cut off dates</h2>
 <ul>
 <li><strong>Baseball:</strong> July 31st</li>
-<li><strong>Football:</strong> July 31st (but it has weight limits and other dates)</li>
-<li><strong>Basketball:</strong> August 31st (but it has other dates)</li>
+<li><strong>American Football:</strong> July 31st <!---(but it has weight limits and other dates)---></li>
+<li><strong>Basketball:</strong> August 31st <!----(but it has other dates)---></li>
 <li><strong>Hockey:</strong> December 31st</li>
 </ul>
 </section>
-<section id="comparing-with-two-group-proportions" class="slide level2">
-<h2>Comparing with two group proportions?</h2>
+<section id="using-the-two-proportions-test." class="slide level2">
+<h2>Using the two proportions test.</h2>
 <ol type="1">
 <li class="fragment">How could we compare US births to Hockey births to see if there is a Matthew effect?</li>
 <li class="fragment">What are some other ways we could compare the two groups?</li>
 <li class="fragment">Which is better?</li>
 <li class="fragment">What concerns do you have?</li>
 </ol>
+<!------
+
+## Comparing multiple variables over two populations?
+
+> - If the Matthew effect is real, why would it only happen in certain months. Should we see a trend?
+> - What are the benefits of comparing the entire trend?
+> - Now that we see a difference, what would we want to do?
+
+------>
 </section>
-<section id="comparing-multiple-variables-over-two-populations" class="slide level2">
-<h2>Comparing multiple variables over two populations?</h2>
+<section id="basketball-data" class="slide level2">
+<h2>Basketball Data</h2>
 <ul>
-<li>If the Matthew effect is real, why would it only happen in certain months. Should we see a trend?</li>
-<li>What are the benefits of comparing the entire trend?</li>
-<li>Now that we see a difference, what would we want to do?</li>
+<li class="fragment"><a href="https://en.wikipedia.org/wiki/Height_in_sports#Basketball">Why does Basketball not have a Mathew effect?</a></li>
 </ul>
-</section>
-<section id="why-does-basketball-not-have-a-mathew-effect" class="slide level2">
-<h2>Why does Basketball not have a Mathew effect?</h2>
-<p><a href="https://en.wikipedia.org/wiki/Height_in_sports#Basketball">Can’t coach height</a></p>
-</section>
-<section id="why-does-us-football-not-have-a-matthew-effect" class="slide level2">
-<h2>Why does US Football not have a Matthew effect?</h2>
+<!-----
+## Why does US Football not have a Matthew effect?
+----->
 </section></section>
     </div>
   </div>
