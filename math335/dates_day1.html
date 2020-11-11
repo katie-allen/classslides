@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
+  <meta name="author" content="" />
   <title>dates_day1.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -11,18 +12,19 @@
 
 
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -42,7 +44,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {  background-color: #f8f8f8; }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ef2929; } /* Alert */
 code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
@@ -505,19 +507,13 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
-    <script src="externals/header-attrs-2.1/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 
-<section>
-<section id="working-with-time" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Working with Time</h1>
-<p>Welcome to class!</p>
-</section>
-<section id="case-study-presentations" class="slide level2">
+<section><section id="working-with-time" class="title-slide slide level1" data-background="#f7d754"><h1>Working with Time</h1><p>Welcome to class!</p></section><section id="case-study-presentations" class="slide level2">
 <h2>Case Study Presentations</h2>
 <!---------
 ## The movie march
@@ -581,20 +577,14 @@ Data always vary randomly because the object of our inquiries, nature itself, is
 
 --------------->
 </section></section>
-<section>
-<section id="dates-and-times" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Dates and Times</h1>
-
-</section>
-<section id="can-you-answer-these-questions" class="slide level2">
+<section><section id="dates-and-times" class="title-slide slide level1" data-background="#f7d754"><h1>Dates and Times</h1></section><section id="can-you-answer-these-questions" class="slide level2">
 <h2>Can you answer these questions?</h2>
 <ul>
 <li class="fragment">Does every year have 365 days?</li>
 <li class="fragment">Does every day have 24 hours?</li>
 <li class="fragment">Does every minute have 60 seconds?</li>
 </ul>
-</section>
-<section id="other-fun-things-to-consider" class="slide level2">
+</section><section id="other-fun-things-to-consider" class="slide level2">
 <h2>Other fun things to consider</h2>
 <ul>
 <li class="fragment">Hawaii does not observe Daylight Saving Time and neither does Arizona (although the Navajo Nation, in northeastern Arizona, does).</li>
@@ -609,20 +599,14 @@ In 2005, we want to know how much electricity is being consumed at 4:00 pm on Mo
 > - [A little history on daylight saving time](https://www.msn.com/en-us/news/us/10-things-you-might-not-know-about-daylight-saving-time/ss-BBK4azQ#image=9)
 ---------->
 </section></section>
-<section>
-<section id="the-lubridate-package" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">The lubridate package</h1>
-
-</section>
-<section id="types-of-time" class="slide level2">
+<section><section id="the-lubridate-package" class="title-slide slide level1" data-background="#f7d754"><h1>The lubridate package</h1></section><section id="types-of-time" class="slide level2">
 <h2>Types of Time</h2>
 <ul>
 <li class="fragment">A date</li>
 <li class="fragment">A time within a day (<code>hms</code> package)</li>
 <li class="fragment">A date-time</li>
 </ul>
-</section>
-<section id="creator-functions" class="slide level2">
+</section><section id="creator-functions" class="slide level2">
 <h2>Creator Functions</h2>
 <p>For dates:</p>
 <ul>
@@ -634,8 +618,7 @@ In 2005, we want to know how much electricity is being consumed at 4:00 pm on Mo
 <li>ymd_hms(), etc.</li>
 <li>make_datetime()</li>
 </ul>
-</section>
-<section id="creator-functions-1" class="slide level2">
+</section><section id="creator-functions-1" class="slide level2">
 <h2>Creator Functions</h2>
 <p>Open R-Studio and Convert the following strings to date objects.</p>
 <p>Try <code>ymd()</code>, <code>mdy()</code>, <code>dmy()</code>, <code>ydm()</code></p>
@@ -644,8 +627,7 @@ In 2005, we want to know how much electricity is being consumed at 4:00 pm on Mo
 <li>“2012-01-01”</li>
 <li>“March 2016 - 23”</li>
 </ul>
-</section>
-<section id="creator-functions-2" class="slide level2">
+</section><section id="creator-functions-2" class="slide level2">
 <h2>Creator Functions</h2>
 <p>Try <code>make_date()</code> and <code>make_datetime()</code>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">library</span>(tidyverse)</span>
@@ -658,8 +640,7 @@ In 2005, we want to know how much electricity is being consumed at 4:00 pm on Mo
 <span id="cb1-8"><a href="#cb1-8"></a>date_cols &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">month =</span> <span class="kw">c</span>(<span class="st">&quot;Jaunary&quot;</span>, <span class="st">&quot;March&quot;</span>, <span class="st">&quot;July&quot;</span>), </span>
 <span id="cb1-9"><a href="#cb1-9"></a>                    <span class="dt">day =</span> <span class="kw">c</span>(<span class="dv">23</span>, <span class="dv">18</span>, <span class="dv">1</span>), </span>
 <span id="cb1-10"><a href="#cb1-10"></a>                    <span class="dt">year =</span> <span class="kw">c</span>(<span class="dv">2017</span>, <span class="dv">2017</span>, <span class="dv">2016</span>))</span></code></pre></div>
-</section>
-<section id="accessor-functions" class="slide level2">
+</section><section id="accessor-functions" class="slide level2">
 <h2>Accessor Functions</h2>
 <p>You can pull out individual parts of the date with the accessor functions</p>
 <ul>
@@ -674,8 +655,7 @@ In 2005, we want to know how much electricity is being consumed at 4:00 pm on Mo
 <li>Tell me what weekday “March 23, 2016” falls on.</li>
 <li>What day of the year was it?</li>
 </ul>
-</section>
-<section id="rounding-functions" class="slide level2">
+</section><section id="rounding-functions" class="slide level2">
 <h2>Rounding Functions</h2>
 <p>Read the help files to figure out what unit you want to round to.</p>
 <ul>
@@ -696,8 +676,7 @@ jan31 <- ymd("2013-01-31")
 - Add one month to "January 31st".  
 - Add 27 hours and 15 minutes to "January 31st, 2013 06:35:27" 
 ----------->
-</section>
-<section id="time-zones" class="slide level2">
+</section><section id="time-zones" class="slide level2">
 <h2>Time Zones</h2>
 <ul>
 <li>Your computer’s time zone: <code>Sys.timezone(location = TRUE)</code></li>
@@ -724,8 +703,7 @@ force_tz(meeting, "America/Chicago")
 ## [1] "2020-11-01 09:00:00 CST"
 ```
 ------------>
-</section>
-<section id="challenge" class="slide level2">
+</section><section id="challenge" class="slide level2">
 <h2>Challenge</h2>
 <ol type="1">
 <li>Tell me what quarter this value is in. While the time is recorded in UTC, it is a transaction that happened in the mountain time zone.</li>
@@ -734,40 +712,33 @@ force_tz(meeting, "America/Chicago")
 <li class="fragment">Now suppose that the time read into R as UTC but that you know those times are actually recorded in the mountian time zone.</li>
 </ol>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>x &lt;-<span class="st"> </span><span class="kw">ymd_hms</span>(<span class="st">&quot;2009-07-01 2:01:59.23&quot;</span>)</span></code></pre></div>
-</section>
-<section id="just-in-case" class="slide level2">
+</section><section id="just-in-case" class="slide level2">
 <h2>Just in case:</h2>
 <p>Note that when you use date-times in a numeric context (like in a histogram), 1 means 1 second, so a binwidth of 86400 means one day. For dates, 1 means 1 day.</p>
-</section></section>
-<section>
-<section id="how-to-visualize-time" class="title-slide slide level1">
-<h1>How to Visualize Time</h1>
+<!-------------
+# How to Visualize Time
 
-</section>
-<section id="time-visualization-examples" class="slide level2">
-<h2>Time Visualization examples</h2>
-<p><a href="https://plotlyblog.tumblr.com/post/117105992082/time-series-graphs-eleven-stunning-ways-you-can">Plotly Blog</a></p>
-</section>
-<section id="the-march-visualization" class="slide level2">
-<h2>The March Visualization</h2>
-<p>In his iconic flow map of Napoleon’s catastrophic 1812 invasion of Russia, Charles Joseph Minard blends and bends temporal and spatial representations. The path and number of outward-bound soldiers is represented by an initially thick tan ribbon while the dwindling numbers of retreating survivors are represented by a narrowing black band. In this visualization, the time it took to march into Russia is not clear. The only time stamps shown are for the return trip and progressing from right to left. In a sense, time is “bent” to advance the impact of the visual narrative.</p>
-<ul>
-<li><a href="http://uxmag.com/sites/default/files/uploads/whitney-its-about-time/Minard.png">The Image</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard_Update.png">In English</a></li>
-</ul>
-</section>
-<section id="the-walmart-march-visualization" class="slide level2">
-<h2>The Walmart March Visualization</h2>
-<ul>
-<li><a href="http://excelcharts.com/wp-content/uploads/2012/06/walmart-growth-micromaps1.png">Small multiples and time</a></li>
-<li><a href="http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png">Without spatial</a></li>
-</ul>
-</section>
-<section id="the-wind-march" class="slide level2">
-<h2>The wind march</h2>
-<ul>
-<li><a href="http://hint.fm/wind/">Current Wind</a></li>
-</ul>
+## Time Visualization examples
+
+[Plotly Blog](https://plotlyblog.tumblr.com/post/117105992082/time-series-graphs-eleven-stunning-ways-you-can)
+
+## The March Visualization
+
+In his iconic flow map of Napoleon's catastrophic 1812 invasion of Russia, Charles Joseph Minard blends and bends temporal and spatial representations. The path and number of outward-bound soldiers is represented by an initially thick tan ribbon while the dwindling numbers of retreating survivors are represented by a narrowing black band. In this visualization, the time it took to march into Russia is not clear. The only time stamps shown are for the return trip and progressing from right to left. In a sense, time is "bent" to advance the impact of the visual narrative.
+
+> - [The Image](http://uxmag.com/sites/default/files/uploads/whitney-its-about-time/Minard.png)
+> - [In English](https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard_Update.png)
+
+## The Walmart March Visualization
+
+> - [Small multiples and time](http://excelcharts.com/wp-content/uploads/2012/06/walmart-growth-micromaps1.png)
+> - [Without spatial](http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png)
+
+## The wind march
+
+> - [Current Wind](http://hint.fm/wind/)
+
+------------------>
 </section></section>
     </div>
   </div>
