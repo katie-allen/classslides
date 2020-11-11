@@ -71,5 +71,6 @@ as.numeric(date("1970-01-01"))
 [Coordinated Universal Time (UTC)]() is the default time zone in lubridate. If you load date data or convert something to a date without specifiying the time zone, UTC is used.
 
 ## Move into R
- 
+
+[code](http://ktoutloud.github.io/classslides/math335/dates_day2_notes.R)
  
