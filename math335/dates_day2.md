@@ -37,3 +37,39 @@ In his iconic flow map of Napoleon's catastrophic 1812 invasion of Russia, Charl
 > - [Current Wind](http://hint.fm/wind/)
 
 # Questions and Work Time {data-background=#f7d754}
+
+## Time Before Christ
+
+Summary: It's harder than I thought. Don't worry about it unless you have to.
+
+>- ?as.Date says: "Years before 1CE (aka 1AD) will probably not be handled correctly."
+>- [lubridate issue](https://github.com/tidyverse/lubridate/issues/2)
+>- [advice on stackoverflow](https://stackoverflow.com/questions/877366/what-is-the-best-way-to-handle-dates-before-christ-in-c-net)
+
+## Dates in R: behind the scenes
+
+[Unix time](https://en.wikipedia.org/wiki/Unix_time) is the number of seconds that have elapsed since the **Unix epoch**, which is January 1 1970.
+
+```
+library(lubridate)
+
+as_date(9910)
+## [1] "1997-02-18"
+
+as_date(0)
+## [1] "1970-01-01"
+
+as_date(-678)
+## [1] "1968-02-23"
+
+as.numeric(date("1970-01-01"))
+## [1] 0
+```
+
+## default lubridate time zone: UTC
+
+[Coordinated Universal Time (UTC)]() is the default time zone in lubridate. If you load date data or convert something to a date without specifiying the time zone, UTC is used.
+
+## Move into R
+ 
+ 
