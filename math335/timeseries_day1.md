@@ -90,24 +90,26 @@ datatable(iris)
 
 ## ts and xts and zoos, oh my!
 
-We are not going to take the time to get into the weeds of xt, xts, zoo.  Here are two locations where you can read till your heart is content - [1](https://faculty.washington.edu/ezivot/econ424/Working%20with%20Time%20Series%20Data%20in%20R.pdf), and [2](https://www.datacamp.com/courses/manipulating-time-series-data-in-r-with-xts-zoo).
+We are not going to take the time to get into the weeds of xt, xts, zoo.  
+
+Here are two locations where you can read till your heart is content - [1](https://faculty.washington.edu/ezivot/econ424/Working%20with%20Time%20Series%20Data%20in%20R.pdf), and [2](https://www.datacamp.com/courses/manipulating-time-series-data-in-r-with-xts-zoo).
 
 
 > - [What is the difference in zoo, xts, and ts objects?](https://stackoverflow.com/questions/33714660/what-is-the-difference-the-zoo-object-and-ts-object-in-r)
+> - [Why xts? and FAQ](http://joshuaulrich.github.io/xts/xts_faq.html)
+
 <!-- ts is base r. ts objects are regularly spaced (quarters always 4, months always 12) -->
 
 <!-- zoo is a separate package. Irregularly spaced time periods and can use most common index classes. has more functions -->
 <!-- xts -->
 
-> - [Why xts and FAQ?](http://joshuaulrich.github.io/xts/xts_faq.html)
 <!-- xts offer additional functions beyond what zoo has by making reasonable constraints on the data types. -->
-
 
 ## Why xts?
 
 **Q: Why should I use xts rather than zoo or another time-series package?**
 
-The main benefit of xts is its seamless compatibility with other packages using different time-series classes (timeSeries, zoo, .). In addition, xts allows the user to add custom attributes to any object. See the main xts vignette for more information.
+The main benefit of xts is its seamless compatibility with other packages using different time-series classes (timeSeries, zoo, etc). In addition, xts allows the user to add custom attributes to any object. See the main xts vignette for more information.
 
 
 <!-- ## Matrix formats -->
@@ -115,7 +117,6 @@ The main benefit of xts is its seamless compatibility with other packages using 
 <!-- **Q: Why is xts implemented as a matrix rather than a data frame?** -->
 
 <!-- xts uses a matrix rather than data.frame because: 1) xts is a subclass of zoo, and that's how zoo objects are structured; and 2) matrix objects have much better performance than data.frames. -->
-
 
 
 # The tidyquant Package {data-background=#f7d754}
