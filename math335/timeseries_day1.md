@@ -118,7 +118,7 @@ The main benefit of xts is its seamless compatibility with other packages using 
 
 
 
-# The tidyquant Package
+# The tidyquant Package {data-background=#f7d754}
 
 ## tidyquant overview
 
