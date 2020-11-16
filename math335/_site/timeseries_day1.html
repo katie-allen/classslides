@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>timeseries_day1.utf8</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="site_libs/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="site_libs/header-attrs-2.5/header-attrs.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section>
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Welcome to class!</h1>
+
+</section>
+<section id="case-study-presentations" class="slide level2">
+<h2>Case Study Presentations</h2>
+<!------------------------
+# R-Studio Connect and Interaction {data-background=#f7d754}
+
+## Setting up R-Studio
+
+Time to set up our R-Studio to share interactive documents.
+
+>- https://shiny.byui.edu/connect in R-Studio
+
+Viewing on the website.
+
+>- view with shiny.byui.edu/connect
+
+
+## Example: library(DT) - DataTables
+
+Make a new Rmd file that just has the following in it (including the default yaml). 
+
+
+
+
+```r
+library(DT)
+datatable(iris)
+```
+
+----------------------->
+<!-- Putting information in your file [My interactive](https://shiny.byui.edu/connect/#/apps/3/access) -->
+<!------------------------------
+## Try: library(DT) - DataTables
+
+Look at the [DT: An R interface to the DataTables library](http://rstudio.github.io/DT/) website and find one or two modifications that you could make to your table output to move beyond the default.
+
+> * Work as a group and push to R-Studio connect.
+> * Make sure everyone at the table has the code saved on their computers.
+
+
+
+```r
+library(DT)
+datatable(iris)
+```
+
+
+
+---------------->
+<!--------------
+# Being Readings {data-background=#f7d754}
+
+## View Data at the Atomic Level
+
+* "None of us would admit now that we didn't realize...there...had to be spread in the data; we...just didn't realize how big it could be."
+
+* What key observations came by looking at the data
+    *  small sample sizes
+    *  values above 100%
+    *  increasing # of patients at 100%
+
+* The Mean is Not the Distribution
+------------------>
+</section></section>
+<section>
+<section id="time-series-data" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Time Series Data</h1>
+
+</section>
+<section id="what-is-a-time-series" class="slide level2">
+<h2>What is a “time series”?</h2>
+</section>
+<section id="ts-and-xts-and-zoos-oh-my" class="slide level2">
+<h2>ts and xts and zoos, oh my!</h2>
+<p>We are not going to take the time to get into the weeds of xt, xts, zoo. Here are two locations where you can read till your heart is content - <a href="https://faculty.washington.edu/ezivot/econ424/Working%20with%20Time%20Series%20Data%20in%20R.pdf">1</a>, and <a href="https://www.datacamp.com/courses/manipulating-time-series-data-in-r-with-xts-zoo">2</a>.</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/33714660/what-is-the-difference-the-zoo-object-and-ts-object-in-r">What is the difference in zoo, xts, and ts objects?</a> <!-- ts is base r. ts objects are regularly spaced (quarters always 4, months always 12) --></li>
+</ul>
+<!-- zoo is a separate package. Irregularly spaced time periods and can use most common index classes. has more functions -->
+<!-- xts -->
+<ul>
+<li><a href="http://joshuaulrich.github.io/xts/xts_faq.html">Why xts and FAQ?</a> <!-- xts offer additional functions beyond what zoo has by making reasonable constraints on the data types. --></li>
+</ul>
+</section>
+<section id="why-xts" class="slide level2">
+<h2>Why xts?</h2>
+<p><strong>Q: Why should I use xts rather than zoo or another time-series package?</strong></p>
+<p>The main benefit of xts is its seamless compatibility with other packages using different time-series classes (timeSeries, zoo, .). In addition, xts allows the user to add custom attributes to any object. See the main xts vignette for more information.</p>
+<!-- ## Matrix formats -->
+<!-- **Q: Why is xts implemented as a matrix rather than a data frame?** -->
+<!-- xts uses a matrix rather than data.frame because: 1) xts is a subclass of zoo, and that's how zoo objects are structured; and 2) matrix objects have much better performance than data.frames. -->
+</section></section>
+<section>
+<section id="the-tidyquant-package" class="title-slide slide level1">
+<h1>The tidyquant Package</h1>
+
+</section>
+<section id="tidyquant-overview" class="slide level2">
+<h2>tidyquant overview</h2>
+<p><a href="https://business-science.github.io/tidyquant/" class="uri">https://business-science.github.io/tidyquant/</a></p>
+<p><a href="https://www.youtube.com/embed/woxJZTL2hok">Watch the video</a></p>
+<p>What are the 3 core functions of tidy quant?</p>
+<!-- get: tq_get() -->
+<!-- manipulate: tq_transmuate and tq_mutate() -->
+<!-- analyze: tq_portfolio() and tq_performance() -->
+</section>
+<section id="getting-financial-data" class="slide level2">
+<h2>Getting Financial Data</h2>
+<p><code>tq_get()</code></p>
+</section>
+<section id="manipulating-financial-data" class="slide level2">
+<h2>Manipulating Financial Data</h2>
+<p><code>tq_transmute()</code> and <code>tq_mutate()</code></p>
+</section>
+<section id="performance-analysis" class="slide level2">
+<h2>Performance Analysis</h2>
+<p><code>tq_portfolio()</code> and <code>tq_performance()</code></p>
+</section>
+<section id="tidyquant-examples" class="slide level2">
+<h2>tidyquant examples</h2>
+<p>Pick 4 stocks to look up.</p>
+<!-- THe video schowed how to get a list of all stocks in an index -->
+<!-- do this part with a live demo only if there is time, or go through the "what does this command do" and then circle back for a live, full demo-->
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>my_stocks &lt;-<span class="st"> </span><span class="kw">c</span>()</span>
+<span id="cb1-2"><a href="#cb1-2"></a>price_data &lt;-<span class="st"> </span><span class="kw">tq_get</span>(my_stocks,</span>
+<span id="cb1-3"><a href="#cb1-3"></a>       <span class="dt">get =</span> <span class="st">&quot;stock.prices&quot;</span>,</span>
+<span id="cb1-4"><a href="#cb1-4"></a>       <span class="dt">from =</span> <span class="st">&quot;2020-09-14&quot;</span>)</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="co">#You can add &quot;to = &quot; also</span></span></code></pre></div>
+</section>
+<section id="tidyquant-examples-1" class="slide level2">
+<h2>tidyquant examples</h2>
+<p>Write out what this function is doing. <!-- significance of tq_mutate vs. tq_transmute --></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>price_data <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">tq_transmute</span>(<span class="dt">select =</span> adjusted,</span>
+<span id="cb2-3"><a href="#cb2-3"></a>               <span class="dt">mutate_fun =</span> periodReturn,</span>
+<span id="cb2-4"><a href="#cb2-4"></a>               <span class="dt">period =</span> <span class="st">&quot;daily&quot;</span>,</span>
+<span id="cb2-5"><a href="#cb2-5"></a>               <span class="dt">type =</span> <span class="st">&quot;arithmetic&quot;</span>)</span></code></pre></div>
+<p><strong>Hint:</strong> Read about <code>quantmod::periodReturn()</code></p>
+</section>
+<section id="tidyquant-examples-2" class="slide level2">
+<h2>tidyquant examples</h2>
+<p>Write out what this function is doing.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>return_data <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="st">  </span><span class="kw">tq_portfolio</span>(<span class="dt">assets_col=</span>symbol,</span>
+<span id="cb3-3"><a href="#cb3-3"></a>               <span class="dt">returns_col=</span>daily.returns,</span>
+<span id="cb3-4"><a href="#cb3-4"></a>               <span class="dt">weights =</span> <span class="kw">tibble</span>(<span class="dt">asset.names =</span> my_stocks, <span class="dt">weight =</span> <span class="kw">c</span>(<span class="fl">0.190</span>,.<span class="dv">534</span>,.<span class="dv">207</span>,.<span class="dv">069</span>)),</span>
+<span id="cb3-5"><a href="#cb3-5"></a>               <span class="dt">wealth.index =</span> T)</span></code></pre></div>
+<p><strong>Hint:</strong> Read about <code>PerformanceAnalytics::Return.portfolio()</code></p>
+</section>
+<section id="task-19" class="slide level2">
+<h2>Task 19</h2>
+</section></section>
+<section>
+<section id="settling-in" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Settling In</h1>
+
+</section>
+<section id="remember-the-goal" class="slide level2">
+<h2>Remember the Goal</h2>
+<p>“The most exciting phrase to hear in science, the one that heralds new discoveries, is not ‘Eureka!’ but ‘That’s funny…’” -Isaac Asimov</p>
+<ul>
+<li><a href="https://youtu.be/fSgEeI2Xpdc">Remembering Good Principles</a></li>
+<li><a href="https://www.youtube.com/embed/coNDCIMH8bk?start=628">Rauser view on time and data</a> - 10:28 to 17:50</li>
+</ul>
+</section>
+<section id="edward-tufte" class="slide level2">
+<h2>Edward Tufte</h2>
+<blockquote>
+<p>Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space</p>
+</blockquote>
+<blockquote>
+<p>Edward Tufte</p>
+</blockquote>
+<!--------------
+
+# Next Class {data-background=#f7d754}
+
+## dygraphs: R connection to dygraphs JavaScript charting library
+
+Open the [dygraphs help website](http://rstudio.github.io/dygraphs/index.html) and implement one of their examples in your local R session.
+
+---------------->
+</section></section>
+    </div>
+  </div>
+
+  <script src="site_libs/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="site_libs/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: true,
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+        // Transition style
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: '100%',
+        height: '100%',
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 1,
+        maxScale: 3,
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'site_libs/reveal.js-3.3.0.1/plugin/search/search.js', async: true },
+          { src: 'site_libs/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
