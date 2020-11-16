@@ -1,11 +1,11 @@
 ---
-title: ""
-author: ""
+title: ''
+author: ''
 params:
   day: 2
-  ptitle: true
-  pbackground: true
-  dtype: "none"
+  ptitle: yes
+  pbackground: yes
+  dtype: none
 ---
 
 
