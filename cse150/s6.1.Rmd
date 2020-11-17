@@ -1,5 +1,5 @@
 ---
-title: ""
+title: ''
 ---
 
 # Goodness of Fit Test {data-background=#f7d754}
