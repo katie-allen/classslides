@@ -3,28 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="" />
-  <title>timeseries_day1.utf8</title>
+  <title>timeseries_day2.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/reveal.css"/>
+  <link rel="stylesheet" href="site_libs/reveal.js-3.3.0.1/css/reveal.css"/>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -44,7 +42,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {  background-color: #f8f8f8; }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ef2929; } /* Alert */
 code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
@@ -76,7 +74,7 @@ code span.vs { color: #4e9a06; } /* VerbatimString */
 code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="site_libs/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
 
 
   <!-- some tweaks to reveal css -->
@@ -507,14 +505,21 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
+    <script src="site_libs/header-attrs-2.5/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 
-<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#f7d754"><h1>Welcome to class!</h1></section><section id="case-study-presentations" class="slide level2">
+<section>
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Welcome to class!</h1>
+
+</section>
+<section id="case-study-presentations" class="slide level2">
 <h2>Case Study Presentations</h2>
+<p>asdfasdfasdfasdf</p>
 <!------------------------
 # R-Studio Connect and Interaction {data-background=#f7d754}
 
@@ -576,9 +581,15 @@ datatable(iris)
 * The Mean is Not the Distribution
 ------------------>
 </section></section>
-<section><section id="time-series-data" class="title-slide slide level1" data-background="#f7d754"><h1>Time Series Data</h1></section><section id="what-is-a-time-series" class="slide level2">
+<section>
+<section id="time-series-data" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Time Series Data</h1>
+
+</section>
+<section id="what-is-a-time-series" class="slide level2">
 <h2>What is a “time series”?</h2>
-</section><section id="ts-and-xts-and-zoos-oh-my" class="slide level2">
+</section>
+<section id="ts-and-xts-and-zoos-oh-my" class="slide level2">
 <h2>ts and xts and zoos, oh my!</h2>
 <p>We are not going to take the time to get into the weeds of xt, xts, zoo.</p>
 <p>Here are two locations where you can read till your heart is content - <a href="https://faculty.washington.edu/ezivot/econ424/Working%20with%20Time%20Series%20Data%20in%20R.pdf">1</a>, and <a href="https://www.datacamp.com/courses/manipulating-time-series-data-in-r-with-xts-zoo">2</a>.</p>
@@ -590,7 +601,8 @@ datatable(iris)
 <!-- zoo is a separate package. Irregularly spaced time periods and can use most common index classes. has more functions -->
 <!-- xts -->
 <!-- xts offer additional functions beyond what zoo has by making reasonable constraints on the data types. -->
-</section><section id="why-xts" class="slide level2">
+</section>
+<section id="why-xts" class="slide level2">
 <h2>Why xts?</h2>
 <p><strong>Q: Why should I use xts rather than zoo or another time-series package?</strong></p>
 <p>The main benefit of xts is its seamless compatibility with other packages using different time-series classes (timeSeries, zoo, etc). In addition, xts allows the user to add custom attributes to any object. See the main xts vignette for more information.</p>
@@ -598,7 +610,12 @@ datatable(iris)
 <!-- **Q: Why is xts implemented as a matrix rather than a data frame?** -->
 <!-- xts uses a matrix rather than data.frame because: 1) xts is a subclass of zoo, and that's how zoo objects are structured; and 2) matrix objects have much better performance than data.frames. -->
 </section></section>
-<section><section id="the-tidyquant-package" class="title-slide slide level1" data-background="#f7d754"><h1>The tidyquant Package</h1></section><section id="tidyquant-overview" class="slide level2">
+<section>
+<section id="the-tidyquant-package" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">The tidyquant Package</h1>
+
+</section>
+<section id="tidyquant-overview" class="slide level2">
 <h2>tidyquant overview</h2>
 <p><a href="https://business-science.github.io/tidyquant/" class="uri">https://business-science.github.io/tidyquant/</a></p>
 <p><a href="https://www.youtube.com/embed/woxJZTL2hok">Watch the video</a></p>
@@ -606,16 +623,20 @@ datatable(iris)
 <!-- get: tq_get() -->
 <!-- manipulate: tq_transmuate and tq_mutate() -->
 <!-- analyze: tq_portfolio() and tq_performance() -->
-</section><section id="getting-financial-data" class="slide level2">
+</section>
+<section id="getting-financial-data" class="slide level2">
 <h2>Getting Financial Data</h2>
 <p><code>tq_get()</code></p>
-</section><section id="manipulating-financial-data" class="slide level2">
+</section>
+<section id="manipulating-financial-data" class="slide level2">
 <h2>Manipulating Financial Data</h2>
 <p><code>tq_transmute()</code> and <code>tq_mutate()</code></p>
-</section><section id="performance-analysis" class="slide level2">
+</section>
+<section id="performance-analysis" class="slide level2">
 <h2>Performance Analysis</h2>
 <p><code>tq_portfolio()</code> and <code>tq_performance()</code></p>
-</section><section id="tidyquant-examples" class="slide level2">
+</section>
+<section id="tidyquant-examples" class="slide level2">
 <h2>tidyquant examples</h2>
 <p>Pick 4 stocks to look up.</p>
 <!-- THe video schowed how to get a list of all stocks in an index -->
@@ -625,7 +646,8 @@ datatable(iris)
 <span id="cb1-3"><a href="#cb1-3"></a>       <span class="dt">get =</span> <span class="st">&quot;stock.prices&quot;</span>,</span>
 <span id="cb1-4"><a href="#cb1-4"></a>       <span class="dt">from =</span> <span class="st">&quot;2020-09-14&quot;</span>)</span>
 <span id="cb1-5"><a href="#cb1-5"></a><span class="co">#You can add &quot;to = &quot; also</span></span></code></pre></div>
-</section><section id="tidyquant-examples-1" class="slide level2">
+</section>
+<section id="tidyquant-examples-1" class="slide level2">
 <h2>tidyquant examples</h2>
 <p>Write out what this function is doing. <!-- significance of tq_mutate vs. tq_transmute --></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>price_data <span class="op">%&gt;%</span><span class="st"> </span></span>
@@ -634,7 +656,8 @@ datatable(iris)
 <span id="cb2-4"><a href="#cb2-4"></a>               <span class="dt">period =</span> <span class="st">&quot;daily&quot;</span>,</span>
 <span id="cb2-5"><a href="#cb2-5"></a>               <span class="dt">type =</span> <span class="st">&quot;arithmetic&quot;</span>)</span></code></pre></div>
 <p><strong>Hint:</strong> Read about <code>quantmod::periodReturn()</code></p>
-</section><section id="tidyquant-examples-2" class="slide level2">
+</section>
+<section id="tidyquant-examples-2" class="slide level2">
 <h2>tidyquant examples</h2>
 <p>Write out what this function is doing.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>return_data <span class="op">%&gt;%</span><span class="st"> </span></span>
@@ -643,17 +666,24 @@ datatable(iris)
 <span id="cb3-4"><a href="#cb3-4"></a>               <span class="dt">weights =</span> <span class="kw">tibble</span>(<span class="dt">asset.names =</span> my_stocks, <span class="dt">weight =</span> <span class="kw">c</span>(<span class="fl">0.190</span>,.<span class="dv">534</span>,.<span class="dv">207</span>,.<span class="dv">069</span>)),</span>
 <span id="cb3-5"><a href="#cb3-5"></a>               <span class="dt">wealth.index =</span> T)</span></code></pre></div>
 <p><strong>Hint:</strong> Read about <code>PerformanceAnalytics::Return.portfolio()</code></p>
-</section><section id="task-19" class="slide level2">
+</section>
+<section id="task-19" class="slide level2">
 <h2>Task 19</h2>
 </section></section>
-<section><section id="settling-in" class="title-slide slide level1" data-background="#f7d754"><h1>Settling In</h1></section><section id="remember-the-goal" class="slide level2">
+<section>
+<section id="settling-in" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Settling In</h1>
+
+</section>
+<section id="remember-the-goal" class="slide level2">
 <h2>Remember the Goal</h2>
 <p>“The most exciting phrase to hear in science, the one that heralds new discoveries, is not ‘Eureka!’ but ‘That’s funny…’” -Isaac Asimov</p>
 <ul>
 <li><a href="https://youtu.be/fSgEeI2Xpdc">Remembering Good Principles</a></li>
 <li><a href="https://www.youtube.com/embed/coNDCIMH8bk?start=628">Rauser view on time and data</a> - 10:28 to 17:50</li>
 </ul>
-</section><section id="edward-tufte" class="slide level2">
+</section>
+<section id="edward-tufte" class="slide level2">
 <h2>Edward Tufte</h2>
 <blockquote>
 <p>Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space</p>
@@ -674,8 +704,8 @@ Open the [dygraphs help website](http://rstudio.github.io/dygraphs/index.html) a
     </div>
   </div>
 
-  <script src="externals/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
-  <script src="externals/reveal.js-3.3.0.1/js/reveal.js"></script>
+  <script src="site_libs/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="site_libs/reveal.js-3.3.0.1/js/reveal.js"></script>
 
   <script>
 
@@ -711,8 +741,8 @@ Open the [dygraphs help website](http://rstudio.github.io/dygraphs/index.html) a
 
         // Optional reveal.js plugins
         dependencies: [
-          { src: 'externals/reveal.js-3.3.0.1/plugin/search/search.js', async: true },
-          { src: 'externals/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+          { src: 'site_libs/reveal.js-3.3.0.1/plugin/search/search.js', async: true },
+          { src: 'site_libs/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
         ]
       });
     </script>

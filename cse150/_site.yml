@@ -1,3 +1,4 @@
+output_dir: ""
 output: 
   revealjs::revealjs_presentation:
       css: custom.css
