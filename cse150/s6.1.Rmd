@@ -1,5 +1,5 @@
 ---
-title: "Goodness of fit"
+title: ""
 ---
 
 # Goodness of Fit Test {data-background=#f7d754}
