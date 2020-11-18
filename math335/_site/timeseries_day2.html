@@ -517,166 +517,62 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <h1 data-background="#f7d754">Welcome to class!</h1>
 
 </section>
-<section id="case-study-presentations" class="slide level2">
-<h2>Case Study Presentations</h2>
-<p>asdfasdfasdfasdf</p>
-<!------------------------
-# R-Studio Connect and Interaction {data-background=#f7d754}
-
-## Setting up R-Studio
-
-Time to set up our R-Studio to share interactive documents.
-
->- https://shiny.byui.edu/connect in R-Studio
-
-Viewing on the website.
-
->- view with shiny.byui.edu/connect
-
-
-## Example: library(DT) - DataTables
-
-Make a new Rmd file that just has the following in it (including the default yaml). 
-
-
-
-
-```r
-library(DT)
-datatable(iris)
-```
-
------------------------>
-<!-- Putting information in your file [My interactive](https://shiny.byui.edu/connect/#/apps/3/access) -->
-<!------------------------------
-## Try: library(DT) - DataTables
-
-Look at the [DT: An R interface to the DataTables library](http://rstudio.github.io/DT/) website and find one or two modifications that you could make to your table output to move beyond the default.
-
-> * Work as a group and push to R-Studio connect.
-> * Make sure everyone at the table has the code saved on their computers.
-
-
-
-```r
-library(DT)
-datatable(iris)
-```
-
-
-
----------------->
-<!--------------
-# Being Readings {data-background=#f7d754}
-
-## View Data at the Atomic Level
-
-* "None of us would admit now that we didn't realize...there...had to be spread in the data; we...just didn't realize how big it could be."
-
-* What key observations came by looking at the data
-    *  small sample sizes
-    *  values above 100%
-    *  increasing # of patients at 100%
-
-* The Mean is Not the Distribution
------------------->
-</section></section>
-<section>
-<section id="time-series-data" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Time Series Data</h1>
-
+<section id="reading-discussion" class="slide level2">
+<h2>Reading Discussion</h2>
 </section>
-<section id="what-is-a-time-series" class="slide level2">
-<h2>What is a “time series”?</h2>
-</section>
-<section id="ts-and-xts-and-zoos-oh-my" class="slide level2">
-<h2>ts and xts and zoos, oh my!</h2>
-<p>We are not going to take the time to get into the weeds of xt, xts, zoo.</p>
-<p>Here are two locations where you can read till your heart is content - <a href="https://faculty.washington.edu/ezivot/econ424/Working%20with%20Time%20Series%20Data%20in%20R.pdf">1</a>, and <a href="https://www.datacamp.com/courses/manipulating-time-series-data-in-r-with-xts-zoo">2</a>.</p>
+<section id="view-data-at-the-atomic-level" class="slide level2">
+<h2>View Data at the Atomic Level</h2>
+<p>“None of us would admit now that we didn’t realize…there…had to be spread in the data; we…just didn’t realize how big it could be.”</p>
 <ul>
-<li><a href="https://stackoverflow.com/questions/33714660/what-is-the-difference-the-zoo-object-and-ts-object-in-r">What is the difference in zoo, xts, and ts objects?</a></li>
-<li><a href="http://joshuaulrich.github.io/xts/xts_faq.html">Why xts? and FAQ</a></li>
+<li>What key observations came by looking at the data
+<ul>
+<li>small sample sizes</li>
+<li>values above 100%</li>
+<li>increasing # of patients at 100%</li>
+</ul></li>
+<li>The Mean is Not the Distribution</li>
 </ul>
-<!-- ts is base r. ts objects are regularly spaced (quarters always 4, months always 12) -->
-<!-- zoo is a separate package. Irregularly spaced time periods and can use most common index classes. has more functions -->
-<!-- xts -->
-<!-- xts offer additional functions beyond what zoo has by making reasonable constraints on the data types. -->
-</section>
-<section id="why-xts" class="slide level2">
-<h2>Why xts?</h2>
-<p><strong>Q: Why should I use xts rather than zoo or another time-series package?</strong></p>
-<p>The main benefit of xts is its seamless compatibility with other packages using different time-series classes (timeSeries, zoo, etc). In addition, xts allows the user to add custom attributes to any object. See the main xts vignette for more information.</p>
-<!-- ## Matrix formats -->
-<!-- **Q: Why is xts implemented as a matrix rather than a data frame?** -->
-<!-- xts uses a matrix rather than data.frame because: 1) xts is a subclass of zoo, and that's how zoo objects are structured; and 2) matrix objects have much better performance than data.frames. -->
 </section></section>
 <section>
-<section id="the-tidyquant-package" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">The tidyquant Package</h1>
+<section id="interactive-graphs" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Interactive Graphs</h1>
 
 </section>
-<section id="tidyquant-overview" class="slide level2">
-<h2>tidyquant overview</h2>
-<p><a href="https://business-science.github.io/tidyquant/" class="uri">https://business-science.github.io/tidyquant/</a></p>
-<p><a href="https://www.youtube.com/embed/woxJZTL2hok">Watch the video</a></p>
-<p>What are the 3 core functions of tidy quant?</p>
-<!-- get: tq_get() -->
-<!-- manipulate: tq_transmuate and tq_mutate() -->
-<!-- analyze: tq_portfolio() and tq_performance() -->
+<section id="example-librarydt" class="slide level2">
+<h2>Example: <code>library(DT)</code></h2>
+<p>Make a new Rmd file that just has the following in it (including the default yaml).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">echo =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">library</span>(DT)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">datatable</span>(iris)</span></code></pre></div>
+<p>Then, try knitting and pushing the files to GitHub</p>
 </section>
-<section id="getting-financial-data" class="slide level2">
-<h2>Getting Financial Data</h2>
-<p><code>tq_get()</code></p>
+<section id="setting-up-r-studio" class="slide level2">
+<h2>Setting up R-Studio</h2>
+<ul>
+<li>Visit <a href="https://shiny.byui.edu/connect" class="uri">https://shiny.byui.edu/connect</a> and log-in</li>
+<li>Click on the publish button and choose “Manage Accounts”</li>
+<li>Click the “connect” button and ensure the “Enable publishing to RStudio Connect” is checked</li>
+<li>Use shiny.byui.edu as the server name.</li>
+<li>Then knitting the .rmd file they click on the publish button</li>
+</ul>
 </section>
-<section id="manipulating-financial-data" class="slide level2">
-<h2>Manipulating Financial Data</h2>
-<p><code>tq_transmute()</code> and <code>tq_mutate()</code></p>
-</section>
-<section id="performance-analysis" class="slide level2">
-<h2>Performance Analysis</h2>
-<p><code>tq_portfolio()</code> and <code>tq_performance()</code></p>
-</section>
-<section id="tidyquant-examples" class="slide level2">
-<h2>tidyquant examples</h2>
-<p>Pick 4 stocks to look up.</p>
-<!-- THe video schowed how to get a list of all stocks in an index -->
-<!-- do this part with a live demo only if there is time, or go through the "what does this command do" and then circle back for a live, full demo-->
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>my_stocks &lt;-<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb1-2"><a href="#cb1-2"></a>price_data &lt;-<span class="st"> </span><span class="kw">tq_get</span>(my_stocks,</span>
-<span id="cb1-3"><a href="#cb1-3"></a>       <span class="dt">get =</span> <span class="st">&quot;stock.prices&quot;</span>,</span>
-<span id="cb1-4"><a href="#cb1-4"></a>       <span class="dt">from =</span> <span class="st">&quot;2020-09-14&quot;</span>)</span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="co">#You can add &quot;to = &quot; also</span></span></code></pre></div>
-</section>
-<section id="tidyquant-examples-1" class="slide level2">
-<h2>tidyquant examples</h2>
-<p>Write out what this function is doing. <!-- significance of tq_mutate vs. tq_transmute --></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>price_data <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">tq_transmute</span>(<span class="dt">select =</span> adjusted,</span>
-<span id="cb2-3"><a href="#cb2-3"></a>               <span class="dt">mutate_fun =</span> periodReturn,</span>
-<span id="cb2-4"><a href="#cb2-4"></a>               <span class="dt">period =</span> <span class="st">&quot;daily&quot;</span>,</span>
-<span id="cb2-5"><a href="#cb2-5"></a>               <span class="dt">type =</span> <span class="st">&quot;arithmetic&quot;</span>)</span></code></pre></div>
-<p><strong>Hint:</strong> Read about <code>quantmod::periodReturn()</code></p>
-</section>
-<section id="tidyquant-examples-2" class="slide level2">
-<h2>tidyquant examples</h2>
-<p>Write out what this function is doing.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>return_data <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="st">  </span><span class="kw">tq_portfolio</span>(<span class="dt">assets_col=</span>symbol,</span>
-<span id="cb3-3"><a href="#cb3-3"></a>               <span class="dt">returns_col=</span>daily.returns,</span>
-<span id="cb3-4"><a href="#cb3-4"></a>               <span class="dt">weights =</span> <span class="kw">tibble</span>(<span class="dt">asset.names =</span> my_stocks, <span class="dt">weight =</span> <span class="kw">c</span>(<span class="fl">0.190</span>,.<span class="dv">534</span>,.<span class="dv">207</span>,.<span class="dv">069</span>)),</span>
-<span id="cb3-5"><a href="#cb3-5"></a>               <span class="dt">wealth.index =</span> T)</span></code></pre></div>
-<p><strong>Hint:</strong> Read about <code>PerformanceAnalytics::Return.portfolio()</code></p>
-</section>
-<section id="task-19" class="slide level2">
-<h2>Task 19</h2>
+<section id="example-librarydt-1" class="slide level2">
+<h2>Example: <code>library(DT)</code></h2>
+<p>Look at the <a href="http://rstudio.github.io/DT/">DT: An R interface to the DataTables library</a> website and find one or two modifications that you could make to your table output to move beyond the default.</p>
+<!-- Putting information in your file [My interactive](https://shiny.byui.edu/connect/#/apps/3/access) -->
 </section></section>
-<section>
-<section id="settling-in" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Settling In</h1>
+<section id="task-20" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Task 20</h1>
 
 </section>
-<section id="remember-the-goal" class="slide level2">
-<h2>Remember the Goal</h2>
+
+<section>
+<section id="remember-the-goal" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Remember the Goal</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
 <p>“The most exciting phrase to hear in science, the one that heralds new discoveries, is not ‘Eureka!’ but ‘That’s funny…’” -Isaac Asimov</p>
 <ul>
 <li><a href="https://youtu.be/fSgEeI2Xpdc">Remembering Good Principles</a></li>
@@ -691,15 +587,6 @@ datatable(iris)
 <blockquote>
 <p>Edward Tufte</p>
 </blockquote>
-<!--------------
-
-# Next Class {data-background=#f7d754}
-
-## dygraphs: R connection to dygraphs JavaScript charting library
-
-Open the [dygraphs help website](http://rstudio.github.io/dygraphs/index.html) and implement one of their examples in your local R session.
-
----------------->
 </section></section>
     </div>
   </div>
