@@ -1,0 +1,127 @@
+---
+title: ""
+author: ""
+params:
+  day: 2
+  ptitle: true
+  pbackground: true
+  dtype: "none"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+
+library(tidyverse)
+```
+
+# Maps: Day 1 {data-background=#f7d754}
+
+Welcome to class!
+
+
+
+
+
+
+
+# Class Discussion {data-background=#e8d725}
+
+## Tracking Progress
+
+> - Don't forget to keep track of your tasks.
+> - Semester project should be moving along.
+> - Check out week 13 work and make sure you are working on this.
+
+## Semester Project Discussion
+
+Make sure you are progressing on the senior project. Looking for data can take a long time.
+
+
+## Prepping for Class Task
+
+Write out in a sentence what this code is doing. Make sure to catch the key points in your sentence
+
+<!-- Note: file_delete and dir_delete are part of the fs package -->
+
+```{r p1, eval=FALSE, echo=TRUE}
+pacman::p_load(downloader, sf, fs, tidyverse)
+dams_path <- "https://research.idwr.idaho.gov/gis/Spatial/Hydrography/streams_lakes/c_250k/hyd250.zip"
+df <- tempfile(); uf <- tempfile()
+download(dams_path, df, mode = "wb")
+unzip(df, exdir = uf)
+rivers <- read_sf(uf)
+file_delete(df); dir_delete(uf)
+
+```
+
+## CRS
+
+* What is a CRS?
+* What info is contained in a [CRS](https://mgimond.github.io/Spatial/coordinate-systems-in-r.html#assigning-a-coordinate-system)?
+* What is an EPSG? ([find a EPSG](https://epsg.org/home.html))
+
+<!-- EPSG is a set of pre-defined CRS's that is maintained by the IOGP Geomatic's Committee. (Some industry group) -->
+
+* You can use a proj4 string to define a CRS, or a specific EPSG number.
+
+## Using the sf package to work with CRS
+
+Run the code below, what do you get?
+
+```{r echo = TRUE, eval = FALSE}
+ID_counties <- USAboundaries::us_counties(states = "ID")
+st_crs(ID_counties)
+```
+
+## Coding Example: Changing the projection
+
+* Change the CRS associated with the dataset
+* Change the projection on the fly when creating a visualization
+
+```{r echo = FALSE, eval = FALSE, include = FALSE}
+my_proj <- "+proj=robin +datum=WGS84"
+ID_tr <- ID_counties %>% st_transform(crs = my_proj)
+st_crs(ID_tr)
+#Note the change in the CRS, and the lack of an EPSG
+
+#Compare the following two plots
+ggplot() + geom_sf(data = ID_counties) + theme_bw()
+ggplot() + geom_sf(data = ID_tr) + theme_bw()
+
+#Now change the projection on the fly instead of the actual dataset
+ggplot() + 
+  geom_sf(data = ID_counties) + 
+  theme_bw() +
+  coord_sf(crs = st_crs(my_proj))
+
+#Doing a similar thing, but with a predefined EPSG
+ggplot() + 
+  geom_sf(data = ID_counties) + 
+  theme_bw() +
+  coord_sf(crs = st_crs(5041))
+```
+
+## Convert to another projection
+
+Go to class activity in I-learn to change your previous tasks's map to a different projection. (or advance to the next two slides). Let's have a few people share.
+
+[Old activity instructions](https://byuistats.github.io/M335/spatial_class.html) 
+
+## Method 1
+
+Altering the projection by using an EPSG
+
+* Search for an EPSG that works: https://epsg.org/home.html.
+
+## Method 2
+
+Altering the projection parameters of the CRS in the proj4string
+
+* Here is a nice list of some standard examples (http://www.radicalcartography.net/?projectionref). Look in the "Name" column for names of differnet projections.
+* Then we can 'search' for that name here: projection type (http://spatialreference.org/ref/).
+    *  Click on "Proj4" to get the proj4string.
+        * Look specifically at the input for the "+proj=" argument.
+    *  The proj4 format information can be helpfull12.
+* There are many online examples3 of using R for spatial as well.
+
+Note the use of +lat_0=45 and +lon_0=-115 and what they do your map.
