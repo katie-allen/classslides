@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>functions_day1.utf8</title>
+  <title>maps_day1.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -442,7 +442,7 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
-    <script src="externals/header-attrs-2.1/header-attrs.js"></script>
+    <script src="externals/header-attrs-2.5/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
@@ -450,139 +450,173 @@ document.getElementsByTagName('head')[0].appendChild(style);
 
 
 <section>
-<section id="functions-day-1" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Functions: Day 1</h1>
+<section id="maps-day-1" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Maps: Day 1</h1>
 <p>Welcome to class!</p>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-<p>Why do we care about working with strings? (text data?)</p>
+<section id="case-study-presentations" class="slide level2">
+<h2>Case Study Presentations</h2>
+<!-------------
+
+# "Big" Data (Josh Wills) {data-background=#f7d754}
+
+## Scientists Vs. Analysts (Josh Wills)
+
+> - Best way to differentiate a data scientist from a data analyst. 
+>    - **Data Analyst:** If my tools and data can't answer a question, then the question doesn't get answered.
+>    - **Data Scientist:** If my tools and data can't answer a question, then I go get better tools and data.
+
+## Leaving your little computer (Josh Wills)
+
+> - [The science is the idea and then data moving to answer](https://www.youtube.com/embed/Ewd5PXgLXlU?start=488)
+> - [Big is different in many ways](https://www.youtube.com/embed/Ewd5PXgLXlU?start=690)
+
+------------------->
+<!------------
+
+# Geospatial Data {data-background=#f7d754}
+
+## McNamara on Mapping
+
+> - Minute 2:45 - [Gelman on maps and variables](http://www.stat.columbia.edu/~gelman/research/published/allmaps.pdf)
+> - Minute 11:15 - [Modifiable areal unit problem](https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem)
+> - **Minute 12:15** - [Histogram example](https://tinlizzie.org/histograms/)
+> - **Minute 14:20** - [John Oliver on Gerrymandering](https://www.youtube.com/watch?v=A-4dIImaodQ) has some crude language after 6 minutes.
+> - Minute 14:20 - [Washinton Post on Gerrymandering](https://www.washingtonpost.com/news/wonk/wp/2015/03/01/this-is-the-best-explanation-of-gerrymandering-you-will-ever-see/?utm_term=.21dbb215a861)
+> - Minute 17:00 - [The redistring game](http://www.redistrictinggame.org/)
+> - Minute 18:00 - [Talismanic Redistricting](http://cho.pol.illinois.edu/wendy/papers/talismanic.pdf)
+> - Minute 20:00 - [Dasymetric Maps](https://www.e-education.psu.edu/geog486/node/1866)
+> - **Minute 21:20** - [Mapping upscaling interactive example](https://tinlizzie.org/spatial/)
+> - Minute 22:25 - [Side Scaling: Nested Polygons and redrawing the states](https://kevinhayeswilson.com/redraw/)
+> - Minute 23:20 - [Misaligned Polygons and Flint](http://theconversation.com/how-zip-codes-nearly-masked-the-lead-problem-in-flint-65626).  Zipcodes are problematic.
+> - Minute 26:19 - [Tobler's First Law](https://gisgeography.com/tobler-first-law-of-geography/)
+> - Minute 26:30 - [Pycno Package](https://cran.r-project.org/web/packages/pycno/pycno.pdf)
+
+----------->
+<!-----------
+## [Gelman's Conclusion](http://www.stat.columbia.edu/~gelman/research/published/allmaps.pdf)
+
+Mapping raw data can lead to spurious spatial features. For example, regions can appear highly variable because of small sample sizes in spatial sub-units (as in the radon example) or small populations [(as in the cancer example)](https://cdn.cnn.com/cnnnext/dam/assets/170124123712-01-cancer-cluster-maps--exlarge-169.jpg), and these apparently variable regions contain a disproportionate number of very high (or low) observed parameter values
+
+Furthermore, maps really do make convenient look-up tables (what is the cancer rate, or mean radon level, in my county?). Unfortunately, even maps that are intended to be used only as look-up tables are almost sure to be used for identifying spatial features – we find it very hard to suppress this instinct ourselves
+-------------->
 </section></section>
 <section>
-<section id="introduction-to-functions" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Introduction to Functions</h1>
+<section id="geospatial-data" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Geospatial Data</h1>
 
 </section>
-<section id="what-is-a-function" class="slide level2">
-<h2>What is a function?</h2>
-</section>
-<section id="how-to-write-a-function-in-r" class="slide level2">
-<h2>How to write a function in R</h2>
-<ol type="1">
-<li class="fragment">Pick a <strong>name</strong> for the function that is intuitive and makes sense to other users</li>
-<li class="fragment">List the <strong>arguments</strong> to the function inside <code>function()</code></li>
-<li class="fragment">Write the steps of your function in the <strong>body</strong>, a <code>{</code> block immediately following <code>function()</code></li>
-</ol>
-</section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
-<pre><code>my_function &lt;- function(bob){
-   is_three &lt;- bob == 3
-   mean(is_three)
-}</code></pre>
-</section>
-<section id="practice" class="slide level2">
-<h2>Practice:</h2>
-<p>Figure out what this function does, and think of a better name for it.</p>
-<ul>
-<li>Left side of the room:</li>
-</ul>
-<pre><code>f1 &lt;- function(string, prefix) {
-  substr(string, 1, nchar(prefix)) == prefix
-}</code></pre>
-<ul>
-<li>Right side of the room:</li>
-</ul>
-<pre><code>f2 &lt;- function(x) {
-  if (length(x) &lt;= 1) return(NULL)
-  x[-length(x)]
-}</code></pre>
-</section>
-<section id="practice-1" class="slide level2">
-<h2>Practice:</h2>
-<p>Write a function that:</p>
-<ul>
-<li class="fragment">Takes a name (a character string) as input</li>
-<li class="fragment">Returns “Hello [name]!”</li>
-</ul>
-</section>
-<section id="practice-2" class="slide level2">
-<h2>Practice:</h2>
-<p>Write a function that:</p>
-<ul>
-<li>Takes a character string as input</li>
-<li>Checks if the name “Bob” is in the string</li>
-<li>If so, returns “Hello Bob!”</li>
-<li>Otherwise, returns “Hello.”</li>
-</ul>
-</section>
-<section id="practice-3" class="slide level2">
-<h2>Practice:</h2>
-<p>Write a function that:</p>
-<ul>
-<li>Take two numerical vectors as inputs</li>
-<li>Calculates the average of all numbers from both vectors combined</li>
-</ul>
-</section>
-<section id="good-advice" class="slide level2">
-<h2>Good Advice</h2>
-<blockquote>
-<p>It’s easier to start with working code and turn it into a function; it’s harder to create a function and then try to make it work.</p>
+<section id="is-the-earth-flat" class="slide level2">
+<h2>Is the earth flat?</h2>
+<blockquote class="twitter-video" data-lang="en">
+<p lang="en" dir="ltr">
+Kyrie Irving was trending on Twitter today because he believes the Earth is flat. I asked him about it. <a href="https://t.co/ODe9aP9qmK">pic.twitter.com/ODe9aP9qmK</a>
+</p>
+— Arash Markazi (<span class="citation" data-cites="ArashMarkazi">@ArashMarkazi</span>) <a href="https://twitter.com/ArashMarkazi/status/832770937078571008?ref_src=twsrc%5Etfw">February 18, 2017</a>
 </blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</section>
+<section id="do-people-believe-him" class="slide level2">
+<h2>Do people believe him?</h2>
+<blockquote class="twitter-video" data-lang="en">
+<p lang="en" dir="ltr">
+Uh oh: Draymond is a Flat Earth/Kyrie Truther. <a href="https://t.co/icJThyG7hx">pic.twitter.com/icJThyG7hx</a>
+</p>
+— The Crossover (<span class="citation" data-cites="TheCrossover">@TheCrossover</span>) <a href="https://twitter.com/TheCrossover/status/833014995583643649?ref_src=twsrc%5Etfw">February 18, 2017</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p><a href="https://www.boston.com/sports/boston-celtics/2017/08/23/heres-why-kyrie-irving-thinks-the-earth-is-flat" class="uri">https://www.boston.com/sports/boston-celtics/2017/08/23/heres-why-kyrie-irving-thinks-the-earth-is-flat</a></p>
+</section>
+<section id="which-area-is-larger" class="slide level2">
+<h2>Which area is larger?</h2>
+<p>The continental 48 states or the country of Brazil?</p>
+<ul>
+<li class="fragment"><a href="http://www.comparea.org/USA48+BRA">Answer</a></li>
+<li class="fragment">While a few basketbal players may think the earth is flat, is education feeding us stuff that isn’t true?</li>
+<li class="fragment"><a href="https://www.theguardian.com/education/2017/mar/19/boston-public-schools-world-map-mercator-peters-projection">Boston has concerns about our map education</a></li>
+</ul>
+</section>
+<section id="when-we-make-a-map-what-is-our-goal" class="slide level2">
+<h2>When we make a map, what is our goal?</h2>
+<ul>
+<li class="fragment">Your goal will change which projection you use.</li>
+<li class="fragment"><a href="https://www.youtube.com/watch?v=8I_VpC6IuJs">Can you make an accurate map?</a></li>
+<li class="fragment"><a href="https://www.youtube.com/watch?v=kIID5FDi2JQ">Why all world maps are wrong</a> <!-------------
+* ![](../images/cahill-keyes.jpg){ width=80% }
+* The [cahill-keyes projection looks pretty good](https://xkcd.com/977/) or [check this out](https://www.youtube.com/watch?v=sD7ED12XGFo).
+----------></li>
+</ul>
+<!------------
+## What is GDAL?
+
+The Geospatial Data Abstraction Library (GDAL) is a C/C++ geospatial data format translation programming library and associated set of utility programs built using the library. GDAL is one of the jewels of the open source community, and I want to help you understand how to leverage its power to process spatial data. 
+
+https://en.wikipedia.org/wiki/GDAL
+http://www.gdal.org
+-------------->
 </section></section>
 <section>
-<section id="so-what" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">So what?</h1>
+<section id="maps-vs.-variables" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Maps Vs. Variables</h1>
 
 </section>
-<section id="q-why-use-functions" class="slide level2">
-<h2>Q: Why use functions?</h2>
-<p>Answer:</p>
-<blockquote>
-<p>One of the best ways to improve your reach as a data scientist is to write functions. Functions allow you to automate common tasks in a more powerful and general way than copy-and-pasting.</p>
-</blockquote>
+<section id="what-is-wrong" class="slide level2">
+<h2>What is wrong?</h2>
+<p>“Here, you can take that, that’s the final map of the numbers,” Trump said, according to Reuters. “It’s pretty good, right? The red is obviously us.” <a href="http://www.businessinsider.com/trump-2016-electoral-map-reuters-interview-xi-jinping-china-2017-4">1</a></p>
+<p><img src="/images/Ch7_maps_area_trump.png"  height="100" width="200"> <a href="/images/Ch7_maps_area_trump.png"></a></p>
 </section>
-<section id="q-when-to-use-a-function" class="slide level2">
-<h2>Q: When to use a function?</h2>
-<p>Answer:</p>
-<blockquote>
-<p>When you’ve copied and pasted a block of code more than twice.</p>
-</blockquote>
+<section id="montana-manhattan-problem" class="slide level2">
+<h2>Montana-Manhattan Problem</h2>
+<p><a href="/images/Ch7_maps_area_combined.png"></a></p>
 </section>
-<section id="three-big-advantages" class="slide level2">
-<h2><a href="https://r4ds.had.co.nz/functions.html">Three Big Advantages</a></h2>
-<ol type="1">
-<li class="fragment">You can give a function an evocative name that makes your code easier to understand.</li>
-<li class="fragment">As requirements change, you only need to update code in one place, instead of many.</li>
-<li class="fragment">You eliminate the chance of making incidental mistakes when you copy and paste (i.e. updating a variable name in one place, but not in another)</li>
-</ol>
-</section>
-<section id="remember" class="slide level2">
-<h2>Remember:</h2>
-<blockquote>
-<p>Writing good functions is a lifetime journey.</p>
-</blockquote>
-</section></section>
-<section>
-<section id="task-15" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Task 15</h1>
-
-</section>
-<section id="you-should-read-the-assigned-chapter." class="slide level2">
-<h2>You should read the assigned chapter.</h2>
-<p>Chapter 19: Functions</p>
+<section id="how-could-we-spatially-depict-the-variable-of-interest" class="slide level2">
+<h2>How could we spatially depict the variable of interest?</h2>
 <ul>
-<li class="fragment">More tips for how to write good functions (humans vs. computers)</li>
-<li class="fragment">How to add constraints to your functions (check for input errors)</li>
-<li class="fragment">Return values for functions</li>
-<li class="fragment">Function environments</li>
-<li class="fragment">Introduction to conditional statements (super cool! super useful!)</li>
-<li class="fragment">Guidelines for having good coding style (aka, how to make sure other programmers don’t hate you)</li>
+<li class="fragment"><a href="https://en.wikipedia.org/wiki/Choropleth_map">Chloropleth Map</a></li>
+<li class="fragment"><a href="https://en.wikipedia.org/wiki/Cartogram">Cartograms</a></li>
+<li class="fragment"><a href="https://hafen.github.io/geofacet/">geofacets</a></li>
 </ul>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<p>Let’s make sure we understand the deliverables.</p>
+<section id="different-views-of-the-2016-election-numbers" class="slide level2">
+<h2>Different views of the 2016 election numbers</h2>
+<ul>
+<li><a href="http://www.businessinsider.com/2016-election-results-maps-population-adjusted-cartogram-2016-11/#heres-the-basic-electoral-college-map-with-states-that-hillary-clinton-won-in-blue-and-states-that-donald-trump-won-in-red-assuming-that-trumps-narrow-lead-in-michigan-continues-to-hold-1">Check these out</a></li>
+</ul>
+</section></section>
+<section>
+<section id="geospatial-data-in-r" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Geospatial data in R</h1>
+
+</section>
+<section id="sp-and-sf" class="slide level2">
+<h2>sp and sf</h2>
+<p>In R, there are two main lineages of tools for dealing with spatial data: <code>sp</code> and <code>sf</code>.</p>
+<ul>
+<li><code>sp</code> has been around for a while, but is complex and difficult to use</li>
+<li><code>sf</code> was first released in 2016. Much easier to use with the tidyverse</li>
+</ul>
+</section>
+<section id="usaboundaries" class="slide level2">
+<h2>USAboundaries</h2>
+<p>The <code>USAboundaries</code> package contains functions that return <code>sf</code> files for US states, counties, and cities.</p>
+</section>
+<section id="demo" class="slide level2">
+<h2>Demo</h2>
+<p>Start by installing the packages:</p>
+<pre><code>install.packages(&quot;sf&quot;)
+install.packages(&quot;USAboundaries&quot;)</code></pre>
+</section>
+<section id="demo-1" class="slide level2">
+<h2>Demo</h2>
+<pre><code>idaho &lt;- us_states(states = &quot;Idaho&quot;)
+View(idaho)</code></pre>
+<p>What do you notice about the <a href="https://r-spatial.github.io/sf/articles/sf1.html">structure of the data</a>?</p>
+</section>
+<section id="demo-2" class="slide level2">
+<h2>Demo</h2>
+<pre><code>plot(idaho$geometry)
+
+ggplot() + geom_sf(data = idaho)</code></pre>
 </section></section>
     </div>
   </div>

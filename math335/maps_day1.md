@@ -157,6 +157,8 @@ idaho <- us_states(states = "Idaho")
 View(idaho)
 ```
 
+What do you notice about the [structure of the data](https://r-spatial.github.io/sf/articles/sf1.html)?
+
 ## Demo
 
 ```
