@@ -8,11 +8,7 @@ params:
   dtype: "none"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 
-library(tidyverse)
-```
 
 # Maps: Day 1 {data-background=#f7d754}
 

@@ -3,76 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>timeseries_day2.utf8</title>
+  <title>maps_day1.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="site_libs/reveal.js-3.3.0.1/css/reveal.css"/>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  background-color: #f8f8f8; }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ef2929; } /* Alert */
-code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #c4a000; } /* Attribute */
-code span.bn { color: #0000cf; } /* BaseN */
-code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4e9a06; } /* Char */
-code span.cn { color: #000000; } /* Constant */
-code span.co { color: #8f5902; font-style: italic; } /* Comment */
-code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
-code span.dt { color: #204a87; } /* DataType */
-code span.dv { color: #0000cf; } /* DecVal */
-code span.er { color: #a40000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #0000cf; } /* Float */
-code span.fu { color: #000000; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
-code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
-code span.ot { color: #8f5902; } /* Other */
-code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-code span.sc { color: #000000; } /* SpecialChar */
-code span.ss { color: #4e9a06; } /* SpecialString */
-code span.st { color: #4e9a06; } /* String */
-code span.va { color: #000000; } /* Variable */
-code span.vs { color: #4e9a06; } /* VerbatimString */
-code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <link rel="stylesheet" href="site_libs/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
 
@@ -513,80 +450,172 @@ document.getElementsByTagName('head')[0].appendChild(style);
 
 
 <section>
-<section id="welcome-to-class" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Welcome to class!</h1>
+<section id="maps-day-1" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Maps: Day 1</h1>
+<p>Welcome to class!</p>
+</section>
+<section id="case-study-presentations" class="slide level2">
+<h2>Case Study Presentations</h2>
+<!-------------
+
+# "Big" Data (Josh Wills) {data-background=#f7d754}
+
+## Scientists Vs. Analysts (Josh Wills)
+
+> - Best way to differentiate a data scientist from a data analyst. 
+>    - **Data Analyst:** If my tools and data can't answer a question, then the question doesn't get answered.
+>    - **Data Scientist:** If my tools and data can't answer a question, then I go get better tools and data.
+
+## Leaving your little computer (Josh Wills)
+
+> - [The science is the idea and then data moving to answer](https://www.youtube.com/embed/Ewd5PXgLXlU?start=488)
+> - [Big is different in many ways](https://www.youtube.com/embed/Ewd5PXgLXlU?start=690)
+
+------------------->
+<!------------
+
+# Geospatial Data {data-background=#f7d754}
+
+## McNamara on Mapping
+
+> - Minute 2:45 - [Gelman on maps and variables](http://www.stat.columbia.edu/~gelman/research/published/allmaps.pdf)
+> - Minute 11:15 - [Modifiable areal unit problem](https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem)
+> - **Minute 12:15** - [Histogram example](https://tinlizzie.org/histograms/)
+> - **Minute 14:20** - [John Oliver on Gerrymandering](https://www.youtube.com/watch?v=A-4dIImaodQ) has some crude language after 6 minutes.
+> - Minute 14:20 - [Washinton Post on Gerrymandering](https://www.washingtonpost.com/news/wonk/wp/2015/03/01/this-is-the-best-explanation-of-gerrymandering-you-will-ever-see/?utm_term=.21dbb215a861)
+> - Minute 17:00 - [The redistring game](http://www.redistrictinggame.org/)
+> - Minute 18:00 - [Talismanic Redistricting](http://cho.pol.illinois.edu/wendy/papers/talismanic.pdf)
+> - Minute 20:00 - [Dasymetric Maps](https://www.e-education.psu.edu/geog486/node/1866)
+> - **Minute 21:20** - [Mapping upscaling interactive example](https://tinlizzie.org/spatial/)
+> - Minute 22:25 - [Side Scaling: Nested Polygons and redrawing the states](https://kevinhayeswilson.com/redraw/)
+> - Minute 23:20 - [Misaligned Polygons and Flint](http://theconversation.com/how-zip-codes-nearly-masked-the-lead-problem-in-flint-65626).  Zipcodes are problematic.
+> - Minute 26:19 - [Tobler's First Law](https://gisgeography.com/tobler-first-law-of-geography/)
+> - Minute 26:30 - [Pycno Package](https://cran.r-project.org/web/packages/pycno/pycno.pdf)
+
+----------->
+<!-----------
+## [Gelman's Conclusion](http://www.stat.columbia.edu/~gelman/research/published/allmaps.pdf)
+
+Mapping raw data can lead to spurious spatial features. For example, regions can appear highly variable because of small sample sizes in spatial sub-units (as in the radon example) or small populations [(as in the cancer example)](https://cdn.cnn.com/cnnnext/dam/assets/170124123712-01-cancer-cluster-maps--exlarge-169.jpg), and these apparently variable regions contain a disproportionate number of very high (or low) observed parameter values
+
+Furthermore, maps really do make convenient look-up tables (what is the cancer rate, or mean radon level, in my county?). Unfortunately, even maps that are intended to be used only as look-up tables are almost sure to be used for identifying spatial features – we find it very hard to suppress this instinct ourselves
+-------------->
+</section></section>
+<section>
+<section id="geospatial-data" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Geospatial Data</h1>
 
 </section>
-<section id="reading-discussion" class="slide level2">
-<h2>Reading Discussion</h2>
+<section id="is-the-earth-flat" class="slide level2">
+<h2>Is the earth flat?</h2>
+<blockquote class="twitter-video" data-lang="en">
+<p lang="en" dir="ltr">
+Kyrie Irving was trending on Twitter today because he believes the Earth is flat. I asked him about it. <a href="https://t.co/ODe9aP9qmK">pic.twitter.com/ODe9aP9qmK</a>
+</p>
+— Arash Markazi (<span class="citation" data-cites="ArashMarkazi">@ArashMarkazi</span>) <a href="https://twitter.com/ArashMarkazi/status/832770937078571008?ref_src=twsrc%5Etfw">February 18, 2017</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </section>
-<section id="view-data-at-the-atomic-level" class="slide level2">
-<h2>View Data at the Atomic Level</h2>
-<p>“None of us would admit now that we didn’t realize…there…had to be spread in the data; we…just didn’t realize how big it could be.”</p>
+<section id="do-people-believe-him" class="slide level2">
+<h2>Do people believe him?</h2>
+<blockquote class="twitter-video" data-lang="en">
+<p lang="en" dir="ltr">
+Uh oh: Draymond is a Flat Earth/Kyrie Truther. <a href="https://t.co/icJThyG7hx">pic.twitter.com/icJThyG7hx</a>
+</p>
+— The Crossover (<span class="citation" data-cites="TheCrossover">@TheCrossover</span>) <a href="https://twitter.com/TheCrossover/status/833014995583643649?ref_src=twsrc%5Etfw">February 18, 2017</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p><a href="https://www.boston.com/sports/boston-celtics/2017/08/23/heres-why-kyrie-irving-thinks-the-earth-is-flat" class="uri">https://www.boston.com/sports/boston-celtics/2017/08/23/heres-why-kyrie-irving-thinks-the-earth-is-flat</a></p>
+</section>
+<section id="which-area-is-larger" class="slide level2">
+<h2>Which area is larger?</h2>
+<p>The continental 48 states or the country of Brazil?</p>
 <ul>
-<li>What key observations came by looking at the data
+<li class="fragment"><a href="http://www.comparea.org/USA48+BRA">Answer</a></li>
+<li class="fragment">While a few basketbal players may think the earth is flat, is education feeding us stuff that isn’t true?</li>
+<li class="fragment"><a href="https://www.theguardian.com/education/2017/mar/19/boston-public-schools-world-map-mercator-peters-projection">Boston has concerns about our map education</a></li>
+</ul>
+</section>
+<section id="when-we-make-a-map-what-is-our-goal" class="slide level2">
+<h2>When we make a map, what is our goal?</h2>
 <ul>
-<li>small sample sizes</li>
-<li>values above 100%</li>
-<li>increasing # of patients at 100%</li>
-</ul></li>
-<li>The Mean is Not the Distribution</li>
+<li class="fragment">Your goal will change which projection you use.</li>
+<li class="fragment"><a href="https://www.youtube.com/watch?v=8I_VpC6IuJs">Can you make an accurate map?</a></li>
+<li class="fragment"><a href="https://www.youtube.com/watch?v=kIID5FDi2JQ">Why all world maps are wrong</a> <!-------------
+* ![](../images/cahill-keyes.jpg){ width=80% }
+* The [cahill-keyes projection looks pretty good](https://xkcd.com/977/) or [check this out](https://www.youtube.com/watch?v=sD7ED12XGFo).
+----------></li>
+</ul>
+<!------------
+## What is GDAL?
+
+The Geospatial Data Abstraction Library (GDAL) is a C/C++ geospatial data format translation programming library and associated set of utility programs built using the library. GDAL is one of the jewels of the open source community, and I want to help you understand how to leverage its power to process spatial data. 
+
+https://en.wikipedia.org/wiki/GDAL
+http://www.gdal.org
+-------------->
+</section></section>
+<section>
+<section id="maps-vs.-variables" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Maps Vs. Variables</h1>
+
+</section>
+<section id="what-is-wrong" class="slide level2">
+<h2>What is wrong?</h2>
+<p>“Here, you can take that, that’s the final map of the numbers,” Trump said, according to Reuters. “It’s pretty good, right? The red is obviously us.” <a href="http://www.businessinsider.com/trump-2016-electoral-map-reuters-interview-xi-jinping-china-2017-4">1</a></p>
+<p><img src="/images/Ch7_maps_area_trump.png"  height="100" width="200"> <a href="/images/Ch7_maps_area_trump.png"></a></p>
+</section>
+<section id="montana-manhattan-problem" class="slide level2">
+<h2>Montana-Manhattan Problem</h2>
+<p><a href="/images/Ch7_maps_area_combined.png"></a></p>
+</section>
+<section id="how-could-we-spatially-depict-the-variable-of-interest" class="slide level2">
+<h2>How could we spatially depict the variable of interest?</h2>
+<ul>
+<li class="fragment"><a href="https://en.wikipedia.org/wiki/Choropleth_map">Chloropleth Map</a></li>
+<li class="fragment"><a href="https://en.wikipedia.org/wiki/Cartogram">Cartograms</a></li>
+<li class="fragment"><a href="https://hafen.github.io/geofacet/">geofacets</a></li>
+</ul>
+</section>
+<section id="different-views-of-the-2016-election-numbers" class="slide level2">
+<h2>Different views of the 2016 election numbers</h2>
+<ul>
+<li><a href="http://www.businessinsider.com/2016-election-results-maps-population-adjusted-cartogram-2016-11/#heres-the-basic-electoral-college-map-with-states-that-hillary-clinton-won-in-blue-and-states-that-donald-trump-won-in-red-assuming-that-trumps-narrow-lead-in-michigan-continues-to-hold-1">Check these out</a></li>
 </ul>
 </section></section>
 <section>
-<section id="interactive-graphs" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Interactive Graphs</h1>
+<section id="geospatial-data-in-r" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Geospatial data in R</h1>
 
 </section>
-<section id="example-librarydt" class="slide level2">
-<h2>Example: <code>library(DT)</code></h2>
-<p>Make a new Rmd file that just has the following in it (including the default yaml).</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">echo =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">library</span>(DT)</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">datatable</span>(iris)</span></code></pre></div>
-<p>Then, try knitting and pushing the files to GitHub</p>
-</section>
-<section id="setting-up-r-studio" class="slide level2">
-<h2>Setting up R-Studio</h2>
+<section id="sp-and-sf" class="slide level2">
+<h2>sp and sf</h2>
+<p>In R, there are two main lineages of tools for dealing with spatial data: <code>sp</code> and <code>sf</code>.</p>
 <ul>
-<li>Visit <a href="https://shiny.byui.edu/connect" class="uri">https://shiny.byui.edu/connect</a> and log-in</li>
-<li>Click on the publish button and choose “Manage Accounts”</li>
-<li>Click the “connect” button and ensure the “Enable publishing to RStudio Connect” is checked</li>
-<li>Use shiny.byui.edu as the server name.</li>
-<li>Then knitting the .rmd file they click on the publish button</li>
+<li><code>sp</code> has been around for a while, but is complex and difficult to use</li>
+<li><code>sf</code> was first released in 2016. Much easier to use with the tidyverse</li>
 </ul>
 </section>
-<section id="example-librarydt-1" class="slide level2">
-<h2>Example: <code>library(DT)</code></h2>
-<p>Look at the <a href="http://rstudio.github.io/DT/">DT: An R interface to the DataTables library</a> website and find one or two modifications that you could make to your table output to move beyond the default.</p>
-<!-- Putting information in your file [My interactive](https://shiny.byui.edu/connect/#/apps/3/access) -->
-</section></section>
-<section id="task-20" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Task 20</h1>
-
+<section id="usaboundaries" class="slide level2">
+<h2>USAboundaries</h2>
+<p>The <code>USAboundaries</code> package contains functions that return <code>sf</code> files for US states, counties, and cities.</p>
 </section>
-
-<section>
-<section id="remember-the-goal" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Remember the Goal</h1>
-
+<section id="demo" class="slide level2">
+<h2>Demo</h2>
+<p>Start by installing the packages:</p>
+<pre><code>install.packages(&quot;sf&quot;)
+install.packages(&quot;USAboundaries&quot;)</code></pre>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-<p>“The most exciting phrase to hear in science, the one that heralds new discoveries, is not ‘Eureka!’ but ‘That’s funny…’” -Isaac Asimov</p>
-<ul>
-<li><a href="https://youtu.be/fSgEeI2Xpdc">Remembering Good Principles</a></li>
-<li><a href="https://www.youtube.com/embed/coNDCIMH8bk?start=628">Rauser view on time and data</a> - 10:28 to 17:50</li>
-</ul>
+<section id="demo-1" class="slide level2">
+<h2>Demo</h2>
+<pre><code>idaho &lt;- us_states(states = &quot;Idaho&quot;)
+View(idaho)</code></pre>
 </section>
-<section id="edward-tufte" class="slide level2">
-<h2>Edward Tufte</h2>
-<blockquote>
-<p>Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space</p>
-</blockquote>
-<blockquote>
-<p>Edward Tufte</p>
-</blockquote>
+<section id="demo-2" class="slide level2">
+<h2>Demo</h2>
+<pre><code>plot(idaho$geometry)
+
+ggplot() + geom_sf(data = idaho)</code></pre>
 </section></section>
     </div>
   </div>
