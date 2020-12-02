@@ -8,11 +8,7 @@ params:
   dtype: "none"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 
-library(tidyverse)
-```
 
 # Maps: Day 2 {data-background=#f7d754}
 
@@ -34,7 +30,8 @@ Write out in a sentence what this code is doing. Make sure to catch the key poin
 
 Note: file_delete and dir_delete are part of the fs package 
 
-```{r p1, eval=FALSE, echo=TRUE}
+
+```r
 pacman::p_load(downloader, sf, fs, tidyverse)
 dams_path <- "https://research.idwr.idaho.gov/gis/Spatial/Hydrography/streams_lakes/c_250k/hyd250.zip"
 df <- tempfile(); uf <- tempfile()
@@ -42,7 +39,6 @@ download(dams_path, df, mode = "wb")
 unzip(df, exdir = uf)
 rivers <- read_sf(uf)
 file_delete(df); dir_delete(uf)
-
 ```
 
 ---------------->
@@ -73,7 +69,8 @@ file_delete(df); dir_delete(uf)
 
 Run the code below, what do you get?
 
-```{r echo = TRUE, eval = FALSE}
+
+```r
 ID_counties <- USAboundaries::us_counties(states = "ID")
 st_crs(ID_counties)
 ```
@@ -83,28 +80,7 @@ st_crs(ID_counties)
 * Change the CRS associated with the dataset
 * Change the projection on the fly when creating a visualization
 
-```{r echo = FALSE, eval = FALSE, include = FALSE}
-my_proj <- "+proj=robin +datum=WGS84"
-ID_tr <- ID_counties %>% st_transform(crs = my_proj)
-st_crs(ID_tr)
-#Note the change in the CRS, and the lack of an EPSG
 
-#Compare the following two plots
-ggplot() + geom_sf(data = ID_counties) + theme_bw()
-ggplot() + geom_sf(data = ID_tr) + theme_bw()
-
-#Now change the projection on the fly instead of the actual dataset
-ggplot() + 
-  geom_sf(data = ID_counties) + 
-  theme_bw() +
-  coord_sf(crs = st_crs(my_proj))
-
-#Doing a similar thing, but with a predefined EPSG
-ggplot() + 
-  geom_sf(data = ID_counties) + 
-  theme_bw() +
-  coord_sf(crs = st_crs(5041))
-```
 
 ## Convert to another projection
 
