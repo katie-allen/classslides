@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="" />
   <title>maps_day2.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -12,19 +11,18 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -44,7 +42,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {  background-color: #f8f8f8; }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ef2929; } /* Alert */
 code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
@@ -507,21 +505,53 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
+    <script src="externals/header-attrs-2.5/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 
-<section><section id="maps-day-2" class="title-slide slide level1" data-background="#f7d754"><h1>Maps: Day 2</h1><p>Welcome to class!</p></section><section id="reading-discussion" class="slide level2">
+<section>
+<section id="maps-day-2" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Maps: Day 2</h1>
+<p>Welcome to class!</p>
+</section>
+<section id="reading-discussion" class="slide level2">
 <h2>Reading Discussion</h2>
-</section><section id="tracking-progress" class="slide level2">
+</section>
+<section id="tracking-progress" class="slide level2">
 <h2>Tracking Progress</h2>
 <ul>
 <li>Don’t forget to keep track of your tasks.</li>
 <li>Semester project should be moving along (it is next week’s case study).</li>
 <li>If you need another class presentation, do it next week.</li>
 </ul>
+</section>
+<section id="xkcd" class="slide level2">
+<h2><a href="https://imgs.xkcd.com/comics/mercator_projection.png">xkcd</a></h2>
+</section></section>
+<section id="task-23" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Task 23</h1>
+
+</section>
+
+<section>
+<section id="prep-for-task-24" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Prep for Task 24</h1>
+
+</section>
+<section id="pro-tip" class="slide level2">
+<h2>Pro tip:</h2>
+<p>Actually read/watch the resources listed.</p>
+</section>
+<section id="what-is-a-crs" class="slide level2">
+<h2>What is a CRS?</h2>
+<ul>
+<li class="fragment">“<strong>Map projections</strong> try to portray the surface of the earth, or a portion of the earth, on a flat piece of paper or computer screen.”</li>
+<li class="fragment">“A <strong>coordinate reference system</strong> (CRS) then defines how the two-dimensional, projected map in your GIS relates to real places on the earth.”</li>
+</ul>
+<p><a href="https://docs.qgis.org/3.16/en/docs/gentle_gis_introduction/coordinate_reference_systems.html#">source</a></p>
 <!----------------
 
 ## Prepping for Class Task
@@ -542,50 +572,50 @@ file_delete(df); dir_delete(uf)
 ```
 
 ---------------->
-</section></section>
-<section><section id="coordinate-reference-system" class="title-slide slide level1" data-background="#f7d754"><h1>Coordinate Reference System</h1></section><section id="what-is-a-crshttpsdocs.qgis.org3.16endocsgentle_gis_introductioncoordinate_reference_systems.htmltextmap20projections20try20to20portrayof20paper20or20computer20screen.texta20coordinate20reference20system20crsreal20places20on20the20earth." class="slide level2">
-<h2><a href="#/what-is-a-crs">What is a CRS?</a>(<a href="https://docs.qgis.org/3.16/en/docs/gentle_gis_introduction/coordinate_reference_systems.html#" class="uri">https://docs.qgis.org/3.16/en/docs/gentle_gis_introduction/coordinate_reference_systems.html#</a>:~:text=Map%20projections%20try%20to%20portray,of%20paper%20or%20computer%20screen.&amp;text=A%20coordinate%20reference%20system%20(CRS,real%20places%20on%20the%20earth.)</h2>
+</section>
+<section id="how-to-define-a-crs" class="slide level2">
+<h2>How to define a CRS</h2>
 <ul>
-<li class="fragment">“<strong>Map projections</strong> try to portray the surface of the earth, or a portion of the earth, on a flat piece of paper or computer screen.”</li>
-<li class="fragment">“A <strong>coordinate reference system</strong> (CRS) then defines how the two-dimensional, projected map in your GIS relates to real places on the earth.”</li>
-</ul>
-</section><section id="what-is-a-crs" class="slide level2">
-<h2>What is a CRS?</h2>
-</section><section id="crs" class="slide level2">
-<h2>CRS</h2>
+<li>What info is contained in a <a href="https://mgimond.github.io/Spatial/coordinate-systems-in-r.html#assigning-a-coordinate-system">CRS</a>?</li>
+<li>What is an EPSG? (<a href="https://epsg.org/home.html">find a EPSG</a>)</li>
+<li>In R, you can use define a CRS with:
 <ul>
-<li class="fragment">What is a CRS?</li>
-<li class="fragment">What info is contained in a <a href="https://mgimond.github.io/Spatial/coordinate-systems-in-r.html#assigning-a-coordinate-system">CRS</a>?</li>
-<li class="fragment">What is an EPSG? (<a href="https://epsg.org/home.html">find a EPSG</a>)</li>
+<li>a proj4 string</li>
+<li>a specific EPSG number</li>
+</ul></li>
 </ul>
 <!-- EPSG is a set of pre-defined CRS's that is maintained by the IOGP Geomatic's Committee. (Some industry group) -->
-<ul>
-<li class="fragment">You can use a proj4 string to define a CRS, or a specific EPSG number.</li>
-</ul>
-</section><section id="using-the-sf-package-to-work-with-crs" class="slide level2">
+</section>
+<section id="using-the-sf-package-to-work-with-crs" class="slide level2">
 <h2>Using the sf package to work with CRS</h2>
 <p>Run the code below, what do you get?</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>ID_counties &lt;-<span class="st"> </span>USAboundaries<span class="op">::</span><span class="kw">us_counties</span>(<span class="dt">states =</span> <span class="st">&quot;ID&quot;</span>)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="kw">st_crs</span>(ID_counties)</span></code></pre></div>
-</section><section id="coding-example-changing-the-projection" class="slide level2">
+</section>
+<section id="coding-example-changing-the-projection" class="slide level2">
 <h2>Coding Example: Changing the projection</h2>
 <ul>
-<li class="fragment">Change the CRS associated with the dataset</li>
-<li class="fragment">Change the projection on the fly when creating a visualization</li>
+<li>Change the CRS associated with the dataset</li>
+<li>Change the projection on the fly when creating a visualization</li>
 </ul>
-</section><section id="convert-to-another-projection" class="slide level2">
-<h2>Convert to another projection</h2>
-<p>Go to class activity in I-learn to change your previous tasks’s map to a different projection. (or advance to the next two slides). Let’s have a few people share.</p>
-<p><a href="https://byuistats.github.io/M335/spatial_class.html">Old activity instructions</a></p>
-</section><section id="method-1" class="slide level2">
+<!-------------------
+## Convert to another projection
+
+Go to class activity in I-learn to change your previous tasks's map to a different projection. (or advance to the next two slides). Let's have a few people share.
+
+[Old activity instructions](https://byuistats.github.io/M335/spatial_class.html) 
+-------------->
+</section>
+<section id="method-1" class="slide level2">
 <h2>Method 1</h2>
 <p>Altering the projection by using an EPSG</p>
 <ul>
 <li class="fragment">Search for an EPSG that works: <a href="https://epsg.org/home.html" class="uri">https://epsg.org/home.html</a>.</li>
 </ul>
-</section><section id="method-2" class="slide level2">
+</section>
+<section id="method-2" class="slide level2">
 <h2>Method 2</h2>
-<p>Altering the projection parameters of the CRS in the proj4string</p>
+<p>Altering the projection parameters of the CRS in the proj4 string</p>
 <ul>
 <li class="fragment">Here is a nice list of some standard examples (<a href="http://www.radicalcartography.net/?projectionref" class="uri">http://www.radicalcartography.net/?projectionref</a>). Look in the “Name” column for names of differnet projections.</li>
 <li class="fragment">Then we can ‘search’ for that name here: projection type (<a href="http://spatialreference.org/ref/" class="uri">http://spatialreference.org/ref/</a>).
@@ -599,6 +629,19 @@ file_delete(df); dir_delete(uf)
 <li class="fragment">There are many online examples3 of using R for spatial as well.</li>
 </ul>
 <p>Note the use of +lat_0=45 and +lon_0=-115 and what they do your map.</p>
+</section></section>
+<section>
+<section id="task-24" class="title-slide slide level1" data-background="#f7d754">
+<h1 data-background="#f7d754">Task 24</h1>
+
+</section>
+<section id="some-helpful-things" class="slide level2">
+<h2>Some helpful things</h2>
+<ul>
+<li>How to read in a shp file</li>
+<li><code>USAboundaries::state_plane()</code></li>
+<li><code>sf::st_transform()</code></li>
+</ul>
 </section></section>
     </div>
   </div>
