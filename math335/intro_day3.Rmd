@@ -1,13 +1,13 @@
 ---
 title: ""
 params:
-  day: 1
+  day: 3
   ptitle: true
   pbackground: true
   dtype: "none"
 ---
 
-# Welcome to class! {data-background=#f7d754}
+# Welcome to class! {data-background=#60a67f}
 
 ## Today's Outline:
 
@@ -29,7 +29,7 @@ Answer: A venn diagram ( [here](https://www.omnisci.com/learn/data-science), [he
 
 Hadley Wickham's [diagram](https://r4ds.had.co.nz/)
 
-# Syllabus (continued from Day 1)  {data-background=#f7d754}
+# Syllabus (continued from Day 1)  {data-background=#60a67f}
 
 ## Specifications Grading
 
@@ -74,13 +74,13 @@ You don't do **B** work on all the tasks and case studies - You do **A** work on
 
 ## Questions about the syllabus?
 
-# Task 1 {data-background=#f7d754}
+# Task 1 {data-background=#60a67f}
 
 ## Questions about R and/or R-Studio?
 
 ## Getting R-Studio under control
 
-# Reading Discussion  {data-background=#f7d754}
+# Reading Discussion  {data-background=#60a67f}
 
 ## How Humans See Data
 
@@ -114,7 +114,7 @@ What do you agree with? Disagree?
 
 What's your plan to succeed this semester?
 
-# Looking Ahead {data-background=#f7d754}
+# Looking Ahead {data-background=#60a67f}
 
 ## Task 2
 

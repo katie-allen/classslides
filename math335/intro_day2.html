@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Welcome to Math 335/CSE 350!</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="externals/header-attrs-2.5/header-attrs.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Welcome to Math 335/CSE 350!</h1>
+</section>
+
+<section>
+<section id="introduction-to-sister-larson" class="title-slide slide level1" data-background="#6897bb">
+<h1 data-background="#6897bb">Introduction to Sister Larson</h1>
+
+</section>
+<section id="my-family" class="slide level2">
+<h2>My family</h2>
+<p><img data-src="images/crazy_family.jpg" /></p>
+</section>
+<section id="my-background" class="slide level2">
+<h2>My background</h2>
+<ul>
+<li>Undergraduate in Applied Mathematics from BYU-Idaho</li>
+<li>Masters degree in Statistics from BYU</li>
+<li>Biostatistician at Myriad Genetics doing cancer research</li>
+<li>Then back to BYU-Idaho!</li>
+</ul>
+</section>
+<section id="my-interests" class="slide level2">
+<h2>My interests</h2>
+<ul>
+<li>Wanted to be an archeologist</li>
+<li>Unique applications of math. For example…
+<ul>
+<li><a href="https://pudding.cool/2018/05/cookies/">The average chocolate chip cookie</a></li>
+<li><a href="https://twitter.com/EmpiricalDave/status/1067941369237434368">Dinosaurs and statistical distributions</a></li>
+<li><a href="https://www.andrewheiss.com/blog/2019/02/16/algebra-calculus-r-yacas/">Calculus and The Good Place</a></li>
+<li><a href="https://juliasilge.com/blog/you-must-allow-me/">Jane Austen and natural language processing</a></li>
+</ul></li>
+<li>Stained glass windows</li>
+<li>Reading</li>
+</ul>
+</section>
+<section id="one-on-one-interviews" class="slide level2">
+<h2>One-on-one Interviews</h2>
+<ul>
+<li>Use the link in I-Learn to sign up for a one-on-one</li>
+<li>My chance to meet you without a mask!</li>
+<li>Quick, 10-minutes, on zoom</li>
+</ul>
+</section>
+<section id="questions-for-me" class="slide level2">
+<h2>Questions for me?</h2>
+</section></section>
+<section>
+<section id="data-wrangling-and-visualization" class="title-slide slide level1" data-background="#6897bb">
+<h1 data-background="#6897bb">Data Wrangling and Visualization</h1>
+
+</section>
+<section id="what-is-a-data-scientist" class="slide level2">
+<h2>What is a data scientist?</h2>
+<p>A blend of programmer, statistician, and communicator that burns with curiosity.</p>
+<ul>
+<li class="fragment">The truth: The definition is settling, but the professional title of data science still covers a broad set of people and skills.</li>
+<li class="fragment">When we say “blend” we can just as easily be saying: <em>An almost scientist that can’t quite program, often isn’t the best statistician in the room and asks too many questions.</em></li>
+</ul>
+</section>
+<section id="what-do-you-think" class="slide level2">
+<h2>What do you think?</h2>
+<ul>
+<li>What makes a good data scientist?</li>
+<li>What skills does a data wrangler need?</li>
+</ul>
+<p>Do some research, and post your answers here:</p>
+<p><a href="https://bit.ly/3iua29R">https://bit.ly/3iua29R</a></p>
+<ul>
+<li class="fragment"><a href="https://towardsdatascience.com/what-makes-a-good-data-scientist-engineer-a8b4d7948a86">Some ideas.</a></li>
+</ul>
+</section></section>
+<section>
+<section id="why-do-we-attend-college" class="title-slide slide level1" data-background="#6897bb">
+<h1 data-background="#6897bb">Why do we attend college?</h1>
+
+</section>
+<section id="peter-gray-on-education" class="slide level2">
+<h2><a href="https://www.psychologytoday.com/us/blog/freedom-learn/200808/brief-history-education">Peter Gray on Education</a></h2>
+<p>Anthropologists have reported that the hunter-gatherer groups they studied did not distinguish between work and play–essentially all of life was understood as play…</p>
+<p>With the rise of schooling, people began to think of learning as children’s work. The same power-assertive methods that had been used to make children work in fields and factories were quite naturally transferred to the classroom.</p>
+<p><strong>If children learn nothing else in school, they learn the difference between work and play and that learning is work, not play.</strong></p>
+</section>
+<section id="jeffry-r.-holland-on-learning" class="slide level2">
+<h2><a href="https://www.churchofjesuschrist.org/study/ensign/2018/12/making-your-life-a-soul-stirring-journey-of-personal-growth?lang=eng">Jeffry R. Holland on learning</a></h2>
+<p>So let’s talk about learning. As a teacher at heart, I love the word and the idea, though I do think we should define it a little better than we usually do. … I don’t just mean the accumulation of knowledge, though that is part of it. I also don’t just mean passively listening to a lecture or memorizing facts. <strong>I mean learning in the sense of growth and change, of insight leading to improvement, of knowing the truth, which in turn leads us closer to the God of all truth.</strong></p>
+</section>
+<section id="byu-idaho-mission-statement" class="slide level2">
+<h2><a href="https://www.byui.edu/about/mission-statement">BYU-Idaho Mission Statement</a></h2>
+<p>To develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities.</p>
+</section></section>
+<section>
+<section id="class-format" class="title-slide slide level1" data-background="#6897bb">
+<h1 data-background="#6897bb">Class Format</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<h3 id="weekly-process">Weekly Process</h3>
+<ul>
+<li>“Being” Readings</li>
+<li>Class Tasks</li>
+<li>Case Studies</li>
+</ul>
+<p><br></p>
+<h3 id="additional-assignments">Additional Assignments</h3>
+<ul>
+<li>Semester project</li>
+<li>Coding challenge</li>
+</ul>
+</section>
+<section id="being-readings" class="slide level2">
+<h2>“Being” Readings</h2>
+<p>Assigned readings to help you understand the big picture of data science, and gain context for the skills you are learning.</p>
+<ul>
+<li class="fragment">Make comments in Perusall (we’ll talk about this later)</li>
+<li class="fragment">Student-lead reading discussion every Wednesday. Come prepared!</li>
+</ul>
+</section>
+<section id="class-tasks" class="slide level2">
+<h2>Class Tasks</h2>
+<p>These tasks help you practice new skills before attempting the case study.</p>
+<ul>
+<li class="fragment">Can be challenging, but should be less time consuming than the weekly case studies</li>
+<li class="fragment">The first two weeks are not as consistent as the remaining weeks</li>
+</ul>
+</section>
+<section id="case-study-format" class="slide level2">
+<h2>Case Study Format</h2>
+<ul>
+<li class="fragment">Week 1 and Week 2 are slightly different</li>
+<li class="fragment">Week 3 begins the standard case study format
+<ol type="1">
+<li class="fragment">Open ended question to answer with data provided<br />
+…<br />
+</li>
+<li class="fragment">Compile your <code>.md</code> and <code>.html</code> file into your git repository</li>
+<li class="fragment">Find two other student’s compiled files in their repository and provide feedback using the issues feature in GitHub (If they already have three issues find a different student to critique)</li>
+<li class="fragment">Address 1-2 of the issues posted on your project and push the updates to GitHub</li>
+</ol></li>
+<li class="fragment">Every Monday two students present their case studies to the class</li>
+</ul>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<p><img data-src="images/weekly_calendar.png" /></p>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<p><img data-src="images/weekly_format.png" /></p>
+</section></section>
+<section>
+<section id="how-to-get-an-a" class="title-slide slide level1" data-background="#6897bb">
+<h1 data-background="#6897bb">How to get an “A”</h1>
+
+</section>
+<section id="grading-philosophy" class="slide level2">
+<h2>Grading Philosophy</h2>
+<ul>
+<li class="fragment">In a specifications-grading system all tasks are evaluated on a high-standards pass/fail basis using detailed checklists of task requirements and expectations.</li>
+<li class="fragment">Letter grades are earned by passing marks on a set of tasks.</li>
+<li class="fragment">This system provides for a variety of choice and is closer to how learning, and work, is done in the real world.</li>
+<li class="fragment">It will be easy for us to tell if work is complete, done in good faith, and consistent with the requirements.</li>
+</ul>
+</section>
+<section id="specifications-grading" class="slide level2">
+<h2>Specifications Grading</h2>
+<p><img data-src="images/grade_sets.png" /></p>
+</section>
+<section id="workload-to-get-an-a" class="slide level2">
+<h2>Workload to get an “A”</h2>
+<p><img data-src="intro_day2_files/figure-revealjs/unnamed-chunk-1-1.png" /></p>
+</section>
+<section id="to-get-a-b" class="slide level2">
+<h2>To get a “B”</h2>
+<p>You don’t do <strong>B</strong> work on all the tasks and case studies - You do <strong>A</strong> work on half of them.</p>
+<ul>
+<li class="fragment">Focus on the first 5-weeks material. Pick and choose work after the foundation material.</li>
+<li class="fragment">I know everyone can earn a B or higher.</li>
+</ul>
+</section>
+<section id="before-next-class." class="slide level2">
+<h2>Before next class….</h2>
+<ul>
+<li>Sign up for an interview with Sister Larson</li>
+<li>Complete Task 1 (you do not need to submit anything)</li>
+<li>Come to class prepared to ask questions about the syllabus or homework tasks</li>
+<li>Come to class prepared to have a discussion on the assigned reading from Task 1</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="externals/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="externals/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: true,
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+        // Transition style
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: '100%',
+        height: '100%',
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 1,
+        maxScale: 3,
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'externals/reveal.js-3.3.0.1/plugin/search/search.js', async: true },
+          { src: 'externals/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
