@@ -7,7 +7,7 @@ params:
   dtype: "none"
 ---
 
-# Welcome to Math 335 and CSE 350! {data-background=#60a67f}
+# Welcome to Math 335 and CSE 350! {data-background=#8dc9a0}
 
 ## Data Wrangling and Visualization
 
@@ -24,7 +24,7 @@ params:
 
 ## Course Outcomes (Short Version)
 
-# Why I Love Data {data-background=#60a67f}
+# Why I Love Data {data-background=#8dc9a0}
 
 ## Introduction to Sister Larson
 
@@ -36,20 +36,20 @@ When I was little, I wanted to be...
 - A civil engineer
 - An architect
 - A costume designer
+- An office assistant
 
 ## Introduction to Sister Larson
 
 What I did instead:
 
-> - Undergraduate in Applied Mathematics at BYU-Idaho
-> - Masters degree in Statistics at BYU
-> - Biostatistician at Myriad Genetics doing cancer research
-> - Then back to BYU-Idaho!
+- Undergraduate in Applied Mathematics at BYU-Idaho
+- Masters degree in Statistics at BYU
+- Biostatistician at Myriad Genetics doing cancer research
+- Then back to BYU-Idaho!
 
 ## Using Data to Gain Insight
 
 - Everything we do generates data.
-
 - If you have the right tools, you can use those data to answer important questions...and not-so-important questions.
 
 ## Examples 
@@ -61,14 +61,37 @@ What I did instead:
 - [Text analysis of the Federalist Papers](https://rcc.uchicago.edu/about-rcc/news-features/text-data-federalist-papers-yelp) (Also [here](http://pages.cs.wisc.edu/~gfung/federalist.pdf) and [here](https://towardsdatascience.com/hamilton-a-text-analysis-of-the-federalist-papers-e64cb1764fbf))
 - [Historical network analysis](https://www.themacroscope.org/?page_id=889) [and visual](https://dcicblog.umd.edu/gjlc/2017/02/beyond-family-ties-from-genealogy-to-social-network-analysis/)
 
+# Decisions Determine Destiny {data-background=#8dc9a0}
 
 
-# Decisions Determine Destiny {data-background=#60a67f}
+##
+
+![](images/grades_a.PNG)
+
+##
+
+![](images/grades_amin.PNG)
+
+##
+
+![](images/grades_all.PNG)
+
+##
+
+![](images/grades_cc.PNG)
 
 
-# Looking Ahead {data-background=#60a67f}
+# Looking Ahead {data-background=#8dc9a0}
+
+## On Friday
+
+- Reading Discussion
+- Answer course/syllabus quetions
+- Intro to R
 
 ## Questions for me?
+
+##
 
 ## My family
 
@@ -78,41 +101,6 @@ What I did instead:
 
 
 
-# Data Wrangling and Visualization  {data-background=#60a67f}
-
-## What is a data scientist?
-
-A blend of programmer, statistician, and communicator that burns with curiosity.
-
-- The truth: The definition is settling, but the professional title of data science still covers a broad set of people and skills.
-- When we say "blend" we can just as easily be saying: *An almost scientist that can't quite program, often isn't the best statistician in the room and asks too many questions.*
-
-## What do you think?
-
-> - What makes a good data scientist?
-> - What skills does a data wrangler need?
-
-Do some research, and post your answers here:
-
-[https://bit.ly/3iua29R](https://bit.ly/3iua29R)
-
-- [Some ideas.](https://towardsdatascience.com/what-makes-a-good-data-scientist-engineer-a8b4d7948a86)
-
-
-
-# Why do we attend college? {data-background=#60a67f}
-
-## [Peter Gray on Education](https://www.psychologytoday.com/us/blog/freedom-learn/200808/brief-history-education)
-
-Anthropologists have reported that the hunter-gatherer groups they studied did not distinguish between work and play--essentially all of life was understood as play...
-
-With the rise of schooling, people began to think of learning as children's work. The same power-assertive methods that had been used to make children work in fields and factories were quite naturally transferred to the classroom.
-
-**If children learn nothing else in school, they learn the difference between work and play and that learning is work, not play.**
-
-## [Jeffry R. Holland on learning](https://www.churchofjesuschrist.org/study/ensign/2018/12/making-your-life-a-soul-stirring-journey-of-personal-growth?lang=eng)
-
-So let's talk about learning. As a teacher at heart, I love the word and the idea, though I do think we should define it a little better than we usually do. ... I don't just mean the accumulation of knowledge, though that is part of it. I also don't just mean passively listening to a lecture or memorizing facts. **I mean learning in the sense of growth and change, of insight leading to improvement, of knowing the truth, which in turn leads us closer to the God of all truth.**
 
 ## [BYU-Idaho Mission Statement](https://www.byui.edu/about/mission-statement)
 
@@ -123,7 +111,7 @@ To develop disciples of Jesus Christ who are leaders in their homes, the Church,
 
 
 
-# Class Format {data-background=#60a67f}
+# Class Format {data-background=#8dc9a0}
 
 ## 
 
@@ -167,18 +155,12 @@ These tasks help you practice new skills before attempting the case study.
 
 ##
 
-![](images/weekly_calendar.png)
-
-##
-
-![](images/weekly_format.png)
+![](images/weekly.png)
 
 
 
 
-
-
-# How to get an "A" {data-background=#60a67f}
+# How to get an "A" {data-background=#8dc9a0}
 
 ## Grading Philosophy
 
@@ -190,30 +172,7 @@ These tasks help you practice new skills before attempting the case study.
 
 ## Specifications Grading
 
-![](images/grade_sets.png)
 
-## Workload to get an "A"
-
-```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=14}
-library(tidyverse)
-
-weeks <- tibble(Week = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), 
-       low  = c(4, 8, 10, 10, 12, 11, 9, 5, 6, 6, 6, 6, 6),
-       high = c(6, 12, 14, 14, 16, 14, 12, 9, 9, 9, 9, 11, 11))
-
-
-weeks %>%
-  ggplot(aes(x = Week)) +
-  geom_point(aes(y = low, color = "Minimum"), size = 2.5) +
-  geom_line(aes(y = low, color = "Minimum")) +
-  geom_point(aes(y = high, color = "Max"), size = 2.5) +
-  geom_line(aes(y = high, color = "Max")) +
-  labs(y = "Hours per week", x = "Week of semester", title = "Number of hours to earn an A") +
-  theme_bw() + theme(panel.grid.minor.x = element_blank()) +
-  coord_cartesian(ylim = c(0, 20)) + 
-  scale_x_continuous(breaks = 1:13) + scale_color_manual("Range", values = c("dodgerblue3", "orange3"))
-
-```
 
 ## To get a "B"
 
@@ -221,6 +180,10 @@ You don't do **B** work on all the tasks and case studies - You do **A** work on
 
 * Focus on the first 5-weeks material. Pick and choose work after the foundation material.
 * I know everyone can earn a B or higher.
+
+
+
+
 
 ## Before next class....
 

@@ -1,82 +1,106 @@
 ---
-title: "Welcome to Math 335/CSE 350!"
+title: ""
 params:
-  day: 1
+  day: 2
   ptitle: true
   pbackground: true
   dtype: "none"
 ---
 
-# Introduction to Sister Larson  {data-background=#6897bb}
+# Welcome to Math 335 and CSE 350! {data-background=#8dc9a0}
+
+## Data Wrangling and Visualization
+
+- **Data Wrangling**
+- **Data Visualization**
+
+## Course Outcomes
+
+1. Convert data from varied formats or structures to a desirable format for analysis and visualization.
+2. Clean, transform and merge data attributes/variables appropriately.
+3. Effectively display and communicate meaning from spatial, temporal, and textual data.
+4. Articulate the process, benefits, and challenges of Big Data manipulation.
+5. Use current analysis, presentation, and collaboration tools in the data science field (R, Python, D3.js, GitHub). 
+
+## Course Outcomes (Short Version)
+
+# Why I Love Data {data-background=#8dc9a0}
+
+## Introduction to Sister Larson
+
+When I was little, I wanted to be...
+
+- An archaeologist
+- A spy or detective
+- A librarian
+- A civil engineer
+- An architect
+- A costume designer
+- An office assistant
+
+## Introduction to Sister Larson
+
+What I did instead:
+
+- Undergraduate in Applied Mathematics at BYU-Idaho
+- Masters degree in Statistics at BYU
+- Biostatistician at Myriad Genetics doing cancer research
+- Then back to BYU-Idaho!
+
+## Using Data to Gain Insight
+
+- Everything we do generates data.
+- If you have the right tools, you can use those data to answer important questions...and not-so-important questions.
+
+## Examples 
+
+- [The average chocolate chip cookie](https://pudding.cool/2018/05/cookies/)
+- [Dinosaurs and statistical distributions](https://twitter.com/EmpiricalDave/status/1067941369237434368)
+- [Calculus and The Good Place](https://www.andrewheiss.com/blog/2019/02/16/algebra-calculus-r-yacas/)
+- [Jane Austen and natural language processing](https://juliasilge.com/blog/you-must-allow-me/)
+- [Text analysis of the Federalist Papers](https://rcc.uchicago.edu/about-rcc/news-features/text-data-federalist-papers-yelp) (Also [here](http://pages.cs.wisc.edu/~gfung/federalist.pdf) and [here](https://towardsdatascience.com/hamilton-a-text-analysis-of-the-federalist-papers-e64cb1764fbf))
+- [Historical network analysis](https://www.themacroscope.org/?page_id=889) [and visual](https://dcicblog.umd.edu/gjlc/2017/02/beyond-family-ties-from-genealogy-to-social-network-analysis/)
+
+# Decisions Determine Destiny {data-background=#8dc9a0}
+
+
+##
+
+![](images/grades_a.PNG)
+
+##
+
+![](images/grades_amin.PNG)
+
+##
+
+![](images/grades_all.PNG)
+
+##
+
+![](images/grades_cc.PNG)
+
+
+# Looking Ahead {data-background=#8dc9a0}
+
+## On Friday
+
+- Reading Discussion
+- Answer course/syllabus quetions
+- Intro to R
+
+## Questions for me?
+
+##
 
 ## My family
 
 ![](images/crazy_family.jpg)
 
-## My background
-
-> - Undergraduate in Applied Mathematics from BYU-Idaho
-> - Masters degree in Statistics from BYU
-> - Biostatistician at Myriad Genetics doing cancer research
-> - Then back to BYU-Idaho!
-
-## My interests
-
-> - Wanted to be an archeologist
-> - Unique applications of math. For example...
->   - [The average chocolate chip cookie](https://pudding.cool/2018/05/cookies/)
->   - [Dinosaurs and statistical distributions](https://twitter.com/EmpiricalDave/status/1067941369237434368)
->   - [Calculus and The Good Place](https://www.andrewheiss.com/blog/2019/02/16/algebra-calculus-r-yacas/)
->   - [Jane Austen and natural language processing](https://juliasilge.com/blog/you-must-allow-me/)
-> - Stained glass windows
-> - Reading
-
-## One-on-one Interviews
-
-> - Use the link in I-Learn to sign up for a one-on-one
-> - My chance to meet you without a mask!
-> - Quick, 10-minutes, on zoom
-
-## Questions for me?
 
 
 
 
-# Data Wrangling and Visualization  {data-background=#6897bb}
-
-## What is a data scientist?
-
-A blend of programmer, statistician, and communicator that burns with curiosity.
-
-- The truth: The definition is settling, but the professional title of data science still covers a broad set of people and skills.
-- When we say "blend" we can just as easily be saying: *An almost scientist that can't quite program, often isn't the best statistician in the room and asks too many questions.*
-
-## What do you think?
-
-> - What makes a good data scientist?
-> - What skills does a data wrangler need?
-
-Do some research, and post your answers here:
-
-[https://bit.ly/3iua29R](https://bit.ly/3iua29R)
-
-- [Some ideas.](https://towardsdatascience.com/what-makes-a-good-data-scientist-engineer-a8b4d7948a86)
-
-
-
-# Why do we attend college? {data-background=#6897bb}
-
-## [Peter Gray on Education](https://www.psychologytoday.com/us/blog/freedom-learn/200808/brief-history-education)
-
-Anthropologists have reported that the hunter-gatherer groups they studied did not distinguish between work and play--essentially all of life was understood as play...
-
-With the rise of schooling, people began to think of learning as children's work. The same power-assertive methods that had been used to make children work in fields and factories were quite naturally transferred to the classroom.
-
-**If children learn nothing else in school, they learn the difference between work and play and that learning is work, not play.**
-
-## [Jeffry R. Holland on learning](https://www.churchofjesuschrist.org/study/ensign/2018/12/making-your-life-a-soul-stirring-journey-of-personal-growth?lang=eng)
-
-So let's talk about learning. As a teacher at heart, I love the word and the idea, though I do think we should define it a little better than we usually do. ... I don't just mean the accumulation of knowledge, though that is part of it. I also don't just mean passively listening to a lecture or memorizing facts. **I mean learning in the sense of growth and change, of insight leading to improvement, of knowing the truth, which in turn leads us closer to the God of all truth.**
 
 ## [BYU-Idaho Mission Statement](https://www.byui.edu/about/mission-statement)
 
@@ -87,7 +111,7 @@ To develop disciples of Jesus Christ who are leaders in their homes, the Church,
 
 
 
-# Class Format {data-background=#6897bb}
+# Class Format {data-background=#8dc9a0}
 
 ## 
 
@@ -131,18 +155,12 @@ These tasks help you practice new skills before attempting the case study.
 
 ##
 
-![](images/weekly_calendar.png)
-
-##
-
-![](images/weekly_format.png)
+![](images/weekly.png)
 
 
 
 
-
-
-# How to get an "A" {data-background=#6897bb}
+# How to get an "A" {data-background=#8dc9a0}
 
 ## Grading Philosophy
 
@@ -154,11 +172,7 @@ These tasks help you practice new skills before attempting the case study.
 
 ## Specifications Grading
 
-![](images/grade_sets.png)
 
-## Workload to get an "A"
-
-![](intro_day2_files/figure-revealjs/unnamed-chunk-1-1.png)
 
 ## To get a "B"
 
@@ -166,6 +180,10 @@ You don't do **B** work on all the tasks and case studies - You do **A** work on
 
 * Focus on the first 5-weeks material. Pick and choose work after the foundation material.
 * I know everyone can earn a B or higher.
+
+
+
+
 
 ## Before next class....
 
