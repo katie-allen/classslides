@@ -83,22 +83,19 @@ What I did instead:
 
 ![](images/weekly.png)
 
+## Weekly Assignments
 
-## 
+- Doing Readings: Learn the *how* of data science
+- Being Readings: Learn the *why* and *so what* of data science
+- Tasks: Practice doing what you've learned (Get messy! Make mistakes!)
+- Case Studies: Practice finding insights and *clearly explaining* insights
 
-### Weekly Process
+## Other Assignments
 
-> - "Being" Readings
-> - Class Tasks
-> - Case Studies
+- Semester Project:
+- Coding Challenges:
 
-<br>
-
-### Additional Assignments
-
-> - Semester project
-> - Coding challenge
-
+<!---
 ## "Being" Readings
 
 Assigned readings to help you understand the big picture of data science, and gain context for the skills you are learning.
@@ -124,12 +121,7 @@ These tasks help you practice new skills before attempting the case study.
     4. Address 1-2 of the issues posted on your project and push the updates to GitHub
 - Every Monday two students present their case studies to the class
 
-##
-
-
-
-
-
+---->
 
 # How to get an "A" {data-background=#e8c35d}
 

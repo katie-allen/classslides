@@ -65,7 +65,8 @@ What I did instead:
 
 ## Examples 
 
-> - **Silly**
+<!--- On a scale of silly to serious ---->
+
 > - [Dinosaurs and statistical distributions](https://twitter.com/EmpiricalDave/status/1067941369237434368)
 > - [The average chocolate chip cookie](https://pudding.cool/2018/05/cookies/)
 > - [Calculus and The Good Place](https://www.andrewheiss.com/blog/2019/02/16/algebra-calculus-r-yacas/)
@@ -73,61 +74,19 @@ What I did instead:
 > - [Jane Austen and natural language processing](https://juliasilge.com/blog/you-must-allow-me/)
 > - [Text analysis of the Federalist Papers](https://rcc.uchicago.edu/about-rcc/news-features/text-data-federalist-papers-yelp) (Also [here](http://pages.cs.wisc.edu/~gfung/federalist.pdf) and [here](https://towardsdatascience.com/hamilton-a-text-analysis-of-the-federalist-papers-e64cb1764fbf))
 > - [Historical network analysis](https://www.themacroscope.org/?page_id=889) and [visual](https://dcicblog.umd.edu/gjlc/2017/02/beyond-family-ties-from-genealogy-to-social-network-analysis/)
-> - [How do dogs knwo that other dogs are dogs?](https://link.springer.com/article/10.1007/s10071-013-0600-8)
+> - [How do dogs know that other dogs are dogs?](https://link.springer.com/article/10.1007/s10071-013-0600-8)
 > - [Cancer Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7066089/)
-> - **Serious**
 
-# Decisions Determine Destiny {data-background=#e8c35d}
+# Class Format and Grading {data-background=#e8c35d}
 
+## Weekly Format
 
-##
+![](images/weekly.png)
 
-![](images/grades_a.PNG)
-
-##
-
-![](images/grades_amin.PNG)
-
-##
-
-![](images/grades_all.PNG)
-
-##
-
-![](images/grades_cc.PNG)
-
-
-# Looking Ahead {data-background=#e8c35d}
-
-## On Friday
-
-- Reading Discussion
-- Answer course/syllabus quetions
-- Intro to R
-
-## Questions for me?
-
-##
-
-## My family
-
-![](images/crazy_family.jpg)
-
-
-
-
-
-
-## [BYU-Idaho Mission Statement](https://www.byui.edu/about/mission-statement)
-
-To develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities.
-
-
-
-
-
-
-# Class Format {data-background=#e8c35d}
+- Doing Readings
+- Being Readings
+- Tasks
+- Case Studies
 
 ## 
 
@@ -171,7 +130,7 @@ These tasks help you practice new skills before attempting the case study.
 
 ##
 
-![](images/weekly.png)
+
 
 
 
@@ -196,6 +155,63 @@ You don't do **B** work on all the tasks and case studies - You do **A** work on
 
 * Focus on the first 5-weeks material. Pick and choose work after the foundation material.
 * I know everyone can earn a B or higher.
+
+
+
+
+
+
+
+
+
+
+# Decisions Determine Destiny {data-background=#e8c35d}
+
+
+##
+
+![](images/grades_a.PNG)
+
+##
+
+![](images/grades_amin.PNG)
+
+##
+
+![](images/grades_all.PNG)
+
+##
+
+![](images/grades_cc.PNG)
+
+
+# Looking Ahead {data-background=#e8c35d}
+
+## On Friday
+
+- Reading Discussion
+- Answer course/syllabus quetions
+- Intro to R
+
+## Questions for me?
+
+##
+
+## My family
+
+![](images/crazy_family.jpg)
+
+
+
+## My Goals for you
+
+
+## [BYU-Idaho Mission Statement](https://www.byui.edu/about/mission-statement)
+
+To develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities.
+
+
+
 
 
 
