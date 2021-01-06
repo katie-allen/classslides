@@ -7,12 +7,21 @@ params:
   dtype: "none"
 ---
 
-# Welcome to Math 335 and CSE 350! {data-background=#8dc9a0}
+# Welcome to Math 335 and CSE 350! {data-background=#e8c35d}
 
 ## Data Wrangling and Visualization
 
-- **Data Wrangling**
-- **Data Visualization**
+## Wrangle
+
+Oxford Dictionary: "round up, herd, or take charge of (livestock)"
+
+![](images/wrangle_sheep.jpg)
+
+## Visualize
+
+Oxford Dictionary: "form a mental image of; imagine; make visible to the eye"
+
+![](images/visualize_data.png)
 
 ## Course Outcomes
 
@@ -24,7 +33,9 @@ params:
 
 ## Course Outcomes (Short Version)
 
-# Why I Love Data {data-background=#8dc9a0}
+Start with data. End with insights.
+
+# Why I Love Data {data-background=#e8c35d}
 
 ## Introduction to Sister Larson
 
@@ -50,18 +61,23 @@ What I did instead:
 ## Using Data to Gain Insight
 
 - Everything we do generates data.
-- If you have the right tools, you can use those data to answer important questions...and not-so-important questions.
+- If you have the right tools, you can use those data to answer important questions...and some very silly questions.
 
 ## Examples 
 
-- [The average chocolate chip cookie](https://pudding.cool/2018/05/cookies/)
-- [Dinosaurs and statistical distributions](https://twitter.com/EmpiricalDave/status/1067941369237434368)
-- [Calculus and The Good Place](https://www.andrewheiss.com/blog/2019/02/16/algebra-calculus-r-yacas/)
-- [Jane Austen and natural language processing](https://juliasilge.com/blog/you-must-allow-me/)
-- [Text analysis of the Federalist Papers](https://rcc.uchicago.edu/about-rcc/news-features/text-data-federalist-papers-yelp) (Also [here](http://pages.cs.wisc.edu/~gfung/federalist.pdf) and [here](https://towardsdatascience.com/hamilton-a-text-analysis-of-the-federalist-papers-e64cb1764fbf))
-- [Historical network analysis](https://www.themacroscope.org/?page_id=889) [and visual](https://dcicblog.umd.edu/gjlc/2017/02/beyond-family-ties-from-genealogy-to-social-network-analysis/)
+> - **Silly**
+> - [Dinosaurs and statistical distributions](https://twitter.com/EmpiricalDave/status/1067941369237434368)
+> - [The average chocolate chip cookie](https://pudding.cool/2018/05/cookies/)
+> - [Calculus and The Good Place](https://www.andrewheiss.com/blog/2019/02/16/algebra-calculus-r-yacas/)
+> - [Rounding movie ratings](https://fivethirtyeight.com/features/fandango-movies-ratings/)
+> - [Jane Austen and natural language processing](https://juliasilge.com/blog/you-must-allow-me/)
+> - [Text analysis of the Federalist Papers](https://rcc.uchicago.edu/about-rcc/news-features/text-data-federalist-papers-yelp) (Also [here](http://pages.cs.wisc.edu/~gfung/federalist.pdf) and [here](https://towardsdatascience.com/hamilton-a-text-analysis-of-the-federalist-papers-e64cb1764fbf))
+> - [Historical network analysis](https://www.themacroscope.org/?page_id=889) and [visual](https://dcicblog.umd.edu/gjlc/2017/02/beyond-family-ties-from-genealogy-to-social-network-analysis/)
+> - [How do dogs knwo that other dogs are dogs?](https://link.springer.com/article/10.1007/s10071-013-0600-8)
+> - [Cancer Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7066089/)
+> - **Serious**
 
-# Decisions Determine Destiny {data-background=#8dc9a0}
+# Decisions Determine Destiny {data-background=#e8c35d}
 
 
 ##
@@ -81,7 +97,7 @@ What I did instead:
 ![](images/grades_cc.PNG)
 
 
-# Looking Ahead {data-background=#8dc9a0}
+# Looking Ahead {data-background=#e8c35d}
 
 ## On Friday
 
@@ -111,7 +127,7 @@ To develop disciples of Jesus Christ who are leaders in their homes, the Church,
 
 
 
-# Class Format {data-background=#8dc9a0}
+# Class Format {data-background=#e8c35d}
 
 ## 
 
@@ -160,7 +176,7 @@ These tasks help you practice new skills before attempting the case study.
 
 
 
-# How to get an "A" {data-background=#8dc9a0}
+# How to get an "A" {data-background=#e8c35d}
 
 ## Grading Philosophy
 
