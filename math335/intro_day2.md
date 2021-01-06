@@ -83,25 +83,39 @@ What I did instead:
 
 ![](images/weekly.png)
 
-- Doing Readings
-- Being Readings
-- Tasks
-- Case Studies
+- Doing Readings: Learn the *how* of data science
+- Being Readings: Learn the *why* and *so what* of data science
+- Tasks: Practice doing what you've learned (Get messy! Make mistakes!)
+- Case Studies: Practice finding insights and *clearly explaining* insights
 
-## 
+## Other Assignments
 
-### Weekly Process
+- Semester Project: A "choose your own adventure" case study.
+- Coding Challenges: A chance for you to show me what you've learned.
 
-> - "Being" Readings
-> - Class Tasks
-> - Case Studies
+## Grading Philosophy
 
-<br>
+- In a specifications-grading system all tasks are evaluated on a high-standards pass/fail basis using detailed checklists of task requirements and expectations. 
+- Letter grades are earned by passing marks on a set of tasks. 
+- This system provides for a variety of choice and is closer to how learning, and work, is done outside of a classroom.
+- It will be easy for us to tell if work is complete, done in good faith, and consistent with the requirements.
 
-### Additional Assignments
+## Specifications Grading
 
-> - Semester project
-> - Coding challenge
+![](images/grades_a.PNG)
+
+## Specifications Grading
+
+![](images/grades_amin.PNG)
+
+## Specifications Grading
+
+![](images/grades_cc.PNG)
+
+## Decisions Determine Destiny
+
+
+<!---
 
 ## "Being" Readings
 
@@ -128,13 +142,6 @@ These tasks help you practice new skills before attempting the case study.
     4. Address 1-2 of the issues posted on your project and push the updates to GitHub
 - Every Monday two students present their case studies to the class
 
-##
-
-
-
-
-
-
 # How to get an "A" {data-background=#e8c35d}
 
 ## Grading Philosophy
@@ -156,33 +163,7 @@ You don't do **B** work on all the tasks and case studies - You do **A** work on
 * Focus on the first 5-weeks material. Pick and choose work after the foundation material.
 * I know everyone can earn a B or higher.
 
-
-
-
-
-
-
-
-
-
-# Decisions Determine Destiny {data-background=#e8c35d}
-
-
-##
-
-![](images/grades_a.PNG)
-
-##
-
-![](images/grades_amin.PNG)
-
-##
-
-![](images/grades_all.PNG)
-
-##
-
-![](images/grades_cc.PNG)
+---->
 
 
 # Looking Ahead {data-background=#e8c35d}
