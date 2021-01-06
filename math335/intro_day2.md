@@ -23,6 +23,12 @@ Oxford Dictionary: "form a mental image of; imagine; make visible to the eye"
 
 ![](images/visualize_data.png)
 
+## Course Outcomes 
+
+To develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities[.](https://www.byui.edu/about/mission-statement)
+
+<!--- Big L vs. little l leader --->
+
 ## Course Outcomes
 
 1. Convert data from varied formats or structures to a desirable format for analysis and visualization.
@@ -86,11 +92,11 @@ What I did instead:
 - Doing Readings: Learn the *how* of data science
 - Being Readings: Learn the *why* and *so what* of data science
 - Tasks: Practice doing what you've learned (Get messy! Make mistakes!)
-- Case Studies: Practice finding insights and *clearly explaining* insights
+- Case Studies: Practice finding insights and clearly explaining insights
 
 ## Other Assignments
 
-- Semester Project: A "choose your own adventure" case study.
+- Semester Project: A "choose your own adventure" case study that you'll present to the class.
 - Coding Challenges: A chance for you to show me what you've learned.
 
 ## Grading Philosophy
@@ -112,8 +118,11 @@ What I did instead:
 
 ![](images/grades_cc.PNG)
 
-## Decisions Determine Destiny
+## ["Decisions Determine Destiny"](https://speeches.byu.edu/talks/thomas-s-monson/decisions-determine-destiny/)
 
+- What are your priorities?
+
+- What do you want out of this class? This semester? This college experience?
 
 <!---
 
@@ -168,39 +177,31 @@ You don't do **B** work on all the tasks and case studies - You do **A** work on
 
 # Looking Ahead {data-background=#e8c35d}
 
+## Task 2 (Thursday)
+
+- Get R and RStudio working on your computer
+- Join Slack and introduce yourself in the #general_w21_larson channel
+- Create an account on GitHub and tell me your username
+
+## Being Reading (Thursday)
+
+- Click on the link in I-Learn
+- Read the article in Perusall
+- Leave two comments
+
 ## On Friday
 
 - Reading Discussion
-- Answer course/syllabus quetions
+- Answer course/syllabus questions
 - Intro to R
 
-## Questions for me?
+## Case Study 1 (Saturday)
 
-##
+- Doing Readings
+- Answer R coding questions
+
+## Questions for me?
 
 ## My family
 
 ![](images/crazy_family.jpg)
-
-
-
-## My Goals for you
-
-
-## [BYU-Idaho Mission Statement](https://www.byui.edu/about/mission-statement)
-
-To develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities.
-
-
-
-
-
-
-
-
-## Before next class....
-
-> - Sign up for an interview with Sister Larson
-> - Complete Task 1 (you do not need to submit anything)
-> - Come to class prepared to ask questions about the syllabus or homework tasks
-> - Come to class prepared to have a discussion on the assigned reading from Task 1
