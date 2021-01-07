@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>s1.3.utf8</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="custom.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section><section id="welcome-to-cse-data-intuition-and-insight" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to CSE: Data Intuition and Insight</h1></section><section id="my-family" class="slide level2">
+<h2>My family</h2>
+<p><img data-src="images/crazy_family.jpg" /></p>
+</section><section id="my-background" class="slide level2">
+<h2>My background</h2>
+<ul>
+<li>Undergraduate in Applied Mathematics from BYU-Idaho</li>
+<li>Masters degree in Statistics from BYU</li>
+<li>Biostatistician at Myriad Genetics (cancer research)</li>
+<li>Then back to BYU-Idaho!</li>
+</ul>
+</section><section id="why-i-love-data" class="slide level2">
+<h2>Why I love data</h2>
+<ul>
+<li class="fragment"><a href="https://twitter.com/EmpiricalDave/status/1067941369237434368">Dinosaurs and statistical distributions</a></li>
+<li class="fragment"><a href="https://pudding.cool/2018/05/cookies/">The average chocolate chip cookie</a></li>
+<li class="fragment"><a href="https://www.andrewheiss.com/blog/2019/02/16/algebra-calculus-r-yacas/">Calculus and The Good Place</a></li>
+<li class="fragment"><a href="https://juliasilge.com/blog/you-must-allow-me/">Jane Austen and natural language processing</a> &gt; - <a href="https://link.springer.com/article/10.1007/s10071-013-0600-8">How do dogs know that other dogs are dogs?</a></li>
+</ul>
+</section><section id="data-intuition-and-insight" class="slide level2">
+<h2>“Data Intuition and Insight”</h2>
+<ul>
+<li class="fragment">What is intuition?</li>
+<li class="fragment">What is insight?</li>
+<li class="fragment">What is data?</li>
+</ul>
+</section><section id="course-outcomes" class="slide level2">
+<h2>Course Outcomes</h2>
+<ol type="1">
+<li class="fragment">Organize and store tabular data for time-series, spatial, and measured variables.</li>
+<li class="fragment">Calculate data summaries and produce visualizations from data.</li>
+<li class="fragment">Communicate about data with people of varied backgrounds (e.g., novices, database administrators, data scientists, business decision-makers).</li>
+<li class="fragment">Describe the implications of data visualization and summaries in the decision-making process.</li>
+</ol>
+</section><section id="mission-statement" class="slide level2">
+<h2>Mission Statement</h2>
+<blockquote>
+<p>To develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities.</p>
+</blockquote>
+</section></section>
+<section><section id="syllabus-overview" class="title-slide slide level1" data-background="#e8c35d"><h1>Syllabus Overview</h1></section><section id="course-format" class="slide level2">
+<h2>Course Format</h2>
+<p>CSE 150 is built around 6 case studies. Most case studies follow this two week format:</p>
+<p><img data-src="images/class_format.png" /></p>
+<p>Each case study has an overview that tells you exactly what to do.</p>
+</section><section id="course-content" class="slide level2">
+<h2>Course Content</h2>
+<p>Our assignments can be grouped into five categories:</p>
+<ol type="1">
+<li>Weekly Readings (25%)</li>
+<li>Case Studies (45%)</li>
+<li>Teach One Another (15%)</li>
+<li>Visualization Challenge (10%)</li>
+<li>Attendance (5%)</li>
+</ol>
+</section><section id="weekly-readings" class="slide level2">
+<h2>Weekly Readings</h2>
+<ul>
+<li>Readings quizzes</li>
+<li>Visualization Discussion</li>
+</ul>
+</section><section id="case-studies" class="slide level2">
+<h2>Case Studies</h2>
+<ul>
+<li>Case Study Beginning Quiz</li>
+<li>Case Study Midpoint Quiz</li>
+<li>Case Study Submission</li>
+</ul>
+</section><section id="teach-one-another" class="slide level2">
+<h2>Teach One Another</h2>
+<ul>
+<li>Teach One Another Quiz</li>
+<li>Case Study Presentation</li>
+<li>Case Study Feedback</li>
+<li>Tool Tips</li>
+</ul>
+</section><section id="visualization-challenge" class="slide level2">
+<h2>Visualization Challenge</h2>
+<p>An in-class challenge that covers three topics:</p>
+<ol type="1">
+<li>Tidy data description</li>
+<li>Visualization critique</li>
+<li>Creating your own visualization</li>
+</ol>
+</section></section>
+<section><section id="materials-and-technology" class="title-slide slide level1" data-background="#e8c35d"><h1>Materials and Technology</h1></section><section id="readings-materials" class="slide level2">
+<h2>Readings Materials</h2>
+<ul>
+<li><a href="https://www.amazon.com/Good-Charts-Smarter-Persuasive-Visualizations/dp/1633690709">Good Charts</a></li>
+<li><a href="https://byuistats.github.io/BYUI_CSE150_StatBook/">CSE 150 Supplement</a></li>
+<li><a href="">Tableau tutorials</a></li>
+</ul>
+</section><section id="slack" class="slide level2">
+<h2>Slack</h2>
+<p>Like a discussion board, but way better.</p>
+<p><img data-src="images/slack.png" /></p>
+<!----------------
+## Slack vs. Email vs. Canvas vs. Teams
+
+> 1. Canvas is not used outside of Academia (done).
+> 2. Email silos conversations, documents, and data. Plus, it hasn't changed much in [over 25 years](https://phrasee.co/a-brief-history-of-email/).
+> 3. Teams vs. Slack
+
+## Google Sheets (G Suite)
+
+I believe that spreadsheets are useful for looking at little data sets, building tables, and collaboration. Not for data analysis. Microsoft has accepted some of this point in their development of [PowerBI](https://powerbi.microsoft.com/en-us/) in response to [Tableau](https://www.tableau.com/).
+
+## Google Sheets vs. Excel 
+
+![](images/excel_gsuite.png)
+
+[reference for google](https://medium.com/grid-spreadsheets-run-the-world/excel-vs-google-sheets-usage-nature-and-numbers-9dfa5d1cadbd)
+------------------->
+</section><section id="edconnect" class="slide level2">
+<h2>EdConnect</h2>
+<p>Used to present case studies and tool tips.</p>
+<ul>
+<li><a href="https://www.edconnect.app">Web</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.koppla.education.android&amp;hl=en_US">Google Play</a></li>
+<li><a href="https://apps.apple.com/us/app/edconnect-virtual-classroom/id1492164134">Apple App Store</a></li>
+</ul>
+<p><img data-src="images/edconnect.png" /></p>
+</section><section id="tableau" class="slide level2">
+<h2>Tableau</h2>
+<p><a href="https://www.youtube.com/watch?v=gAruNQGxYMA">“Tableau makes analyzing data fast, easy, and beautiful for everyone.”</a></p>
+<p><img data-src="images/tableau.jpg" /></p>
+</section><section id="tableau-vs-power-bi" class="slide level2">
+<h2>Tableau vs Power BI</h2>
+<p><img data-src="images/powerbi_tableau.png" /></p>
+<p><a href="https://www.iflexion.com/blog/power-bi-vs-tableau">ref</a></p>
+</section></section>
+<section><section id="looking-ahead" class="title-slide slide level1" data-background="#e8c35d"><h1>Looking Ahead</h1></section><section id="what-to-do-after-class-today" class="slide level2">
+<h2>What to do after class today</h2>
+<ul>
+<li class="fragment">Follow the instructions on the “Technology Tools” page</li>
+<li class="fragment">Reading Quiz 1.2</li>
+<li class="fragment">Case Study 1</li>
+</ul>
+</section><section id="what-makes-a-chart-good" class="slide level2">
+<h2>What makes a chart “good”?</h2>
+<p>(chart = graph = visualization = plot)</p>
+</section><section id="is-this-chart-good" class="slide level2">
+<h2>Is this chart good?</h2>
+<p><img data-src="images/bad_chart.gif" /></p>
+<p><a href="http://www.perceptualedge.com/example1.php">Source</a></p>
+</section><section id="is-this-chart-good-1" class="slide level2">
+<h2>Is this chart good?</h2>
+<p><img data-src="images/good_chart.gif" /></p>
+<p><a href="http://www.perceptualedge.com/example1.php">Source</a></p>
+</section><section id="is-this-chart-good-2" class="slide level2">
+<h2>Is this chart good?</h2>
+<p><img data-src="images/poppyfield.jpg" /></p>
+<p><a href="http://poppyfield.org/">Source</a></p>
+</section><section id="is-this-chart-good-3" class="slide level2">
+<h2>Is this chart good?</h2>
+<p><img data-src="images/pizza.png" /></p>
+<p><a href="https://yougov.co.uk/topics/politics/articles-reports/2017/03/06/does-pineapple-belong-pizza">Source</a></p>
+<!---------
+## [Can we make it better?](https://jamboard.google.com/d/1vbLNBFPgCjidY9BBw7_daz1xfzleyhbERHzsu6r0a9o/edit?usp=sharing)
+------------>
+<!----------------------
+
+## Canvas or course structure questions?
+
+## Teams
+
+# Is there an art to making visualizations? {data-background=#e8c35d}
+
+## How humans see data -- John Rauser
+
+What did you learn from this video? Anything you disagreed with?
+
+- "Your goal with a visualization is to make new ideas appear in the heads of other people."
+- "Good visualizations optimize for the human visual system."
+- "Above all else, show the data" *Tufte*
+
+## 7 methods of encoding data
+
+#### Ordered by accuracy of perceptual estimation.
+
+1. Position along a common scale
+2. Position on common, non-aligned scale
+3. Length
+4. Angle or slope
+5. Area
+6. Volume/density/saturation of "color"
+7. Color hue
+
+# Good Charts {data-background=#e8c35d}
+
+## Good Charts, Chapter 2: When Charts hit our eyes
+
+- What were your takeaways from Chapter 2?
+- Misunderstandings?
+- Doubts?
+
+## Five ideas to know
+
+1. We don't go in order
+2. We see what stands out
+3. We only see a few things at once
+4. Humans yearn for patterns
+5. Communication only happens through metaphor
+
+- *keep track: close your eyes then take note where you looked first*
+
+##
+
+![](images/Vaccines_Wall_Street_Journal.png)
+
+[Source](https://generalassemb.ly/blog/the-best-topical-data-visualizations-of-2015/)
+
+## Where do people look?
+
+![](images/gc/Ch1_tropicana_example.png)
+
+## Don't make it complicated (unless you need to)
+
+**Try to tell me the message in the below paragraph**
+
+> getting Lectured trainingoutsideofcollege is-even-more-expensive-than it is in college. aWeek’sworth of trainingcancostmore dlkjalkdfald;kjfasdlkjfasd than a semester of school here at BYUI........Duetothisexpenselearning howtodigest onlinematerial butmaybeorand get up to speedonatopic before.going.to.the.expertfor                                                 questions                         is a valuableskill todevelop. I expect que tu have completedthe assigned-reading-material-before class begins. You will also have work tocompleteafterclass.
+
+## We want patterns to a fault.
+
+**Conspiracy Theory of Charts**
+
+![](images/gc/ch1_dualaxes.png)
+
+> - [The case against dual axis charts](https://blog.datawrapper.de/dualaxis/)
+
+**Only do it for transformations: ft -> meters**
+
+## Metaphor matters in all communication
+
+I love his symphony metaphor.
+
+> When deeply complex charts work, we find them effective and beautiful, just as we find a symphony, which is another marvelously complex arrangement of data that we experience as a coherent whole.
+
+![](images/gc/ch1_badsymphony_lines.png)
+
+## Metaphor highlights
+
+"The influence of the brain and expectation are far greater than the raw data."
+
+- South is down?
+- Lighter color shades are "emptier" or lower than darker ones.
+- Lines imply ordered relationship
+- Time moves from left to right.
+
+- **What other metaphors could you use to describe data visualization?**
+-------------------------->
+</section><section id="good-charts-matrix" class="slide level2">
+<h2>Good Charts Matrix</h2>
+<p><img data-src="images/gc/Intro_chartquadrant.png" /></p>
+<!---------------------------
+# Tidy Data ([Section 1.1](https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#tidy-data)) {data-background=#e8c35d}
+
+## How data is stored.
+
+*Data and how to handle it isn't trivial*
+
+1. Visual consumption by humans
+2. Computer consumption for storage
+3. Analytics consumption
+
+## How humans consume data.
+
+![](images/sr/human_table.png)
+
+
+## How computers consume data.
+
+![](images/sr/relational_diagram.png)
+
+
+## How data is stored for visualization and analytics.
+
+![](images/sr/tidy_diagram.png)
+
+## Oh no you don't
+
+**You should never attempt all three of the above in one sheet in Excel or Google Sheets.**
+
+*Using multiple tabs or sheets can make this possible but still not recommended.*
+
+-------------------->
+</section></section>
+    </div>
+  </div>
+
+  <script src="externals/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="externals/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: true,
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: '100%',
+        height: '100%',
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 1,
+        maxScale: 3,
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'externals/reveal.js-3.3.0.1/plugin/search/search.js', async: true },
+          { src: 'externals/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

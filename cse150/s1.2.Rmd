@@ -1,13 +1,13 @@
 ---
 ---
 
-# Welcome to Class! {data-background=#f7d754}
+# Welcome to Class! {data-background=#e8c35d}
 
 ## Canvas or course structure questions?
 
 ## Teams
 
-# Is there an art to making visualizations? {data-background=#f7d754}
+# Is there an art to making visualizations? {data-background=#e8c35d}
 
 ## How humans see data -- John Rauser
 
@@ -29,7 +29,7 @@ What did you learn from this video? Anything you disagreed with?
 6. Volume/density/saturation of "color"
 7. Color hue
 
-# Good Charts {data-background=#f7d754}
+# Good Charts {data-background=#e8c35d}
 
 ## Good Charts, Chapter 2: When Charts hit our eyes
 
@@ -98,7 +98,7 @@ I love his symphony metaphor.
 
 ![](images/gc/Intro_chartquadrant.png)
 
-# Tidy Data ([Section 1.1](https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#tidy-data)) {data-background=#f7d754}
+# Tidy Data ([Section 1.1](https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#tidy-data)) {data-background=#e8c35d}
 
 ## How data is stored.
 
@@ -128,7 +128,7 @@ I love his symphony metaphor.
 
 *Using multiple tabs or sheets can make this possible but still not recommended.*
 
-# Google Sheets ([Section](https://byuistats.github.io/BYUI_CSE150_StatBook/tools.html#sheets)) {data-background=#f7d754}
+# Google Sheets ([Section](https://byuistats.github.io/BYUI_CSE150_StatBook/tools.html#sheets)) {data-background=#e8c35d}
 
 ## What we have to do with Google Sheets.
 
@@ -139,7 +139,7 @@ I love his symphony metaphor.
 
 **Sheets is a sidenote, not our primary tool.**
 
-# Looking Ahead {data-background=#f7d754}
+# Looking Ahead {data-background=#e8c35d}
 
 ## Case Study
 
