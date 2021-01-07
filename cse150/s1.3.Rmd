@@ -16,10 +16,10 @@
 
 ## Why I love data
 
-- [Dinosaurs and statistical distributions](https://twitter.com/EmpiricalDave/status/1067941369237434368)
-- [The average chocolate chip cookie](https://pudding.cool/2018/05/cookies/)
-- [Calculus and The Good Place](https://www.andrewheiss.com/blog/2019/02/16/algebra-calculus-r-yacas/)
-- [Jane Austen and natural language processing](https://juliasilge.com/blog/you-must-allow-me/)
+> - [Dinosaurs and statistical distributions](https://twitter.com/EmpiricalDave/status/1067941369237434368)
+> - [The average chocolate chip cookie](https://pudding.cool/2018/05/cookies/)
+> - [Calculus and The Good Place](https://www.andrewheiss.com/blog/2019/02/16/algebra-calculus-r-yacas/)
+> - [Jane Austen and natural language processing](https://juliasilge.com/blog/you-must-allow-me/)
 > - [How do dogs know that other dogs are dogs?](https://link.springer.com/article/10.1007/s10071-013-0600-8)
 
 ## "Data Intuition and Insight"
@@ -73,9 +73,9 @@ Our assignments can be grouped into five categories:
 ## Teach One Another
 
 >- Teach One Another Quiz
->  - Case Study Presentation
->  - Case Study Feedback
->  - Tool Tips
+>   - Case Study Presentation
+>   - Case Study Feedback
+>   - Tool Tips
 
 ## Visualization Challenge
 
