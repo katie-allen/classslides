@@ -51,26 +51,7 @@ Hadley Wickham's [diagram](https://r4ds.had.co.nz/)
 
 ## Workload to get an "A"
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=14}
-library(tidyverse)
-
-weeks <- tibble(Week = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), 
-       low  = c(4, 8, 10, 10, 12, 11, 9, 5, 6, 6, 6, 6, 6),
-       high = c(6, 12, 14, 14, 16, 14, 12, 9, 9, 9, 9, 11, 11))
-
-
-weeks %>%
-  ggplot(aes(x = Week)) +
-  geom_point(aes(y = low, color = "Minimum"), size = 2.5) +
-  geom_line(aes(y = low, color = "Minimum")) +
-  geom_point(aes(y = high, color = "Max"), size = 2.5) +
-  geom_line(aes(y = high, color = "Max")) +
-  labs(y = "Hours per week", x = "Week of semester", title = "Number of hours to earn an A") +
-  theme_bw() + theme(panel.grid.minor.x = element_blank()) +
-  coord_cartesian(ylim = c(0, 20)) + 
-  scale_x_continuous(breaks = 1:13) + scale_color_manual("Range", values = c("dodgerblue3", "orange3"))
-
-```
+![](intro_day3_files/figure-revealjs/unnamed-chunk-1-1.png)
 
 
 ## To get a "B"
