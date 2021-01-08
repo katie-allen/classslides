@@ -11,10 +11,20 @@ params:
 
 ## Today's Outline:
 
->- Questions?
+>- Housekeeping and Questions
 >- Reading Discussion
 >- RStudio and R Markdown
 >- Practice in R
+
+## Before Sister Larson forgets:
+
+- GitHub
+- Comments in Perusall
+- "On time"
+- Face-to-face
+- Zoom
+  - How can we help remote students feel included and engaged?
+- Please be respectful
 
 ## Questions?
 
@@ -22,15 +32,61 @@ params:
 >- R, RStudio, Slack, GitHub
 >- Anything else
 
+## Try, and then ask questions!
+
+![](images/ask_questions.png)
+
+
+
 # Reading Discussion {data-background=#e8c35d}
 
+## [The Data Science Process](https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67)
 
-# RStudio and R Markdown {data-background=#e8c35d}
+What are your thoughts?
 
+## The Data Science Process
 
-# Practice in R  {data-background=#e8c35d}
+> I realized that despite the variation in the details of different projects, the steps that data scientists use to work through a complex business problem remain more or less the same.
 
+## The Data Science Process
 
+- Frame the problem
+- Collect the raw data needed to solve the problem
+- Process the data (data wrangling)
+- Explore the data
+- Perform in-depth analysis (machine learning, statistical models, algorithms)
+- Communicate results of the analysis
+
+# R, RStudio, and R Markdown {data-background=#e8c35d}
+
+## R vs. RStudio
+
+## "Knitting" an R Markdown document
+
+## [Data Types](https://www.geeksforgeeks.org/r-data-types/)
+
+- Each variable in R has an associated data type
+- Each data type requires different amounts of memory
+- Each data type has some specific operations which can be performed over it
+  - **Numeric:** Set of all real numbers
+  - **Integer:** Set of all integers
+  - **Logical:** TRUE and FALSE
+  - **Complex:** Set of complex numbers
+  - **Character:** "a", "BYU-Idaho", "lions and tigers and bears", "@", "3"
+
+## [Vectors](http://adv-r.had.co.nz/Data-structures.html)
+
+- The basic data structure in R is the vector
+- Vectors come in two flavors: atomic vectors and lists
+- Atomic vectors and lists have three common properties:
+  - **Type:** typeof(), what it is.
+  - **Length:** length(), how many elements it contains.
+  - **Attributes:** attributes(), additional arbitrary metadata.
+- They differ in the types of their elements: 
+  - All elements of an atomic vector must be the same type
+  - The elements of a list can have different types.
+
+## Practice in R
 
 
 <!--------------------------------
