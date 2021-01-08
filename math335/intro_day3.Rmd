@@ -7,19 +7,33 @@ params:
   dtype: "none"
 ---
 
-# Welcome to class! {data-background=#60a67f}
+# Welcome to class! {data-background=#e8c35d}
 
 ## Today's Outline:
 
-> - Finish syllabus review
-> - Questions from Task 1/Setting up R-Studio
-> - Reading discussion
-> - Prepare for Task 2 and Case Study
+>- Questions?
+>- Reading Discussion
+>- RStudio and R Markdown
+>- Practice in R
 
-## My family
+## Questions?
 
-![](images/crazy_family.jpg)
+>- Syllabus
+>- R, RStudio, Slack, GitHub
+>- Anything else
 
+# Reading Discussion {data-background=#e8c35d}
+
+
+# RStudio and R Markdown {data-background=#e8c35d}
+
+
+# Practice in R
+
+
+
+
+<!--------------------------------
 
 ## What is data science?
 
@@ -29,7 +43,7 @@ Answer: A venn diagram ( [here](https://www.omnisci.com/learn/data-science), [he
 
 Hadley Wickham's [diagram](https://r4ds.had.co.nz/)
 
-# Syllabus (continued from Day 1)  {data-background=#60a67f}
+# Syllabus (continued from Day 1)  {data-background=#e8c35d}
 
 ## Specifications Grading
 
@@ -74,13 +88,13 @@ You don't do **B** work on all the tasks and case studies - You do **A** work on
 
 ## Questions about the syllabus?
 
-# Task 1 {data-background=#60a67f}
+# Task 1 {data-background=#e8c35d}
 
 ## Questions about R and/or R-Studio?
 
 ## Getting R-Studio under control
 
-# Reading Discussion  {data-background=#60a67f}
+# Reading Discussion  {data-background=#e8c35d}
 
 ## How Humans See Data
 
@@ -114,7 +128,7 @@ What do you agree with? Disagree?
 
 What's your plan to succeed this semester?
 
-# Looking Ahead {data-background=#60a67f}
+# Looking Ahead {data-background=#e8c35d}
 
 ## Task 2
 
@@ -130,14 +144,4 @@ What's your plan to succeed this semester?
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+------------------------------>
