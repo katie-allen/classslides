@@ -24,7 +24,7 @@ title: "Finding meaning in Data"
 
 > - *Create a bar chart of the top 20 merchants by sales. Which are the top 2 merchants by sales?*   
 
-# Case Study {data-background=#6897bb}
+# Case Study {data-background=#e8c35d}
 
 > - [Measuring LEGO case study](https://byuistats.github.io/CSE150/project.html#Case_Study_2:_Lego_my_data) questions?   
 > - Working with a partner but presenting and submitting individually.   
@@ -33,7 +33,7 @@ title: "Finding meaning in Data"
 > - Case study quizes.
 
 
-# Good Reads {data-background=#6897bb}
+# Good Reads {data-background=#e8c35d}
 
 ## Chapter 4: Better Charts in a couple of hours (73-86)
 
@@ -48,7 +48,7 @@ title: "Finding meaning in Data"
 
 After prep, all of these can happen at the same time when you are working in a group. As long as everyone has come prepared. [Hejazi and Voisin climate paper example](https://www.pnas.org/content/112/34/10635/tab-figures-data).
 
-# Supplemental Reading {data-background=#6897bb}
+# Supplemental Reading {data-background=#e8c35d}
 
 ## [Measures of Spread](https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#measures-of-spread)
 
@@ -57,7 +57,7 @@ If you were a Walmart buyer of cherry tomatoes, what specifications would you gi
 - How might a supplier user your metric to their advantage?
 - How could the metric provide safety for Walmart and the supplier?
 
-# Case Study Work {data-background=#6897bb}
+# Case Study Work {data-background=#e8c35d}
 
 ## The LEGO project
 
