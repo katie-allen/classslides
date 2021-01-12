@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>s2.1.utf8</title>
+  <title>Presenting Data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -448,149 +448,41 @@ document.getElementsByTagName('head')[0].appendChild(style);
   <div class="reveal">
     <div class="slides">
 
+<section>
+    <h1 class="title">Presenting Data</h1>
+</section>
 
-<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1></section><section id="xkcd-for-the-day" class="slide level2">
-<h2>xkcd for the day</h2>
-<p><img data-src="https://imgs.xkcd.com/comics/convincing.png" /></p>
-</section></section>
-<section><section id="good-reads" class="title-slide slide level1" data-background="#e8c35d"><h1>Good Reads</h1></section><section id="chapter-3-two-questions-to-four-types" class="slide level2">
-<h2>Chapter 3: Two questions to four types</h2>
-<blockquote>
-<p>“When it comes to information visualization, the impulse is to immediately choose a chart type and click a button to create it. You should resist this impulse and instead…”</p>
-</blockquote>
-</section><section id="the-two-questions" class="slide level2">
-<h2>The Two Questions</h2>
-<ol type="1">
-<li class="fragment">Is the information <em>conceptual</em> or <em>data-driven</em>? (What do you have?)</li>
-<li class="fragment">Am I <em>declaring something</em> or <em>exploring something</em>? (What are you doing?)</li>
-</ol>
-</section><section id="the-four-types" class="slide level2">
-<h2>The Four Types</h2>
-<ul>
-<li class="fragment"><a href="https://www.google.com/search?q=best+powerpoint+diagrams&amp;tbm=isch&amp;ved=2ahUKEwjB-pXl2f_oAhVSlJ4KHU86CXEQ2-cCegQIABAA&amp;oq=best+powerpoint+diagrams&amp;gs_lcp=CgNpbWcQAzIECAAQGDoECCMQJzoECAAQQzoCCAA6BQgAEIMBOgYIABAFEB46BggAEAgQHlC1_AZYtp0HYKeeB2gAcAB4AIABXogBmQ6SAQIyNJgBAKABAaoBC2d3cy13aXotaW1n&amp;sclient=img&amp;ei=tSSiXoHMKtKo-gTP9KSIBw&amp;bih=867&amp;biw=1614&amp;hl=en">Consultant Visualization</a> (Conceptual &amp; Declarative)</li>
-<li class="fragment"><a href="https://seattlebusinessmag.com/technology/why-live-drawing-replacing-powerpoint-top-companies">Design Thinking Visualization</a> (Conceptual &amp; Exploratory)</li>
-<li class="fragment"><a href="https://www.google.com/search?q=Power+BI+visualization&amp;tbm=isch&amp;hl=en&amp;ved=2ahUKEwiEo5Ce2P_oAhWQh54KHc7nBsoQBXoECAEQNg&amp;biw=1614&amp;bih=867">PowerBI and Excel Users</a> (Data-Driven &amp; Declarative)</li>
-<li class="fragment"><a href="https://www.google.com/search?q=best+ggplot2+visualizations&amp;tbm=isch&amp;ved=2ahUKEwic8eim2P_oAhWR154KHdURDF0Q2-cCegQIABAA&amp;oq=best+ggplot2+visualizations&amp;gs_lcp=CgNpbWcQAzICCAA6BAgjECc6BAgAEEM6BggAEAgQHjoECAAQGFCj6BZYtIUXYLWGF2gAcAB4AIABiwGIAd8RkgEEMjIuNZgBAKABAaoBC2d3cy13aXotaW1n&amp;sclient=img&amp;ei=JiOiXpzGHpGv-wTVo7DoBQ&amp;bih=867&amp;biw=1614&amp;hl=en">Data Scientists</a> (Data-Driven &amp; Exploratory)</li>
-</ul>
-</section><section id="which-quadrant-will-we-spend-the-most-time-in" class="slide level2">
-<h2>Which quadrant will we spend the most time in?</h2>
-<p>Answer the question in Slack.</p>
-<ul>
-<li>Conceptual &amp; Declarative (top left)</li>
-<li>Conceptual &amp; Exploratory (bottom right)</li>
-<li>Data-Driven &amp; Declarative (top right)</li>
-<li>Data-Driven &amp; Exploratory (bottom right)</li>
-</ul>
-</section></section>
-<section><section id="tidy-data" class="title-slide slide level1" data-background="#e8c35d"><h1><a href="https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#tidy-data">Tidy Data</a></h1></section><section id="how-data-is-stored" class="slide level2">
-<h2>How data is stored</h2>
-<p>Deciding what data is and how to handle it is not a trivial problem.</p>
-<ol type="1">
-<li class="fragment">Visual consumption by humans</li>
-<li class="fragment">Computer consumption for storage</li>
-<li class="fragment">Analytics consumption</li>
-</ol>
-</section><section id="how-humans-consume-data" class="slide level2">
-<h2>How humans consume data</h2>
-<p><img data-src="images/sr/human_table.png" /></p>
-</section><section id="how-computers-consume-data" class="slide level2">
-<h2>How computers consume data</h2>
-<p><img data-src="images/sr/relational_diagram.png" /></p>
-</section><section id="how-data-is-stored-for-visualization-and-analytics" class="slide level2">
-<h2>How data is stored for visualization and analytics</h2>
-<p><img data-src="images/sr/tidy_diagram.png" /></p>
-</section><section id="dont-mix-and-match" class="slide level2">
-<h2>Don’t mix and match!</h2>
-<p>You should never attempt all three of the above in one sheet in Excel or Google Sheets.</p>
-<p>Using multiple tabs or sheets can make this possible but still not recommended.</p>
-<p>(bad example)</p>
-</section><section id="data-tools-for-this-class" class="slide level2">
-<h2>Data tools for this class</h2>
-<p>Most of our data will be stored as a <a href="https://www.google.com/search?q=csv+file&amp;rlz=1C1GCEJ_enUS882US882&amp;oq=csv+file&amp;aqs=chrome..69i57j69i60l3j5j69i60l3.622j0j7&amp;sourceid=chrome&amp;ie=UTF-8">csv file</a>.</p>
-<ul>
-<li>Microsoft Excel</li>
-<li>Google Sheets</li>
-</ul>
-<!---------------
-## What we have to do with Google Sheets.
-
-- [View data sets](https://drive.google.com/drive/folders/1jR07hsu3mbsBOmghKset0geclsFn_ZMG?usp=sharing)
-- [Do some calculations](https://docs.google.com/spreadsheets/d/1KUq-7qEHB642UB9olN7Fw0Yp9pYoKyCQIhs1TCPP198/template/preview)
-
-- [Maybe create a few simple formulas](https://support.google.com/docs/table/25273)
-
-**Sheets is a sidenote, not our primary tool.**
------------------>
-<!--------------------
-## Measures of Center
-
-![](images/center/Slide5.PNG)
-
-## Measures of Center {data-transition="none"}
-
-![](images/center/Slide6.PNG)
-
-## Measures of Center {data-transition="none"}
-
-![](images/center/Slide7.PNG)
-
-## Measures of Center {data-transition="none"}
-
-![](images/center/Slide8.PNG)
-
-## Measures of Center
-
-![](images/center/insect_spray.PNG)
-
-## Different Types of Center
-
-![](images/center/meanmedian_learningstatisticswithr.png)
-
-[*source*](https://learningstatisticswithr.com/book/descriptives.html)
-
-## Measures of Center Activity
-
-> - **Instructions:**
->   - Generate 10 random numbers between 1 and 10
->   - Plot the numbers on your graph
->   - Calculate the mean and median. Cirlce them on your graph.
-
-
-> - This will be easier if you pick one person to be the writer, one person to generate the random numbers, and one person to do the math.
-> - [Jam Board](https://jamboard.google.com/d/1zLvnfW7fe9ZVnUrUEjjnO_CrFCe5NOk6dFJuMxfdn5w/edit?usp=sharing)
-> - [Random Number Generator](https://www.google.com/search?q=random+number+between+1+and+10&rlz=1C1GCEJ_enUS882US882&oq=random+number+between+1+and+10&aqs=chrome..69i57j0l7.3815j0j9&sourceid=chrome&ie=UTF-8)
-
-## [Measures of Center](https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#measures-of-center)
-
-**Break into new groups and answer to the following questions:**   
-
-> - What does the phrase 'measures of center' mean?
-> - What do you notice about the mean's location relative to the median?
-> - Why do we use measures of center?   
-> - Which measure of center do you prefer? 
-> - Which measure would represent a typical net worth of people living in Seattle better?
-
-
-- [Bill Gates walks into a bar](https://introductorystats.wordpress.com/2011/09/04/when-bill-gates-walks-into-a-bar/)
-
-## Questions on Measures of Center?
-
--------------------------->
-</section></section>
-<section><section id="case-study-2" class="title-slide slide level1" data-background="#e8c35d"><h1>Case Study 2</h1></section><section id="case-study-2-overview" class="slide level2">
-<h2>Case Study 2 Overview</h2>
-<ul>
-<li class="fragment">You work together to get data recording done, but each of you creates your own visualizations and presentation.<br />
-</li>
-<li class="fragment">You can use similar images, but your presentation and Tableau file should be your own creation.</li>
-</ul>
-</section><section id="tidy-lego-data" class="slide level2">
-<h2>“Tidy” Lego data</h2>
-<p><img data-src="images/sr/tidy_diagram.png" /></p>
-</section><section id="questions" class="slide level2">
+<section><section id="good-reads" class="title-slide slide level1" data-background="#e8c35d"><h1>Good Reads</h1></section><section id="questions" class="slide level2">
 <h2>Questions?</h2>
 </section></section>
-<section id="tableau" class="title-slide slide level1" data-background="#e8c35d"><h1>Tableau</h1></section>
+<section><section id="supplemental-reading" class="title-slide slide level1" data-background="#e8c35d"><h1>Supplemental Reading</h1></section><section id="data-vs.-summaries" class="slide level2">
+<h2><a href="https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#data-vs-summaries">Data vs. Summaries</a></h2>
+</section><section id="tools-tableau-depth" class="slide level2">
+<h2><a href="https://help.tableau.com/current/pro/desktop/en-us/environ_st.htm">Tools: Tableau Depth</a></h2>
+</section><section id="just-google-it." class="slide level2">
+<h2>Just Google it.</h2>
+<ul>
+<li>Find</li>
+<li>Filter</li>
+<li>Focus</li>
+</ul>
+</section></section>
+<section><section id="activity" class="title-slide slide level1" data-background="#e8c35d"><h1>Activity</h1></section><section id="numerical-gestalt" class="slide level2">
+<h2>Numerical Gestalt</h2>
+<p><strong>Gestalt:</strong> an organized whole that is perceived as more than the sum of its parts.</p>
+</section><section id="submitting-case-studies" class="slide level2">
+<h2>Submitting case studies</h2>
+<p>Canvas structure. Questions?</p>
+</section><section id="outline" class="slide level2">
+<h2>Outline</h2>
+<ol type="1">
+<li>Work with your partner to finalize your analysis.</li>
+<li>Review your project with me.</li>
+<li>Ask questions about Tableau and Google Sheets.</li>
+</ol>
+</section><section id="group-time" class="slide level2">
+<h2>Group time</h2>
+</section></section>
     </div>
   </div>
 
