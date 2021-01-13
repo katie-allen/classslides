@@ -2,11 +2,11 @@
 title: ""
 ---
 
-# Welcome to Class! {data-background=#f7d754}
+# Welcome to Class! {data-background=#e8c35d}
 
 ## Good Charts and Bad Charts
 
-# Good Charts: Chapter 4 {data-background=#f7d754}
+# Good Charts: Chapter 4 {data-background=#e8c35d}
 
 ## Chapter 4: Better charts in a couple of hours
 
@@ -30,7 +30,7 @@ title: ""
 - Talk and Listen will "be the most revelatory, but also possible the least natural."
 - "Sketching is generative; it's meant to bring up ideas. Prototyping is iterative; it's meant to hone good ones."
 
-# Practice with LEGO data {data-background=#f7d754}
+# Practice with LEGO data {data-background=#e8c35d}
 
 ## Prep: 3 minutes
 
@@ -53,7 +53,7 @@ Share ideas with your partner about:
 
 Sketch a few ideas for a chart, and then pick one you'd like to prototype.
 
-# Supplemental Reading {data-background=#f7d754}
+# Supplemental Reading {data-background=#e8c35d}
 
 ## [Graphical Summaries](https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#graphical-summaries)
 

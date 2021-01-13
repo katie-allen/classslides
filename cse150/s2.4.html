@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>ds_day1.utf8</title>
+  <title>Presenting Data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -59,6 +59,7 @@
 
     <style type="text/css">code{white-space: pre;}</style>
 
+    <link rel="stylesheet" href="custom.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -447,151 +448,40 @@ document.getElementsByTagName('head')[0].appendChild(style);
   <div class="reveal">
     <div class="slides">
 
+<section>
+    <h1 class="title">Presenting Data</h1>
+</section>
 
-<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1><p>The Data Science Process: Day 1</p></section><section id="todays-outline" class="slide level2">
-<h2>Today’s Outline:</h2>
-<ul>
-<li>Case Study 1</li>
-<li>Saving and sharing your work</li>
-<li>R Programming</li>
-<li>Exploratory Data Analysis</li>
-</ul>
-</section><section id="case-study-1" class="slide level2">
-<h2>Case Study 1</h2>
-</section><section id="other-questions" class="slide level2">
-<h2>Other questions?</h2>
+<section><section id="good-reads" class="title-slide slide level1" data-background="#e8c35d"><h1>Good Reads</h1></section><section id="questions" class="slide level2">
+<h2>Questions?</h2>
 </section></section>
-<section><section id="saving-and-sharing-your-work" class="title-slide slide level1" data-background="#e8c35d"><h1>Saving and Sharing Your Work</h1></section><section id="r-vs-r-scripts" class="slide level2">
-<h2>R vs R Scripts</h2>
-<p>What parts of you analysis do you want to preserve?</p>
-</section><section id="r-vs-r-scripts-1" class="slide level2">
-<h2>R vs R Scripts</h2>
-<p><a href="https://r4ds.had.co.nz/workflow-projects.html?q=real#what-is-real">What is real?</a></p>
-<blockquote>
-<p>As a beginning R user, it’s OK to consider your environment (i.e. the objects listed in the environment pane) “real”. However, in the long run, you’ll be much better off if you consider your R scripts as “real”.</p>
-</blockquote>
-</section><section id="r-vs-r-scripts-2" class="slide level2">
-<h2>R vs R Scripts</h2>
-<p><a href="https://r4ds.had.co.nz/workflow-projects.html?q=real#what-is-real">What is real?</a></p>
-<blockquote>
-<p>With your R scripts (and your data files), you can recreate the environment. It’s much harder to recreate your R scripts from your environment! You’ll either have to retype a lot of code from memory (making mistakes all the way) or you’ll have to carefully mine your R history.</p>
-</blockquote>
-</section><section id="r-scripts" class="slide level2">
-<h2>R Scripts</h2>
-<p>Mostly code, with a little bit of dialogue (comments)</p>
-</section><section id="markdown" class="slide level2">
-<h2>Markdown</h2>
-<p>All dialogue, maybe with some static code examples</p>
-<p><a href="https://blog.bit.ai/what-is-markdown/">What is Markdown?</a></p>
-</section><section id="r-markdown" class="slide level2">
-<h2>R Markdown</h2>
-<p>A beautiful blend of dialogue, code, and code output</p>
-<p><a href="https://rmarkdown.rstudio.com/lesson-1.html">What is R Markdown?</a></p>
-</section><section id="possibilities-with-r-markdown" class="slide level2">
-<h2>Possibilities with R Markdown</h2>
+<section><section id="supplemental-reading" class="title-slide slide level1" data-background="#e8c35d"><h1>Supplemental Reading</h1></section><section id="data-vs.-summaries" class="slide level2">
+<h2><a href="https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#data-vs-summaries">Data vs. Summaries</a></h2>
+</section><section id="tools-tableau-depth" class="slide level2">
+<h2><a href="https://help.tableau.com/current/pro/desktop/en-us/environ_st.htm">Tools: Tableau Depth</a></h2>
+</section><section id="just-google-it." class="slide level2">
+<h2>Just Google it.</h2>
 <ul>
-<li class="fragment">Word document</li>
-<li class="fragment">Html page</li>
-<li class="fragment">Website or blog</li>
-<li class="fragment">PowerPoint Slide show</li>
-<li class="fragment">Html slides</li>
-<li class="fragment">PDF report</li>
-<li class="fragment">Interactive dashboard</li>
+<li>Find</li>
+<li>Filter</li>
+<li>Focus</li>
 </ul>
-</section><section id="r-script-vs.-r-markdown" class="slide level2">
-<h2>R Script vs. R Markdown</h2>
-<p>Which one should I use?</p>
 </section></section>
-<section><section id="r-programming" class="title-slide slide level1" data-background="#e8c35d"><h1>R Programming</h1></section><section id="data-types" class="slide level2">
-<h2><a href="https://www.geeksforgeeks.org/r-data-types/">Data Types</a></h2>
-<ul>
-<li class="fragment">Each variable in R has an associated data type</li>
-<li class="fragment">Each data type requires different amounts of memory</li>
-<li class="fragment">Each data type has some specific operations which can be performed over it
-<ul>
-<li class="fragment"><strong>Numeric:</strong> Set of all real numbers</li>
-<li class="fragment"><strong>Integer:</strong> Set of all integers</li>
-<li class="fragment"><strong>Logical:</strong> TRUE and FALSE</li>
-<li class="fragment"><strong>Complex:</strong> Set of complex numbers</li>
-<li class="fragment"><strong>Character:</strong> “a”, “BYU-Idaho”, “lions and tigers and bears”, “@”, “3”</li>
-</ul></li>
-</ul>
-</section><section id="vectors" class="slide level2">
-<h2><a href="http://adv-r.had.co.nz/Data-structures.html">Vectors</a></h2>
-<ul>
-<li class="fragment">The basic data structure in R is the vector</li>
-<li class="fragment">Vectors come in two flavors: atomic vectors and lists</li>
-<li class="fragment">Atomic vectors and lists have three common properties:
-<ul>
-<li class="fragment"><strong>Type:</strong> typeof(), what it is.</li>
-<li class="fragment"><strong>Length:</strong> length(), how many elements it contains.</li>
-<li class="fragment"><strong>Attributes:</strong> attributes(), additional arbitrary metadata.</li>
-</ul></li>
-<li class="fragment">They differ in the types of their elements:
-<ul>
-<li class="fragment">All elements of an atomic vector must be the same type</li>
-<li class="fragment">The elements of a list can have different types.</li>
-</ul></li>
-</ul>
-</section><section id="dataframes" class="slide level2">
-<h2>Dataframes</h2>
-</section></section>
-<section><section id="exploratory-data-analysis" class="title-slide slide level1" data-background="#e8c35d"><h1>Exploratory Data Analysis</h1></section><section id="what-is-eda" class="slide level2">
-<h2>What is EDA?</h2>
-<p>EDA is not a formal process, but a <a href="https://r4ds.had.co.nz/exploratory-data-analysis.html">state of mind</a>.</p>
+<section><section id="activity" class="title-slide slide level1" data-background="#e8c35d"><h1>Activity</h1></section><section id="numerical-gestalt" class="slide level2">
+<h2>Numerical Gestalt</h2>
+<p><strong>Gestalt:</strong> an organized whole that is perceived as more than the sum of its parts.</p>
+</section><section id="submitting-case-studies" class="slide level2">
+<h2>Submitting case studies</h2>
+<p>Canvas structure. Questions?</p>
+</section><section id="outline" class="slide level2">
+<h2>Outline</h2>
 <ol type="1">
-<li class="fragment">Generate questions about your data.</li>
-<li class="fragment">Search for answers</li>
-<li class="fragment">Use what you learn to refine your questions and/or generate new questions</li>
-<li class="fragment">Repeat</li>
+<li>Work with your partner to finalize your analysis.</li>
+<li>Review your project with me.</li>
+<li>Ask questions about Tableau and Google Sheets.</li>
 </ol>
-</section><section id="goal-of-eda" class="slide level2">
-<h2>Goal of EDA</h2>
-<p>Like one of those awkward ice breakers on the first day of school, you’re trying to learn enough about the data that you can introduce it to other people. Try asking:</p>
-<ul>
-<li class="fragment">What are the data types? (numeric, character, etc.)</li>
-<li class="fragment">What is the distribution of each variable?</li>
-<li class="fragment">Are there any extreme values?</li>
-<li class="fragment">Is there missing data? Where? Why?</li>
-<li class="fragment">Are there any obvious relationships between variables?</li>
-</ul>
-</section><section id="where-does-eda-fit-in-the-data-science-process" class="slide level2">
-<h2>Where does EDA fit in the data science process?</h2>
-<p>A client sets up a meeting with you to discuss an upcoming project. She also sends you multiple csv files with data she has collected. Before the meeting, you use EDA to answer some important questions:</p>
-<ul>
-<li class="fragment"><em>What type of information is stored in this data?</em></li>
-<li class="fragment"><em>What can I do with this data?</em></li>
-<li class="fragment"><em>What can I not do with this data?</em></li>
-<li class="fragment"><em>Does anything look suspicious?</em></li>
-</ul>
-</section><section id="where-does-eda-fit-in-the-data-science-process-1" class="slide level2">
-<h2>Where does EDA fit in the data science process?</h2>
-<p>You’re working on a project with some very specific questions that need answering. A coworker from another department sends you data with “everything you need” to find the answers. You should use EDA to figure out:</p>
-<ul>
-<li class="fragment"><em>Do I actually have all the information I need?</em></li>
-<li class="fragment"><em>Do I trust the quality of this data?</em></li>
-<li class="fragment"><em>What is the best way to combine data sets?</em></li>
-<li class="fragment"><em>What wrangling is needed to get the data in the right format?</em></li>
-</ul>
-</section><section id="generate-questions" class="slide level2">
-<h2>Generate Questions</h2>
-<p>What questions do we have about this data?</p>
-<pre><code>library(tidyverse)
-View(gss_cat)</code></pre>
-</section><section id="find-answers" class="slide level2">
-<h2>Find Answers</h2>
-</section></section>
-<section><section id="looking-ahead" class="title-slide slide level1" data-background="#e8c35d"><h1>Looking Ahead</h1></section><section id="what-are-we-doing-the-rest-of-the-week" class="slide level2">
-<h2>What are we doing the rest of the week?</h2>
-<ul>
-<li>Wednesday: Have every one on GitHub</li>
-<li>Friday: “Reproducible Research”
-<ul>
-<li>R Projects</li>
-<li>Sharing code</li>
-<li>Semester project</li>
-</ul></li>
-</ul>
+</section><section id="group-time" class="slide level2">
+<h2>Group time</h2>
 </section></section>
     </div>
   </div>
@@ -615,7 +505,7 @@ View(gss_cat)</code></pre>
         // Opens links in an iframe preview overlay
         previewLinks: false,
         // Transition style
-        transition: 'default', // none/fade/slide/convex/concave/zoom
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
         // Transition style for full page slide backgrounds
         backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
         // The "normal" size of the presentation, aspect ratio will be preserved

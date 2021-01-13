@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>ds_day1.utf8</title>
+  <title>s2.1.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -59,6 +59,7 @@
 
     <style type="text/css">code{white-space: pre;}</style>
 
+    <link rel="stylesheet" href="custom.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -448,151 +449,148 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 
-<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1><p>The Data Science Process: Day 1</p></section><section id="todays-outline" class="slide level2">
-<h2>Today’s Outline:</h2>
-<ul>
-<li>Case Study 1</li>
-<li>Saving and sharing your work</li>
-<li>R Programming</li>
-<li>Exploratory Data Analysis</li>
-</ul>
-</section><section id="case-study-1" class="slide level2">
-<h2>Case Study 1</h2>
-</section><section id="other-questions" class="slide level2">
-<h2>Other questions?</h2>
+<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1></section><section id="xkcd-for-the-day" class="slide level2">
+<h2>xkcd for the day</h2>
+<p><img data-src="https://imgs.xkcd.com/comics/convincing.png" /></p>
 </section></section>
-<section><section id="saving-and-sharing-your-work" class="title-slide slide level1" data-background="#e8c35d"><h1>Saving and Sharing Your Work</h1></section><section id="r-vs-r-scripts" class="slide level2">
-<h2>R vs R Scripts</h2>
-<p>What parts of you analysis do you want to preserve?</p>
-</section><section id="r-vs-r-scripts-1" class="slide level2">
-<h2>R vs R Scripts</h2>
-<p><a href="https://r4ds.had.co.nz/workflow-projects.html?q=real#what-is-real">What is real?</a></p>
+<section><section id="good-reads" class="title-slide slide level1" data-background="#e8c35d"><h1>Good Reads</h1></section><section id="chapter-3-two-questions-to-four-types" class="slide level2">
+<h2>Chapter 3: Two questions to four types</h2>
 <blockquote>
-<p>As a beginning R user, it’s OK to consider your environment (i.e. the objects listed in the environment pane) “real”. However, in the long run, you’ll be much better off if you consider your R scripts as “real”.</p>
+<p>“When it comes to information visualization, the impulse is to immediately choose a chart type and click a button to create it. You should resist this impulse and instead…”</p>
 </blockquote>
-</section><section id="r-vs-r-scripts-2" class="slide level2">
-<h2>R vs R Scripts</h2>
-<p><a href="https://r4ds.had.co.nz/workflow-projects.html?q=real#what-is-real">What is real?</a></p>
-<blockquote>
-<p>With your R scripts (and your data files), you can recreate the environment. It’s much harder to recreate your R scripts from your environment! You’ll either have to retype a lot of code from memory (making mistakes all the way) or you’ll have to carefully mine your R history.</p>
-</blockquote>
-</section><section id="r-scripts" class="slide level2">
-<h2>R Scripts</h2>
-<p>Mostly code, with a little bit of dialogue (comments)</p>
-</section><section id="markdown" class="slide level2">
-<h2>Markdown</h2>
-<p>All dialogue, maybe with some static code examples</p>
-<p><a href="https://blog.bit.ai/what-is-markdown/">What is Markdown?</a></p>
-</section><section id="r-markdown" class="slide level2">
-<h2>R Markdown</h2>
-<p>A beautiful blend of dialogue, code, and code output</p>
-<p><a href="https://rmarkdown.rstudio.com/lesson-1.html">What is R Markdown?</a></p>
-</section><section id="possibilities-with-r-markdown" class="slide level2">
-<h2>Possibilities with R Markdown</h2>
-<ul>
-<li class="fragment">Word document</li>
-<li class="fragment">Html page</li>
-<li class="fragment">Website or blog</li>
-<li class="fragment">PowerPoint Slide show</li>
-<li class="fragment">Html slides</li>
-<li class="fragment">PDF report</li>
-<li class="fragment">Interactive dashboard</li>
-</ul>
-</section><section id="r-script-vs.-r-markdown" class="slide level2">
-<h2>R Script vs. R Markdown</h2>
-<p>Which one should I use?</p>
-</section></section>
-<section><section id="r-programming" class="title-slide slide level1" data-background="#e8c35d"><h1>R Programming</h1></section><section id="data-types" class="slide level2">
-<h2><a href="https://www.geeksforgeeks.org/r-data-types/">Data Types</a></h2>
-<ul>
-<li class="fragment">Each variable in R has an associated data type</li>
-<li class="fragment">Each data type requires different amounts of memory</li>
-<li class="fragment">Each data type has some specific operations which can be performed over it
-<ul>
-<li class="fragment"><strong>Numeric:</strong> Set of all real numbers</li>
-<li class="fragment"><strong>Integer:</strong> Set of all integers</li>
-<li class="fragment"><strong>Logical:</strong> TRUE and FALSE</li>
-<li class="fragment"><strong>Complex:</strong> Set of complex numbers</li>
-<li class="fragment"><strong>Character:</strong> “a”, “BYU-Idaho”, “lions and tigers and bears”, “@”, “3”</li>
-</ul></li>
-</ul>
-</section><section id="vectors" class="slide level2">
-<h2><a href="http://adv-r.had.co.nz/Data-structures.html">Vectors</a></h2>
-<ul>
-<li class="fragment">The basic data structure in R is the vector</li>
-<li class="fragment">Vectors come in two flavors: atomic vectors and lists</li>
-<li class="fragment">Atomic vectors and lists have three common properties:
-<ul>
-<li class="fragment"><strong>Type:</strong> typeof(), what it is.</li>
-<li class="fragment"><strong>Length:</strong> length(), how many elements it contains.</li>
-<li class="fragment"><strong>Attributes:</strong> attributes(), additional arbitrary metadata.</li>
-</ul></li>
-<li class="fragment">They differ in the types of their elements:
-<ul>
-<li class="fragment">All elements of an atomic vector must be the same type</li>
-<li class="fragment">The elements of a list can have different types.</li>
-</ul></li>
-</ul>
-</section><section id="dataframes" class="slide level2">
-<h2>Dataframes</h2>
-</section></section>
-<section><section id="exploratory-data-analysis" class="title-slide slide level1" data-background="#e8c35d"><h1>Exploratory Data Analysis</h1></section><section id="what-is-eda" class="slide level2">
-<h2>What is EDA?</h2>
-<p>EDA is not a formal process, but a <a href="https://r4ds.had.co.nz/exploratory-data-analysis.html">state of mind</a>.</p>
+</section><section id="the-two-questions" class="slide level2">
+<h2>The Two Questions</h2>
 <ol type="1">
-<li class="fragment">Generate questions about your data.</li>
-<li class="fragment">Search for answers</li>
-<li class="fragment">Use what you learn to refine your questions and/or generate new questions</li>
-<li class="fragment">Repeat</li>
+<li class="fragment">Is the information <em>conceptual</em> or <em>data-driven</em>? (What do you have?)</li>
+<li class="fragment">Am I <em>declaring something</em> or <em>exploring something</em>? (What are you doing?)</li>
 </ol>
-</section><section id="goal-of-eda" class="slide level2">
-<h2>Goal of EDA</h2>
-<p>Like one of those awkward ice breakers on the first day of school, you’re trying to learn enough about the data that you can introduce it to other people. Try asking:</p>
+</section><section id="the-four-types" class="slide level2">
+<h2>The Four Types</h2>
 <ul>
-<li class="fragment">What are the data types? (numeric, character, etc.)</li>
-<li class="fragment">What is the distribution of each variable?</li>
-<li class="fragment">Are there any extreme values?</li>
-<li class="fragment">Is there missing data? Where? Why?</li>
-<li class="fragment">Are there any obvious relationships between variables?</li>
+<li class="fragment"><a href="https://www.google.com/search?q=best+powerpoint+diagrams&amp;tbm=isch&amp;ved=2ahUKEwjB-pXl2f_oAhVSlJ4KHU86CXEQ2-cCegQIABAA&amp;oq=best+powerpoint+diagrams&amp;gs_lcp=CgNpbWcQAzIECAAQGDoECCMQJzoECAAQQzoCCAA6BQgAEIMBOgYIABAFEB46BggAEAgQHlC1_AZYtp0HYKeeB2gAcAB4AIABXogBmQ6SAQIyNJgBAKABAaoBC2d3cy13aXotaW1n&amp;sclient=img&amp;ei=tSSiXoHMKtKo-gTP9KSIBw&amp;bih=867&amp;biw=1614&amp;hl=en">Consultant Visualization</a> (Conceptual &amp; Declarative)</li>
+<li class="fragment"><a href="https://seattlebusinessmag.com/technology/why-live-drawing-replacing-powerpoint-top-companies">Design Thinking Visualization</a> (Conceptual &amp; Exploratory)</li>
+<li class="fragment"><a href="https://www.google.com/search?q=Power+BI+visualization&amp;tbm=isch&amp;hl=en&amp;ved=2ahUKEwiEo5Ce2P_oAhWQh54KHc7nBsoQBXoECAEQNg&amp;biw=1614&amp;bih=867">PowerBI and Excel Users</a> (Data-Driven &amp; Declarative)</li>
+<li class="fragment"><a href="https://www.google.com/search?q=best+ggplot2+visualizations&amp;tbm=isch&amp;ved=2ahUKEwic8eim2P_oAhWR154KHdURDF0Q2-cCegQIABAA&amp;oq=best+ggplot2+visualizations&amp;gs_lcp=CgNpbWcQAzICCAA6BAgjECc6BAgAEEM6BggAEAgQHjoECAAQGFCj6BZYtIUXYLWGF2gAcAB4AIABiwGIAd8RkgEEMjIuNZgBAKABAaoBC2d3cy13aXotaW1n&amp;sclient=img&amp;ei=JiOiXpzGHpGv-wTVo7DoBQ&amp;bih=867&amp;biw=1614&amp;hl=en">Data Scientists</a> (Data-Driven &amp; Exploratory)</li>
 </ul>
-</section><section id="where-does-eda-fit-in-the-data-science-process" class="slide level2">
-<h2>Where does EDA fit in the data science process?</h2>
-<p>A client sets up a meeting with you to discuss an upcoming project. She also sends you multiple csv files with data she has collected. Before the meeting, you use EDA to answer some important questions:</p>
+</section><section id="which-quadrant-will-we-spend-the-most-time-in" class="slide level2">
+<h2>Which quadrant will we spend the most time in?</h2>
+<p>Answer the question in Slack.</p>
 <ul>
-<li class="fragment"><em>What type of information is stored in this data?</em></li>
-<li class="fragment"><em>What can I do with this data?</em></li>
-<li class="fragment"><em>What can I not do with this data?</em></li>
-<li class="fragment"><em>Does anything look suspicious?</em></li>
-</ul>
-</section><section id="where-does-eda-fit-in-the-data-science-process-1" class="slide level2">
-<h2>Where does EDA fit in the data science process?</h2>
-<p>You’re working on a project with some very specific questions that need answering. A coworker from another department sends you data with “everything you need” to find the answers. You should use EDA to figure out:</p>
-<ul>
-<li class="fragment"><em>Do I actually have all the information I need?</em></li>
-<li class="fragment"><em>Do I trust the quality of this data?</em></li>
-<li class="fragment"><em>What is the best way to combine data sets?</em></li>
-<li class="fragment"><em>What wrangling is needed to get the data in the right format?</em></li>
-</ul>
-</section><section id="generate-questions" class="slide level2">
-<h2>Generate Questions</h2>
-<p>What questions do we have about this data?</p>
-<pre><code>library(tidyverse)
-View(gss_cat)</code></pre>
-</section><section id="find-answers" class="slide level2">
-<h2>Find Answers</h2>
-</section></section>
-<section><section id="looking-ahead" class="title-slide slide level1" data-background="#e8c35d"><h1>Looking Ahead</h1></section><section id="what-are-we-doing-the-rest-of-the-week" class="slide level2">
-<h2>What are we doing the rest of the week?</h2>
-<ul>
-<li>Wednesday: Have every one on GitHub</li>
-<li>Friday: “Reproducible Research”
-<ul>
-<li>R Projects</li>
-<li>Sharing code</li>
-<li>Semester project</li>
-</ul></li>
+<li>Conceptual &amp; Declarative (top left)</li>
+<li>Conceptual &amp; Exploratory (bottom right)</li>
+<li>Data-Driven &amp; Declarative (top right)</li>
+<li>Data-Driven &amp; Exploratory (bottom right)</li>
 </ul>
 </section></section>
+<section><section id="tidy-data" class="title-slide slide level1" data-background="#e8c35d"><h1><a href="https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#tidy-data">Tidy Data</a></h1></section><section id="how-data-is-stored" class="slide level2">
+<h2>How data is stored</h2>
+<p>Deciding what data is and how to handle it is not a trivial problem.</p>
+<ol type="1">
+<li class="fragment">Visual consumption by humans</li>
+<li class="fragment">Computer consumption for storage</li>
+<li class="fragment">Analytics consumption</li>
+</ol>
+</section><section id="how-humans-consume-data" class="slide level2">
+<h2>How humans consume data</h2>
+<p><img data-src="images/sr/human_table.png" /></p>
+</section><section id="how-computers-consume-data" class="slide level2">
+<h2>How computers consume data</h2>
+<p><img data-src="images/sr/relational_diagram.png" /></p>
+</section><section id="how-data-is-stored-for-visualization-and-analytics" class="slide level2">
+<h2>How data is stored for visualization and analytics</h2>
+<p><img data-src="images/sr/tidy_diagram.png" /></p>
+</section><section id="dont-mix-and-match" class="slide level2">
+<h2>Don’t mix and match!</h2>
+<p>You should never attempt all three of the above in one sheet in Excel or Google Sheets.</p>
+<p>Using multiple tabs or sheets can make this possible but still not recommended.</p>
+<p>(bad example)</p>
+</section><section id="data-tools-for-this-class" class="slide level2">
+<h2>Data tools for this class</h2>
+<p>Most of our data will be stored as a <a href="https://www.google.com/search?q=csv+file&amp;rlz=1C1GCEJ_enUS882US882&amp;oq=csv+file&amp;aqs=chrome..69i57j69i60l3j5j69i60l3.622j0j7&amp;sourceid=chrome&amp;ie=UTF-8">csv file</a>.</p>
+<ul>
+<li>Microsoft Excel</li>
+<li>Google Sheets</li>
+</ul>
+<!---------------
+## What we have to do with Google Sheets.
+
+- [View data sets](https://drive.google.com/drive/folders/1jR07hsu3mbsBOmghKset0geclsFn_ZMG?usp=sharing)
+- [Do some calculations](https://docs.google.com/spreadsheets/d/1KUq-7qEHB642UB9olN7Fw0Yp9pYoKyCQIhs1TCPP198/template/preview)
+
+- [Maybe create a few simple formulas](https://support.google.com/docs/table/25273)
+
+**Sheets is a sidenote, not our primary tool.**
+----------------->
+<!--------------------
+## Measures of Center
+
+![](images/center/Slide5.PNG)
+
+## Measures of Center {data-transition="none"}
+
+![](images/center/Slide6.PNG)
+
+## Measures of Center {data-transition="none"}
+
+![](images/center/Slide7.PNG)
+
+## Measures of Center {data-transition="none"}
+
+![](images/center/Slide8.PNG)
+
+## Measures of Center
+
+![](images/center/insect_spray.PNG)
+
+## Different Types of Center
+
+![](images/center/meanmedian_learningstatisticswithr.png)
+
+[*source*](https://learningstatisticswithr.com/book/descriptives.html)
+
+## Measures of Center Activity
+
+> - **Instructions:**
+>   - Generate 10 random numbers between 1 and 10
+>   - Plot the numbers on your graph
+>   - Calculate the mean and median. Cirlce them on your graph.
+
+
+> - This will be easier if you pick one person to be the writer, one person to generate the random numbers, and one person to do the math.
+> - [Jam Board](https://jamboard.google.com/d/1zLvnfW7fe9ZVnUrUEjjnO_CrFCe5NOk6dFJuMxfdn5w/edit?usp=sharing)
+> - [Random Number Generator](https://www.google.com/search?q=random+number+between+1+and+10&rlz=1C1GCEJ_enUS882US882&oq=random+number+between+1+and+10&aqs=chrome..69i57j0l7.3815j0j9&sourceid=chrome&ie=UTF-8)
+
+## [Measures of Center](https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#measures-of-center)
+
+**Break into new groups and answer to the following questions:**   
+
+> - What does the phrase 'measures of center' mean?
+> - What do you notice about the mean's location relative to the median?
+> - Why do we use measures of center?   
+> - Which measure of center do you prefer? 
+> - Which measure would represent a typical net worth of people living in Seattle better?
+
+
+- [Bill Gates walks into a bar](https://introductorystats.wordpress.com/2011/09/04/when-bill-gates-walks-into-a-bar/)
+
+## Questions on Measures of Center?
+
+-------------------------->
+</section></section>
+<section><section id="case-study-2" class="title-slide slide level1" data-background="#e8c35d"><h1>Case Study 2</h1></section><section id="case-study-2-overview" class="slide level2">
+<h2>Case Study 2 Overview</h2>
+<ul>
+<li class="fragment">You work together to get data recording done, but each of you creates your own visualizations and presentation.<br />
+</li>
+<li class="fragment">You can use similar images, but your presentation and Tableau file should be your own creation.</li>
+</ul>
+</section><section id="tidy-lego-data" class="slide level2">
+<h2>“Tidy” Lego data</h2>
+<p><img data-src="images/sr/tidy_diagram.png" /></p>
+</section><section id="questions" class="slide level2">
+<h2>Questions?</h2>
+</section></section>
+<section id="tableau" class="title-slide slide level1" data-background="#e8c35d"><h1>Tableau</h1></section>
     </div>
   </div>
 
@@ -615,7 +613,7 @@ View(gss_cat)</code></pre>
         // Opens links in an iframe preview overlay
         previewLinks: false,
         // Transition style
-        transition: 'default', // none/fade/slide/convex/concave/zoom
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
         // Transition style for full page slide backgrounds
         backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
         // The "normal" size of the presentation, aspect ratio will be preserved
