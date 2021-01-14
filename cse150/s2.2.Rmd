@@ -1,7 +1,74 @@
 ---
-title: "Finding meaning in Data"
+title: ""
 ---
 
+# Welcome to class! {data-background=#e8c35d}
+
+## Any questions?
+
+# Raw Data vs. Summaries {data-background=#e8c35d}
+
+## Raw Data vs. Summaries
+
+- What is the difference between "raw data" and "summarized data"?
+- Why do we care?
+
+# Intro to Tableau  {data-background=#e8c35d}
+
+## Any problems?
+
+## How to load data
+
+## Types of variables (columns)
+
+**Dimensions vs Measures**
+
+> - Tableau displays dimensions (categorical variables) by their name
+> - Tableau displays measures (numerical variables) as a summary
+
+**Discrete vs Continuous**
+
+>- Discrete variables (specific values) are blue
+>- Continuous variables (any value in a range) are green
+
+
+## [Pill types](https://redheadedstepdata.io/master-tableau-concepts/)
+
+![](images/4-pill-types.png)
+
+## Your turn!
+
+- Let's use the [purchase_data](https://docs.google.com/spreadsheets/d/1WFdhJVJpW-4V-zoCG1OK0w4EBzGvY0v4wpuvANq_rF0/edit?usp=sharing)   
+- **Create a bar chart of the top 20 merchants by sales.**
+
+
+
+
+<!-----------------
+# Good Charts {data-background=#e8c35d}
+
+## Chapter 4: Better charts in a couple of hours
+
+![](images/gc/Ch4_building_better_charts_time.png)
+
+> - **Prep:**  Visualization is creative communication. It takes time, so block it out in 1-2 hour chunks.
+> - **Talk & Listen:** Find people that will listen and then talk their ear off.  But listen to what they don't understand.
+> - **Sketch:** This is hard.  Don't be afraid to make mistakes. [Use a visualization topic guide](https://datavizcatalogue.com/) or use [good chart cheatsheet](images/gc/Ch4_chart_ideation.png).
+> - **Prototype:** *Next class discussion*
+
+## Talk, Sketch, Listen, Prototype...
+
+After prep, all of these can happen at the same time when you are working in a group. As long as everyone has come prepared. [Hejazi and Voisin climate paper example](https://www.pnas.org/content/112/34/10635/tab-figures-data).
+
+------------------------>
+
+
+
+
+
+
+
+<!------------------------
 ## [Tools: Tableau](https://byuistats.github.io/BYUI_CSE150_StatBook/tools.html#tableau)
 
 **Two tools: Both should work**
@@ -15,15 +82,13 @@ title: "Finding meaning in Data"
 
 > - [Connecting to Google Sheets](https://www.tableau.com/about/blog/2016/5/connect-directly-your-google-sheets-tableau-10-53954)
 > - [Registered Training (pill types)](https://www.tableau.com/learn/tutorials/on-demand/understanding-pill-types): Their videos are great and should be used.  
+--------------------->
 
-## Working with Tableau
 
-> - [Let's use the government_data_data4](https://docs.google.com/spreadsheets/d/1uPunkpysrF773ce2QxwqXiYQ3MkxaLCbXBHu3yeASfU/edit#gid=37313239)   
 
-**Tackle the following questions**   
 
-> - *Create a bar chart of the top 20 merchants by sales. Which are the top 2 merchants by sales?*   
 
+<!---------------
 # Case Study {data-background=#e8c35d}
 
 > - [Measuring LEGO case study](https://byuistats.github.io/CSE150/project.html#Case_Study_2:_Lego_my_data) questions?   
@@ -31,23 +96,12 @@ title: "Finding meaning in Data"
 >    - You work together to get data recording done, but each of you creates your own visualizations and presentation.   
 >    - You can use similar images, but your presentation and Tableau file should be your own creation.   
 > - Case study quizes.
+------------------------>
 
 
-# Good Reads {data-background=#e8c35d}
 
-## Chapter 4: Better Charts in a couple of hours (73-86)
 
-![](images/gc/Ch4_building_better_charts_time.png)
-
-> - **Prep:**  Visualization is creative communication. It takes time, so block it out in 1-2 hour chunks.
-> - **Talk & Listen:** Find people that will listen and then talk their ear off.  But listen to what they don't understand.
-> - **Sketch:** This is hard.  Don't be afraid to make mistakes. [Use a visualization topic guide](https://datavizcatalogue.com/) or use [good chart cheatsheet](images/gc/Ch4_chart_ideation.png).
-> - **Prototype:** *Next class discussion*
-
-## Talk, Sketch, Listen, Prototype...
-
-After prep, all of these can happen at the same time when you are working in a group. As long as everyone has come prepared. [Hejazi and Voisin climate paper example](https://www.pnas.org/content/112/34/10635/tab-figures-data).
-
+<!--------------------
 # Supplemental Reading {data-background=#e8c35d}
 
 ## [Measures of Spread](https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#measures-of-spread)
@@ -63,3 +117,23 @@ If you were a Walmart buyer of cherry tomatoes, what specifications would you gi
 
 - [LEGO my data](https://byuistats.github.io/CSE150/project.html#Case_Study_2:_Lego_my_data)
 [ref](https://youtu.be/BvZgAEiQXgk)
+------------------------>
+
+
+
+
+# Looking Ahead {data-background=#e8c35d}
+
+## Midpoint Quiz (Saturday)
+
+1. Have you discussed with a friend or family member (or classmates!) which variables you should record on each Lego brick?
+2. Has your group started recording Lego data?
+3. Has your team shared a draft (an example) of your Lego data to our class conversation space, with a short justification of what variables you are recording?
+
+## Visualization Discussion (Monday)
+
+Each "visualization discussion" will have [an article](https://www.nytimes.com/interactive/2019/04/12/sports/basketball/stephen-curry-warriors-popcorn.html) to read with a chart. 
+
+The quiz will ask you a few questions about the chart.
+
+## Questions?
