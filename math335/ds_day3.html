@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>ds_day3.utf8</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section class="slide level2">
+
+<!-----------------------
+Note:
+want to students to focus on picking a TOPIC and QUESTION,
+rather than finding the perfect data right now.
+
+There is a task in a few weeks (task 11???)
+that tells them to find the data for their project
+-------------------------->
+</section>
+<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1><p>The Data Science Process: Day 3</p></section><section id="todays-outline" class="slide level2">
+<h2>Today’s Outline:</h2>
+<ul>
+<li>Data Answer</li>
+<li>Data Questions</li>
+<li>The Semester Project</li>
+<li>Reproducible Research</li>
+<li>Looking Ahead</li>
+</ul>
+</section><section id="a-data-science-problem" class="slide level2">
+<h2>A Data Science Problem</h2>
+<p><br></p>
+<p><strong>“Can you help us optimize our sales funnel and improve our conversion rates?”</strong><a href="https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67">.</a></p>
+<p><br></p>
+<ul>
+<li class="fragment">You say “yes” and go back to your office to get to work.</li>
+<li class="fragment">Then what?</li>
+<li class="fragment"><em>What does a solution to this problem look like?</em></li>
+</ul>
+</section><section id="does-this-help" class="slide level2">
+<h2>Does this help?</h2>
+<p><br></p>
+<p>“When a non-technical supervisor asks you to solve a data problem, the description of your task can be quite ambiguous at first. It is up to you, as the data scientist, to translate the task into a concrete problem, figure out how to solve it and <em>present the solution back to all of your stakeholders</em>.”<a href="https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67">.</a></p>
+</section><section id="what-about-this" class="slide level2">
+<h2>What about this?</h2>
+<p>“Communicate results of the analysis: All the analysis and technical results that you come up with are of little value unless you can explain to your stakeholders what they mean, in a way that’s comprehensible and compelling. Data storytelling is a critical and underrated skill that you will build and use here.”<a href="https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67">.</a></p>
+</section><section id="what-exactly-is-a-data-science-solution" class="slide level2">
+<h2>What exactly is a data science solution?</h2>
+<p><br></p>
+<p>Important first step: Framing the problem</p>
+</section><section id="what-exactly-is-a-data-science-solution-1" class="slide level2">
+<h2>What exactly is a data science solution?</h2>
+<p><br></p>
+<p>You now have an amazing machine learning model that can predict, with high accuracy, how likely a prospective customer is to buy Hotshot’s product. But how do you convey its awesomeness to your client, the VP of Sales? <strong>How do you present your results to her in a form that she can use?</strong></p>
+</section><section id="what-exactly-is-a-data-science-solution-2" class="slide level2">
+<h2>What exactly is a data science solution?</h2>
+<p><br></p>
+<p>Communication is one of the most underrated skills a data scientist can have. While some of your colleagues (engineers, for example) can get away with being <strong>siloed in their technical bubbles</strong>, data scientists must be able to communicate with other teams and effectively translate their work for <strong>maximum impact</strong>. This set of skills is often called <em>‘data storytelling.’</em></p>
+</section><section id="what-exactly-is-a-data-science-solution-3" class="slide level2">
+<h2>What exactly is a data science solution?</h2>
+<p><br></p>
+<p>Go back and read Step 6 in the <a href="https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67">article</a>. What are the deliverables?</p>
+<ul>
+<li class="fragment">Current deliverables:
+<ul>
+<li class="fragment">A spreadsheet, with “current prospects” ranked</li>
+<li class="fragment">A face-to-face conversation where you “walk her through your conclusions”</li>
+<li class="fragment">A verbal recommendation</li>
+</ul></li>
+<li class="fragment">Future deliverables:</li>
+</ul>
+</section><section id="a-data-science-solution" class="slide level2">
+<h2>A Data Science Solution</h2>
+<p><br></p>
+<p><strong>“Can you help us optimize our sales funnel and improve our conversion rates?”</strong><a href="https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67">.</a></p>
+<p>What does a solution to this problem look like?</p>
+</section><section id="what-does-a-data-science-solution-look-like" class="slide level2">
+<h2>What does a data science solution look like?</h2>
+<p><a href="https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67">The Data Science Process</a></p>
+<!--------------------------------
+The music/symphony analogy comes from Robert Peng
+https://www.coursera.org/lecture/reproducible-research/what-is-reproducible-research-about-FvOGB
+
+"Okay, so in case you didn't recognize it, that was the very beginning of the Symphony Number Eight, by Gustav Mahler. It was performed by the Chicago Symphony Orchestra, under the baton of Sir Georg Solti. And so this might be the polar opposite of the Code Monkey song that I just played for you. This symphony is sometimes called the Symphony of 1000, because just of the sheer number of people that have to be on stage to perform this piece. You need an entire symphony orchestra. You need an entire full chorus to sing. And so there's a lot of complex moving parts needed to perform this piece, and yet it gets performed all the time, and everyone recognizes the piece when they hear it, because it's more or less the same thing. Now how does that happen, right? So how is it that orchestras and choruses all over the world can play this enormously complex piece and it always seems to come off more or less just the same thing, okay? And similarly, how is it that you can listen to Johnathan Colton's song and you can hear the music, and then somehow, if you are trained musician, you can pick it up and maybe play it for yourself, okay? This is really about reproducibility, right? So in music, one of the nice things about music in general is that when you hear the performance, regardless of whether it's a simple popular song or an enormous symphony, you get all the information that you need. And now depending on the complexity of the music, you may get more or less information, because the brain is only able to process so much information at a time. But for something that's very complicated, like a symphony, we actually have a way to write down the instructions to give to the performers to tell them how to play each thing. And so it actually, Mahler is a great example of this because he himself was a conductor. And he knew that as a conductor it's often difficult to look at a composer's music and understand what is it exactly that the composer wanted here? And so when he wrote his music, he put instructions on every single inch of that piece of music, because that way the conductor who is interpreting and the performers who are interpreting the music can understand, oh, that's what the composer wanted here. So for Mahler's Symphony Number Eight what we have is the score. So the score is basically a book that lists every single part of every instrument, and what they need to play, and what instructions they have. And so the conductor can look at the score, and say, okay, I know what the violin's playing at this time and I know what the flute is playing, and I know what the chorus is singing at this time. And that way the music can be coordinated and all performed, and synchronized."
+
+"And so what we're talking about in this course, Reproducible Research, is basically, how do you develop the score for data analysis so that you can communicate to someone what was done, and if they want to reproduce the work, how to do it, okay? Now the fundamental problem in data analysis is that we don't really have an agreed upon notation system for communicating data analysis. And so, everyone does it a different way, and in aggregate, it's kind of a mess. So some people will just describe in words what was done, and in some cases, this is suficient. This is sufficient but in many cases, it's not. Some people will provide the computer code and the data and everything that you need, and sometimes that's good. But sometimes it's enormously complex and it's difficult to sort through. And so there are a variety of ways that you can communicate data analysis, but we just haven't agreed upon what is a way that we can all look, that is sufficient for everybody, or more or less sufficient for everybody. So, what we're gonna focus on in this course, is how to communicate data analysis, using code by writing documents that are very dynamic, and by sharing data so that other people can reproduce the work that you're doing."
+
+"If you want to communicate what you've done to other people, you need to be able to give them the material so that they can perform, so to speak, the analysis themselves."
+------------------------------------>
+</section></section>
+<section><section id="reproducible-research" class="title-slide slide level1" data-background="#e8c35d"><h1>Reproducible Research</h1></section><section id="close-your-eyes" class="slide level2">
+<h2>Close your eyes</h2>
+</section><section id="section" class="slide level2">
+<h2></h2>
+<iframe src="https://open.spotify.com/embed/playlist/1yWApTnGURJFcz7XE7jN5H" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
+</iframe>
+</section><section id="beethovens-symphony-no.-5" class="slide level2">
+<h2>Beethoven’s Symphony No. 5</h2>
+<p>Written early 1880s. Score from <a href="https://www.researchgate.net/figure/Ludwig-van-Beethoven-Symphony-No-5-C-Minor-Op-67-Breitkopf-Haertel-Leipzig-1862_fig2_282721507">1862</a>. Songs from 1983 and 2021.</p>
+<p><img data-src="images/Ludwig-van-Beethoven-Symphony-No-5-C-Minor-Op-67-Breitkopf-Haertel-Leipzig-1862.png" /></p>
+</section><section id="so-what" class="slide level2">
+<h2>So what?</h2>
+<p>If multiple people can get the same results, then it strengthens the arguments of the paper/research/etc.</p>
+</section><section id="working-in-silos" class="slide level2">
+<h2>Working in silos</h2>
+</section><section id="how-to-share-your-code" class="slide level2">
+<h2>How to share your code</h2>
+<ul>
+<li class="fragment">bad example
+<ul>
+<li class="fragment">What went wrong? (packages, file paths, etc)</li>
+</ul></li>
+<li class="fragment">good example
+<ul>
+<li class="fragment">common file structure across company/projects</li>
+<li class="fragment">code to install packages first</li>
+<li class="fragment">R projects….</li>
+</ul></li>
+</ul>
+</section><section id="r-projects" class="slide level2">
+<h2>R Projects</h2>
+<ul>
+<li class="fragment">why they are awesome</li>
+</ul>
+</section><section id="math-335-workflow" class="slide level2">
+<h2>Math 335 Workflow</h2>
+<p>What steps will they follow for each task and case study?</p>
+<ul>
+<li class="fragment">Open their 335 project in R Studio</li>
+<li class="fragment">Make a new file (r script or r markdown)</li>
+<li class="fragment">Knit (convert RMarkdown –&gt; markdown –&gt; html)</li>
+<li class="fragment">pull, add, commit, push</li>
+<li class="fragment">submit link in Canvas</li>
+</ul>
+</section><section id="reproducible-research-crisis" class="slide level2">
+<h2>Reproducible Research Crisis</h2>
+<ul>
+<li class="fragment">zoom out, big picture. maybe start with this?</li>
+</ul>
+</section></section>
+<section><section id="the-semester-project" class="title-slide slide level1" data-background="#e8c35d"><h1>The Semester Project</h1></section><section id="what-types-of-questions-can-data-answer" class="slide level2">
+<h2>What types of questions can data answer?</h2>
+</section><section id="how-to-ask-good-questionsdata-questions" class="slide level2">
+<h2>How to ask good questions/data questions</h2>
+<ul>
+<li class="fragment">some questions can’t be answered</li>
+<li class="fragment">some questions to subjettive</li>
+<li class="fragment">need to answer in one semester</li>
+</ul>
+</section><section id="what-is-the-goal" class="slide level2">
+<h2>What is the goal?</h2>
+<ul>
+<li class="fragment">choose-your-own-adventure case study</li>
+</ul>
+</section><section id="what-should-it-look-like" class="slide level2">
+<h2>What should it look like?</h2>
+<ul>
+<li class="fragment">example</li>
+<li class="fragment">example</li>
+<li class="fragment">example</li>
+</ul>
+</section><section id="what-can-i-study" class="slide level2">
+<h2>What can I study?</h2>
+<ul>
+<li class="fragment">anything</li>
+</ul>
+</section><section id="where-can-i-find-data" class="slide level2">
+<h2>Where can I find data?</h2>
+<ul>
+<li class="fragment">don’t focus on data</li>
+<li class="fragment">for now, just do a google search????</li>
+<li class="fragment">task 11 will talk more abotu data sources</li>
+</ul>
+</section></section>
+<section><section id="looking-ahead" class="title-slide slide level1" data-background="#e8c35d"><h1>Looking Ahead</h1></section><section id="upcoming-assignments" class="slide level2">
+<h2>Upcoming Assignments</h2>
+<ul>
+<li>Case Study 2 (Saturday)</li>
+<li>Task 5 (Tuesday)
+<ul>
+<li>Reading only</li>
+<li>Try taking reading notes in the <code>readme.md</code> file in your repo’s week 3 folder.</li>
+</ul></li>
+</ul>
+</section><section id="a-note-on-week-3" class="slide level2">
+<h2>A note on week 3</h2>
+<p>Week 3 is all about the <code>ggplot</code> package and visualizing data.</p>
+<p>This is the goal:</p>
+<p><img data-src="images/week3.png" /></p>
+<!-------------------------------------
+
+Other goals for week 3: Want to give them enough ggplot vocabulary
+that they will be able to sucessfully google things.
+
+Try a class exercise. 
+- They ask me how to do something
+- Then they watch me google it and find the answer.
+- I explain why i'm using certain words in my google search
+
+
+--------------------------------------->
+</section></section>
+    </div>
+  </div>
+
+  <script src="externals/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="externals/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: true,
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+        // Transition style
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: '100%',
+        height: '100%',
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 1,
+        maxScale: 3,
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'externals/reveal.js-3.3.0.1/plugin/search/search.js', async: true },
+          { src: 'externals/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
