@@ -26,6 +26,8 @@ The Data Science Process: Day 3
 >- The Semester Project
 >- Looking Ahead
 
+# Data Science Solutions  {data-background=#e8c35d}
+
 ## A Data Science Problem
 
 <br>
@@ -50,11 +52,15 @@ The Data Science Process: Day 3
 
 "All the analysis and technical results that you come up with are of little value unless you can **explain to your stakeholders what they mean, in a way that's comprehensible and compelling**. Data storytelling is a critical and underrated skill that you will build and use here."[.](https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67)
 
+<!------------------------
+
 ## What exactly is a data science solution?
 
 <br>
 
-Step One: Frame the Problem
+Make sure you follow Step One: Frame the Problem
+
+Or, as [Scott Berinato](https://hbr.org/2016/06/visualizations-that-really-work) says, "Know what message you're trying to communicate before you get down in the weeds."
 
 ## What exactly is a data science solution?
 
@@ -71,6 +77,7 @@ Step 6: Communicate Your Findings
 Step 6: Communicate Your Findings
 
 "Communication is one of the most underrated skills a data scientist can have. While some of your colleagues (engineers, for example) can get away with being **siloed in their technical bubbles**, data scientists must be able to communicate with other teams and effectively translate their work for **maximum impact**. This set of skills is often called *'data storytelling.'*"
+--------------------------------->
 
 ## What exactly is a data science solution?
 
@@ -85,25 +92,50 @@ Go back and read Step 6 in the [article](https://medium.springboard.com/the-data
 - Future deliverables:
   - A face-to-face conversation with VP of marketing
   - A couple of slides "summarizing results and recommendations" to be presented at a board meeting
+  
+## What exactly is a data science solution?
+
+<br>
+
+What about [Florence Nightingale](https://www.atlasobscura.com/articles/florence-nightingale-infographic)? What was her solution?
+
+- Asked to "communicate her opinions" about hospitals
+- Delivered an 850-page report with stories, tables, and charts
 
 ## Data Science Solutions
 
 <br>
 
-What else could a data science solution look like?
+What else could a data science solution look like?[.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7066089/)
 
-## A Data Science Solution
+## Data Science Solutions
 
 <br>
 
-"Boom! You've had an amazing impact on your first project! You've successfully finished your first data science project at work."
+"Boom! You've had an amazing impact on your first project! You've successfully finished your first data science project at work."[.](https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67)
+
+- **How do you know if your data science solution is successful? **
+
+## Data Science Solutions
+
+<br>
+
+**How do you know if your data science solution is successful? **
+
+- [Scott Berinato](https://hbr.org/2016/06/visualizations-that-really-work) says "Visualization is merely a process. What we actually do when we make a good chart is get at some truth and move people to feel it - to see what couldn't be seen before. To change minds. To cause action."
+- [Florence Nightingale](https://www.atlasobscura.com/articles/florence-nightingale-infographic) defeated her critics and "by the 1880s, sanitation standards in the British Army had greatly improved". 
+- What about [Hans Rosling](https://www.youtube.com/watch?v=hVimVzgtD6w&list=PLO_OaQZ3Gmd7NYH4lRxIfMyd9FosWsp6-)?
+
+## Data Science Solutions
+
+<br>
 
 **How do you know if your data science solution is successful? **
 
 - Here are some of my ideas:
   - Your boss is happy (maybe not a great metric to use?)
   - You answered the questions (framed in Step 1)
-  - Your solution provides your boss/client with enough information that she or he can clearly see the next step forward
+  - Your solution provides your boss/client with enough information that she or he can clearly see the next step forward (take action!)
 
 ## Are you sure?
 
@@ -113,7 +145,7 @@ Let's extend the story:
 
 - The VP of Sales is *so excited* about what your work that she brings on another analyst to help continue the project.
 - To get up to speed on the project, the new analyst tries to answer the same questions you did.
-- She comes up with completely different answers.
+- The new analyst comes up with completely different answers.
 - Now what?
 
 ## Are you sure?
@@ -126,7 +158,7 @@ How can you be sure your results are reliable?
 
 ## Replication
 
-- [Can ye feel so now?](https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5.26?lang=eng#p26#26)
+- [Experiment upon my words](https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32.27,33,36?lang=eng&clang=eng#p27,33,36) or [Can ye feel so now?](https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5.26?lang=eng#p26#26)
 - [Replication crisis](https://en.wikipedia.org/wiki/Replication_crisis)
 - [If you can't replicate, then what?](https://www.youtube.com/watch?v=DfBSiOupI1I) (until 4:04)
   - Warning: The meaning of replication and reproduction are often [switched](https://guides.library.unlv.edu/datamanagement/reproducible_research)
@@ -142,7 +174,9 @@ https://open-science-training-handbook.gitbook.io/book/open-science-basics/repro
 
 ## Close your eyes
 
-##
+## There is a *40 year gap* between these recordings.
+
+<br>
 
 <iframe src="https://open.spotify.com/embed/playlist/1yWApTnGURJFcz7XE7jN5H" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
@@ -229,18 +263,17 @@ Show me you know how to:
 <br>
 
 - You decide. 
-- What solution format is the most useful for this data science problem?
+- What solution format is the most useful for your data science problem?
 - Slightly more helpful answer: Probably an R Markdown report. Anything else you'll have to learn on your own.
+- The focus will be on analysis through visualization, not statistics or algorithms.
 - At the end of the semester, you'll present your project in front of the class.
 
-## Picking a topic (Case Study 2)
+## Exploring topics (Case Study 2)
 
 <br>
 
 - Keep in mind that not all questions can be (easily) answered with data.
 - Pick a question that can be answered by the end of the semester.
-
-## Want to see my current project?
 
 # Looking Ahead {data-background=#e8c35d}
 
@@ -259,9 +292,17 @@ This is the goal:
 
 ![](images/week3.png)
 
+## A note on `ggplot` layers
 
+![](images/lasagna_ingredients.jpg)
 
+## A note on `ggplot` layers
 
+![](images/lasagna_layers.jpg)
+
+## A note on `ggplot` layers
+
+![](images/lasagna_final.jpg)
 
 
 
