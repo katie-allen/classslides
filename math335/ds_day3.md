@@ -21,10 +21,9 @@ The Data Science Process: Day 3
 
 ## Today's Outline:
 
->- Data Answer
->- Data Questions
->- The Semester Project
+>- Data Science Solutions
 >- Reproducible Research
+>- The Semester Project
 >- Looking Ahead
 
 ## A Data Science Problem
@@ -47,7 +46,9 @@ The Data Science Process: Day 3
 
 ## What about this?
 
-"All the analysis and technical results that you come up with are of little value unless you can explain to your stakeholders what they mean, in a way that's comprehensible and compelling. Data storytelling is a critical and underrated skill that you will build and use here."[.](https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67)
+<br>
+
+"All the analysis and technical results that you come up with are of little value unless you can **explain to your stakeholders what they mean, in a way that's comprehensible and compelling**. Data storytelling is a critical and underrated skill that you will build and use here."[.](https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67)
 
 ## What exactly is a data science solution?
 
@@ -85,6 +86,12 @@ Go back and read Step 6 in the [article](https://medium.springboard.com/the-data
   - A face-to-face conversation with VP of marketing
   - A couple of slides "summarizing results and recommendations" to be presented at a board meeting
 
+## Data Science Solutions
+
+<br>
+
+What else could a data science solution look like?
+
 ## A Data Science Solution
 
 <br>
@@ -121,7 +128,7 @@ How can you be sure your results are reliable?
 
 - [Can ye feel so now?](https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5.26?lang=eng#p26#26)
 - [Replication crisis](https://en.wikipedia.org/wiki/Replication_crisis)
-- [If you can't replicate, then what?](https://www.youtube.com/watch?v=DfBSiOupI1I) (first three minutes)
+- [If you can't replicate, then what?](https://www.youtube.com/watch?v=DfBSiOupI1I) (until 4:04)
   - Warning: The meaning of replication and reproduction are often [switched](https://guides.library.unlv.edu/datamanagement/reproducible_research)
   - Warning: An analysis can be reproducible and [still be wrong](https://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/)
 
@@ -141,13 +148,36 @@ https://open-science-training-handbook.gitbook.io/book/open-science-basics/repro
 
 ## Beethoven's Symphony No. 5
 
-Written early 1880s. Score from [1862](https://www.researchgate.net/figure/Ludwig-van-Beethoven-Symphony-No-5-C-Minor-Op-67-Breitkopf-Haertel-Leipzig-1862_fig2_282721507). Songs from 1983 and 2021.
+Composed early 1880s. This image is from [1862](https://www.researchgate.net/figure/Ludwig-van-Beethoven-Symphony-No-5-C-Minor-Op-67-Breitkopf-Haertel-Leipzig-1862_fig2_282721507). Spotify songs from 1983 and 2021.
 
 ![](images/Ludwig-van-Beethoven-Symphony-No-5-C-Minor-Op-67-Breitkopf-Haertel-Leipzig-1862.png)
 
 ## What is the "score" of your data science solution?
 
-## Working in silos
+## This is what happens when you [work in a silo](https://www.google.com/search?q=working+in+a+silo&rlz=1C1GCEJ_enUS882US882&oq=working+in+a+silo&aqs=chrome..69i57j0l2j0i22i30l5.1662j0j7&sourceid=chrome&ie=UTF-8).
+
+<br>
+
+![](images/silo.gif)
+
+## Reproducible Research Checklist
+
+<br>
+
+**"How you got to the end is just as important as the end itself."**
+
+via [Roger Peng](https://www.youtube.com/watch?v=pjL2uP-fmPY)
+
+- DON'T do things by hand
+- DON't point and click
+- DON'T save output
+- DO teach a computer (almost guarantees reproducibility)
+- DO use version control
+- DO keep track of your software environment (aka, `sessionInfo()`)
+- DO think about the entire pipeline (raw data -> clean data -> analysis -> report)
+
+
+<!----------------
 
 ## How to share your code
 
@@ -167,46 +197,50 @@ Written early 1880s. Score from [1862](https://www.researchgate.net/figure/Ludwi
 
 What steps will they follow for each task and case study?
 
-- Open their 335 project in R Studio
-- Make a new file (r script or r markdown)
-- Knit (convert RMarkdown --> markdown --> html)
+- Open your 335 repo project
+- Make a new file (R script or R Markdown)
+- Knit (convert RMarkdown -> markdown -> html)
 - pull, add, commit, push
 - submit link in Canvas
 
-## Reproducible Research Crisis
-
-- zoom out, big picture. maybe start with this?
+------------------->
 
 # The Semester Project {data-background=#e8c35d}
 
-## What types of questions can data answer?
+## Choose Your Own Adventure
 
-## How to ask good questions/data questions
+<br>
 
-- some questions can't be answered
-- some questions to subjettive
-- need to answer in one semester
+![](images/own_adventure.jpeg)
 
-## What is the goal?
+## Minimum Requirements
 
-- choose-your-own-adventure case study
+<br>
 
-## What should it look like?
+Show me you know how to:
 
-- example
-- example
-- example
+>- Import and (if needed) combine data sets (weeks 5 and 6)
+>- Wrangle data to get it in the proper format (weeks 4+)
+>- Use visualizations to provide clear insights (weeks 3 and 7)
+>- Communicate your results in a compelling story (all semester)
 
-## What can I study?
+## But Sister Larson, *what do I need to submit?!?"*
 
-- anything
+<br>
 
-## Where can I find data?
+- You decide. 
+- What solution format is the most useful for this data science problem?
+- Slightly more helpful answer: Probably an R Markdown report. Anything else you'll have to learn on your own.
+- At the end of the semester, you'll present your project in front of the class.
 
-- don't focus on data
-- for now, just do a google search????
-- task 11 will talk more abotu data sources
+## Picking a topic (Case Study 2)
 
+<br>
+
+- Keep in mind that not all questions can be (easily) answered with data.
+- Pick a question that can be answered by the end of the semester.
+
+## Want to see my current project?
 
 # Looking Ahead {data-background=#e8c35d}
 
