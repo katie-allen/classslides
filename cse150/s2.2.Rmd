@@ -44,25 +44,6 @@ title: ""
 
 
 
-<!-----------------
-# Good Charts {data-background=#e8c35d}
-
-## Chapter 4: Better charts in a couple of hours
-
-![](images/gc/Ch4_building_better_charts_time.png)
-
-> - **Prep:**  Visualization is creative communication. It takes time, so block it out in 1-2 hour chunks.
-> - **Talk & Listen:** Find people that will listen and then talk their ear off.  But listen to what they don't understand.
-> - **Sketch:** This is hard.  Don't be afraid to make mistakes. [Use a visualization topic guide](https://datavizcatalogue.com/) or use [good chart cheatsheet](images/gc/Ch4_chart_ideation.png).
-> - **Prototype:** *Next class discussion*
-
-## Talk, Sketch, Listen, Prototype...
-
-After prep, all of these can happen at the same time when you are working in a group. As long as everyone has come prepared. [Hejazi and Voisin climate paper example](https://www.pnas.org/content/112/34/10635/tab-figures-data).
-
------------------------->
-
-
 
 
 
@@ -102,15 +83,6 @@ After prep, all of these can happen at the same time when you are working in a g
 
 
 <!--------------------
-# Supplemental Reading {data-background=#e8c35d}
-
-## [Measures of Spread](https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#measures-of-spread)
-
-If you were a Walmart buyer of cherry tomatoes, what specifications would you give them to make sure you got the size you wanted in the store?
-
-- How might a supplier user your metric to their advantage?
-- How could the metric provide safety for Walmart and the supplier?
-
 # Case Study Work {data-background=#e8c35d}
 
 ## The LEGO project
