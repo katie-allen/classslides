@@ -2,6 +2,18 @@
 title: ""
 ---
 
+
+
+## What have we learned about collecting data?
+
+
+
+## Tidy Data Practice
+
+
+
+
+
 # Welcome to class!  {data-background=#f7d754}
 
 Open your LEGO case study presentation and be ready to share.  
