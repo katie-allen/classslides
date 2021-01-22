@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="" />
-  <title>day_6.utf8</title>
+  <title>basicviz_day2.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -449,71 +449,40 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 
-<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#f7d754"><h1>Welcome to class!</h1><p>Try to recreate this plot using the <code>airquality</code> dataset in R.</p>
-<p><img data-src="images/try/try_airquality.png" /></p></section><section id="todays-outline" class="slide level2">
-<h2>Today’s Outline</h2>
+<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1><p>Basic Visualizations: Day 2</p></section><section id="goals-for-today" class="slide level2">
+<h2>Goals for today:</h2>
 <ul>
-<li>Semester Project</li>
-<li>Looking Ahead</li>
-<li>Connect GitHub to R</li>
+<li>Syllabus Update</li>
+<li>Team Leads</li>
+<li>Reading Discussion</li>
+<li>Case Study Discussion</li>
+<li>Questions from Task 6</li>
+<li>Work time for Case Study 3</li>
+</ul>
+</section><section id="reading-discussion" class="slide level2">
+<h2>Reading Discussion</h2>
+</section><section id="task-6" class="slide level2">
+<h2>Task 6</h2>
+</section><section id="case-study-3" class="slide level2">
+<h2>Case Study 3</h2>
+<ul>
+<li><a href="https://github.com/jennybc/gapminder/issues/9">Kuwait</a></li>
+<li><a href="https://www.r-graph-gallery.com/">Need ideas?</a></li>
 </ul>
 </section></section>
-<section><section id="semester-project" class="title-slide slide level1" data-background="#f7d754"><h1>Semester Project</h1></section><section id="choose-your-own-adventure-case-study" class="slide level2">
-<h2>“Choose your own adventure” case study</h2>
-<p>The semester project is just like a case study, except…</p>
+<section><section id="very-quick-intro-to-data-wrangling" class="title-slide slide level1" data-background="#e8c35d"><h1>(Very Quick) Intro to Data Wrangling</h1></section><section id="data-manipulation-verbs-from-dplyr" class="slide level2">
+<h2>Data Manipulation Verbs from <code>dplyr</code></h2>
 <ul>
-<li>You pick the question</li>
-<li>You find the data</li>
+<li><code>filter</code> - filter your data to a smaller set of important rows.</li>
+<li><code>sort</code> - Organize the row order of my data</li>
+<li><code>select</code> - select specific columns to keep or remove</li>
+<li><code>mutate</code> - add new mutated (changed) variables as columns to my data.</li>
 </ul>
-</section><section id="semester-project-timeline" class="slide level2">
-<h2>Semester Project Timeline</h2>
-<p>There are three checkpoints during the semester:</p>
+</section><section id="data-manipulation-verbs-for-summaries" class="slide level2">
+<h2>Data Manipulation Verbs for Summaries</h2>
 <ul>
-<li>Case Study 2 (this week): Pick a question</li>
-<li>Task 11 (week 6) : Find your data</li>
-<li>Case Study 13 (week 13) : Get feedback on your project, refine it, and submit</li>
-</ul>
-</section></section>
-<section><section id="looking-ahead" class="title-slide slide level1" data-background="#f7d754"><h1>Looking Ahead</h1></section><section id="what-you-should-have-completed-by-the-end-of-this-week" class="slide level2">
-<h2>What you should have completed by the end of this week:</h2>
-<ul>
-<li class="fragment">Task 1</li>
-<li class="fragment">Task 2</li>
-<li class="fragment">Case Study 1</li>
-<li class="fragment">Week 2 Being Readings</li>
-<li class="fragment">Task 3 (push to GitHub)</li>
-<li class="fragment">Task 4 (push to GitHub)</li>
-<li class="fragment">Case Study 2 (push to GitHub)</li>
-</ul>
-</section><section id="case-study-2" class="slide level2">
-<h2>Case Study 2</h2>
-<ul>
-<li class="fragment">Think of a few questions you <em>could</em> ask.</li>
-<li class="fragment">Get feedback on those questions
-<ul>
-<li class="fragment">classmates, spouse/roomates, family, strangers, etc.</li>
-</ul></li>
-<li class="fragment">Pick one question to focus on</li>
-<li class="fragment">Ask <em>someone who works with data</em> about the quality of the question, and if it can be answered in 2 months
-<ul>
-<li class="fragment">If not, consider picking a different question</li>
-</ul></li>
-<li class="fragment">Keep track of all your notes/feedback in the <strong>readme.md</strong> file</li>
-</ul>
-</section></section>
-<section><section id="github" class="title-slide slide level1" data-background="#f7d754"><h1>Github</h1><ul>
-<li>File structure</li>
-<li>Example</li>
-<li>Open lab time</li>
-</ul></section><section id="do-i-really-have-to-learn-git-and-github" class="slide level2">
-<h2>Do I really have to learn Git and GitHub?</h2>
-<ul>
-<li class="fragment">Yes</li>
-<li class="fragment">Github is used by <a href="https://venturebeat.com/2019/08/08/githubs-actions-gets-continuous-integration-support-and-workflow-suggestions/">40 million developers worldwide</a>.</li>
-<li class="fragment">There are over <a href="https://expandedramblings.com/index.php/github-statistics/">100 million repositories</a> on GitHub</li>
-<li class="fragment">GitHub has <a href="https://expandedramblings.com/index.php/github-statistics/">32 million monthly visitors</a></li>
-<li class="fragment">Everyone hosts their open source projects on GitHub including <a href="https://www.wired.com/2015/03/github-conquered-google-microsoft-everyone-else/">Google, Facebook, Twitter, and even Microsoft</a>.</li>
-<li class="fragment">GitHub is like a bazaar that offers just about any piece of code you might want - and so much of it free. <a href="https://www.wired.com/2015/03/github-conquered-google-microsoft-everyone-else/">“If you need something, you just go to GitHub. You will find it there.”</a></li>
+<li><code>summarise</code> - build summaries of the columns specified</li>
+<li><code>group_by</code> - divide your data into groups. Often used with <code>summarise</code></li>
 </ul>
 </section></section>
     </div>
