@@ -10,6 +10,70 @@
   <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/reveal.css"/>
 
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
 
@@ -459,285 +523,69 @@ There is a task in a few weeks (task 11???)
 that tells them to find the data for their project
 -------------------------->
 </section>
-<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1><p>The Data Science Process: Day 3</p></section><section id="todays-outline" class="slide level2">
-<h2>Today’s Outline:</h2>
-<ul>
-<li>Data Science Solutions</li>
-<li>Reproducible Research</li>
-<li>The Semester Project</li>
-<li>Looking Ahead</li>
-</ul>
+<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1><p>Try to recreate this plot using the <code>airquality</code> dataset in R.</p>
+<p><img data-src="images/try/try_airquality.png" /></p></section><section id="case-study-groups" class="slide level2">
+<h2>Case Study Groups</h2>
 </section></section>
-<section><section id="data-science-solutions" class="title-slide slide level1" data-background="#e8c35d"><h1>Data Science Solutions</h1></section><section id="a-data-science-problem" class="slide level2">
-<h2>A Data Science Problem</h2>
+<section><section id="data-wrangling-with-dplyr" class="title-slide slide level1" data-background="#e8c35d"><h1>Data wrangling with dplyr</h1></section><section id="the-dplyr-package" class="slide level2">
+<h2>The dplyr package</h2>
 <p><br></p>
-<p><strong>“Can you help us optimize our sales funnel and improve our conversion rates?”</strong><a href="https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67">.</a></p>
+<p>From the official documentation:</p>
+<blockquote>
+<p>“<strong>dplyr</strong> is a grammar of data manipulation, providing a consistent set of verbs that help you solve the most common data manipulation challenges.”</p>
+</blockquote>
+</section><section id="remember" class="slide level2">
+<h2>Remember…</h2>
+<p><br></p>
+<p>Hadley Wickham, the author of the dplyr package, says:</p>
+<blockquote>
+<p>“Whenever you’re learning a new tool, for a long time you’re going to suck. But the good news is that is typical, that’s something that happens to everyone, and it’s only temporary.”</p>
+</blockquote>
+</section><section id="data-manipulation-verbs" class="slide level2">
+<h2>Data manipulation verbs</h2>
 <p><br></p>
 <ul>
-<li class="fragment">You say “yes” and go back to your office to get to work.</li>
-<li class="fragment">Then what?</li>
-<li class="fragment"><em>What does a solution to this problem look like?</em></li>
+<li class="fragment"><code>filter</code> - filter your data to a smaller set of important rows</li>
+<li class="fragment"><code>arrange</code> - organize the row order of my data</li>
+<li class="fragment"><code>select</code> - select specific columns to keep or remove</li>
+<li class="fragment"><code>mutate</code> - add new mutated (changed) variables as columns to my data</li>
 </ul>
-</section><section id="does-this-help" class="slide level2">
-<h2>Does this help?</h2>
+</section><section id="data-manipulation-verbs-for-summaries" class="slide level2">
+<h2>Data manipulation verbs for summaries</h2>
 <p><br></p>
-<p>“When a non-technical supervisor asks you to solve a data problem, the description of your task can be quite ambiguous at first. It is up to you, as the data scientist, to translate the task into a concrete problem, figure out how to solve it and <strong>present the solution back to all of your stakeholders</strong>.”<a href="https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67">.</a></p>
-</section><section id="what-about-this" class="slide level2">
-<h2>What about this?</h2>
-<p><br></p>
-<p>“All the analysis and technical results that you come up with are of little value unless you can <strong>explain to your stakeholders what they mean, in a way that’s comprehensible and compelling</strong>. Data storytelling is a critical and underrated skill that you will build and use here.”<a href="https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67">.</a></p>
-<!------------------------
-
-## What exactly is a data science solution?
-
-<br>
-
-Make sure you follow Step One: Frame the Problem
-
-Or, as [Scott Berinato](https://hbr.org/2016/06/visualizations-that-really-work) says, "Know what message you're trying to communicate before you get down in the weeds."
-
-## What exactly is a data science solution?
-
-<br>
-
-Step 6: Communicate Your Findings
-
-"You now have an amazing machine learning model that can predict, with high accuracy, how likely a prospective customer is to buy Hotshot's product. But how do you convey its awesomeness to your client, the VP of Sales? **How do you present your results to her in a form that she can use?**"
-
-## What exactly is a data science solution?
-
-<br>
-
-Step 6: Communicate Your Findings
-
-"Communication is one of the most underrated skills a data scientist can have. While some of your colleagues (engineers, for example) can get away with being **siloed in their technical bubbles**, data scientists must be able to communicate with other teams and effectively translate their work for **maximum impact**. This set of skills is often called *'data storytelling.'*"
---------------------------------->
-</section><section id="what-exactly-is-a-data-science-solution" class="slide level2">
-<h2>What exactly is a data science solution?</h2>
-<p><br></p>
-<p>Go back and read Step 6 in the <a href="https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67">article</a>. What are the deliverables?</p>
 <ul>
-<li class="fragment">Current deliverables:
-<ul>
-<li class="fragment">A spreadsheet, with “current prospects” ranked</li>
-<li class="fragment">A face-to-face conversation where you “walk her through your conclusions”</li>
-<li class="fragment">A verbal recommendation</li>
-</ul></li>
-<li class="fragment">Future deliverables:
-<ul>
-<li class="fragment">A face-to-face conversation with VP of marketing</li>
-<li class="fragment">A couple of slides “summarizing results and recommendations” to be presented at a board meeting</li>
-</ul></li>
+<li class="fragment"><code>summarise</code> - build summaries of the columns specified</li>
+<li class="fragment"><code>group_by</code> - divide your data into groups and change the “scope” of other verbs</li>
 </ul>
-</section><section id="what-exactly-is-a-data-science-solution-1" class="slide level2">
-<h2>What exactly is a data science solution?</h2>
+</section><section id="data-verbs-practice" class="slide level2">
+<h2>Data verbs practice</h2>
 <p><br></p>
-<p>What about <a href="https://www.atlasobscura.com/articles/florence-nightingale-infographic">Florence Nightingale</a>? What was her solution?</p>
-<ul>
-<li class="fragment">Asked to “communicate her opinions” about hospitals</li>
-<li class="fragment">Delivered an 850-page report with stories, tables, and charts</li>
-</ul>
-</section><section id="data-science-solutions-1" class="slide level2">
-<h2>Data Science Solutions</h2>
+<p><a href="https://docs.google.com/presentation/d/1zDWzyacFGixKjPbW6rqAJ0p9jl-25ERZ3pfG1JUfgEI/template/preview">Data Verbs Template</a></p>
+</section><section id="practice-reading-code" class="slide level2">
+<h2>Practice reading code</h2>
 <p><br></p>
-<p>What else could a data science solution look like?<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7066089/">.</a></p>
-</section><section id="data-science-solutions-2" class="slide level2">
-<h2>Data Science Solutions</h2>
-<p><br></p>
-<p>“Boom! You’ve had an amazing impact on your first project! You’ve successfully finished your first data science project at work.”<a href="https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67">.</a></p>
-<ul>
-<li class="fragment"><strong>How do you know if your data science solution is successful? </strong></li>
-</ul>
-</section><section id="data-science-solutions-3" class="slide level2">
-<h2>Data Science Solutions</h2>
-<p><br></p>
-<p><strong>How do you know if your data science solution is successful? </strong></p>
-<ul>
-<li class="fragment"><a href="https://hbr.org/2016/06/visualizations-that-really-work">Scott Berinato</a> says “Visualization is merely a process. What we actually do when we make a good chart is get at some truth and move people to feel it - to see what couldn’t be seen before. To change minds. To cause action.”</li>
-<li class="fragment"><a href="https://www.atlasobscura.com/articles/florence-nightingale-infographic">Florence Nightingale</a> defeated her critics and “by the 1880s, sanitation standards in the British Army had greatly improved”.</li>
-<li class="fragment">What about <a href="https://www.youtube.com/watch?v=hVimVzgtD6w&amp;list=PLO_OaQZ3Gmd7NYH4lRxIfMyd9FosWsp6-">Hans Rosling</a>?</li>
-</ul>
-</section><section id="data-science-solutions-4" class="slide level2">
-<h2>Data Science Solutions</h2>
-<p><br></p>
-<p><strong>How do you know if your data science solution is successful? </strong></p>
-<ul>
-<li class="fragment">Here are some of my ideas:
-<ul>
-<li class="fragment">Your boss is happy (maybe not a great metric to use?)</li>
-<li class="fragment">You answered the questions (framed in Step 1)</li>
-<li class="fragment">Your solution provides your boss/client with enough information that she or he can clearly see the next step forward (take action!)</li>
-</ul></li>
-</ul>
-</section><section id="are-you-sure" class="slide level2">
-<h2>Are you sure?</h2>
-<p><br></p>
-<p>Let’s extend the story:</p>
-<ul>
-<li class="fragment">The VP of Sales is <em>so excited</em> about what your work that she brings on another analyst to help continue the project.</li>
-<li class="fragment">To get up to speed on the project, the new analyst tries to answer the same questions you did.</li>
-<li class="fragment">The new analyst comes up with completely different answers.</li>
-<li class="fragment">Now what?</li>
-</ul>
-</section><section id="are-you-sure-1" class="slide level2">
-<h2>Are you sure?</h2>
-<p><br></p>
-<p>Why should other people trust your insights?</p>
-<p>How can you be sure your results are reliable?</p>
-</section><section id="replication" class="slide level2">
-<h2>Replication</h2>
-<ul>
-<li class="fragment"><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32.27,33,36?lang=eng&amp;clang=eng#p27,33,36">Experiment upon my words</a> or <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5.26?lang=eng#p26#26">Can ye feel so now?</a></li>
-<li class="fragment"><a href="https://en.wikipedia.org/wiki/Replication_crisis">Replication crisis</a></li>
-<li class="fragment"><a href="https://www.youtube.com/watch?v=DfBSiOupI1I">If you can’t replicate, then what?</a> (until 4:04)
-<ul>
-<li class="fragment">Warning: The meaning of replication and reproduction are often <a href="https://guides.library.unlv.edu/datamanagement/reproducible_research">switched</a></li>
-<li class="fragment">Warning: An analysis can be reproducible and <a href="https://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/">still be wrong</a></li>
-</ul></li>
-</ul>
-<!--------------------
-other resources:
-https://open-science-training-handbook.gitbook.io/book/open-science-basics/reproducible-research-and-data-analysis
-
--------------------->
-</section></section>
-<section><section id="reproducible-research" class="title-slide slide level1" data-background="#e8c35d"><h1>Reproducible Research</h1></section><section id="close-your-eyes" class="slide level2">
-<h2>Close your eyes</h2>
-</section><section id="there-is-a-40-year-gap-between-these-recordings." class="slide level2">
-<h2>There is a <em>40 year gap</em> between these recordings.</h2>
-<p><br></p>
-<iframe src="https://open.spotify.com/embed/playlist/1yWApTnGURJFcz7XE7jN5H" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
-</iframe>
-</section><section id="beethovens-symphony-no.-5" class="slide level2">
-<h2>Beethoven’s Symphony No. 5</h2>
-<p>Composed early 1880s. This image is from <a href="https://www.researchgate.net/figure/Ludwig-van-Beethoven-Symphony-No-5-C-Minor-Op-67-Breitkopf-Haertel-Leipzig-1862_fig2_282721507">1862</a>. Spotify songs from 1983 and 2021.</p>
-<p><img data-src="images/Ludwig-van-Beethoven-Symphony-No-5-C-Minor-Op-67-Breitkopf-Haertel-Leipzig-1862.png" /></p>
-</section><section id="what-is-the-score-of-your-data-science-solution" class="slide level2">
-<h2>What is the “score” of your data science solution?</h2>
-</section><section id="this-is-what-happens-when-you-work-in-a-silo." class="slide level2">
-<h2>This is what happens when you <a href="https://www.google.com/search?q=working+in+a+silo&amp;rlz=1C1GCEJ_enUS882US882&amp;oq=working+in+a+silo&amp;aqs=chrome..69i57j0l2j0i22i30l5.1662j0j7&amp;sourceid=chrome&amp;ie=UTF-8">work in a silo</a>.</h2>
-<p><br></p>
-<p><img data-src="images/silo.gif" /></p>
-</section><section id="reproducible-research-checklist" class="slide level2">
-<h2>Reproducible Research Checklist</h2>
-<p><br></p>
-<p><strong>“How you got to the end is just as important as the end itself.”</strong></p>
-<p>via <a href="https://www.youtube.com/watch?v=pjL2uP-fmPY">Roger Peng</a></p>
-<ul>
-<li class="fragment">DON’T do things by hand</li>
-<li class="fragment">DON’t point and click</li>
-<li class="fragment">DON’T save output</li>
-<li class="fragment">DO teach a computer (almost guarantees reproducibility)</li>
-<li class="fragment">DO use version control</li>
-<li class="fragment">DO keep track of your software environment (aka, <code>sessionInfo()</code>)</li>
-<li class="fragment">DO think about the entire pipeline (raw data -&gt; clean data -&gt; analysis -&gt; report)</li>
-</ul>
-<!----------------
-
-## How to share your code
-
-- bad example
-  - What went wrong? (packages, file paths, etc)
-- good example
-  - common file structure across company/projects
-  - code to install packages first
-  - R projects....
-
-## R Projects
-
-- why they are awesome
-
-
-## Math 335 Workflow
-
-What steps will they follow for each task and case study?
-
-- Open your 335 repo project
-- Make a new file (R script or R Markdown)
-- Knit (convert RMarkdown -> markdown -> html)
-- pull, add, commit, push
-- submit link in Canvas
-
-------------------->
-</section></section>
-<section><section id="the-semester-project" class="title-slide slide level1" data-background="#e8c35d"><h1>The Semester Project</h1></section><section id="choose-your-own-adventure" class="slide level2">
-<h2>Choose Your Own Adventure</h2>
-<p><br></p>
-<p><img data-src="images/own_adventure.jpeg" /></p>
-</section><section id="minimum-requirements" class="slide level2">
-<h2>Minimum Requirements</h2>
-<p><br></p>
-<p>Show me you know how to:</p>
-<ul>
-<li>Import and (if needed) combine data sets (weeks 5 and 6)</li>
-<li>Wrangle data to get it in the proper format (weeks 4+)</li>
-<li>Use visualizations to provide clear insights (weeks 3 and 7)</li>
-<li>Communicate your results in a compelling story (all semester)</li>
-</ul>
-</section><section id="but-sister-larson-what-do-i-need-to-submit" class="slide level2">
-<h2>But Sister Larson, <em>what do I need to submit?!?"</em></h2>
-<p><br></p>
-<ul>
-<li class="fragment">You decide.</li>
-<li class="fragment">What solution format is the most useful for your data science problem?</li>
-<li class="fragment">Slightly more helpful answer: Probably an R Markdown report. Anything else you’ll have to learn on your own.</li>
-<li class="fragment">The focus will be on analysis through visualization, not statistics or algorithms.</li>
-<li class="fragment">At the end of the semester, you’ll present your project in front of the class.</li>
-</ul>
-</section><section id="exploring-topics-case-study-2" class="slide level2">
-<h2>Exploring topics (Case Study 2)</h2>
-<p><br></p>
-<ul>
-<li class="fragment">Keep in mind that not all questions can be (easily) answered with data.</li>
-<li class="fragment">Pick a question that can be answered by the end of the semester.</li>
-</ul>
-</section></section>
-<section><section id="looking-ahead" class="title-slide slide level1" data-background="#e8c35d"><h1>Looking Ahead</h1></section><section id="upcoming-assignments" class="slide level2">
-<h2>Upcoming Assignments</h2>
-<ul>
-<li>Case Study 2 (Saturday)</li>
-<li>Task 5 (Tuesday)
-<ul>
-<li>Reading only</li>
-<li>Try taking reading notes in the <code>readme.md</code> file in your repo’s week 3 folder.</li>
-</ul></li>
-</ul>
-</section><section id="a-note-on-week-3" class="slide level2">
-<h2>A note on week 3</h2>
-<p>Week 3 is all about the <code>ggplot</code> package and visualizing data.</p>
-<p>This is the goal:</p>
-<p><img data-src="images/week3.png" /></p>
-</section><section id="a-note-on-ggplot-layers" class="slide level2">
-<h2>A note on <code>ggplot</code> layers</h2>
-<p><img data-src="images/lasagna_ingredients.jpg" /></p>
-</section><section id="a-note-on-ggplot-layers-1" class="slide level2">
-<h2>A note on <code>ggplot</code> layers</h2>
-<p><img data-src="images/lasagna_layers.jpg" /></p>
-</section><section id="a-note-on-ggplot-layers-2" class="slide level2">
-<h2>A note on <code>ggplot</code> layers</h2>
-<p><img data-src="images/lasagna_final.jpg" /></p>
-<!--------------------------------
-The music/symphony analogy comes from Robert Peng
-https://www.coursera.org/lecture/reproducible-research/what-is-reproducible-research-about-FvOGB
-
-"Okay, so in case you didn't recognize it, that was the very beginning of the Symphony Number Eight, by Gustav Mahler. It was performed by the Chicago Symphony Orchestra, under the baton of Sir Georg Solti. And so this might be the polar opposite of the Code Monkey song that I just played for you. This symphony is sometimes called the Symphony of 1000, because just of the sheer number of people that have to be on stage to perform this piece. You need an entire symphony orchestra. You need an entire full chorus to sing. And so there's a lot of complex moving parts needed to perform this piece, and yet it gets performed all the time, and everyone recognizes the piece when they hear it, because it's more or less the same thing. Now how does that happen, right? So how is it that orchestras and choruses all over the world can play this enormously complex piece and it always seems to come off more or less just the same thing, okay? And similarly, how is it that you can listen to Johnathan Colton's song and you can hear the music, and then somehow, if you are trained musician, you can pick it up and maybe play it for yourself, okay? This is really about reproducibility, right? So in music, one of the nice things about music in general is that when you hear the performance, regardless of whether it's a simple popular song or an enormous symphony, you get all the information that you need. And now depending on the complexity of the music, you may get more or less information, because the brain is only able to process so much information at a time. But for something that's very complicated, like a symphony, we actually have a way to write down the instructions to give to the performers to tell them how to play each thing. And so it actually, Mahler is a great example of this because he himself was a conductor. And he knew that as a conductor it's often difficult to look at a composer's music and understand what is it exactly that the composer wanted here? And so when he wrote his music, he put instructions on every single inch of that piece of music, because that way the conductor who is interpreting and the performers who are interpreting the music can understand, oh, that's what the composer wanted here. So for Mahler's Symphony Number Eight what we have is the score. So the score is basically a book that lists every single part of every instrument, and what they need to play, and what instructions they have. And so the conductor can look at the score, and say, okay, I know what the violin's playing at this time and I know what the flute is playing, and I know what the chorus is singing at this time. And that way the music can be coordinated and all performed, and synchronized."
-
-"And so what we're talking about in this course, Reproducible Research, is basically, how do you develop the score for data analysis so that you can communicate to someone what was done, and if they want to reproduce the work, how to do it, okay? Now the fundamental problem in data analysis is that we don't really have an agreed upon notation system for communicating data analysis. And so, everyone does it a different way, and in aggregate, it's kind of a mess. So some people will just describe in words what was done, and in some cases, this is suficient. This is sufficient but in many cases, it's not. Some people will provide the computer code and the data and everything that you need, and sometimes that's good. But sometimes it's enormously complex and it's difficult to sort through. And so there are a variety of ways that you can communicate data analysis, but we just haven't agreed upon what is a way that we can all look, that is sufficient for everybody, or more or less sufficient for everybody. So, what we're gonna focus on in this course, is how to communicate data analysis, using code by writing documents that are very dynamic, and by sharing data so that other people can reproduce the work that you're doing."
-
-"If you want to communicate what you've done to other people, you need to be able to give them the material so that they can perform, so to speak, the analysis themselves."
------------------------------------->
-<!-------------------------------------
-
-Other goals for week 3: Want to give them enough ggplot vocabulary
-that they will be able to sucessfully google things.
-
-Try a class exercise. 
-- They ask me how to do something
-- Then they watch me google it and find the answer.
-- I explain why i'm using certain words in my google search
-
-
---------------------------------------->
+<p>With a partner (or in the Zoom chat), write this code out in an English paragraph.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>delays &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="st">  </span><span class="kw">group_by</span>(dest) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="st">  </span><span class="kw">summarise</span>(</span>
+<span id="cb1-4"><a href="#cb1-4"></a>    <span class="dt">count =</span> <span class="kw">n</span>(),</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="dt">dist =</span> <span class="kw">mean</span>(distance, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="dt">delay =</span> <span class="kw">mean</span>(arr_delay, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  ) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="st">  </span><span class="kw">filter</span>(count <span class="op">&gt;</span><span class="st"> </span><span class="dv">20</span>, dest <span class="op">!=</span><span class="st"> &quot;HNL&quot;</span>)</span></code></pre></div>
+</section><section id="practice-writing-code" class="slide level2">
+<h2>Practice writing code</h2>
+<p>Use the six data verbs to tackle the following challenges.</p>
+<p>(Take turns in the driver’s seat.)</p>
+<ol type="1">
+<li>Arrange the <code>iris</code> data by <code>Sepal.Length</code> and display the first six rows.</li>
+<li>Select the <code>Species</code> and <code>Petal.Width</code> columns and put them into a new data set called <code>testdat</code>.</li>
+<li>Create a new table that has the mean and standard deviation for petal width for each Species.</li>
+<li>Read about the <code>?summarise_all()</code> function and get a new table with the means and standard deviations for all the variables for each Species.</li>
+</ol>
+</section><section id="use-the-dplyr-cheatsheet" class="slide level2">
+<h2>Use the dplyr cheatsheet</h2>
+<p><a href="https://github.com/rstudio/cheatsheets/blob/master/data-transformation.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/master/data-transformation.pdf</a></p>
 </section></section>
     </div>
   </div>
