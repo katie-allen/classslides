@@ -8,7 +8,7 @@ title: ""
 
 ![](https://imgs.xkcd.com/comics/convincing.png)
 
-# Good Reads {data-background=#e8c35d}
+# Good Charts {data-background=#e8c35d}
 
 ## Chapter 3: Two questions to four types
 
@@ -89,66 +89,6 @@ Most of our data will be stored as a [csv file](https://www.google.com/search?q=
 
 
 
-
-
-
-
-
-<!--------------------
-## Measures of Center
-
-![](images/center/Slide5.PNG)
-
-## Measures of Center {data-transition="none"}
-
-![](images/center/Slide6.PNG)
-
-## Measures of Center {data-transition="none"}
-
-![](images/center/Slide7.PNG)
-
-## Measures of Center {data-transition="none"}
-
-![](images/center/Slide8.PNG)
-
-## Measures of Center
-
-![](images/center/insect_spray.PNG)
-
-## Different Types of Center
-
-![](images/center/meanmedian_learningstatisticswithr.png)
-
-[*source*](https://learningstatisticswithr.com/book/descriptives.html)
-
-## Measures of Center Activity
-
-> - **Instructions:**
->   - Generate 10 random numbers between 1 and 10
->   - Plot the numbers on your graph
->   - Calculate the mean and median. Cirlce them on your graph.
-
-
-> - This will be easier if you pick one person to be the writer, one person to generate the random numbers, and one person to do the math.
-> - [Jam Board](https://jamboard.google.com/d/1zLvnfW7fe9ZVnUrUEjjnO_CrFCe5NOk6dFJuMxfdn5w/edit?usp=sharing)
-> - [Random Number Generator](https://www.google.com/search?q=random+number+between+1+and+10&rlz=1C1GCEJ_enUS882US882&oq=random+number+between+1+and+10&aqs=chrome..69i57j0l7.3815j0j9&sourceid=chrome&ie=UTF-8)
-
-## [Measures of Center](https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#measures-of-center)
-
-**Break into new groups and answer to the following questions:**   
-
-> - What does the phrase 'measures of center' mean?
-> - What do you notice about the mean's location relative to the median?
-> - Why do we use measures of center?   
-> - Which measure of center do you prefer? 
-> - Which measure would represent a typical net worth of people living in Seattle better?
-
-
-- [Bill Gates walks into a bar](https://introductorystats.wordpress.com/2011/09/04/when-bill-gates-walks-into-a-bar/)
-
-## Questions on Measures of Center?
-
--------------------------->
 
 # Case Study 2 {data-background=#e8c35d}
 

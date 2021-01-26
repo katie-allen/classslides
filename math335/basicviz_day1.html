@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>s2.4.utf8</title>
+  <meta name="author" content="" />
+  <title>basicviz_day1.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -59,7 +60,6 @@
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="custom.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -449,59 +449,119 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 
-<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to Class!</h1></section>
-<section><section id="good-charts" class="title-slide slide level1" data-background="#e8c35d"><h1>Good Charts</h1></section><section id="chapter-4-better-charts-in-a-couple-of-hours" class="slide level2">
-<h2>Chapter 4: Better charts in a couple of hours</h2>
+<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1><p>Basic Visualizations: Day 1</p></section><section id="task-6-says-to-push-the-.rmd-.md-and-the-.html" class="slide level2">
+<h2>Task 6 says to push the <code>.Rmd</code>, <code>.md</code>, and the <code>.html</code></h2>
 <p><br></p>
-<p>Sister Larson’s favorite quotes</p>
-<ul>
-<li class="fragment">“Programs visualize data. People visualize ideas.”</li>
-<li class="fragment">The Talk and Listen step will “be the most revelatory, but also possibly the least natural.”</li>
-<li class="fragment">“Sketching is generative; it’s meant to bring up ideas. Prototyping is iterative; it’s meant to hone good ones.”</li>
-</ul>
+<p><img data-src="images/rmarkdownflow.png" /></p>
+</section><section id="what-does-it-mean-to-push-the-graphics-folder-to-github" class="slide level2">
+<h2>What does it mean to push the “graphics folder” to GitHub?</h2>
+<p><br></p>
+<p><a href="https://github.com/BYUI335/M335_WI21_Paxman_Tayl/tree/master/week_02_data_science/task_03">Example.</a></p>
 </section></section>
-<section><section id="making-charts-in-tableau" class="title-slide slide level1" data-background="#e8c35d"><h1>Making Charts in Tableau</h1></section><section id="workflow" class="slide level2">
-<h2>Workflow</h2>
+<section><section id="the-ggplot2-package" class="title-slide slide level1" data-background="#e8c35d"><h1>The <code>ggplot2</code> package</h1></section><section id="what-is-grammar." class="slide level2">
+<h2>What is grammar?<a href="https://www.google.com/search?q=grammar&amp;rlz=1C1GCEJ_enUS882US882&amp;oq=grammar&amp;aqs=chrome..69i57j0i67i457j0i67i395i433l2j0i67i395j69i60j69i61l2.1229j1j7&amp;sourceid=chrome&amp;ie=UTF-8">.</a></h2>
+</section><section id="the-grammar-of-graphics" class="slide level2">
+<h2>The Grammar of Graphics</h2>
 <p><br></p>
-<p>For each case study, you should…</p>
-<ol type="1">
-<li class="fragment">Start a new Tableau “workbook” by opening a dataset</li>
-<li class="fragment">Load any other data you need</li>
-<li class="fragment">Make charts. Lots of charts!</li>
-<li class="fragment">Save your Tableau workbook often</li>
-<li class="fragment">Export your final charts and create a presentation</li>
-</ol>
-</section><section id="case-study-2" class="slide level2">
-<h2>Case Study 2</h2>
+<p><code>ggplot2</code> uses a “grammar of graphics” that helps us put graphical elements together in a way that makes sense.</p>
+</section><section id="aka-lasagna" class="slide level2">
+<h2>aka: lasagna</h2>
 <p><br></p>
-<p>What do you need to submit in I-Learn?</p>
+<p><img data-src="images/lasagna_final.jpg" /></p>
+</section><section id="ggplot2-vs.-tidyverse" class="slide level2">
+<h2><code>ggplot2</code> vs. <code>tidyverse</code></h2>
+<p><br></p>
+<p>Try installing and loading the <code>tidyverse</code> package.</p>
+<pre><code>install.packages(&quot;tidyverse&quot;)
+library(tidyverse)</code></pre>
+<p>What do you see in your R console?</p>
+</section><section id="how-can-i-get-with-with-ggplot2." class="slide level2">
+<h2>How can I get with with <code>ggplot2</code>?.</h2>
+<p><br></p>
+<p>Use the <a href="https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf">cheatsheet</a>.</p>
+<p>You always start with a <code>ggplot()</code> layer. Then you can add on:</p>
 <ul>
-<li class="fragment">Your data (.csv or .xlsx)</li>
-<li class="fragment">Your 6-slide presentation
-<ul>
-<li class="fragment">The presentation and charts must be your own!</li>
-<li class="fragment">Do not just paste your charts into the slides. You also have to write a description.</li>
-</ul></li>
+<li class="fragment">a <code>geom_*()</code> layer (required)</li>
+<li class="fragment">a <code>coord_*()</code> layer</li>
+<li class="fragment">a <code>facet_*()</code> layer</li>
+<li class="fragment">a <code>scale_*()</code> layer</li>
+<li class="fragment">a <code>theme_*()</code> layer</li>
+<li class="fragment">and more!</li>
 </ul>
-</section><section id="teach-one-another-quiz" class="slide level2">
-<h2>Teach One Another Quiz</h2>
+</section><section id="more-help." class="slide level2">
+<h2>More help.</h2>
 <p><br></p>
-<p>Due on Saturday, but you can’t complete it until other people post their case studies.</p>
-<ol type="1">
-<li class="fragment">Share a “tool tip” in EdConnect</li>
-<li class="fragment">Present your case study in EdConnect</li>
-<li class="fragment">Comment on another student’s case study in EdConnect</li>
-</ol>
+<p>Layers can get complicated. For example, <a href="https://ggplot2.tidyverse.org/reference/theme.html">themes</a>.</p>
+<p>It is easier to google questions and find answer if you know what things are called.</p>
+<ul>
+<li class="fragment"><a href="https://henrywang.nl/ggplot2-theme-elements-demonstration/">Theme elements</a></li>
+<li class="fragment"><a href="https://isabella-b.com/blog/ggplot2-theme-elements-reference/">More theme elements</a></li>
+<li class="fragment">Google image search</li>
+</ul>
 </section><section id="lets-practice" class="slide level2">
 <h2>Let’s practice!</h2>
-<p><br></p>
-<p>Remind me to show you:</p>
-<ul>
-<li>Histogram</li>
-<li>Bar chart</li>
-<li>Scatterplot</li>
-<li>Boxplot</li>
-</ul>
+<pre><code>ggplot(data = &lt;DATA&gt;) + 
+  &lt;GEOM_FUNCTION&gt;(mapping = aes(&lt;MAPPINGS&gt;))</code></pre>
+<!-----------------------------
+# Task 9 {data-background=#e8c35d}
+
+##
+
+![](images/dataviz/excess-mortality-p-scores.png)
+
+## Tidy Data
+
+>- `pivot_longer()`
+>- `pivot_wider()`
+>- [How to select column names](https://dplyr.tidyverse.org/reference/select.html)
+
+## Sister Larson's Code
+
+
+# Reading Discussion {data-background=#e8c35d}
+
+## [The Two Questions](https://hbr.org/2016/06/visualizations-that-really-work)
+
+>- Is the information conceptual or data-driven?
+>- Am I declaring something or exploring something?
+
+## This class is data-driven.
+
+>- "Exploring" = trying to figure something out = EDA
+>- "Delcaring" = communicating information = visualizations for presentations
+
+![](images/dataviz/R1606H_BERINATO_B.png)
+
+## Everyday Dataviz
+
+>- Simple, simple, simple
+>- Communicate a single message
+>- Generate discussion about the ideas in the chart, not the chart itself
+
+## Sister Larson's Favorite Quotes
+
+> "A poorly designed chart will waste that time by provoking questions that require the presenter to interpret information that's meant to be obvious. If an everyday dataviz can't speak for itself, it has failed-just like a joke whose punch line has to be explained."
+
+## Sister Larson's Favorite Quotes
+
+> "Busy charts communicate the idea that you've been just that-busy."
+
+## Sister Larson's Favorite Quotes
+
+> "What we actually do when we make a good chart is get at some truth and move people to feel it-to see what couldn't be seen before. To change minds. To cause action."
+
+# Class Activity {data-background=#e8c35d}
+
+## [Make This Chart](https://ourworldindata.org/grapher/carbon-footprint-travel-mode?tab=chart&stackMode=absolute&region=World)
+
+![](images/dataviz/carbon-footprint-travel-mode.png)
+
+## What is the message?
+
+What if I only wanted to communicate one message with this chart - that public transportation is better (ie, lower carbon footprint)?
+
+![](images/dataviz/carbon-footprint-travel-mode.png)
+----------------------->
 </section></section>
     </div>
   </div>
@@ -525,7 +585,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
         // Opens links in an iframe preview overlay
         previewLinks: false,
         // Transition style
-        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        transition: 'default', // none/fade/slide/convex/concave/zoom
         // Transition style for full page slide backgrounds
         backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
         // The "normal" size of the presentation, aspect ratio will be preserved

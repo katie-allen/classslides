@@ -3,13 +3,77 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>s2.4.utf8</title>
+  <title>ds_day3.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/reveal.css"/>
 
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
 
@@ -59,7 +123,6 @@
 
     <style type="text/css">code{white-space: pre;}</style>
 
-    <link rel="stylesheet" href="custom.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -449,59 +512,80 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 
-<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to Class!</h1></section>
-<section><section id="good-charts" class="title-slide slide level1" data-background="#e8c35d"><h1>Good Charts</h1></section><section id="chapter-4-better-charts-in-a-couple-of-hours" class="slide level2">
-<h2>Chapter 4: Better charts in a couple of hours</h2>
-<p><br></p>
-<p>Sister Larson’s favorite quotes</p>
-<ul>
-<li class="fragment">“Programs visualize data. People visualize ideas.”</li>
-<li class="fragment">The Talk and Listen step will “be the most revelatory, but also possibly the least natural.”</li>
-<li class="fragment">“Sketching is generative; it’s meant to bring up ideas. Prototyping is iterative; it’s meant to hone good ones.”</li>
-</ul>
+<section class="slide level2">
+
+<!-----------------------
+Note:
+want to students to focus on picking a TOPIC and QUESTION,
+rather than finding the perfect data right now.
+
+There is a task in a few weeks (task 11???)
+that tells them to find the data for their project
+-------------------------->
+</section>
+<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1><p>Try to recreate this plot using the <code>airquality</code> dataset in R.</p>
+<p><img data-src="images/try/try_airquality.png" /></p></section><section id="case-study-groups" class="slide level2">
+<h2>Case Study Groups</h2>
 </section></section>
-<section><section id="making-charts-in-tableau" class="title-slide slide level1" data-background="#e8c35d"><h1>Making Charts in Tableau</h1></section><section id="workflow" class="slide level2">
-<h2>Workflow</h2>
+<section><section id="data-wrangling-with-dplyr" class="title-slide slide level1" data-background="#e8c35d"><h1>Data wrangling with dplyr</h1></section><section id="the-dplyr-package" class="slide level2">
+<h2>The dplyr package</h2>
 <p><br></p>
-<p>For each case study, you should…</p>
-<ol type="1">
-<li class="fragment">Start a new Tableau “workbook” by opening a dataset</li>
-<li class="fragment">Load any other data you need</li>
-<li class="fragment">Make charts. Lots of charts!</li>
-<li class="fragment">Save your Tableau workbook often</li>
-<li class="fragment">Export your final charts and create a presentation</li>
-</ol>
-</section><section id="case-study-2" class="slide level2">
-<h2>Case Study 2</h2>
+<p>From the official documentation:</p>
+<blockquote>
+<p>“<strong>dplyr</strong> is a grammar of data manipulation, providing a consistent set of verbs that help you solve the most common data manipulation challenges.”</p>
+</blockquote>
+</section><section id="remember" class="slide level2">
+<h2>Remember…</h2>
 <p><br></p>
-<p>What do you need to submit in I-Learn?</p>
+<p>Hadley Wickham, the author of the dplyr package, says:</p>
+<blockquote>
+<p>“Whenever you’re learning a new tool, for a long time you’re going to suck. But the good news is that is typical, that’s something that happens to everyone, and it’s only temporary.”</p>
+</blockquote>
+</section><section id="data-manipulation-verbs" class="slide level2">
+<h2>Data manipulation verbs</h2>
+<p><br></p>
 <ul>
-<li class="fragment">Your data (.csv or .xlsx)</li>
-<li class="fragment">Your 6-slide presentation
-<ul>
-<li class="fragment">The presentation and charts must be your own!</li>
-<li class="fragment">Do not just paste your charts into the slides. You also have to write a description.</li>
-</ul></li>
+<li class="fragment"><code>filter</code> - filter your data to a smaller set of important rows</li>
+<li class="fragment"><code>arrange</code> - organize the row order of my data</li>
+<li class="fragment"><code>select</code> - select specific columns to keep or remove</li>
+<li class="fragment"><code>mutate</code> - add new mutated (changed) variables as columns to my data</li>
 </ul>
-</section><section id="teach-one-another-quiz" class="slide level2">
-<h2>Teach One Another Quiz</h2>
+</section><section id="data-manipulation-verbs-for-summaries" class="slide level2">
+<h2>Data manipulation verbs for summaries</h2>
 <p><br></p>
-<p>Due on Saturday, but you can’t complete it until other people post their case studies.</p>
-<ol type="1">
-<li class="fragment">Share a “tool tip” in EdConnect</li>
-<li class="fragment">Present your case study in EdConnect</li>
-<li class="fragment">Comment on another student’s case study in EdConnect</li>
-</ol>
-</section><section id="lets-practice" class="slide level2">
-<h2>Let’s practice!</h2>
-<p><br></p>
-<p>Remind me to show you:</p>
 <ul>
-<li>Histogram</li>
-<li>Bar chart</li>
-<li>Scatterplot</li>
-<li>Boxplot</li>
+<li class="fragment"><code>summarise</code> - build summaries of the columns specified</li>
+<li class="fragment"><code>group_by</code> - divide your data into groups and change the “scope” of other verbs</li>
 </ul>
+</section><section id="data-verbs-practice" class="slide level2">
+<h2>Data verbs practice</h2>
+<p><br></p>
+<p><a href="https://docs.google.com/presentation/d/1zDWzyacFGixKjPbW6rqAJ0p9jl-25ERZ3pfG1JUfgEI/template/preview">Data Verbs Template</a></p>
+</section><section id="practice-reading-code" class="slide level2">
+<h2>Practice reading code</h2>
+<p><br></p>
+<p>With a partner (or in the Zoom chat), write this code out in an English paragraph.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>delays &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="st">  </span><span class="kw">group_by</span>(dest) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="st">  </span><span class="kw">summarise</span>(</span>
+<span id="cb1-4"><a href="#cb1-4"></a>    <span class="dt">count =</span> <span class="kw">n</span>(),</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="dt">dist =</span> <span class="kw">mean</span>(distance, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="dt">delay =</span> <span class="kw">mean</span>(arr_delay, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  ) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="st">  </span><span class="kw">filter</span>(count <span class="op">&gt;</span><span class="st"> </span><span class="dv">20</span>, dest <span class="op">!=</span><span class="st"> &quot;HNL&quot;</span>)</span></code></pre></div>
+</section><section id="practice-writing-code" class="slide level2">
+<h2>Practice writing code</h2>
+<p>Use the six data verbs to tackle the following challenges.</p>
+<p>(Take turns in the driver’s seat.)</p>
+<ol type="1">
+<li>Arrange the <code>iris</code> data by <code>Sepal.Length</code> and display the first six rows.</li>
+<li>Select the <code>Species</code> and <code>Petal.Width</code> columns and put them into a new data set called <code>testdat</code>.</li>
+<li>Create a new table that has the mean and standard deviation for petal width for each Species.</li>
+<li>Read about the <code>?summarise_all()</code> function and get a new table with the means and standard deviations for all the variables for each Species.</li>
+</ol>
+</section><section id="use-the-dplyr-cheatsheet" class="slide level2">
+<h2>Use the dplyr cheatsheet</h2>
+<p><a href="https://github.com/rstudio/cheatsheets/blob/master/data-transformation.pdf" class="uri">https://github.com/rstudio/cheatsheets/blob/master/data-transformation.pdf</a></p>
 </section></section>
     </div>
   </div>
@@ -525,7 +609,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
         // Opens links in an iframe preview overlay
         previewLinks: false,
         // Transition style
-        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        transition: 'default', // none/fade/slide/convex/concave/zoom
         // Transition style for full page slide backgrounds
         backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
         // The "normal" size of the presentation, aspect ratio will be preserved

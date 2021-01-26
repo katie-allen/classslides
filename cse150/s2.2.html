@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>s2.4.utf8</title>
+  <title>s2.2.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -449,59 +449,114 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 
-<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to Class!</h1></section>
-<section><section id="good-charts" class="title-slide slide level1" data-background="#e8c35d"><h1>Good Charts</h1></section><section id="chapter-4-better-charts-in-a-couple-of-hours" class="slide level2">
-<h2>Chapter 4: Better charts in a couple of hours</h2>
-<p><br></p>
-<p>Sister Larson’s favorite quotes</p>
+<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1></section><section id="any-questions" class="slide level2">
+<h2>Any questions?</h2>
+</section></section>
+<section><section id="raw-data-vs.-summaries" class="title-slide slide level1" data-background="#e8c35d"><h1>Raw Data vs. Summaries</h1></section><section id="raw-data-vs.-summaries-1" class="slide level2">
+<h2>Raw Data vs. Summaries</h2>
 <ul>
-<li class="fragment">“Programs visualize data. People visualize ideas.”</li>
-<li class="fragment">The Talk and Listen step will “be the most revelatory, but also possibly the least natural.”</li>
-<li class="fragment">“Sketching is generative; it’s meant to bring up ideas. Prototyping is iterative; it’s meant to hone good ones.”</li>
+<li class="fragment">What is the difference between “raw data” and “summarized data”?</li>
+<li class="fragment">Why do we care?</li>
 </ul>
 </section></section>
-<section><section id="making-charts-in-tableau" class="title-slide slide level1" data-background="#e8c35d"><h1>Making Charts in Tableau</h1></section><section id="workflow" class="slide level2">
-<h2>Workflow</h2>
-<p><br></p>
-<p>For each case study, you should…</p>
-<ol type="1">
-<li class="fragment">Start a new Tableau “workbook” by opening a dataset</li>
-<li class="fragment">Load any other data you need</li>
-<li class="fragment">Make charts. Lots of charts!</li>
-<li class="fragment">Save your Tableau workbook often</li>
-<li class="fragment">Export your final charts and create a presentation</li>
-</ol>
-</section><section id="case-study-2" class="slide level2">
-<h2>Case Study 2</h2>
-<p><br></p>
-<p>What do you need to submit in I-Learn?</p>
+<section><section id="intro-to-tableau" class="title-slide slide level1" data-background="#e8c35d"><h1>Intro to Tableau</h1></section><section id="any-problems" class="slide level2">
+<h2>Any problems?</h2>
+</section><section id="how-to-load-data" class="slide level2">
+<h2>How to load data</h2>
+</section><section id="types-of-variables-columns" class="slide level2">
+<h2>Types of variables (columns)</h2>
+<p><strong>Dimensions vs Measures</strong></p>
 <ul>
-<li class="fragment">Your data (.csv or .xlsx)</li>
-<li class="fragment">Your 6-slide presentation
-<ul>
-<li class="fragment">The presentation and charts must be your own!</li>
-<li class="fragment">Do not just paste your charts into the slides. You also have to write a description.</li>
-</ul></li>
+<li>Tableau displays dimensions (categorical variables) by their name</li>
+<li>Tableau displays measures (numerical variables) as a summary</li>
 </ul>
-</section><section id="teach-one-another-quiz" class="slide level2">
-<h2>Teach One Another Quiz</h2>
-<p><br></p>
-<p>Due on Saturday, but you can’t complete it until other people post their case studies.</p>
-<ol type="1">
-<li class="fragment">Share a “tool tip” in EdConnect</li>
-<li class="fragment">Present your case study in EdConnect</li>
-<li class="fragment">Comment on another student’s case study in EdConnect</li>
-</ol>
-</section><section id="lets-practice" class="slide level2">
-<h2>Let’s practice!</h2>
-<p><br></p>
-<p>Remind me to show you:</p>
+<p><strong>Discrete vs Continuous</strong></p>
 <ul>
-<li>Histogram</li>
-<li>Bar chart</li>
-<li>Scatterplot</li>
-<li>Boxplot</li>
+<li>Discrete variables (specific values) are blue</li>
+<li>Continuous variables (any value in a range) are green</li>
 </ul>
+</section><section id="pill-types" class="slide level2">
+<h2><a href="https://redheadedstepdata.io/master-tableau-concepts/">Pill types</a></h2>
+<p><img data-src="images/4-pill-types.png" /></p>
+</section><section id="your-turn" class="slide level2">
+<h2>Your turn!</h2>
+<ul>
+<li class="fragment">Let’s use the <a href="https://docs.google.com/spreadsheets/d/1WFdhJVJpW-4V-zoCG1OK0w4EBzGvY0v4wpuvANq_rF0/edit?usp=sharing">purchase_data</a><br />
+</li>
+<li class="fragment"><strong>Create a bar chart of the top 20 merchants by sales.</strong></li>
+</ul>
+<!-----------------
+# Good Charts {data-background=#e8c35d}
+
+## Chapter 4: Better charts in a couple of hours
+
+![](images/gc/Ch4_building_better_charts_time.png)
+
+> - **Prep:**  Visualization is creative communication. It takes time, so block it out in 1-2 hour chunks.
+> - **Talk & Listen:** Find people that will listen and then talk their ear off.  But listen to what they don't understand.
+> - **Sketch:** This is hard.  Don't be afraid to make mistakes. [Use a visualization topic guide](https://datavizcatalogue.com/) or use [good chart cheatsheet](images/gc/Ch4_chart_ideation.png).
+> - **Prototype:** *Next class discussion*
+
+## Talk, Sketch, Listen, Prototype...
+
+After prep, all of these can happen at the same time when you are working in a group. As long as everyone has come prepared. [Hejazi and Voisin climate paper example](https://www.pnas.org/content/112/34/10635/tab-figures-data).
+
+------------------------>
+<!------------------------
+## [Tools: Tableau](https://byuistats.github.io/BYUI_CSE150_StatBook/tools.html#tableau)
+
+**Two tools: Both should work**
+
+> - [Full Tableau Tool](https://www.tableau.com/tft/activation)
+> - [Tableau Public](https://public.tableau.com/en-us/s/)
+
+**First Try**
+
+*We have curated a list of tools readings and videos. I would not skip the material we have picked.*
+
+> - [Connecting to Google Sheets](https://www.tableau.com/about/blog/2016/5/connect-directly-your-google-sheets-tableau-10-53954)
+> - [Registered Training (pill types)](https://www.tableau.com/learn/tutorials/on-demand/understanding-pill-types): Their videos are great and should be used.  
+--------------------->
+<!---------------
+# Case Study {data-background=#e8c35d}
+
+> - [Measuring LEGO case study](https://byuistats.github.io/CSE150/project.html#Case_Study_2:_Lego_my_data) questions?   
+> - Working with a partner but presenting and submitting individually.   
+>    - You work together to get data recording done, but each of you creates your own visualizations and presentation.   
+>    - You can use similar images, but your presentation and Tableau file should be your own creation.   
+> - Case study quizes.
+------------------------>
+<!--------------------
+# Supplemental Reading {data-background=#e8c35d}
+
+## [Measures of Spread](https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#measures-of-spread)
+
+If you were a Walmart buyer of cherry tomatoes, what specifications would you give them to make sure you got the size you wanted in the store?
+
+- How might a supplier user your metric to their advantage?
+- How could the metric provide safety for Walmart and the supplier?
+
+# Case Study Work {data-background=#e8c35d}
+
+## The LEGO project
+
+- [LEGO my data](https://byuistats.github.io/CSE150/project.html#Case_Study_2:_Lego_my_data)
+[ref](https://youtu.be/BvZgAEiQXgk)
+------------------------>
+</section></section>
+<section><section id="looking-ahead" class="title-slide slide level1" data-background="#e8c35d"><h1>Looking Ahead</h1></section><section id="midpoint-quiz-saturday" class="slide level2">
+<h2>Midpoint Quiz (Saturday)</h2>
+<ol type="1">
+<li class="fragment">Have you discussed with a friend or family member (or classmates!) which variables you should record on each Lego brick?</li>
+<li class="fragment">Has your group started recording Lego data?</li>
+<li class="fragment">Has your team shared a draft (an example) of your Lego data to our class conversation space, with a short justification of what variables you are recording?</li>
+</ol>
+</section><section id="visualization-discussion-monday" class="slide level2">
+<h2>Visualization Discussion (Monday)</h2>
+<p>Each “visualization discussion” will have <a href="https://www.nytimes.com/interactive/2019/04/12/sports/basketball/stephen-curry-warriors-popcorn.html">an article</a> to read with a chart.</p>
+<p>The quiz will ask you a few questions about the chart.</p>
+</section><section id="questions" class="slide level2">
+<h2>Questions?</h2>
 </section></section>
     </div>
   </div>

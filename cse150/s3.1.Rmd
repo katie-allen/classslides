@@ -4,6 +4,12 @@ title: ""
 
 # Welcome to class!  {data-background=#e8c35d}
 
+## What have we learned about collecting data?
+
+## Tidy Data Practice
+
+# Welcome to class!  {data-background=#f7d754}
+
 ## EdConnect
 
 # Good Charts {data-background=#e8c35d}

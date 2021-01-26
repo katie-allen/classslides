@@ -1,40 +1,63 @@
 ---
-title: "Presenting Data"
+title: ""
 ---
 
+# Welcome to Class! {data-background=#e8c35d}
 
-# Good Reads {data-background=#e8c35d}
+# Good Charts {data-background=#e8c35d}
 
-## Questions?
+## Chapter 4: Better charts in a couple of hours
 
-# Supplemental Reading {data-background=#e8c35d}
+<br>
 
-## [Data vs. Summaries](https://byuistats.github.io/BYUI_CSE150_StatBook/describing-data.html#data-vs-summaries)
+Sister Larson's favorite quotes
 
-## [Tools: Tableau Depth](https://help.tableau.com/current/pro/desktop/en-us/environ_st.htm)
+- "Programs visualize data. People visualize ideas."
+- The Talk and Listen step will "be the most revelatory, but also possibly the least natural."
+- "Sketching is generative; it's meant to bring up ideas. Prototyping is iterative; it's meant to hone good ones."
 
-## Just Google it.
+# Making Charts in Tableau {data-background=#e8c35d}
 
-> - Find
-> - Filter
-> - Focus
+## Workflow
 
+<br>
 
-# Activity {data-background=#e8c35d}
+For each case study, you should...
 
+1. Start a new Tableau "workbook" by opening a dataset
+2. Load any other data you need
+3. Make charts. Lots of charts!
+4. Save your Tableau workbook often
+5. Export your final charts and create a presentation
 
-## Numerical Gestalt
+## Case Study 2
 
-**Gestalt:** an organized whole that is perceived as more than the sum of its parts.
+<br>
 
-## Submitting case studies
+What do you need to submit in I-Learn?
 
-Canvas structure.  Questions?
+- Your data (.csv or .xlsx)
+- Your 6-slide presentation
+  - The presentation and charts must be your own!
+  - Do not just paste your charts into the slides. You also have to write a description.
 
-## Outline
+## Teach One Another Quiz
 
-> 1. Work with your partner to finalize your analysis.
-> 2. Review your project with me.
-> 3. Ask questions about Tableau and Google Sheets.
+<br>
 
-## Group time
+Due on Saturday, but you can't complete it until other people post their case studies.
+
+1. Share a "tool tip" in EdConnect
+1. Present your case study in EdConnect
+1. Comment on another student's case study in EdConnect
+
+## Let's practice!
+
+<br>
+
+Remind me to show you:
+
+>- Histogram
+>- Bar chart
+>- Scatterplot
+>- Boxplot
