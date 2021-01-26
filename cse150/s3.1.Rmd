@@ -2,34 +2,11 @@
 title: ""
 ---
 
-# Welcome to class!  {data-background=#f7d754}
+# Welcome to class!  {data-background=#e8c35d}
 
-Open your LEGO case study presentation and be ready to share.  
+## EdConnect
 
-## Teach One Another
-
-In your breakout room...
-
->- Take 2 minutes to present your case study to the group
->- 1 minute for questions and feedback
-
-Repeat for each student in your breakout room. Go in **alphabetical** order.
-
-## Syllabus: Teach One Another
-
-What we just did is part of the "Teach One Another" requirement in the syllabus.
-
-This semester you need to complete:
-
-- 6 case study presentations
-- 6 case study comments
-- 6 "tool tips" posted in Microsoft Teams
-
-## Update to reading quizzes
-
-I've moved the reading quizzes to be due Monday/Wednesday nights instead of Tuesday/Thursday. 
-
-# Good Charts {data-background=#f7d754}
+# Good Charts {data-background=#e8c35d}
 
 ## Chapter 5: Refine to impress (Pg. 109-120)
 
@@ -73,7 +50,7 @@ With bad charts, instead of using the chart to guide the meeting, each member ha
    
 [Chart Source](https://www.wallstreetmojo.com/legends-in-excel-chart/)
 
-# Supplemental Reading {data-background=#f7d754}
+# Supplemental Reading {data-background=#e8c35d}
 
 ## You should know how to:
 
@@ -96,7 +73,7 @@ Bring questions to class on Thursday.
 *How do you change the bin size?*   
 *Why would we change the bin size?*
 
-# Case Study {data-background=#f7d754}
+# Case Study {data-background=#e8c35d}
 
 ## Running marathons
 
@@ -106,7 +83,6 @@ What is normal about marathons?
 >- Data dictionary
 >- How to get the data
 >- Article template
-
 
 ## Plotting Marathons
 

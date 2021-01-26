@@ -1,9 +1,9 @@
 ---
 title: ""
 ---
-# Welcome to class! {data-background=#f7d754}
+# Welcome to class! {data-background=#e8c35d}
 
-# Good Charts {data-background=#f7d754}
+# Good Charts {data-background=#e8c35d}
 
 ## Chapter 5: Refine to impress (Pg. 121-132)
 
@@ -13,7 +13,7 @@ title: ""
 
 ![](images/gc/Ch5_which_elements.png)
 
-# Tableau Tools {data-background=#f7d754}
+# Tableau Tools {data-background=#e8c35d}
 
 ## The tools
 
@@ -62,7 +62,7 @@ Check out the Analytics (much more like data summaries tab) next to Data.
 
 --------------------------->
 
-# Case Study {data-background=#f7d754}
+# Case Study {data-background=#e8c35d}
 
 ## Examples of data journalism
 
