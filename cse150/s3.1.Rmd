@@ -4,17 +4,33 @@ title: ""
 
 # Welcome to class!  {data-background=#e8c35d}
 
-## What have we learned about collecting data?
+## In your breakout rooms:
+
+<br>
+
+What have you learned about data and the process of collecting data?
+
+Your group needs to list 3 things in Slack.
 
 ## Tidy Data Practice
 
-# Welcome to class!  {data-background=#f7d754}
+<br>
+
+What data do we need to make this chart?[.]()
+
+![](images/tidydata/tidy_popcorn.png)
 
 ## EdConnect
+
+>- Record a video and hit the green submit button.
+>  - Your video might not show up right away
+>  - Click on the class group name (left panel) to get it to refresh
 
 # Good Charts {data-background=#e8c35d}
 
 ## Chapter 5: Refine to impress (Pg. 109-120)
+
+<br>
 
 **The ambiguity is paralyzing! People don't want to crash into your chart.**
 
@@ -46,9 +62,13 @@ With bad charts, instead of using the chart to guide the meeting, each member ha
 
 ## Look-up Effect (Limit eye travel)
 
+<br>
+
 *Which was better - 2014 East or 2018 South?*
 
 ## Look-up Effect (Limit eye travel)
+
+<br>
 
 *Which was better - 2014 East or 2018 South?*
 
@@ -56,6 +76,9 @@ With bad charts, instead of using the chart to guide the meeting, each member ha
    
 [Chart Source](https://www.wallstreetmojo.com/legends-in-excel-chart/)
 
+
+
+<!-------------------
 # Supplemental Reading {data-background=#e8c35d}
 
 ## You should know how to:
@@ -78,9 +101,21 @@ Bring questions to class on Thursday.
    
 *How do you change the bin size?*   
 *Why would we change the bin size?*
+------------------->
 
 # Case Study {data-background=#e8c35d}
 
+## Data Journalism
+
+<br>
+
+[What Good Marathons and Bad Investments Have in Common](https://www.nytimes.com/2014/04/23/upshot/what-good-marathons-and-bad-investments-have-in-common.html)
+
+## Let's try it!
+
+## Case Study Deliverables
+
+<!----------------
 ## Running marathons
 
 What is normal about marathons?
@@ -93,3 +128,4 @@ What is normal about marathons?
 ## Plotting Marathons
 
 Let's make a histogram.
+------------------------->
