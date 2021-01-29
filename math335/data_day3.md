@@ -38,7 +38,7 @@ What is pseudocode?
 
 <br>
 
-[Class Activity]()
+[Class Activity](https://ktoutloud.github.io/classslides/math335/wrangle_activity_students.R)
 
 <!------------------
 ## Practice reading code
