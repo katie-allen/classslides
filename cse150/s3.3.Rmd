@@ -2,6 +2,21 @@
 title: ""
 ---
 
+<!---------------------
+Hey Sister Larson
+These might be good links to use next semester
+https://byuistats.github.io/BYUI_CSE150_StatBook/introduction-to-the-normal-distribution-and-z-scores.html#normal
+
+https://galtonboard.com/Content/Images/distribution/monthly-temperature-difference-large.png
+https://galtonboard.com/probabilityexamplesinlife
+
+https://www.google.com/search?q=eye+color+distribution&rlz=1C1GCEJ_enUS882US882&sxsrf=ALeKk004aXnqyzoWi7S5aInHHH_KSHUdvw:1612285520818&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjeovrN18vuAhX-GDQIHUr1AqcQ_AUoAXoECCUQAw&biw=1920&bih=969#imgrc=y0H1QalhPKuqyM
+
+https://www.google.com/search?q=height+distribution&rlz=1C1GCEJ_enUS882US882&sxsrf=ALeKk03TmDxoQ9rYO9K4NYNTs56O2EwIJw:1612285478750&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiayPK518vuAhWwCjQIHdmdAA4Q_AUoAXoECBYQAw&biw=1920&bih=969#imgrc=6Ltz52iNbCCe8M
+---------------------->
+
+
+
 # Welcome to class! {data-background=#e8c35d}
 
 # The Normal Distribution {data-background=#e8c35d}
