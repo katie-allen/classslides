@@ -2,14 +2,14 @@
 title: ""
 ---
 
-# Welcome to class! {data-background=#f7d754}
+# Welcome to class! {data-background=#e8c35d}
 
-# Good Charts {data-background=#f7d754}
+# Good Charts {data-background=#e8c35d}
 
 ## Chapter 6: Refine to Persuade
 
 > - You are trying to reveal truths dormant in the data; to make a case; compete for attention.
-> - It is often the [data scientists] job to *show* all the data - to be as objective as possible.
+> - It is often the "data scientists" job to show all the data - to be as objective as possible.
 > - There is a difference between:
 >    - Data presentation
 >    - Data analysis
@@ -31,22 +31,22 @@ title: ""
 
 >"Perfectly objective visualizations don't exist, because perfectly objective brains don't exist."
 
-# Supplemental Reading {data-background=#f7d754}
+# Supplemental Reading {data-background=#e8c35d}
 
-##  Editing your graphic in Tableau: Part 2
+##  Editing your graphic in Tableau
 
 > - [Sorting](https://help.tableau.com/current/pro/desktop/en-us/sortgroup_sorting_computed_howto.htm)
-> - [Filters](https://www.tableau.com/learn/tutorials/on-demand/ways-filter)
-> - [Tooltips](https://www.tableau.com/learn/tutorials/on-demand/tooltips)
+> - [Filters](https://www.youtube.com/watch?v=WN548Hpa-iY)
+> - [Tooltips](https://www.youtube.com/watch?v=P1V3SPiiPM8)
 > - [Annotations](https://help.tableau.com/current/pro/desktop/en-us/annotations_annotations_add.htm)
-> - [Grouping](https://www.tableau.com/learn/tutorials/on-demand/grouping)
+> - [Grouping](https://www.youtube.com/watch?v=UAPH5W9Pq90)
 
 
 ## Tools Activity
 
 Can you make this chart?
 
-![](images/popular_marathons.png)
+![](images/popular_marathons2.png)
 
 
-# Case Study {data-background=#f7d754}
+# Case Study {data-background=#e8c35d}
