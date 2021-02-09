@@ -2,13 +2,14 @@
 title: ""
 ---
 
-# Week 6: Child Health and Z-scores  {data-background=#f7d754}
+# Week 6: Child Health and Z-scores  {data-background=#e8c35d}
 
 Welcome to class! 
 
+<!-----------------------
 Have your marathon case study open and ready to share with your group.
 
-# Case Study Presentations  {data-background=#f7d754}
+# Case Study Presentations  {data-background=#e8c35d}
 
 ## Open Microsoft Teams
 
@@ -31,10 +32,12 @@ Instructions for your groups/breakout rooms:
 >   - Present your case study, explaining your graphs and the message(s) you wanted to communicate.
 >- **When someone else is presenting:** 
 >   - Pay attention to their presentation. Then share your helpful feeback.
+------------------------------------>
+
 
 
 <!-------
-# Good Reads {data-background=#6897bb}
+# Good Charts {data-background=#6897bb}
 
 ## Chapter 7: Persuasion or Manipulation? (Truncated Axes)
 
@@ -61,7 +64,9 @@ Instructions for your groups/breakout rooms:
 > - [Annotations](https://help.tableau.com/current/pro/desktop/en-us/annotations_annotations_add.htm)
 ------>
 
-# Child Health and Z-scores {data-background=#f7d754}
+
+
+# Child Health and Z-scores {data-background=#e8c35d}
 
 ## Understanding Z-scores 
 

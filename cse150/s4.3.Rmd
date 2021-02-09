@@ -2,7 +2,7 @@
 title: ""
 ---
 
-# Welcome to Class! {data-background=#f7d754}
+# Welcome to Class! {data-background=#e8c35d}
 
 What is your favorite holiday food?
 
@@ -12,7 +12,7 @@ What is your favorite holiday food?
 .reveal section img { background:none; border:none; box-shadow:none; }
 </style>
 
-# Dimension vs. Attribute vs. Measure {data-background=#f7d754}
+# Dimension vs. Attribute vs. Measure {data-background=#e8c35d}
 
 ## Most often:
 
@@ -41,7 +41,7 @@ What is your favorite holiday food?
 
 
 
-# Z-Scores {data-background=#f7d754}
+# Z-Scores {data-background=#e8c35d}
 
 ##
 
@@ -96,7 +96,7 @@ $$Z = \frac{x - \mu}{\sigma}$$
 
 ---->
 
-# Case Study {data-background=#f7d754}
+# Case Study {data-background=#e8c35d}
 
 ## [Why does height measure health?](https://www.who.int/nutgrowthdb/about/introduction/en/index2.html)
 
