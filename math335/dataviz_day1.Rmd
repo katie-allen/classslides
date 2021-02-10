@@ -12,7 +12,7 @@ params:
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 ```
 
-# Visualizations for Presentation {data-background=#e8c35d}
+# Visualizations for Presentation: Day 1 {data-background=#e8c35d}
 
 Welcome to class!
 

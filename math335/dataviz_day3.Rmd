@@ -16,6 +16,60 @@ library(tidyverse)
 
 # Welcome to class! {data-background=#f7d754}
 
+
+
+
+
+
+
+
+
+
+# Reading Discussion {data-background=#f7d754}
+
+## [The Two Questions](https://hbr.org/2016/06/visualizations-that-really-work)
+
+>- Is the information conceptual or data-driven?
+>- Am I declaring something or exploring something?
+
+## This class is data-driven.
+
+>- "Exploring" = trying to figure something out = EDA
+>- "Delcaring" = communicating information = visualizations for presentations
+
+![](images/dataviz/R1606H_BERINATO_B.png)
+
+## Everyday Dataviz
+
+>- Simple, simple, simple
+>- Communicate a single message
+>- Generate discussion about the ideas in the chart, not the chart itself
+
+## Sister Larson's Favorite Quotes
+
+> "A poorly designed chart will waste that time by provoking questions that require the presenter to interpret information that's meant to be obvious. If an everyday dataviz can't speak for itself, it has failed-just like a joke whose punch line has to be explained."
+
+## Sister Larson's Favorite Quotes
+
+> "Busy charts communicate the idea that you've been just that-busy."
+
+## Sister Larson's Favorite Quotes
+
+> "What we actually do when we make a good chart is get at some truth and move people to feel it-to see what couldn't be seen before. To change minds. To cause action."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Case Study 5: Gun Deaths {data-background=#f7d754}
 
 ## What is a "seasonal trend"?
