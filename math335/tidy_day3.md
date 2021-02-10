@@ -8,86 +8,6 @@ params:
 
 # Welcome to class! {data-background=#e8c35d}
 
-Tidy Data: Day 2
-
-## Task 9
-
-<br>
-
-Anyone want to share your table and/or chart?
-
-## tidyr Functions: Character vectors
-
-<br>
-
-- `separate()` separates a character column into multiple columns with a regular expression or numeric locations
-- `extract()` extracts a character column into multiple columns using regular expression groups
-- `unite()` unites multiple columns into one by pasting strings together
-
-## Data frame vs Tibble
-
-<br>
-
-What are the [main differences](https://r4ds.had.co.nz/tibbles.html#tibbles)?
-
-Compare the output:
-
-```r
-library(tidyverse)
-
-iris
-as_tibble(iris)
-```
-
-## Attributes
-
-<br>
-
-Attributes are used to store [metadata](https://www.google.com/search?q=metadata&rlz=1C1GCEJ_enUS882US882&oq=metadata&aqs=chrome.0.0i67i131i433j0i67l4j69i60l3.694j0j7&sourceid=chrome&ie=UTF-8) about an object.
-
-```r
-attributes(iris)
-
-comment(iris) <- "This is my favorite data."
-attributes(iris)
-
-attr(iris, "my_attribute") <- 42
-attributes(iris)
-```
-## readr package
-
-<br>
-
-The [readr package](https://readr.tidyverse.org/) provides "a fast and friendly way to read rectangular data."
-
-How is `read.csv()` different from `read_csv()`? And [why do we care](https://r4ds.had.co.nz/data-import.html#compared-to-base-r)?
-
-## Sign up to lead
-
-<br>
-
-In Slack: Who wants to be a lead for this Friday's reading discussion?
-
-4 online, 3 face-to-face
-
-## Task 10!
-
-
-
-
-
-
-
-<!-----------
-## regular expressions
-
-A **regular expression** is a sequence of characters that define a search pattern.
-
-Usually such patterns are used by string-searching algorithms for "find" or "find and replace" operations on strings, or for input validation.
-
-[regex101.com](https://regex101.com/)
-------------->
-=======
 Tidy Data: Day 3
 
 
@@ -236,7 +156,8 @@ https://www.youtube.com/watch?v=dwG6MO92xtI
 
 Hypothesize what you think will happen for each line of code before running it
 
-```{r eval = FALSE, echo=TRUE, include = TRUE}
+
+```r
 (f<-factor(5:10))
 levels(f)[f]
 levels(f)[[f]]
@@ -251,7 +172,6 @@ parse_number(as.character(f))
 
 # the same, considerably more efficient (for long factors):
 as.numeric(levels(f))[f]
-
 ```
 
 -------------------------------->
@@ -304,7 +224,8 @@ money <- c('4,554,25', '$45', '8025.33cents', '288f45')
 
 <br>
 
-```{r vle3, eval=FALSE, echo=TRUE}
+
+```r
 challenge <- read_csv(readr_example("challenge.csv"))
 problems(challenge)
 ```
@@ -314,12 +235,6 @@ problems(challenge)
 > 3. Find more clues using the `head()`, and `tail()` of your `challenge` object.  What formats should they be?
 > 4. Now review [11.4.2 of our textbook](http://r4ds.had.co.nz/data-import.html#problems) and `?read_csv()` to fix the read in.
 
-```{r, eval=FALSE, include=FALSE, echo=FALSE}
-challenge <- read_csv(readr_example("challenge.csv"), col_types=list(col_double(), col_date()))
-#or
-challenge <- read_csv(readr_example("challenge.csv"), guess_max = 1010)
 
-```
 
 # Work Time {data-background=#e8c35d}
-
