@@ -28,7 +28,7 @@ Welcome to class!
 >- [How to select column names](https://dplyr.tidyverse.org/reference/select.html)
 --------------->
 
-## Sister Larson's Code
+## [Sister Larson's Code](https://github.com/BYUI335/M335_WI21_Larson_Kati/blob/master/week_06_relational-data/task_11/Task11_SisterLarson.md)
 
 # Class Activity {data-background=#e8c35d}
 
