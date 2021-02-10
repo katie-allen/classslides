@@ -38,6 +38,8 @@ Welcome to class!
 
 ## [Make This Chart](https://ourworldindata.org/grapher/carbon-footprint-travel-mode?tab=chart&stackMode=absolute&region=World)
 
+[Activity link](https://ktoutloud.github.io/classslides/math335/dataviz_day2_activity.R)
+
 ![](images/dataviz/carbon-footprint-travel-mode.png)
 
 ## What is the message?
