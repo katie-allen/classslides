@@ -15,7 +15,7 @@ library(tidyverse)
 library(nycflights13)
 ```
 
-# Week 6: Relational Data {data-background=#f7d754}
+# Week 6: Relational Data {data-background=#e8c35d}
 
 Welcome to class!
 
@@ -26,7 +26,7 @@ Welcome to class!
 >- Ask questions in slack for Q&A Wednesday
 >- Anyone want to sign up for Wednesday reading dicussion?
 
-# Case Study Review {data-background=#f7d754}
+# Case Study Review {data-background=#e8c35d}
 
 ## On your own (5-ish minutes)
 
@@ -35,7 +35,7 @@ Welcome to class!
 
 ## Case Study Presentations
 
-# Relational Data {data-background=#f7d754}
+# Relational Data {data-background=#e8c35d}
 
 ## What are "relational data"?
 
@@ -75,7 +75,7 @@ What could we use to connect the `flights` and `airports` datasets?
 
 [Flight Keys](https://r4ds.had.co.nz/diagrams/relational-nycflights.png)
 
-# Joining Datasets {data-background=#f7d754}
+# Joining Datasets {data-background=#e8c35d}
 
 ## Example 
 
@@ -142,7 +142,7 @@ The `left_join` we just practiced will be the most common join you use. In the `
 >- [Set operations](https://r4ds.had.co.nz/relational-data.html#set-operations) work with individual rows, comparing each value in the rows.
 
 
-# Upcoming {data-background=#f7d754}
+# Upcoming {data-background=#e8c35d}
 
 >- Task 11
 >- Coding Challenge

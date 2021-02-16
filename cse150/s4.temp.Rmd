@@ -1,0 +1,146 @@
+---
+title: ""
+---
+
+# Week 7: Child Health {data-background=#e8c35d}
+
+Welcome to class!
+
+# Good Charts {data-background=#e8c35d}
+
+## Chapter 7
+
+<!---------------------------
+# Good Charts {data-background=#e8c35d}
+
+## Group Discussion
+
+In your breakout rooms:
+
+>- Everyone share one insight from the chapter.
+>- Then, discuss the question "How do you decide if a chart is persuasive and manipulative?"
+
+## Chapter 7: Persuasion or Manipulation? (Truncated Axes)
+
+> - **The truncated axes:** complicated but should be used with thought.
+
+![](images/gc/Ch7_truncated_2.png)
+
+
+## Chapter 7: Persuasion or Manipulation? (Dual Axes)
+
+![](images/gc/Ch7_dual Axes.png)
+
+
+## Chapter 7: Persuasion or Manipulation? (Maps)
+
+![](images/gc/Ch7_maps_area_combined.png)
+
+## You decide: Persuasion or Manipulation?
+
+>- [Spurious correlations](https://www.tylervigen.com/spurious-correlations)
+>- [Job losses and gains](https://www.moonofalabama.org/2020/06/cnbc-makes-up-v-shaped-charts-to-support-false-claims-of-economic-recovery.html)
+>- [Tax cuts](https://www.statisticshowto.com/misleading-graphs/)
+
+##
+
+> Persuasion is a knife, and knives can be used in any number of ways: skillfully, carelessly, recklessly, even illicitly.
+
+---------------------------------->
+
+## Chapter 8
+
+
+<!------------
+
+# Good Reads {data-background=#6897bb}
+
+## Chapter 8: Present to Persuade (Pg. 177-192)
+
+**When it's time to talk, don't read the picture.**
+
+![](images/gc/Ch8_explainVinsight.png)
+
+## Hans Rosling's Idea Discussion
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jbkSRLYSojo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Vox's Chart discussion
+
+**I worry that Scott has oversold not explaining the chart**
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O-3Mlj3MQ_Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+- What are your thoughts?
+
+---->
+
+
+
+
+
+# Probability and Sampling {data-background=#e8c35d}
+
+
+
+
+
+
+
+# Supplemental Reading: [Probability & Sampling](https://byuistats.github.io/BYUI_CSE150_StatBook/probability-sampling-and-confidence-intervals.html) {data-background=#e8c35d}
+
+## Write a one sentence definition of probability (without using Google) and share it with me.
+
+## Understanding Probability
+
+**[One dice probability](https://istats.shinyapps.io/RandomNumbers/)**
+
+$$p(x) = \frac{1}{6} \approx 0.1667$$
+
+**Sum of two dice probability**
+
+What is $x$ or the event now?
+
+- [Catan Tokens](images/other/catan_tokens.jpg)
+- [Sum of two dice](images/other/sum_of_two_dice.jpg)
+
+## Walmart and probability
+
+[Walmart Employees Are Out to Show Its Anti-Theft AI Doesn't Work
+](https://www.wired.com/story/walmart-shoplifting-artificial-intelligence-everseen/)
+
+[Everseen video](https://www.youtube.com/watch?v=ibIKS84ETpM): Where do you see probability in their video?  Why don't they say this word?
+
+*“Our digital eye has perfect vision and it never needs a day off.”*
+
+## Walmart Associate Quotes
+
+- The same person then grabs two gallons of milk by their handles, and moves them across the scanner with one hand. Only one is rung up, but both are put in the bagging area. They then put their own cell phone on top of the machine, and an alert pops up saying they need to wait for assistance—a false positive. “Everseen finally alerts! But does so mistakenly. Oops again,” a caption reads. The filmmaker repeats the same process at two more stores, where they fail to scan a heart-shaped Valentine’s Day chocolate box with a puppy on the front and a Philips Sonicare electric toothbrush. At the end, a caption explains that Everseen failed to stop more than $100 of would-be theft.
+
+## Sampling: Walmart and Everseen 
+
+> - Was Everseen's video representative of the retail experience of their product? Did they show a representative sample?
+> - Were the Walmart associate examples representative of Everseen's product?
+- What makes a collection of data a good example or representative of the general product (population)?
+
+## Sampling from a Population
+
+You have 150 students that graduated from a major in 2019 and you want to take a sample of 25 of them to estimate starting salaries.
+
+Describe the way you would do each sampling method for the scenario above.
+
+> - Convenience sample
+> - simple random sample (SRS) 
+> - systematic random sample 
+> - Clustered random sample
+> - Stratified random sample
+
+
+
+
+
+
+
+# Case Study{data-background=#e8c35d}
+
+

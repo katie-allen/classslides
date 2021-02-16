@@ -14,18 +14,13 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 library(tidyverse)
 ```
 
-# Welcome to class! {data-background=#f7d754}
+# Visualizations for Presentation: Day 3 {data-background=#e8c35d}
 
+Welcome to class!
 
+## Reading Discussion
 
-
-
-
-
-
-
-
-# Reading Discussion {data-background=#f7d754}
+<!-----------------------------------
 
 ## [The Two Questions](https://hbr.org/2016/06/visualizations-that-really-work)
 
@@ -57,21 +52,35 @@ library(tidyverse)
 
 > "What we actually do when we make a good chart is get at some truth and move people to feel it-to see what couldn't be seen before. To change minds. To cause action."
 
+--------------------------------------------->
+
+## Next Week
+
+- Class on Tuesday, Wednesday, and Friday
+- Task 13: Find data for your semester project
+- No Task 14
+- Coding challenge on Friday
+- Case study due Saturday
 
 
 
+# Case Study: Gun Deaths {data-background=#e8c35d}
+
+##  Case Study
+
+> - What is the end goal?
+> - What is a "seasonal trend"?
+> - What types of variables do we have?
+> - What do we expect to see?
+
+## A few helpful things
+
+>- I think you will use a lot of `group_by()` and `summarise()`
+>- Use `mutate()` and `case_when()` to create new variables/groups
+>- `lubridate::days_in_month(1:12)` could be interesting/fun
 
 
-
-
-
-
-
-
-
-
-# Case Study 5: Gun Deaths {data-background=#f7d754}
-
+<!-----------------
 ## What is a "seasonal trend"?
 
 ## What is a "target audience"?
@@ -114,3 +123,4 @@ data %>%
 ```
 
 ## Free Time
+------------------------>

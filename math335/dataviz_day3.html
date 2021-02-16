@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
+  <meta name="author" content="" />
   <title>dataviz_day3.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -442,67 +443,116 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
-    <script src="externals/header-attrs-2.1/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 
-<section id="welcome-to-class" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Welcome to class!</h1>
+<section><section id="visualizations-for-presentation-day-3" class="title-slide slide level1" data-background="#e8c35d"><h1>Visualizations for Presentation: Day 3</h1><p>Welcome to class!</p></section><section id="reading-discussion" class="slide level2">
+<h2>Reading Discussion</h2>
+<!-----------------------------------
 
-</section>
+## [The Two Questions](https://hbr.org/2016/06/visualizations-that-really-work)
 
-<section>
-<section id="case-study-5-gun-deaths" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Case Study 5: Gun Deaths</h1>
+>- Is the information conceptual or data-driven?
+>- Am I declaring something or exploring something?
 
-</section>
-<section id="what-is-a-seasonal-trend" class="slide level2">
-<h2>What is a “seasonal trend”?</h2>
-</section>
-<section id="what-is-a-target-audience" class="slide level2">
-<h2>What is a “target audience”?</h2>
-</section>
-<section id="what-is-pseudo-code" class="slide level2">
-<h2>What is “pseudo code”?</h2>
-<p><a href="https://www.khanacademy.org/computing/computer-programming/programming/good-practices/pt/planning-with-pseudo-code">A silly example.</a></p>
-</section>
-<section id="reducing-gun-deaths" class="slide level2">
-<h2><strong>Reducing Gun Deaths</strong></h2>
-<p>I’ve given you the instructions in English.</p>
-<p>You’ll end with a report full of code and images</p>
+## This class is data-driven.
+
+>- "Exploring" = trying to figure something out = EDA
+>- "Delcaring" = communicating information = visualizations for presentations
+
+![](images/dataviz/R1606H_BERINATO_B.png)
+
+## Everyday Dataviz
+
+>- Simple, simple, simple
+>- Communicate a single message
+>- Generate discussion about the ideas in the chart, not the chart itself
+
+## Sister Larson's Favorite Quotes
+
+> "A poorly designed chart will waste that time by provoking questions that require the presenter to interpret information that's meant to be obvious. If an everyday dataviz can't speak for itself, it has failed-just like a joke whose punch line has to be explained."
+
+## Sister Larson's Favorite Quotes
+
+> "Busy charts communicate the idea that you've been just that-busy."
+
+## Sister Larson's Favorite Quotes
+
+> "What we actually do when we make a good chart is get at some truth and move people to feel it-to see what couldn't be seen before. To change minds. To cause action."
+
+--------------------------------------------->
+</section><section id="next-week" class="slide level2">
+<h2>Next Week</h2>
 <ul>
-<li>Pseudo code is a bridge between the start and the end</li>
-<li>Pseudo code helps with the “structured thinking” we read about last week</li>
-<li>Pseudo code is the recipe for our lasagna (ingredients/layers)</li>
+<li class="fragment">Class on Tuesday, Wednesday, and Friday</li>
+<li class="fragment">Task 13: Find data for your semester project</li>
+<li class="fragment">No Task 14</li>
+<li class="fragment">Coding challenge on Friday</li>
+<li class="fragment">Case study due Saturday</li>
 </ul>
-</section>
-<section id="reducing-gun-deaths-1" class="slide level2">
-<h2><strong>Reducing Gun Deaths</strong></h2>
-<p>Read over the case study.</p>
-<p>Then, in slack, write pseudo code for the entire project.</p>
-</section>
-<section id="a-few-helpful-things" class="slide level2">
+</section></section>
+<section><section id="case-study-gun-deaths" class="title-slide slide level1" data-background="#e8c35d"><h1>Case Study: Gun Deaths</h1></section><section id="case-study" class="slide level2">
+<h2>Case Study</h2>
+<ul>
+<li>What is the end goal?</li>
+<li>What is a “seasonal trend”?</li>
+<li>What types of variables do we have?</li>
+<li>What do we expect to see?</li>
+</ul>
+</section><section id="a-few-helpful-things" class="slide level2">
 <h2>A few helpful things</h2>
 <ul>
 <li>I think you will use a lot of <code>group_by()</code> and <code>summarise()</code></li>
 <li>Use <code>mutate()</code> and <code>case_when()</code> to create new variables/groups</li>
 <li><code>lubridate::days_in_month(1:12)</code> could be interesting/fun</li>
 </ul>
-</section>
-<section id="what-does-this-code-do" class="slide level2">
-<h2>What does this code do?</h2>
-<pre><code>data %&gt;% 
-  select_if(is.numeric) %&gt;% 
-  pivot_longer(cols = everything()) %&gt;% 
+<!-----------------
+## What is a "seasonal trend"?
+
+## What is a "target audience"?
+
+## What is "pseudo code"?
+
+[A silly example.](https://www.khanacademy.org/computing/computer-programming/programming/good-practices/pt/planning-with-pseudo-code)
+
+## **Reducing Gun Deaths**
+
+I've given you the instructions in English. 
+
+You'll end with a report full of code and images
+
+>- Pseudo code is a bridge between the start and the end
+>- Pseudo code helps with the "structured thinking" we read about last week
+>- Pseudo code is the recipe for our lasagna (ingredients/layers)
+
+## **Reducing Gun Deaths**
+
+Read over the case study. 
+
+Then, in slack, write pseudo code for the entire project.
+
+## A few helpful things
+
+>- I think you will use a lot of `group_by()` and `summarise()`
+>- Use `mutate()` and `case_when()` to create new variables/groups
+>- `lubridate::days_in_month(1:12)` could be interesting/fun
+
+## What does this code do?
+
+```
+data %>% 
+  select_if(is.numeric) %>% 
+  pivot_longer(cols = everything()) %>% 
   ggplot() +
   geom_histogram(aes(value)) +
-  facet_wrap(~name, scales = &quot;free&quot;)</code></pre>
-</section>
-<section id="free-time" class="slide level2">
-<h2>Free Time</h2>
+  facet_wrap(~name, scales = "free")
+```
+
+## Free Time
+------------------------>
 </section></section>
     </div>
   </div>

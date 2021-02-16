@@ -15,35 +15,34 @@ library(tidyverse)
 library(nycflights13)
 ```
 
-# Week 6: Relational Data {data-background=#f7d754}
+# Relational Data: Day 1 {data-background=#e8c35d}
 
 Welcome to class!
 
-## Housekeeping
+# Case Study Review {data-background=#e8c35d}
 
->- How does Perusall score my annotations?
->- Additional assignment in Perusall.
->- Ask questions in slack for Q&A Wednesday
->- Anyone want to sign up for Wednesday reading dicussion?
-
-# Case Study Review {data-background=#f7d754}
-
+<!--------------
 ## On your own (5-ish minutes)
 
 >- Post the link to your case study in slack.
 >- Review case studies done by classmates and start writing issues.
 
 ## Case Study Presentations
+---------------------------->
 
-# Relational Data {data-background=#f7d754}
+# Relational Data {data-background=#e8c35d}
 
 ## What are "relational data"?
+
+<br>
 
 Relational data are multiple tables of data that have defined relationships with each other.
 
 Relational data make it easy to store information about many different base units.
 
 ## Example
+
+<br>
 
 ```
 library(tidyverse)
@@ -55,14 +54,20 @@ library(nycflights13)
 
 ## Why is learning to work with relational data important?
 
+<br>
+
 > "It's rare that a data analysis involves only a single table of data. Typically you have many tables of data, and you must combine them to answer the questions that you're interested in."
 
 ## Why is learning to work with relational data important?
 
-- There are many types of databases, but relational databases have [dominated since the 1980s](https://www.oracle.com/database/what-is-database.html). 
-- You will often have to combine data from different sources to answer business questions.
+<br>
+
+> - There are many types of databases, but relational databases have [dominated since the 1980s](https://www.oracle.com/database/what-is-database.html). 
+> - You will often have to combine data from different sources to answer business questions.
 
 ## [Keys](https://r4ds.had.co.nz/relational-data.html)
+
+<br>
 
 What could we use to connect the `flights` and `airports` datasets?
 
@@ -73,21 +78,29 @@ What could we use to connect the `flights` and `airports` datasets?
 
 ## [Keys](https://r4ds.had.co.nz/relational-data.html)
 
+<br>
+
 [Flight Keys](https://r4ds.had.co.nz/diagrams/relational-nycflights.png)
 
-# Joining Datasets {data-background=#f7d754}
+# Joining Datasets {data-background=#e8c35d}
 
 ## Example 
 
+<br>
+
 Join the `flights` and `airlines` datasets.
+
+<br>
 
 - What do we want the output to look like?
 - What is the primary key?
 - What is the foreign key?
-- `flights %>% left_join(airlines, by = "carrier")`
-- What happens if I flip the data sets? `airlines %>% left_join(flights, by = "carrier")`
+- `flights %>% dplyr::left_join(airlines, by = "carrier")`
+- What happens if I flip the data sets? `airlines %>% dplyr::left_join(flights, by = "carrier")`
 
 ## Your turn
+
+<br>
 
 How could we join the `flights` and `airports` data to show the full name of the airport in the `flights`? Post your code in slack.
 
@@ -98,6 +111,8 @@ How could we join the `flights` and `airports` data to show the full name of the
 
 ## How to make sure a key is unique
 
+<br>
+
 ```{r}
 planes %>% count(tailnum) %>% filter(n > 1)
 flights %>% count(flight) %>% filter(n > 1)
@@ -105,23 +120,27 @@ flights %>% count(flight) %>% filter(n > 1)
 
 ## What happend if you have duplicate keys?
 
+<br>
+
 > - [One table w/ duplicates](http://r4ds.had.co.nz/diagrams/join-one-to-many.png)
 > - [Both tables w/ duplicates](http://r4ds.had.co.nz/diagrams/join-many-to-many.png)
 
 ## In-depth example
 
+<br>
+
 <!----
 **Partner-up**: 1 is a problem solver and tells what to do. The other is the coder and codes up the solution.
 ---->
 
-> - For each tailnumber in planes datatable, you want to know which carrier is operating it.
+> - For each tailnumber in `planes` data table, you want to know which carrier is operating it.
 > - *Bonus*: Include the carrier's full name (in `airlines`), not just the 2 digit abbreviation.
 
 
 ```{r echo = FALSE, eval = FALSE}
 planes  %>% 
   left_join(flights, by = "tailnum") %>% 
-  distinct(tailnum, carrier) %>% #If I stop here, there are a few duplicate tailnumbers, they were operated by multiple carriers. Because flights is sorted in chronological order, I just take the last (or most recent one) to remove the duplcates
+  distinct(tailnum, carrier) %>% #If I stop here, there are a few duplicate tailnumbers, they were operated by multiple carriers. Because flights is sorted in chronological order, I just take the last (or most recent one) to remove the duplicates
   group_by(tailnum) %>% 
   summarise_all(last)  %>% #or I could have done slice(n())
 
@@ -132,17 +151,23 @@ left_join(airlines)
 
 ## Mutating joins
 
+<br>
+
 The `left_join` we just practiced will be the most common join you use. In the `dplyr` package, it is called a *mutating join*.
 
 >- [A venn diagram for mutating joins.](https://r4ds.had.co.nz/diagrams/join-venn.png)
 
 ## Other types of joins
 
+<br>
+
 > - [Filtering joins](http://r4ds.had.co.nz/relational-data.html#filtering-joins) don't add columns. They are an efficient way to filter on multiple columns.
 >- [Set operations](https://r4ds.had.co.nz/relational-data.html#set-operations) work with individual rows, comparing each value in the rows.
 
 
-# Upcoming {data-background=#f7d754}
+# Upcoming {data-background=#e8c35d}
 
->- Task 11
+<br>
+
+>- Task 13
 >- Coding Challenge
