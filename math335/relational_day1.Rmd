@@ -133,7 +133,7 @@ flights %>% count(flight) %>% filter(n > 1)
 **Partner-up**: 1 is a problem solver and tells what to do. The other is the coder and codes up the solution.
 ---->
 
-> - For each tailnumber in `planes` data table, you want to know which carrier is operating it.
+> - For each tailnumber in `planes` data table, you want to know which carrier is operating it (using the `flights` data).
 > - *Bonus*: Include the carrier's full name (in `airlines`), not just the 2 digit abbreviation.
 
 

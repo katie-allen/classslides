@@ -8,12 +8,7 @@ params:
   dtype: "none"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 
-library(tidyverse)
-library(nycflights13)
-```
 
 # Relational Data: Day 2 {data-background=#e8c35d}
 
@@ -50,9 +45,35 @@ How could we join the `flights` and `airports` data to show the full name of the
 
 <br>
 
-```{r}
+
+```r
 planes %>% count(tailnum) %>% filter(n > 1)
+```
+
+```
+## # A tibble: 0 x 2
+## # ... with 2 variables: tailnum <chr>, n <int>
+```
+
+```r
 flights %>% count(flight) %>% filter(n > 1)
+```
+
+```
+## # A tibble: 3,493 x 2
+##    flight     n
+##     <int> <int>
+##  1      1   701
+##  2      2    51
+##  3      3   631
+##  4      4   393
+##  5      5   324
+##  6      6   210
+##  7      7   237
+##  8      8   236
+##  9      9   153
+## 10     10    61
+## # ... with 3,483 more rows
 ```
 
 ## What happend if you have duplicate keys?
@@ -74,17 +95,7 @@ flights %>% count(flight) %>% filter(n > 1)
 > - *Bonus*: Include the carrier's full name (in `airlines`), not just the 2 digit abbreviation.
 
 
-```{r echo = FALSE, eval = FALSE}
-planes  %>% 
-  left_join(flights, by = "tailnum") %>% 
-  distinct(tailnum, carrier) %>% #If I stop here, there are a few duplicate tailnumbers, they were operated by multiple carriers. Because flights is sorted in chronological order, I just take the last (or most recent one) to remove the duplicates
-  group_by(tailnum) %>% 
-  summarise_all(last)  %>% #or I could have done slice(n())
 
-#Now to get the full carrier's name
-left_join(airlines)
-
-```
 
 ## Mutating joins
 
