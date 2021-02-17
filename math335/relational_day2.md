@@ -119,3 +119,17 @@ The `left_join` we just practiced will be the most common join you use. In the `
 
 >- Coding Challenge
 >- Relational Case Study
+
+## Coding Challenge Practice
+
+<br>
+
+- You have 15 minutes to recreate the chart you see.
+
+## Coding Challenge Practice
+
+<br>
+
+Use this data: https://raw.githubusercontent.com/ktoutloud/classslides/master/math335/We%20Tried%20EVERY%20Flavor.csv
+
+![](images/RhettandLink.png)
