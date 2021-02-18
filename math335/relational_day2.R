@@ -1,6 +1,8 @@
 library(tidyverse)
 library(nycflights13)
 
+#-----------------------------------------------
+
 # if tables have the same columns and the same units
 # (aka, rows are measuring the same thing)
 # then we can simply row bind the tables
@@ -16,6 +18,8 @@ table1
 table2
 
 bind_rows(table1, table2)
+
+#-----------------------------------------------
 
 # if the tables have the same rows
 # (the same people, or the same observations)
@@ -34,6 +38,8 @@ table2
 
 bind_cols(table1, table2)
 
+#-----------------------------------------------
+
 # if the tables have different units
 # (are measuring different thigns)
 # then we need to "join" them instead of simply binding
@@ -47,7 +53,10 @@ glimpse(flights %>% left_join(airlines, by = "carrier"))
 glimpse(airlines %>% left_join(flights, by = "carrier"))
 
 table(flights$carrier %in% airlines$carrier)
+
 table(airlines$carrier %in% flights$carrier)
+
+#-----------------------------------------------
 
 # when does the order matter?
 
@@ -60,6 +69,9 @@ table1
 table2
 
 table1 %>% left_join(table2)
+
+# these are the same thing
+table1 %>% right_join(table2)
 table2 %>% left_join(table1)
 
 # inner join
@@ -71,3 +83,21 @@ table1 %>% inner_join(table2)
 # how many rows will this table have?
 
 table1 %>% full_join(table2)
+
+#-----------------------------------------------
+
+# Checking for unique keys
+
+glimpse(planes)
+planes %>% count(tailnum) %>% filter(n > 1)
+
+glimpse(flights)
+flights %>% count(flight) %>% filter(n > 1)
+
+
+
+
+
+
+
+
