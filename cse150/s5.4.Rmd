@@ -2,7 +2,7 @@
 title: ""
 ---
 
-# Welcome to class! {data-background=#f7d754}
+# Welcome to class! {data-background=#e8c35d}
 
 ## Remember
 
@@ -32,7 +32,7 @@ What data do we need to make this chart?
 
 [*Source*](https://fivethirtyeight.com/features/every-color-of-every-lightsaber-in-star-wars-in-one-chart/)
 
-# From and Idea to a conclusion {data-background=#f7d754}
+# From and Idea to a conclusion {data-background=#e8c35d}
 
 ## The plural of anecdote is not data
 
@@ -49,6 +49,6 @@ What data do we need to make this chart?
 - Is one proportion the same as another proportion?
   - Two Proportion Test
 
-# Case Study {data-background=#f7d754}
+# Case Study {data-background=#e8c35d}
 
 ## Time to ask questions and finish your case study.

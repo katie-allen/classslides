@@ -3,13 +3,13 @@ title: ""
 ---
 
 
-# Welcome to class! {data-background=#f7d754}
+# Welcome to class! {data-background=#e8c35d}
 
 In I-Learn, go to the "Materials" module and open the "Google Sheets Tool".
 
 You'll also want Tableau opened with the "counts_all" data loaded.
 
-# Supplemental Reading: {data-background=#f7d754}
+# Supplemental Reading: {data-background=#e8c35d}
 
 ## [Section 4.5 Chi-Squared Test of Independence](https://byuistats.github.io/BYUI_CSE150_StatBook/inferential-decision-making.html#chi-squared-test-of-independence)
 
@@ -36,7 +36,7 @@ Let's think about our counts of birth by month and sport data.
 - If yes, they are correlated or their is a relationship. They are **not independent**.
 - if no, then birthday months are **independent** of what sport a professional plays.
 
-# Case Study {data-background=#f7d754}
+# Case Study {data-background=#e8c35d}
 
 ## Building our data tables (Tableau)
 

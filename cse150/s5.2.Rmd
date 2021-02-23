@@ -2,11 +2,11 @@
 title: ""
 ---
 
-# Comparing Groups {data-background=#f7d754}
+# Comparing Groups {data-background=#e8c35d}
 
 Welcome to class!
 
-# Confidence Intervals {data-background=#f7d754}
+# Confidence Intervals {data-background=#e8c35d}
 
 ## Can you explain it?
 
@@ -35,7 +35,7 @@ Confidence intervals are like coin flips, just that the probabilities move from 
     - Parameters: Population mean
 - [Interval Estimators](https://en.wikipedia.org/wiki/Interval_estimation): Why do we need interval estimators? 
 
-# The Matthew Effect {data-background=#f7d754}
+# The Matthew Effect {data-background=#e8c35d}
 
 ## What is the Matthew Effect?
 
@@ -64,7 +64,7 @@ cutoff for age-class hockey is January 1. A boy who turns ten on January 2, then
 alongside someone who doesn't turn ten until the end of the year - and at that age, in
 preadolescence, a twelve-month gap in age represents an enormous difference in physical maturity.
 
-# Case Study {data-background=#f7d754}
+# Case Study {data-background=#e8c35d}
 
 ## [Comparing Proportional Measures](https://byuistats.github.io/BYUI_CSE150_StatBook/inferential-decision-making.html#comparing-proportions)
 

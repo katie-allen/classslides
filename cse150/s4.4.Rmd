@@ -32,6 +32,34 @@ Welcome to class!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/O-3Mlj3MQ_Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
+
+
+
+<!-----------------------
+# Good Charts {data-background=#e8c35d}
+
+## Present to Persuade
+
+*One million, six million, seventy million. Spoken or written, these numbers become a buszz. Incomprehensible. Presented graphically, they hit closer to the heart. As the Soviet losses climbed, I thought my browser had frozen. Surely the top of the column bust have been reached by now, I thought.*
+
+> - See minute 6:05 <http://www.fallen.io/ww2/>
+
+## Present to Persuade Summary
+
+> - Show the chart and stop talking
+> - Don't read the picture
+> - For unusual visual forms, guide the audience
+> - Use reference charts
+> - Show something simple, leave behind more detail
+> - Tell stories
+----------------->
+
+
+
+
+
+
 # Supplemental Reading: [Probability & Sampling](https://byuistats.github.io/BYUI_CSE150_StatBook/probability-sampling-and-confidence-intervals.html) {data-background=#e8c35d}
 
 ## What is probability?
