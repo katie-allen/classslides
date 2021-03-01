@@ -22,9 +22,25 @@ Welcome to class!
 
 ## Semester Project Examples
 
+<br>
+
+On Wednesday. In the meantime...
+
+>- [R Markdown Formats](https://r4ds.had.co.nz/r-markdown-formats.html)
+>- [R Markdown Themes](https://www.datadreaming.org/post/r-markdown-theme-gallery/)
+
+
 # Introduction to Functions {data-background=#e8c35d}
 
 ## What is a function?
+
+## What is a function?
+
+<br>
+
+Math 108 Definition:
+
+"A function is a rule that assigns the input value(s) to a single output value."
 
 ## How to write a function in R
 
@@ -204,8 +220,15 @@ Chapter 19: Functions
 
 <br>
 
-- **Function 1**: B/A
-- **Function 2**: B/C
+- **Function 1** is B/A and **Function 2** is B/C
+
+## Load the data
+
+<br>
+
+```
+class_data_all <- read_csv("https://byuistats.github.io/M335/data/waitlist_DP_108.csv")
+```
 
 ## The first function
 
