@@ -14,40 +14,111 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 library(tidyverse)
 ```
 
-# Functions: Day 1 {data-background=#f7d754}
+# Functions: Day 1 {data-background=#e8c35d}
 
 Welcome to class!
 
-##
+## Case Study Review
 
-Why do we care about working with strings? (text data?)
+## Semester Project Examples
 
-
-
-# Introduction to Functions {data-background=#f7d754}
+# Introduction to Functions {data-background=#e8c35d}
 
 ## What is a function?
 
 ## How to write a function in R
 
+<br>
+
 1. Pick a **name** for the function that is intuitive and makes sense to other users
 2. List the **arguments** to the function inside `function()`
 3. Write the steps of your function in the **body**, a `{` block immediately following `function()`
+4. The function will **return** the value of the last line in the body. You can make this return value explicit using `return()`.
 
 ## Example
 
+<br>
+
 ```
-my_function <- function(bob){
-   is_three <- bob == 3
-   mean(is_three)
+count_threes <- function(a_number_vector){
+   is_three <- a_number_vector == 3
+   sum(is_three)
 }
 ```
 
-## Practice:
+## Example
+
+<br>
+
+```
+count_threes <- function(a_number_vector){
+   is_three <- a_number_vector == 3
+   return(sum(is_three))
+}
+```
+
+## Question: Why use functions?
+
+<br>
+
+Answer:
+
+> One of the best ways to improve your reach as a data scientist is to write functions. Functions allow you to automate common tasks in a more powerful and general way than copy-and-pasting.
+
+## Question: When to use a function?
+
+<br>
+
+Answer: 
+
+> When you've copied and pasted a block of code more than twice.
+
+## [Three Big Advantages](https://r4ds.had.co.nz/functions.html)
+
+<br>
+
+1. You can give a function an evocative name that makes your code easier to understand.
+2. As requirements change, you only need to update code in one place, instead of many.
+3. You eliminate the chance of making incidental mistakes when you copy and paste (i.e. updating a variable name in one place, but not in another)
+
+## Remember:
+
+<br>
+
+> Writing good functions is a lifetime journey.
+
+<!-------------------------------------------
+
+## The `return()` value
+
+<br>
+
+## Example
+
+<br>
+
+```
+```
+
+## Using `if` and `else` in a function
+
+<br>
+
+## Example
+
+<br>
+
+```
+```
+----------------------------------------------------->
+
+## Your turn:
+
+<br>
 
 Figure out what this function does, and think of a better name for it.
 
->- Left side of the room:
+>- Face-to-face students:
 
 ```
 f1 <- function(string, prefix) {
@@ -55,7 +126,7 @@ f1 <- function(string, prefix) {
 }
 ```
 
->- Right side of the room:
+>- Online students:
 
 ```
 f2 <- function(x) {
@@ -64,14 +135,18 @@ f2 <- function(x) {
 }
 ```
 
-## Practice:
+## Your turn:
+
+<br>
 
 Write a function that:
 
-- Takes a name (a character string) as input
-- Returns "Hello [name]!"
+> - Takes a name (a character string) as input
+> - Returns "Hello [name]!"
 
-## Practice:
+## Your turn:
+
+<br>
 
 Write a function that:
 
@@ -80,44 +155,24 @@ Write a function that:
 > - If so, returns "Hello Bob!"
 > - Otherwise, returns "Hello."
 
-## Practice:
+*Hint: Check the "conditional statements" section in the reading.*
+
+## Your turn:
+
+<br>
 
 Write a function that:
 
 > - Take two numerical vectors as inputs
 > - Calculates the average of all numbers from both vectors combined
 
-## Good Advice
 
-> It's easier to start with working code and turn it into a function; it's harder to create a function and then try to make it work.
 
-# So what? {data-background=#f7d754}
+# Task 17: Waitlisted {data-background=#e8c35d}
 
-## Q: Why use functions?
+## Assigned reading
 
-Answer:
-
-> One of the best ways to improve your reach as a data scientist is to write functions. Functions allow you to automate common tasks in a more powerful and general way than copy-and-pasting.
-
-## Q: When to use a function?
-
-Answer: 
-
-> When you've copied and pasted a block of code more than twice.
-
-## [Three Big Advantages](https://r4ds.had.co.nz/functions.html)
-
-1. You can give a function an evocative name that makes your code easier to understand.
-2. As requirements change, you only need to update code in one place, instead of many.
-3. You eliminate the chance of making incidental mistakes when you copy and paste (i.e. updating a variable name in one place, but not in another)
-
-## Remember:
-
-> Writing good functions is a lifetime journey.
-
-# Task 15 {data-background=#f7d754}
-
-## You should read the assigned chapter.
+<br>
 
 Chapter 19: Functions
 
@@ -128,6 +183,38 @@ Chapter 19: Functions
 - Introduction to conditional statements (super cool! super useful!)
 - Guidelines for having good coding style (aka, how to make sure other programmers don't hate you)
 
-##
+## Some good advice
 
-Let's make sure we understand the deliverables.
+<br>
+
+> It's easier to start with working code and turn it into a function; it's harder to create a function and then try to make it work.
+
+## Two functions
+
+<br>
+
+- **Function 1**: Create a function that calculates the % of currently registered students who were at one time on the waitlist.
+- **Function 2**: Create a function that calculates the % of students who were ever on the waitlist that are currently registered for for the class.
+
+## Two fractions
+
+<br>
+
+![](images/functions_venn.PNG)
+
+<br>
+
+- **Function 1**: B/A
+- **Function 2**: B/C
+
+## The first function
+
+<br>
+
+Make sure you understand the goal before you start coding the solution!
+
+1. What does one row represent?
+1. Can a student have multiple rows?
+1. Why would a student have multiple rows?
+1. What are the options for "Status"
+1. Can two status updates happen at the same time? Why?

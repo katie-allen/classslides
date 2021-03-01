@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
+  <meta name="author" content="" />
   <title>functions_day1.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -442,72 +443,122 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
-    <script src="externals/header-attrs-2.1/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 
-<section>
-<section id="functions-day-1" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Functions: Day 1</h1>
-<p>Welcome to class!</p>
-</section>
-<section id="section" class="slide level2">
-<h2></h2>
-<p>Why do we care about working with strings? (text data?)</p>
+<section><section id="functions-day-1" class="title-slide slide level1" data-background="#e8c35d"><h1>Functions: Day 1</h1><p>Welcome to class!</p></section><section id="case-study-review" class="slide level2">
+<h2>Case Study Review</h2>
+</section><section id="semester-project-examples" class="slide level2">
+<h2>Semester Project Examples</h2>
 </section></section>
-<section>
-<section id="introduction-to-functions" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Introduction to Functions</h1>
-
-</section>
-<section id="what-is-a-function" class="slide level2">
+<section><section id="introduction-to-functions" class="title-slide slide level1" data-background="#e8c35d"><h1>Introduction to Functions</h1></section><section id="what-is-a-function" class="slide level2">
 <h2>What is a function?</h2>
-</section>
-<section id="how-to-write-a-function-in-r" class="slide level2">
+</section><section id="how-to-write-a-function-in-r" class="slide level2">
 <h2>How to write a function in R</h2>
+<p><br></p>
 <ol type="1">
 <li class="fragment">Pick a <strong>name</strong> for the function that is intuitive and makes sense to other users</li>
 <li class="fragment">List the <strong>arguments</strong> to the function inside <code>function()</code></li>
 <li class="fragment">Write the steps of your function in the <strong>body</strong>, a <code>{</code> block immediately following <code>function()</code></li>
+<li class="fragment">The function will <strong>return</strong> the value of the last line in the body. You can make this return value explicit using <code>return()</code>.</li>
 </ol>
-</section>
-<section id="example" class="slide level2">
+</section><section id="example" class="slide level2">
 <h2>Example</h2>
-<pre><code>my_function &lt;- function(bob){
-   is_three &lt;- bob == 3
-   mean(is_three)
+<p><br></p>
+<pre><code>count_threes &lt;- function(a_number_vector){
+   is_three &lt;- a_number_vector == 3
+   sum(is_three)
 }</code></pre>
-</section>
-<section id="practice" class="slide level2">
-<h2>Practice:</h2>
+</section><section id="example-1" class="slide level2">
+<h2>Example</h2>
+<p><br></p>
+<pre><code>count_threes &lt;- function(a_number_vector){
+   is_three &lt;- a_number_vector == 3
+   return(sum(is_three))
+}</code></pre>
+</section><section id="question-why-use-functions" class="slide level2">
+<h2>Question: Why use functions?</h2>
+<p><br></p>
+<p>Answer:</p>
+<blockquote>
+<p>One of the best ways to improve your reach as a data scientist is to write functions. Functions allow you to automate common tasks in a more powerful and general way than copy-and-pasting.</p>
+</blockquote>
+</section><section id="question-when-to-use-a-function" class="slide level2">
+<h2>Question: When to use a function?</h2>
+<p><br></p>
+<p>Answer:</p>
+<blockquote>
+<p>When you’ve copied and pasted a block of code more than twice.</p>
+</blockquote>
+</section><section id="three-big-advantages" class="slide level2">
+<h2><a href="https://r4ds.had.co.nz/functions.html">Three Big Advantages</a></h2>
+<p><br></p>
+<ol type="1">
+<li class="fragment">You can give a function an evocative name that makes your code easier to understand.</li>
+<li class="fragment">As requirements change, you only need to update code in one place, instead of many.</li>
+<li class="fragment">You eliminate the chance of making incidental mistakes when you copy and paste (i.e. updating a variable name in one place, but not in another)</li>
+</ol>
+</section><section id="remember" class="slide level2">
+<h2>Remember:</h2>
+<p><br></p>
+<blockquote>
+<p>Writing good functions is a lifetime journey.</p>
+</blockquote>
+<!-------------------------------------------
+
+## The `return()` value
+
+<br>
+
+## Example
+
+<br>
+
+```
+```
+
+## Using `if` and `else` in a function
+
+<br>
+
+## Example
+
+<br>
+
+```
+```
+----------------------------------------------------->
+</section><section id="your-turn" class="slide level2">
+<h2>Your turn:</h2>
+<p><br></p>
 <p>Figure out what this function does, and think of a better name for it.</p>
 <ul>
-<li>Left side of the room:</li>
+<li>Face-to-face students:</li>
 </ul>
 <pre><code>f1 &lt;- function(string, prefix) {
   substr(string, 1, nchar(prefix)) == prefix
 }</code></pre>
 <ul>
-<li>Right side of the room:</li>
+<li>Online students:</li>
 </ul>
 <pre><code>f2 &lt;- function(x) {
   if (length(x) &lt;= 1) return(NULL)
   x[-length(x)]
 }</code></pre>
-</section>
-<section id="practice-1" class="slide level2">
-<h2>Practice:</h2>
+</section><section id="your-turn-1" class="slide level2">
+<h2>Your turn:</h2>
+<p><br></p>
 <p>Write a function that:</p>
 <ul>
-<li class="fragment">Takes a name (a character string) as input</li>
-<li class="fragment">Returns “Hello [name]!”</li>
+<li>Takes a name (a character string) as input</li>
+<li>Returns “Hello [name]!”</li>
 </ul>
-</section>
-<section id="practice-2" class="slide level2">
-<h2>Practice:</h2>
+</section><section id="your-turn-2" class="slide level2">
+<h2>Your turn:</h2>
+<p><br></p>
 <p>Write a function that:</p>
 <ul>
 <li>Takes a character string as input</li>
@@ -515,61 +566,19 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>If so, returns “Hello Bob!”</li>
 <li>Otherwise, returns “Hello.”</li>
 </ul>
-</section>
-<section id="practice-3" class="slide level2">
-<h2>Practice:</h2>
+<p><em>Hint: Check the “conditional statements” section in the reading.</em></p>
+</section><section id="your-turn-3" class="slide level2">
+<h2>Your turn:</h2>
+<p><br></p>
 <p>Write a function that:</p>
 <ul>
 <li>Take two numerical vectors as inputs</li>
 <li>Calculates the average of all numbers from both vectors combined</li>
 </ul>
-</section>
-<section id="good-advice" class="slide level2">
-<h2>Good Advice</h2>
-<blockquote>
-<p>It’s easier to start with working code and turn it into a function; it’s harder to create a function and then try to make it work.</p>
-</blockquote>
 </section></section>
-<section>
-<section id="so-what" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">So what?</h1>
-
-</section>
-<section id="q-why-use-functions" class="slide level2">
-<h2>Q: Why use functions?</h2>
-<p>Answer:</p>
-<blockquote>
-<p>One of the best ways to improve your reach as a data scientist is to write functions. Functions allow you to automate common tasks in a more powerful and general way than copy-and-pasting.</p>
-</blockquote>
-</section>
-<section id="q-when-to-use-a-function" class="slide level2">
-<h2>Q: When to use a function?</h2>
-<p>Answer:</p>
-<blockquote>
-<p>When you’ve copied and pasted a block of code more than twice.</p>
-</blockquote>
-</section>
-<section id="three-big-advantages" class="slide level2">
-<h2><a href="https://r4ds.had.co.nz/functions.html">Three Big Advantages</a></h2>
-<ol type="1">
-<li class="fragment">You can give a function an evocative name that makes your code easier to understand.</li>
-<li class="fragment">As requirements change, you only need to update code in one place, instead of many.</li>
-<li class="fragment">You eliminate the chance of making incidental mistakes when you copy and paste (i.e. updating a variable name in one place, but not in another)</li>
-</ol>
-</section>
-<section id="remember" class="slide level2">
-<h2>Remember:</h2>
-<blockquote>
-<p>Writing good functions is a lifetime journey.</p>
-</blockquote>
-</section></section>
-<section>
-<section id="task-15" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Task 15</h1>
-
-</section>
-<section id="you-should-read-the-assigned-chapter." class="slide level2">
-<h2>You should read the assigned chapter.</h2>
+<section><section id="task-17-waitlisted" class="title-slide slide level1" data-background="#e8c35d"><h1>Task 17: Waitlisted</h1></section><section id="assigned-reading" class="slide level2">
+<h2>Assigned reading</h2>
+<p><br></p>
 <p>Chapter 19: Functions</p>
 <ul>
 <li class="fragment">More tips for how to write good functions (humans vs. computers)</li>
@@ -579,10 +588,39 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li class="fragment">Introduction to conditional statements (super cool! super useful!)</li>
 <li class="fragment">Guidelines for having good coding style (aka, how to make sure other programmers don’t hate you)</li>
 </ul>
-</section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<p>Let’s make sure we understand the deliverables.</p>
+</section><section id="some-good-advice" class="slide level2">
+<h2>Some good advice</h2>
+<p><br></p>
+<blockquote>
+<p>It’s easier to start with working code and turn it into a function; it’s harder to create a function and then try to make it work.</p>
+</blockquote>
+</section><section id="two-functions" class="slide level2">
+<h2>Two functions</h2>
+<p><br></p>
+<ul>
+<li class="fragment"><strong>Function 1</strong>: Create a function that calculates the % of currently registered students who were at one time on the waitlist.</li>
+<li class="fragment"><strong>Function 2</strong>: Create a function that calculates the % of students who were ever on the waitlist that are currently registered for for the class.</li>
+</ul>
+</section><section id="two-fractions" class="slide level2">
+<h2>Two fractions</h2>
+<p><br></p>
+<p><img data-src="images/functions_venn.PNG" /></p>
+<p><br></p>
+<ul>
+<li class="fragment"><strong>Function 1</strong>: B/A</li>
+<li class="fragment"><strong>Function 2</strong>: B/C</li>
+</ul>
+</section><section id="the-first-function" class="slide level2">
+<h2>The first function</h2>
+<p><br></p>
+<p>Make sure you understand the goal before you start coding the solution!</p>
+<ol type="1">
+<li class="fragment">What does one row represent?</li>
+<li class="fragment">Can a student have multiple rows?</li>
+<li class="fragment">Why would a student have multiple rows?</li>
+<li class="fragment">What are the options for “Status”</li>
+<li class="fragment">Can two status updates happen at the same time? Why?</li>
+</ol>
 </section></section>
     </div>
   </div>
