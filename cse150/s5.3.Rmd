@@ -3,42 +3,112 @@ title: ""
 ---
 
 
-# Welcome to class! {data-background=#e8c35d}
+# Comparing Birthdays in Sports {data-background=#e8c35d}
+
+<br>
+
+**Welcome to class!**
 
 In I-Learn, go to the "Materials" module and open the "Google Sheets Tool".
 
-You'll also want Tableau opened with the "counts_all" data loaded.
+You'll also want Tableau open with the "counts_all" data loaded.
 
-# Supplemental Reading: {data-background=#e8c35d}
+# Hypothesis Tests {data-background=#e8c35d}
 
-## [Section 4.5 Chi-Squared Test of Independence](https://byuistats.github.io/BYUI_CSE150_StatBook/inferential-decision-making.html#chi-squared-test-of-independence)
+***
 
-- Null hypothesis: These two variables are independent.
-- Alternative hypothesis: These two variables are *not* independent.
+Hypothesis tests help us answer questions about our data.
 
-## Scatterplots with two measures
+## Review: One Proportion Test
 
-Finish the following sentences for comparing two measures (or "variables")
+<br>
+
+- Question: Is <span class="fragment highlight-red"  data-fragment-index="1">this proportion</span> equal to <span class="fragment highlight-blue"  data-fragment-index="1">this constant</span>?
+- Question: Is the <span class="fragment highlight-red"  data-fragment-index="1">proportion of Hockey players born in January</span> equal to <span class="fragment highlight-blue"  data-fragment-index="1">1/12</span>?
+
+<br>
+
+- Null hypothesis: The proportion is **equal to** the constant.
+- Alternative hypothesis: The proportion is **less than/greater than/not equal to** the constant.
+
+## Review: Two Proportion Test
+
+<br>
+
+- Question: Is <span class="fragment highlight-red"  data-fragment-index="1">this proportion</span> equal to <span class="fragment highlight-blue"  data-fragment-index="1">this proportion</span>?
+- Question: Is the <span class="fragment highlight-red"  data-fragment-index="1">proportion of Hockey players born in January</span> equal to <span class="fragment highlight-blue"  data-fragment-index="1">the proportion of January births in the US</span>?
+
+<br>
+
+- Null hypothesis: Proportion 1 is **equal to** proportion 2.
+- Alternative hypothesis: Proportion 1 is **less than/greater than/not equal to** proportion 2.
+
+## Chi-Squared Test of Independence
+
+<br>
+
+
+The Chi-Squared Test of Independence allows us to to answer questions about two **variables**, rather than two proportions.
+
+## Correlation
+
+<br>
+
+![](images/other/nocorrelation.png)
+
+## Correlation
+
+<!--------
+## Scatterplots with two variables
+------------>
+
+<br>
+
+Finish the following sentences for comparing two variables (or "measures")
 
 - **Positive Correlation:** As x increases y ________.
 - **Negative Correlation:** As x increases y ________.
 - **No Correlation:** As x increases y _________.
-- If there is a relationship between x and y then knowing x gives us information about y.
-- If x and y are independent then knowing x tells us nothing about y.
+
+<br>
+
+- If there is a "relationship" between x and y, then knowing x gives us information about y.
+- If x and y are "independent" then knowing x tells us nothing about y.
 
 ![](images/other/nocorrelation.png)
 
-## Tables with two dimensions
+## Thinking in two dimensions
 
-Let's think about our counts of birth by month and sport data.
+<br>
+
+Let's think about our birth counts, separated by month and sport group.
 
 - Does being in a professional sport provide information about what month they were born in?
-- If yes, they are correlated or their is a relationship. They are **not independent**.
-- if no, then birthday months are **independent** of what sport a professional plays.
+
+<br>
+
+- If **yes**, the variables are correlated. Aka, there is a relationship. They are **not independent**.
+- If **no**, then birthday months are **independent** of what sport a professional plays.
+
+
+## [Chi-Squared Test of Independence](https://byuistats.github.io/BYUI_CSE150_StatBook/inferential-decision-making.html#chi-squared-test-of-independence)
+
+<br>
+
+- Question: Is there a relationship between <span class="fragment highlight-red"  data-fragment-index="1">this variable</span> and <span class="fragment highlight-blue"  data-fragment-index="1">this other variable</span>?
+- Question: Is there a relationship between <span class="fragment highlight-red"  data-fragment-index="1">birth month</span> and <span class="fragment highlight-blue"  data-fragment-index="1">the professional sport you play</span>?
+
+<br>
+
+- Null hypothesis: The two variables **are** independent.
+- Alternative hypothesis: The two variables **are not** independent.
+
 
 # Case Study {data-background=#e8c35d}
 
 ## Building our data tables (Tableau)
+
+<br>
 
 1. Build a table that shows the sum of all births for each group and each month.
 2. Build a table that shows the percentage of births by month within each sport.
@@ -46,14 +116,36 @@ Let's think about our counts of birth by month and sport data.
 
 ## Are birthdays and sports related?
 
-Let's test the data in the Google Sheets Tool.
+<br>
+
+Let's test the data in the [Google Sheets Tool](https://docs.google.com/spreadsheets/d/1KUq-7qEHB642UB9olN7Fw0Yp9pYoKyCQIhs1TCPP198/template/preview).
+
+<br>
+
+What do you notice?
+
+## Pearson Residuals
+
+<br>
+
+If we get a small p-value (p < 0.05), then we decide to reject the null hypothesis in favor of the alternative.
+
+<br>
+
+**Pearson residuals** help us understand which "observed counts" (aka, which groups) are responsible for such a small p-value.
 
 ## Cut off dates
+
+<br>
 
 > - **Baseball:** July 31st
 > - **American Football:** July 31st <!---(but it has weight limits and other dates)--->
 > - **Basketball:** August 31st <!----(but it has other dates)--->
 > - **Hockey:** December 31st
+
+
+
+<!------
 
 ## Using the two proportions test.
 
@@ -62,7 +154,6 @@ Let's test the data in the Google Sheets Tool.
 3. Which is better?
 4. What concerns do you have?
 
-<!------
 
 ## Comparing multiple variables over two populations?
 
@@ -72,12 +163,9 @@ Let's test the data in the Google Sheets Tool.
 
 ------>
 
-## Basketball Data
+## Birthday and Sport Insights
 
-- [Why does Basketball not have a Mathew effect?](https://en.wikipedia.org/wiki/Height_in_sports#Basketball)
+<br>
 
-
-<!-----
-## Why does US Football not have a Matthew effect?
------>
-
+> - Why does Basketball not have a Mathew effect? [Answer.](https://en.wikipedia.org/wiki/Height_in_sports#Basketball)
+>- What about American Football? What do you think?
