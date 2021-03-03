@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
+  <meta name="author" content="" />
   <title>functions_day2.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -11,18 +12,19 @@
 
 
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -42,7 +44,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {  background-color: #f8f8f8; }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ef2929; } /* Alert */
 code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
@@ -505,31 +507,20 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
-    <script src="externals/header-attrs-2.1/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 
-<section id="welcome-to-class" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Welcome to class!</h1>
-
-</section>
-
-<section>
-<section id="functions-and-purrr" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Functions and purrr</h1>
-<p><img data-src="images/programming_cat.gif" /></p>
-</section>
-<section id="what-i-want-you-to-get-out-of-this-week" class="slide level2">
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1></section>
+<section><section id="functions-and-purrr" class="title-slide slide level1" data-background="#e8c35d"><h1>Functions and purrr</h1><p><img data-src="images/programming_cat.gif" /></p></section><section id="what-i-want-you-to-get-out-of-this-week" class="slide level2">
 <h2>What I want you to get out of this week:</h2>
 <ul>
 <li class="fragment">If you copy/paste more than once, consider writing a function.</li>
-<li class="fragment">If you copy/page a function more than once, consider using <code>purrr</code></li>
+<li class="fragment">If you copy/paste a function more than once, consider using <code>purrr</code></li>
 </ul>
-</section>
-<section id="loops-vs.-purrr" class="slide level2">
+</section><section id="loops-vs.-purrr" class="slide level2">
 <h2>Loops vs. purrr</h2>
 <ul>
 <li class="fragment">Loops are slow, but highly customizable. Most work can be done without them.
@@ -541,8 +532,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>){</span>
 <span id="cb1-2"><a href="#cb1-2"></a>  <span class="kw">print</span>(i)</span>
 <span id="cb1-3"><a href="#cb1-3"></a>}</span></code></pre></div>
-</section>
-<section id="purrr-is-group_by-on-steroids" class="slide level2">
+</section><section id="purrr-is-group_by-on-steroids" class="slide level2">
 <h2>purrr is group_by() on steroids</h2>
 <ul>
 <li class="fragment"><code>group_by() %&gt;% summarise()</code> worked well for repeating code on chunks of a vector</li>

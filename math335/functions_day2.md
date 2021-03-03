@@ -10,16 +10,16 @@ params:
 
 
 
-# Welcome to class! {data-background=#f7d754}
+# Welcome to class! {data-background=#e8c35d}
 
-# Functions and purrr {data-background=#f7d754}
+# Functions and purrr {data-background=#e8c35d}
 
 ![](images/programming_cat.gif)
 
 ## What I want you to get out of this week:
 
 - If you copy/paste more than once, consider writing a function.
-- If you copy/page a function more than once, consider using `purrr`
+- If you copy/paste a function more than once, consider using `purrr`
 
 ## Loops vs. purrr
 
