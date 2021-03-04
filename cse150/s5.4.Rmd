@@ -20,17 +20,17 @@ You need:
 
 What data do we need to make this chart?
 
-![](images/tidydata/hickey-starwars-21.png)
+![](images/tidydata/hickey-titanic-1218-1.png)
 
-[*Source*](https://fivethirtyeight.com/features/star-wars-killed-a-universe-to-save-the-galaxy/)
+[*Source*](https://fivethirtyeight.com/features/how-many-people-havent-seen-titanic/)
 
 ## Practice 
 
 What data do we need to make this chart?
 
-![](images/tidydata/hickey-starwarssabers-2.png)
+![](images/tidydata/hickey-datalab-starwars-41.png)
 
-[*Source*](https://fivethirtyeight.com/features/every-color-of-every-lightsaber-in-star-wars-in-one-chart/)
+[*Source*](https://fivethirtyeight.com/features/americas-favorite-star-wars-movies-and-least-favorite-characters/)
 
 # From and Idea to a conclusion {data-background=#e8c35d}
 
