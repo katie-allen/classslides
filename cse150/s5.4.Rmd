@@ -6,17 +6,13 @@ title: ""
 
 ## Remember
 
+<br>
+
 You can resubmit case studies and reading quizzes *at any time* during the semester.
 
-## Tracking Progress
-
-You need:
-
-> - 6 case study presentations (In Class)
-> - 6 case study "comments" (In Class)
-> - 6 Tool Tips (Microsoft Teams)
-
 ## Practice
+
+<br>
 
 What data do we need to make this chart?
 
@@ -26,15 +22,20 @@ What data do we need to make this chart?
 
 ## Practice 
 
+<br>
+
 What data do we need to make this chart?
 
 ![](images/tidydata/hickey-datalab-starwars-41.png)
 
 [*Source*](https://fivethirtyeight.com/features/americas-favorite-star-wars-movies-and-least-favorite-characters/)
 
+
 # From and Idea to a conclusion {data-background=#e8c35d}
 
-## The plural of anecdote is not data
+## "The plural of anecdote is not data."
+
+<br>
 
 - What is an [anecdote](https://www.google.com/search?q=anecdote&oq=anecdote&aqs=chrome..69i57j69i60.1926j0j4&sourceid=chrome&ie=UTF-8)?
 
@@ -44,11 +45,19 @@ What data do we need to make this chart?
 
 ## Questions we can answer:
 
-- Is there a relationship between one category and another category?
+<br>
+
+- Is there a relationship between one category (birth month) and another category (sport)?
   - Chi-Squared Test of Independence
-- Is one proportion the same as another proportion?
+- Is a proportion the same as a constant?
+  - One Proportion Test
+- Is a proportion the same as another proportion?
   - Two Proportion Test
 
-# Case Study {data-background=#e8c35d}
+## Case Study
 
-## Time to ask questions and finish your case study.
+<br>
+
+Let's make some charts!
+
+![](images/look-at-this-graph.gif)
