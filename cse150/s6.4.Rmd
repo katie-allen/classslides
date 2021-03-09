@@ -2,7 +2,7 @@
 title: "Catching the cheat"
 ---
 
-# Finishing the Semester {data-background=#6897bb}
+# Finishing the Semester {data-background=#e8c35d}
 
 - Case Study 8: Messy data and data science
    - The next project will be done with a partner.  How do we want to pick partners?
@@ -13,7 +13,7 @@ title: "Catching the cheat"
 
 **Only one week after that!**
 
-# Case Study {data-background=#6897bb}
+# Case Study {data-background=#e8c35d}
 
 ## Background
 
@@ -38,7 +38,7 @@ You can find varied data sources available for your use on the data page in Canv
 - Multiple visualizations of the **Government Entity** data to find other interesting insights.
 
 
-# Data Exploration {data-background=#6897bb}
+# Data Exploration {data-background=#e8c35d}
 
 ## What can we do to orient our managers to the client?
 
