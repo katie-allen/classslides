@@ -10,11 +10,9 @@ params:
 
 
 
-# Welcome to class! {data-background=#f7d754}
+# Welcome to class! {data-background=#e8c35d}
 
-# Reading Discussion {data-background=#f7d754}
-
-# How to Visualize Time {data-background=#f7d754}
+# How to Visualize Time {data-background=#e8c35d}
 
 ## Time Visualization examples
 
@@ -36,8 +34,9 @@ In his iconic flow map of Napoleon's catastrophic 1812 invasion of Russia, Charl
 
 > - [Current Wind](http://hint.fm/wind/)
 
-# Questions and Work Time {data-background=#f7d754}
+# Questions and Work Time {data-background=#e8c35d}
 
+<!----------
 ## Time Before Christ
 
 Summary: It's harder than I thought. Don't worry about it unless you have to.
@@ -73,4 +72,4 @@ as.numeric(date("1970-01-01"))
 ## Move into R
 
 [code](http://ktoutloud.github.io/classslides/math335/dates_day2_notes.R)
- 
+---------------------->
