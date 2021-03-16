@@ -1,10 +1,14 @@
 ---
-title: "Visualizing Benford's Law"
+title: ""
 ---
 
-# Tableau Tools {data-background=#e8c35d}
+# Visualizing Benford's Law  {data-background=#e8c35d}
 
-[Visualizing Benford's Law](https://help.tableau.com/current/pro/desktop/en-us/benford.htm)
+<br>
+
+Welcome to class!
+
+## [Visualizing Benford's Law](https://help.tableau.com/current/pro/desktop/en-us/benford.htm)
 
 # Case Study {data-background=#e8c35d}
 
