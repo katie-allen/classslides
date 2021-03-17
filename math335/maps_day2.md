@@ -10,7 +10,7 @@ params:
 
 
 
-# Maps: Day 2 {data-background=#f7d754}
+# Maps: Day 2 {data-background=#e8c35d}
 
 Welcome to class!
 
@@ -24,9 +24,9 @@ Welcome to class!
 
 ## [xkcd](https://imgs.xkcd.com/comics/mercator_projection.png)
 
-# Task 23 {data-background=#f7d754}
+# Task 23 {data-background=#e8c35d}
 
-# Prep for Task 24 {data-background=#f7d754}
+# Prep for Task 24 {data-background=#e8c35d}
 
 ## Pro tip:
 
@@ -114,9 +114,11 @@ Altering the projection parameters of the CRS in the proj4 string
     *  The proj4 format information can be helpfull12.
 * There are many online examples3 of using R for spatial as well.
 
+<!---
 Note the use of +lat_0=45 and +lon_0=-115 and what they do your map.
+--->
 
-# Task 24 {data-background=#f7d754}
+# Task 24 {data-background=#e8c35d}
 
 ## Some helpful things
 

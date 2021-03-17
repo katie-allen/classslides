@@ -10,15 +10,20 @@ params:
 
 
 
-# Maps: Day 1 {data-background=#f7d754}
+# Maps: Day 1 {data-background=#e8c35d}
 
 Welcome to class!
 
-## Case Study Presentations
+## Reading Discussion
+
+<br>
+
+> - How to Become a Data Scientist in 2020
+> - Do I need to code in my free time to be a good developer?
 
 <!-------------
 
-# "Big" Data (Josh Wills) {data-background=#f7d754}
+# "Big" Data (Josh Wills) {data-background=#e8c35d}
 
 ## Scientists Vs. Analysts (Josh Wills)
 
@@ -35,7 +40,7 @@ Welcome to class!
 
 <!------------
 
-# Geospatial Data {data-background=#f7d754}
+# Geospatial Data {data-background=#e8c35d}
 
 ## McNamara on Mapping
 
@@ -63,14 +68,18 @@ Mapping raw data can lead to spurious spatial features. For example, regions can
 Furthermore, maps really do make convenient look-up tables (what is the cancer rate, or mean radon level, in my county?). Unfortunately, even maps that are intended to be used only as look-up tables are almost sure to be used for identifying spatial features – we find it very hard to suppress this instinct ourselves
 -------------->
 
-# Geospatial Data {data-background=#f7d754}
+# Geospatial Data {data-background=#e8c35d}
 
 ## Is the earth flat?
+
+<br>
 
 <blockquote class="twitter-video" data-lang="en"><p lang="en" dir="ltr">Kyrie Irving was trending on Twitter today because he believes the Earth is flat. I asked him about it. <a href="https://t.co/ODe9aP9qmK">pic.twitter.com/ODe9aP9qmK</a></p>&mdash; Arash Markazi (@ArashMarkazi) <a href="https://twitter.com/ArashMarkazi/status/832770937078571008?ref_src=twsrc%5Etfw">February 18, 2017</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Do people believe him?
+
+<br>
 
 <blockquote class="twitter-video" data-lang="en"><p lang="en" dir="ltr">Uh oh: Draymond is a Flat Earth/Kyrie Truther. <a href="https://t.co/icJThyG7hx">pic.twitter.com/icJThyG7hx</a></p>&mdash; The Crossover (@TheCrossover) <a href="https://twitter.com/TheCrossover/status/833014995583643649?ref_src=twsrc%5Etfw">February 18, 2017</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -78,6 +87,8 @@ Furthermore, maps really do make convenient look-up tables (what is the cancer r
 https://www.boston.com/sports/boston-celtics/2017/08/23/heres-why-kyrie-irving-thinks-the-earth-is-flat
 
 ## Which area is larger?
+
+<br>
 
 The continental 48 states or the country of Brazil?
 
@@ -87,6 +98,8 @@ The continental 48 states or the country of Brazil?
 
 
 ## When we make a map, what is our goal?
+
+<br>
 
 - Your goal will change which projection you use.
 - [Can you make an accurate map?](https://www.youtube.com/watch?v=8I_VpC6IuJs)
@@ -105,9 +118,11 @@ https://en.wikipedia.org/wiki/GDAL
 http://www.gdal.org
 -------------->
 
-# Maps Vs. Variables {data-background=#f7d754}
+# Maps Vs. Variables {data-background=#e8c35d}
 
 ## What is wrong?
+
+<br>
 
 "Here, you can take that, that's the final map of the numbers," Trump said, according to Reuters.  "It's pretty good, right? The red is obviously us." [1](http://www.businessinsider.com/trump-2016-electoral-map-reuters-interview-xi-jinping-china-2017-4)
 
@@ -116,9 +131,13 @@ http://www.gdal.org
 
 ## Montana-Manhattan Problem
 
+<br>
+
 [](/images/Ch7_maps_area_combined.png)
 
 ## How could we spatially depict the variable of interest?
+
+<br>
 
 - [Chloropleth Map](https://en.wikipedia.org/wiki/Choropleth_map)
 - [Cartograms](https://en.wikipedia.org/wiki/Cartogram)
@@ -126,11 +145,15 @@ http://www.gdal.org
 
 ## Different views of the 2016 election numbers
 
+<br>
+
 >- [Check these out](http://www.businessinsider.com/2016-election-results-maps-population-adjusted-cartogram-2016-11/#heres-the-basic-electoral-college-map-with-states-that-hillary-clinton-won-in-blue-and-states-that-donald-trump-won-in-red-assuming-that-trumps-narrow-lead-in-michigan-continues-to-hold-1)
 
-# Geospatial data in R {data-background=#f7d754}
+# Geospatial data in R {data-background=#e8c35d}
 
 ## sp and sf
+
+<br>
 
 In R, there are two main lineages of tools for dealing with spatial data: `sp` and `sf`.
 
@@ -139,9 +162,13 @@ In R, there are two main lineages of tools for dealing with spatial data: `sp` a
 
 ## USAboundaries
 
+<br>
+
 The `USAboundaries` package contains functions that return `sf` files for US states, counties, and cities.
 
 ## Demo
+
+<br>
 
 Start by installing the packages:
 
@@ -152,14 +179,19 @@ install.packages("USAboundaries")
 
 ## Demo
 
+<br>
+
 ```
 idaho <- us_states(states = "Idaho")
 View(idaho)
 ```
+<br>
 
 What do you notice about the [structure of the data](https://r-spatial.github.io/sf/articles/sf1.html)?
 
 ## Demo
+
+<br>
 
 ```
 plot(idaho$geometry)
