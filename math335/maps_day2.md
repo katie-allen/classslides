@@ -14,30 +14,68 @@ params:
 
 Welcome to class!
 
-## Reading Discussion
-
-## Tracking Progress
-
-> - Don't forget to keep track of your tasks.
-> - Semester project should be moving along (it is next week's case study).
->- If you need another class presentation, do it next week.
+## Reading Discussion (All together)
 
 ## [xkcd](https://imgs.xkcd.com/comics/mercator_projection.png)
 
-# Task 23 {data-background=#e8c35d}
+# Prep for Case Study {data-background=#e8c35d}
 
-# Prep for Task 24 {data-background=#e8c35d}
+## What is a Geographic CRS?
 
-## Pro tip:
+<br>
 
-Actually read/watch the resources listed.
+When we want to pinpoint a location on the globe, we typically use latitude and longitude angles. For example, [40 degrees north and 50 degrees east ](https://www.earthdatascience.org/courses/earth-analytics/spatial-data-r/geographic-vs-projected-coordinate-reference-systems-UTM/).
 
-## What is a CRS?
+## What is a Geographic CRS?
+
+<br>
+
+A **geographic coordinate reference system** is the mapping (the connection) between a lat/long location (like 40 N 50 E) and an actual, physical location on the map.
+
+<br>
+
+A geographic CRS uses a perfect sphere to create this mapping. However, the earth is not a perfect sphere! [Now what?](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/gcs_vs_pcs/)
+
+## What is a "datum"?
+
+<br>
+
+There are many different geographic CRS systems. These different systems are defined by their reference point, which is called a **datum**.
+
+<br>
+
+[Video](https://www.youtube.com/watch?v=xKGlMp__jog)
+
+## What about map projections?
+
+<br>
+
+Once we know what geographic CRS we are using, we then need to decide what map projection, or "projected CRS" to use to convert 3D information (the lat/long coordinates) to 2D information (like an x,y point). [*ref*](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/gcs_vs_pcs/)
+
+<br>
+
+![](images/grid2.png)
+
+## In Summary
+
+<br>
+
+>- A geographic CRS defines where the data is located on the earth's surface. (In 3D!)
+>- A projected CRS tells the computer how to put the data on a flat surface. (2D)
+
+
+<!-----------------
+
 
 - "**Map projections** try to portray the surface of the earth, or a portion of the earth, on a flat piece of paper or computer screen."
 - "A **coordinate reference system** (CRS) then defines how the two-dimensional, projected map in your GIS relates to real places on the earth."
 
 [source](https://docs.qgis.org/3.16/en/docs/gentle_gis_introduction/coordinate_reference_systems.html#)
+
+
+--------------------->
+
+
 
 
 
@@ -62,13 +100,15 @@ file_delete(df); dir_delete(uf)
 
 ---------------->
 
-## How to define a CRS
+## Working with spatial data in R
+
+<br>
 
 >- What info is contained in a [CRS](https://mgimond.github.io/Spatial/coordinate-systems-in-r.html#assigning-a-coordinate-system)?
->- What is an EPSG? ([find a EPSG](https://epsg.org/home.html))
->- In R, you can use define a CRS with:
->   - a proj4 string
->   - a specific EPSG number
+>- In R, you can use define a projected CRS with:
+>   - a "Proj4" string, or
+>   - a specific "EPSG" number
+>- [Find an EPSG](https://epsg.org/home.html)
 
 <!-- EPSG is a set of pre-defined CRS's that is maintained by the IOGP Geomatic's Committee. (Some industry group) -->
 
@@ -97,13 +137,17 @@ Go to class activity in I-learn to change your previous tasks's map to a differe
 [Old activity instructions](https://byuistats.github.io/M335/spatial_class.html) 
 -------------->
 
-## Method 1
+## Using an EPSG number
+
+<br>
 
 Altering the projection by using an EPSG
 
 * Search for an EPSG that works: https://epsg.org/home.html.
 
-## Method 2
+## Using a Proj4 string
+
+<br>
 
 Altering the projection parameters of the CRS in the proj4 string
 
@@ -118,10 +162,8 @@ Altering the projection parameters of the CRS in the proj4 string
 Note the use of +lat_0=45 and +lon_0=-115 and what they do your map.
 --->
 
-# Task 24 {data-background=#e8c35d}
+## Some helpful functions
 
-## Some helpful things
-
->- How to read in a shp file
+>- `sf::st_read()`
 >- `USAboundaries::state_plane()`
 >- `sf::st_transform()`

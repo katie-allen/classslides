@@ -513,29 +513,50 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 
-<section><section id="maps-day-2" class="title-slide slide level1" data-background="#e8c35d"><h1>Maps: Day 2</h1><p>Welcome to class!</p></section><section id="reading-discussion" class="slide level2">
-<h2>Reading Discussion</h2>
-</section><section id="tracking-progress" class="slide level2">
-<h2>Tracking Progress</h2>
-<ul>
-<li>Don’t forget to keep track of your tasks.</li>
-<li>Semester project should be moving along (it is next week’s case study).</li>
-<li>If you need another class presentation, do it next week.</li>
-</ul>
+<section><section id="maps-day-2" class="title-slide slide level1" data-background="#e8c35d"><h1>Maps: Day 2</h1><p>Welcome to class!</p></section><section id="reading-discussion-all-together" class="slide level2">
+<h2>Reading Discussion (All together)</h2>
 </section><section id="xkcd" class="slide level2">
 <h2><a href="https://imgs.xkcd.com/comics/mercator_projection.png">xkcd</a></h2>
 </section></section>
-<section id="task-23" class="title-slide slide level1" data-background="#e8c35d"><h1>Task 23</h1></section>
-<section><section id="prep-for-task-24" class="title-slide slide level1" data-background="#e8c35d"><h1>Prep for Task 24</h1></section><section id="pro-tip" class="slide level2">
-<h2>Pro tip:</h2>
-<p>Actually read/watch the resources listed.</p>
-</section><section id="what-is-a-crs" class="slide level2">
-<h2>What is a CRS?</h2>
+<section><section id="prep-for-case-study" class="title-slide slide level1" data-background="#e8c35d"><h1>Prep for Case Study</h1></section><section id="what-is-a-geographic-crs" class="slide level2">
+<h2>What is a Geographic CRS?</h2>
+<p><br></p>
+<p>When we want to pinpoint a location on the globe, we typically use latitude and longitude angles. For example, <a href="https://www.earthdatascience.org/courses/earth-analytics/spatial-data-r/geographic-vs-projected-coordinate-reference-systems-UTM/">40 degrees north and 50 degrees east</a>.</p>
+</section><section id="what-is-a-geographic-crs-1" class="slide level2">
+<h2>What is a Geographic CRS?</h2>
+<p><br></p>
+<p>A <strong>geographic coordinate reference system</strong> is the mapping (the connection) between a lat/long location (like 40 N 50 E) and an actual, physical location on the map.</p>
+<p><br></p>
+<p>A geographic CRS uses a perfect sphere to create this mapping. However, the earth is not a perfect sphere! <a href="https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/gcs_vs_pcs/">Now what?</a></p>
+</section><section id="what-is-a-datum" class="slide level2">
+<h2>What is a “datum”?</h2>
+<p><br></p>
+<p>There are many different geographic CRS systems. These different systems are defined by their reference point, which is called a <strong>datum</strong>.</p>
+<p><br></p>
+<p><a href="https://www.youtube.com/watch?v=xKGlMp__jog">Video</a></p>
+</section><section id="what-about-map-projections" class="slide level2">
+<h2>What about map projections?</h2>
+<p><br></p>
+<p>Once we know what geographic CRS we are using, we then need to decide what map projection, or “projected CRS” to use to convert 3D information (the lat/long coordinates) to 2D information (like an x,y point). <a href="https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/gcs_vs_pcs/"><em>ref</em></a></p>
+<p><br></p>
+<p><img data-src="images/grid2.png" /></p>
+</section><section id="in-summary" class="slide level2">
+<h2>In Summary</h2>
+<p><br></p>
 <ul>
-<li class="fragment">“<strong>Map projections</strong> try to portray the surface of the earth, or a portion of the earth, on a flat piece of paper or computer screen.”</li>
-<li class="fragment">“A <strong>coordinate reference system</strong> (CRS) then defines how the two-dimensional, projected map in your GIS relates to real places on the earth.”</li>
+<li>A geographic CRS defines where the data is located on the earth’s surface. (In 3D!)</li>
+<li>A projected CRS tells the computer how to put the data on a flat surface. (2D)</li>
 </ul>
-<p><a href="https://docs.qgis.org/3.16/en/docs/gentle_gis_introduction/coordinate_reference_systems.html#">source</a></p>
+<!-----------------
+
+
+- "**Map projections** try to portray the surface of the earth, or a portion of the earth, on a flat piece of paper or computer screen."
+- "A **coordinate reference system** (CRS) then defines how the two-dimensional, projected map in your GIS relates to real places on the earth."
+
+[source](https://docs.qgis.org/3.16/en/docs/gentle_gis_introduction/coordinate_reference_systems.html#)
+
+
+--------------------->
 <!----------------
 
 ## Prepping for Class Task
@@ -556,16 +577,17 @@ file_delete(df); dir_delete(uf)
 ```
 
 ---------------->
-</section><section id="how-to-define-a-crs" class="slide level2">
-<h2>How to define a CRS</h2>
+</section><section id="working-with-spatial-data-in-r" class="slide level2">
+<h2>Working with spatial data in R</h2>
+<p><br></p>
 <ul>
 <li>What info is contained in a <a href="https://mgimond.github.io/Spatial/coordinate-systems-in-r.html#assigning-a-coordinate-system">CRS</a>?</li>
-<li>What is an EPSG? (<a href="https://epsg.org/home.html">find a EPSG</a>)</li>
-<li>In R, you can use define a CRS with:
+<li>In R, you can use define a projected CRS with:
 <ul>
-<li>a proj4 string</li>
-<li>a specific EPSG number</li>
+<li>a “Proj4” string, or</li>
+<li>a specific “EPSG” number</li>
 </ul></li>
+<li><a href="https://epsg.org/home.html">Find an EPSG</a></li>
 </ul>
 <!-- EPSG is a set of pre-defined CRS's that is maintained by the IOGP Geomatic's Committee. (Some industry group) -->
 </section><section id="using-the-sf-package-to-work-with-crs" class="slide level2">
@@ -586,14 +608,16 @@ Go to class activity in I-learn to change your previous tasks's map to a differe
 
 [Old activity instructions](https://byuistats.github.io/M335/spatial_class.html) 
 -------------->
-</section><section id="method-1" class="slide level2">
-<h2>Method 1</h2>
+</section><section id="using-an-epsg-number" class="slide level2">
+<h2>Using an EPSG number</h2>
+<p><br></p>
 <p>Altering the projection by using an EPSG</p>
 <ul>
 <li class="fragment">Search for an EPSG that works: <a href="https://epsg.org/home.html" class="uri">https://epsg.org/home.html</a>.</li>
 </ul>
-</section><section id="method-2" class="slide level2">
-<h2>Method 2</h2>
+</section><section id="using-a-proj4-string" class="slide level2">
+<h2>Using a Proj4 string</h2>
+<p><br></p>
 <p>Altering the projection parameters of the CRS in the proj4 string</p>
 <ul>
 <li class="fragment">Here is a nice list of some standard examples (<a href="http://www.radicalcartography.net/?projectionref" class="uri">http://www.radicalcartography.net/?projectionref</a>). Look in the “Name” column for names of differnet projections.</li>
@@ -610,11 +634,10 @@ Go to class activity in I-learn to change your previous tasks's map to a differe
 <!---
 Note the use of +lat_0=45 and +lon_0=-115 and what they do your map.
 --->
-</section></section>
-<section><section id="task-24" class="title-slide slide level1" data-background="#e8c35d"><h1>Task 24</h1></section><section id="some-helpful-things" class="slide level2">
-<h2>Some helpful things</h2>
+</section><section id="some-helpful-functions" class="slide level2">
+<h2>Some helpful functions</h2>
 <ul>
-<li>How to read in a shp file</li>
+<li><code>sf::st_read()</code></li>
 <li><code>USAboundaries::state_plane()</code></li>
 <li><code>sf::st_transform()</code></li>
 </ul>
