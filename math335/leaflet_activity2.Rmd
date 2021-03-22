@@ -37,7 +37,7 @@ Read in the COVID data. Replace the stars with yesterday's date m/d/y. This will
 ```{r load_data}
 # Use this R-Chunk to import all your datasets!
 covid <- read_csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv") %>% 
-  rename(confirmed = `3/21/21`)
+  rename(confirmed = `*/**/**`)
 ```
 
 ## Plotting the Top Cities
