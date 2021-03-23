@@ -2,7 +2,7 @@
 title: ""
 ---
 
-# Welcome to class! {data-background=#f7d754}
+# Welcome to class! {data-background=#e8c35d}
 
 ## End of the Semester
 
@@ -21,7 +21,7 @@ title: ""
 - [Articles in textbook](https://byuistats.github.io/BYUI_CSE150_StatBook/what-is-data-science.html#languages-of-data-science)
 - [Google](https://www.google.com/search?q=r+vs+python&rlz=1C1GCEJ_enUS882US882&oq=r+vs+p&aqs=chrome.1.69i57j35i39i457j0i20i263j0l2j69i60l3.3197j0j4&sourceid=chrome&ie=UTF-8) is always a good idea
 
-# Case Study 8 {data-background=#f7d754}
+# Case Study 8 {data-background=#e8c35d}
 
 ## Background
 
@@ -54,7 +54,7 @@ This letter is no more than a page.  It should address items related to the foll
 
 
 <!----------------
-# Dream Resume {data-background=#f7d754}
+# Dream Resume {data-background=#e8c35d}
 
 - Write a dream resume you would actually use (it doesn't have to be data science!)
   1. Coursework
@@ -64,7 +64,7 @@ This letter is no more than a page.  It should address items related to the foll
 ------------->
 
   
-# Your Future {data-background=#f7d754}
+# Your Future {data-background=#e8c35d}
 
 ## What are your goals?
 

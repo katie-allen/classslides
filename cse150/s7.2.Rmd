@@ -2,7 +2,7 @@
 title: "Call Centers and Data Requests"
 ---
 
-# Supplemental Readings {data-background=#6897bb}
+# Supplemental Readings {data-background=#e8c35d}
 
 ## Data Science in general
 
@@ -15,7 +15,7 @@ title: "Call Centers and Data Requests"
 What do you think about R, Python, and SQL?  Remember, your case study requires you to have a firm understanding of them to make a recommendation.
 
 
-# Case Study {data-background=#6897bb}
+# Case Study {data-background=#e8c35d}
 
 ## TB and the Gates Foundation
 
