@@ -14,38 +14,41 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 library(tidyverse)
 ```
 
-# Welcome to class! {data-background=#f7d754}
+# Welcome to class! {data-background=#e8c35d}
 
+<!-----
 ## Case Study Presentations
+------>
 
-<!------------------------
-# R-Studio Connect and Interaction {data-background=#f7d754}
+# R-Studio and Interactive Graphs {data-background=#e8c35d}
 
-## Setting up R-Studio
+## Making an interactive document
 
-Time to set up our R-Studio to share interactive documents.
-
->- https://shiny.byui.edu/connect in R-Studio
-
-Viewing on the website.
-
->- view with shiny.byui.edu/connect
-
-
-## Example: library(DT) - DataTables
+<br>
 
 Make a new Rmd file that just has the following in it (including the default yaml). 
 
-```{r bob, include=FALSE}
+```{r}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r bob2, eval=FALSE}
+```{r}
 library(DT)
-datatable(iris)
+# un-comment this line
+#datatable(iris)
 ```
 
------------------------>
+## Setting up R-Studio
+
+<br>
+
+Time to set up our R-Studio to share interactive documents.
+
+> - Visit [https://shiny.byui.edu/connect](https://shiny.byui.edu/connect) and log-in
+> - Click on the publish button and choose "Manage Accounts"
+> - Click the "connect" button and ensure the "Enable publishing to RStudio Connect" is checked
+> - Use shiny.byui.edu as the server name.
+> - After knitting the .rmd file, click on the publish button
 
 
 <!-- Putting information in your file [My interactive](https://shiny.byui.edu/connect/#/apps/3/access) -->
@@ -71,7 +74,7 @@ datatable(iris)
 
 
 <!--------------
-# Being Readings {data-background=#f7d754}
+# Being Readings {data-background=#e8c35d}
 
 ## View Data at the Atomic Level
 
@@ -85,19 +88,18 @@ datatable(iris)
 * The Mean is Not the Distribution
 ------------------>
 
-# Time Series Data {data-background=#f7d754}
+# Time Series Data {data-background=#e8c35d}
 
 ## What is a "time series"?
 
-
-
-
 ## ts and xts and zoos, oh my!
 
-We are not going to take the time to get into the weeds of xt, xts, zoo.  
+We are not going to take the time to get into the weeds of ts, xts, zoo.  
 
-Here are two locations where you can read till your heart is content - [1](https://faculty.washington.edu/ezivot/econ424/Working%20with%20Time%20Series%20Data%20in%20R.pdf), and [2](https://www.datacamp.com/courses/manipulating-time-series-data-in-r-with-xts-zoo).
+Here are two locations where you can read till your heart is content: 
+[Link 1](https://faculty.washington.edu/ezivot/econ424/Working%20with%20Time%20Series%20Data%20in%20R.pdf), and [Link 2](https://www.datacamp.com/courses/manipulating-time-series-data-in-r-with-xts-zoo).
 
+<br>
 
 > - [What is the difference in zoo, xts, and ts objects?](https://stackoverflow.com/questions/33714660/what-is-the-difference-the-zoo-object-and-ts-object-in-r)
 > - [Why xts? and FAQ](http://joshuaulrich.github.io/xts/xts_faq.html)
@@ -111,6 +113,8 @@ Here are two locations where you can read till your heart is content - [1](https
 
 ## Why xts?
 
+<br>
+
 **Q: Why should I use xts rather than zoo or another time-series package?**
 
 The main benefit of xts is its seamless compatibility with other packages using different time-series classes (timeSeries, zoo, etc). In addition, xts allows the user to add custom attributes to any object. See the main xts vignette for more information.
@@ -123,20 +127,36 @@ The main benefit of xts is its seamless compatibility with other packages using 
 <!-- xts uses a matrix rather than data.frame because: 1) xts is a subclass of zoo, and that's how zoo objects are structured; and 2) matrix objects have much better performance than data.frames. -->
 
 
-# The tidyquant Package {data-background=#f7d754}
+# The tidyquant Package {data-background=#e8c35d}
 
 ## tidyquant overview
 
-https://business-science.github.io/tidyquant/
+<br>
 
-[Watch the video](https://www.youtube.com/embed/woxJZTL2hok)
+> - [Documentation](https://business-science.github.io/tidyquant/)
+> - [Watch the video](https://www.youtube.com/embed/woxJZTL2hok)
 
-What are the 3 core functions of tidy quant?
+<br>
 
-<!-- get: tq_get() -->
-<!-- manipulate: tq_transmuate and tq_mutate() -->
-<!-- analyze: tq_portfolio() and tq_performance() -->
+What are the 3 core functions of tidyquant?
 
+> - get: `tq_get()`
+> - manipulate: `tq_transmuate` and `tq_mutate()`
+> - analyze: `tq_portfolio()` and `tq_performance()`
+
+# The dygraphs Package {data-background=#e8c35d}
+
+## dygraphs
+
+<br>
+
+> "The dygraphs package is an R interface to the dygraphs JavaScript charting library. It provides rich facilities for charting time-series data in R."
+
+[dygraphs website and examples](https://rstudio.github.io/dygraphs/index.html)
+
+# Example {data-background=#e8c35d}
+
+<!--------------------------------
 ## Getting Financial Data
 
 `tq_get()`
@@ -152,10 +172,12 @@ What are the 3 core functions of tidy quant?
 ## tidyquant examples
 
 Pick 4 stocks to look up.
+------------------------------------>
 
 <!-- THe video schowed how to get a list of all stocks in an index -->
 <!-- do this part with a live demo only if there is time, or go through the "what does this command do" and then circle back for a live, full demo-->
 
+<!---------------------
 ```{r eval = FALSE, echo = TRUE}
 my_stocks <- c()
 price_data <- tq_get(my_stocks,
@@ -168,8 +190,12 @@ price_data <- tq_get(my_stocks,
 ## tidyquant examples
 
 Write out what this function is doing.
+
+----------------------------->
+
 <!-- significance of tq_mutate vs. tq_transmute -->
 
+<!--------------------------------------
 ```{r transmute_example,eval=FALSE, echo=TRUE}
 price_data %>% 
 tq_transmute(select = adjusted,
@@ -193,10 +219,14 @@ return_data %>%
 ```
 
 **Hint:** Read about `PerformanceAnalytics::Return.portfolio()`
+--------------------------------------->
 
+
+
+<!--------------
 ## Task 19
 
-# Settling In {data-background=#f7d754}
+# Settling In {data-background=#e8c35d}
 
 ## Remember the Goal
 
@@ -211,9 +241,12 @@ return_data %>%
 
 > Edward Tufte
 
+-------------->
+
+
 <!--------------
 
-# Next Class {data-background=#f7d754}
+# Next Class {data-background=#e8c35d}
 
 ## dygraphs: R connection to dygraphs JavaScript charting library
 

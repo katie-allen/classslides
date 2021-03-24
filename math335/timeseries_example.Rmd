@@ -1,0 +1,189 @@
+---
+title: "Example: Stock Competition"
+output: 
+  html_document:
+    theme: spacelab
+    toc: true
+    toc_float: true
+    toc_depth: 2
+    code_folding: hide
+    keep_md: true
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Background
+
+The stock market is overflowing with data. There are many packages in R that allow us to get quick access to information on publicly traded companies. Imagine that you and a friend each purchased about $1,000 of stock in three different stocks at the start of October of 2019, and you want to compare your performance up to this week. Use the stock shares purchased and share prices to demonstrate how each of you fared over the period you were competing (assuming that you did not change your allocations).
+
+```{r, message=FALSE}
+library(tidyverse)
+library(tidyquant)
+library(timetk)
+library(xts)
+library(dygraphs)
+```
+
+# Friendly Stock Competition
+
+I chose Overstock (OSTK), Health Catalyst (HCAT), and Domo (DOMO). The other three "friend" stocks were chosen by a random generator. We are going to pull the price performance data using `library(tidyquant)` and build a visualization that shows who is winning each day of the competition.
+
+```{r}
+# my stocks - utah companies
+my.stock <- tq_get(c("OSTK","HCAT","DOMO"),
+             get = "stock.prices",
+             from = "2019-10-01")
+head(my.stock)
+```
+
+```{r}
+my.returns <- my.stock %>% 
+  group_by(symbol) %>% 
+  tq_transmute(select = adjusted,
+                    mutate_fun = periodReturn,
+                    period = "daily",
+                    type = "arithmetic")
+head(my.returns)
+```
+
+
+
+```{r}
+my.returns %>% 
+  tq_portfolio(assets_col = symbol,
+               returns_col = daily.returns,
+               weights = c(.5, .25, .25))
+```
+
+
+
+```{r}
+my.portfolio <- my.returns %>% 
+  tq_portfolio(assets_col = symbol,
+               returns_col = daily.returns,
+               weights = c(.5, .25, .25),
+               wealth.index = TRUE) %>% 
+  mutate(value = 1000*portfolio.wealthindex,
+         `Who's Stock` = "Mine")
+head(my.portfolio)
+```
+
+```{r}
+# random stocks
+rand.stock <- tq_get(c("TLMD","CQP","RRBI"),
+             get = "stock.prices",
+             from = "2019-10-01")
+
+rand.returns <- rand.stock %>% 
+  group_by(symbol) %>% 
+  tq_transmute(select = adjusted,
+                    mutate_fun = periodReturn,
+                    period = "daily",
+                    type = "arithmetic")
+
+rand.portfolio <- rand.returns %>% 
+  tq_portfolio(assets_col = symbol,
+               returns_col = daily.returns,
+               weights = c(.5, .25, .25),
+               wealth.index = TRUE) %>% 
+  mutate(value = 1000*portfolio.wealthindex,
+         `Who's Stock` = "Random")
+
+head(rand.portfolio)
+```
+
+```{r}
+# put them together and plot
+both.portfolio = my.portfolio %>% bind_rows(rand.portfolio)
+
+both.portfolio %>% 
+  ggplot(aes(x = date, y = value, colour=`Who's Stock`)) +
+  geom_line() +
+  labs(title = "Friendly Stock Competition",
+       subtitle = "It's all fun and games till COVID-19") +
+  xlab("") +
+  ylab("")
+
+```
+
+# (Interactive) Friendly Stock Competition
+
+This is what my data looks like right now:
+
+```{r}
+class(both.portfolio)
+head(both.portfolio)
+```
+
+I want to convert this into an `xts` object, so that I can plot it using `dygraphs`. Thill will go more smoothly if I convert the two portfolios separately.
+
+```{r}
+mine.xts <- my.portfolio %>% tk_xts()
+rand.xts <- rand.portfolio %>% tk_xts()
+
+class(my.portfolio)
+class(mine.xts)
+head(mine.xts)
+```
+
+I could also do the conversion manually by creating my own `xts` objects.
+
+```{r}
+mine.xts <- xts(x = my.portfolio$value, order.by = my.portfolio$date)
+rand.xts <- xts(x = rand.portfolio$value, order.by = rand.portfolio$date)
+
+class(my.portfolio)
+class(mine.xts)
+head(mine.xts)
+```
+
+Now I'm ready for `dygraph`!
+
+```{r}
+both.xts <- cbind(mine.xts, rand.xts)
+head(both.xts)
+dygraph(both.xts)
+```
+
+
+
+
+
+
+<!----------------
+> Show which stock is helping the winner of the competition.
+
+```{r}
+my.ind.returns <- my.returns %>% 
+  pivot_wider(id_cols = date, 
+              names_from = symbol, 
+              values_from = daily.returns) %>% 
+  mutate(OSTK.mult = 1 + OSTK,
+         HCAT.mult = 1 + HCAT,
+         DOMO.mult = 1 + DOMO)
+my.ind.returns <- my.ind.returns %>% 
+  mutate(OSTK.val = c(500, rep(NA, nrow(my.ind.returns)-1)),
+         HCAT.val = c(250, rep(NA, nrow(my.ind.returns)-1)),
+         DOMO.val = c(250, rep(NA, nrow(my.ind.returns)-1)))
+
+for(i in 2:nrow(my.ind.returns)){
+  my.ind.returns$OSTK.val[i] = my.ind.returns$OSTK.val[i-1]*my.ind.returns$OSTK.mult[i]
+  my.ind.returns$HCAT.val[i] = my.ind.returns$HCAT.val[i-1]*my.ind.returns$HCAT.mult[i]
+  my.ind.returns$DOMO.val[i] = my.ind.returns$DOMO.val[i-1]*my.ind.returns$DOMO.mult[i]
+}
+
+my.ind.returns %>% 
+  select(date, "OSTK"=OSTK.val, "HCAT"=HCAT.val, "DOMO"=DOMO.val) %>% 
+  pivot_longer(OSTK:DOMO, names_to = "Stock", values_to = "value") %>% 
+  ggplot(aes(x = date, y = value, color = Stock)) +
+  geom_line() +
+  #theme(legend.position="none") +
+  labs(title = "Stock Contributions",
+       subtitle = "Overstock is the stock that rises to the top") +
+  xlab("") +
+  ylab("")
+```
+--------------------->

@@ -513,35 +513,28 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 
-<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#f7d754"><h1>Welcome to class!</h1></section><section id="case-study-presentations" class="slide level2">
-<h2>Case Study Presentations</h2>
-<!------------------------
-# R-Studio Connect and Interaction {data-background=#f7d754}
-
-## Setting up R-Studio
-
-Time to set up our R-Studio to share interactive documents.
-
->- https://shiny.byui.edu/connect in R-Studio
-
-Viewing on the website.
-
->- view with shiny.byui.edu/connect
-
-
-## Example: library(DT) - DataTables
-
-Make a new Rmd file that just has the following in it (including the default yaml). 
-
-
-
-
-```r
-library(DT)
-datatable(iris)
-```
-
------------------------>
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1><!-----
+## Case Study Presentations
+------></section>
+<section><section id="r-studio-and-interactive-graphs" class="title-slide slide level1" data-background="#e8c35d"><h1>R-Studio and Interactive Graphs</h1></section><section id="making-an-interactive-document" class="slide level2">
+<h2>Making an interactive document</h2>
+<p><br></p>
+<p>Make a new Rmd file that just has the following in it (including the default yaml).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">echo =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">library</span>(DT)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="co"># un-comment this line</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="co">#datatable(iris)</span></span></code></pre></div>
+</section><section id="setting-up-r-studio" class="slide level2">
+<h2>Setting up R-Studio</h2>
+<p><br></p>
+<p>Time to set up our R-Studio to share interactive documents.</p>
+<ul>
+<li>Visit <a href="https://shiny.byui.edu/connect">https://shiny.byui.edu/connect</a> and log-in</li>
+<li>Click on the publish button and choose “Manage Accounts”</li>
+<li>Click the “connect” button and ensure the “Enable publishing to RStudio Connect” is checked</li>
+<li>Use shiny.byui.edu as the server name.</li>
+<li>After knitting the .rmd file, click on the publish button</li>
+</ul>
 <!-- Putting information in your file [My interactive](https://shiny.byui.edu/connect/#/apps/3/access) -->
 <!------------------------------
 ## Try: library(DT) - DataTables
@@ -562,7 +555,7 @@ datatable(iris)
 
 ---------------->
 <!--------------
-# Being Readings {data-background=#f7d754}
+# Being Readings {data-background=#e8c35d}
 
 ## View Data at the Atomic Level
 
@@ -576,12 +569,13 @@ datatable(iris)
 * The Mean is Not the Distribution
 ------------------>
 </section></section>
-<section><section id="time-series-data" class="title-slide slide level1" data-background="#f7d754"><h1>Time Series Data</h1></section><section id="what-is-a-time-series" class="slide level2">
+<section><section id="time-series-data" class="title-slide slide level1" data-background="#e8c35d"><h1>Time Series Data</h1></section><section id="what-is-a-time-series" class="slide level2">
 <h2>What is a “time series”?</h2>
 </section><section id="ts-and-xts-and-zoos-oh-my" class="slide level2">
 <h2>ts and xts and zoos, oh my!</h2>
-<p>We are not going to take the time to get into the weeds of xt, xts, zoo.</p>
-<p>Here are two locations where you can read till your heart is content - <a href="https://faculty.washington.edu/ezivot/econ424/Working%20with%20Time%20Series%20Data%20in%20R.pdf">1</a>, and <a href="https://www.datacamp.com/courses/manipulating-time-series-data-in-r-with-xts-zoo">2</a>.</p>
+<p>We are not going to take the time to get into the weeds of ts, xts, zoo.</p>
+<p>Here are two locations where you can read till your heart is content: <a href="https://faculty.washington.edu/ezivot/econ424/Working%20with%20Time%20Series%20Data%20in%20R.pdf">Link 1</a>, and <a href="https://www.datacamp.com/courses/manipulating-time-series-data-in-r-with-xts-zoo">Link 2</a>.</p>
+<p><br></p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/33714660/what-is-the-difference-the-zoo-object-and-ts-object-in-r">What is the difference in zoo, xts, and ts objects?</a></li>
 <li><a href="http://joshuaulrich.github.io/xts/xts_faq.html">Why xts? and FAQ</a></li>
@@ -592,85 +586,127 @@ datatable(iris)
 <!-- xts offer additional functions beyond what zoo has by making reasonable constraints on the data types. -->
 </section><section id="why-xts" class="slide level2">
 <h2>Why xts?</h2>
+<p><br></p>
 <p><strong>Q: Why should I use xts rather than zoo or another time-series package?</strong></p>
 <p>The main benefit of xts is its seamless compatibility with other packages using different time-series classes (timeSeries, zoo, etc). In addition, xts allows the user to add custom attributes to any object. See the main xts vignette for more information.</p>
 <!-- ## Matrix formats -->
 <!-- **Q: Why is xts implemented as a matrix rather than a data frame?** -->
 <!-- xts uses a matrix rather than data.frame because: 1) xts is a subclass of zoo, and that's how zoo objects are structured; and 2) matrix objects have much better performance than data.frames. -->
 </section></section>
-<section><section id="the-tidyquant-package" class="title-slide slide level1" data-background="#f7d754"><h1>The tidyquant Package</h1></section><section id="tidyquant-overview" class="slide level2">
+<section><section id="the-tidyquant-package" class="title-slide slide level1" data-background="#e8c35d"><h1>The tidyquant Package</h1></section><section id="tidyquant-overview" class="slide level2">
 <h2>tidyquant overview</h2>
-<p><a href="https://business-science.github.io/tidyquant/" class="uri">https://business-science.github.io/tidyquant/</a></p>
-<p><a href="https://www.youtube.com/embed/woxJZTL2hok">Watch the video</a></p>
-<p>What are the 3 core functions of tidy quant?</p>
-<!-- get: tq_get() -->
-<!-- manipulate: tq_transmuate and tq_mutate() -->
-<!-- analyze: tq_portfolio() and tq_performance() -->
-</section><section id="getting-financial-data" class="slide level2">
-<h2>Getting Financial Data</h2>
-<p><code>tq_get()</code></p>
-</section><section id="manipulating-financial-data" class="slide level2">
-<h2>Manipulating Financial Data</h2>
-<p><code>tq_transmute()</code> and <code>tq_mutate()</code></p>
-</section><section id="performance-analysis" class="slide level2">
-<h2>Performance Analysis</h2>
-<p><code>tq_portfolio()</code> and <code>tq_performance()</code></p>
-</section><section id="tidyquant-examples" class="slide level2">
-<h2>tidyquant examples</h2>
-<p>Pick 4 stocks to look up.</p>
+<p><br></p>
+<ul>
+<li><a href="https://business-science.github.io/tidyquant/">Documentation</a></li>
+<li><a href="https://www.youtube.com/embed/woxJZTL2hok">Watch the video</a></li>
+</ul>
+<p><br></p>
+<p>What are the 3 core functions of tidyquant?</p>
+<ul>
+<li>get: <code>tq_get()</code></li>
+<li>manipulate: <code>tq_transmuate</code> and <code>tq_mutate()</code></li>
+<li>analyze: <code>tq_portfolio()</code> and <code>tq_performance()</code></li>
+</ul>
+</section></section>
+<section><section id="the-dygraphs-package" class="title-slide slide level1" data-background="#e8c35d"><h1>The dygraphs Package</h1></section><section id="dygraphs" class="slide level2">
+<h2>dygraphs</h2>
+<p><br></p>
+<blockquote>
+<p>“The dygraphs package is an R interface to the dygraphs JavaScript charting library. It provides rich facilities for charting time-series data in R.”</p>
+</blockquote>
+<p><a href="https://rstudio.github.io/dygraphs/index.html">dygraphs website and examples</a></p>
+</section></section>
+<section id="example" class="title-slide slide level1" data-background="#e8c35d"><h1>Example</h1><!--------------------------------
+## Getting Financial Data
+
+`tq_get()`
+
+## Manipulating Financial Data
+
+`tq_transmute()` and `tq_mutate()`
+
+## Performance Analysis
+
+`tq_portfolio()` and `tq_performance()`
+
+## tidyquant examples
+
+Pick 4 stocks to look up.
+------------------------------------>
 <!-- THe video schowed how to get a list of all stocks in an index -->
 <!-- do this part with a live demo only if there is time, or go through the "what does this command do" and then circle back for a live, full demo-->
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>my_stocks &lt;-<span class="st"> </span><span class="kw">c</span>()</span>
-<span id="cb1-2"><a href="#cb1-2"></a>price_data &lt;-<span class="st"> </span><span class="kw">tq_get</span>(my_stocks,</span>
-<span id="cb1-3"><a href="#cb1-3"></a>       <span class="dt">get =</span> <span class="st">&quot;stock.prices&quot;</span>,</span>
-<span id="cb1-4"><a href="#cb1-4"></a>       <span class="dt">from =</span> <span class="st">&quot;2020-09-14&quot;</span>)</span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="co">#You can add &quot;to = &quot; also</span></span></code></pre></div>
-</section><section id="tidyquant-examples-1" class="slide level2">
-<h2>tidyquant examples</h2>
-<p>Write out what this function is doing. <!-- significance of tq_mutate vs. tq_transmute --></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>price_data <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">tq_transmute</span>(<span class="dt">select =</span> adjusted,</span>
-<span id="cb2-3"><a href="#cb2-3"></a>               <span class="dt">mutate_fun =</span> periodReturn,</span>
-<span id="cb2-4"><a href="#cb2-4"></a>               <span class="dt">period =</span> <span class="st">&quot;daily&quot;</span>,</span>
-<span id="cb2-5"><a href="#cb2-5"></a>               <span class="dt">type =</span> <span class="st">&quot;arithmetic&quot;</span>)</span></code></pre></div>
-<p><strong>Hint:</strong> Read about <code>quantmod::periodReturn()</code></p>
-</section><section id="tidyquant-examples-2" class="slide level2">
-<h2>tidyquant examples</h2>
-<p>Write out what this function is doing.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>return_data <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="st">  </span><span class="kw">tq_portfolio</span>(<span class="dt">assets_col=</span>symbol,</span>
-<span id="cb3-3"><a href="#cb3-3"></a>               <span class="dt">returns_col=</span>daily.returns,</span>
-<span id="cb3-4"><a href="#cb3-4"></a>               <span class="dt">weights =</span> <span class="kw">tibble</span>(<span class="dt">asset.names =</span> my_stocks, <span class="dt">weight =</span> <span class="kw">c</span>(<span class="fl">0.190</span>,.<span class="dv">534</span>,.<span class="dv">207</span>,.<span class="dv">069</span>)),</span>
-<span id="cb3-5"><a href="#cb3-5"></a>               <span class="dt">wealth.index =</span> T)</span></code></pre></div>
-<p><strong>Hint:</strong> Read about <code>PerformanceAnalytics::Return.portfolio()</code></p>
-</section><section id="task-19" class="slide level2">
-<h2>Task 19</h2>
-</section></section>
-<section><section id="settling-in" class="title-slide slide level1" data-background="#f7d754"><h1>Settling In</h1></section><section id="remember-the-goal" class="slide level2">
-<h2>Remember the Goal</h2>
-<p>“The most exciting phrase to hear in science, the one that heralds new discoveries, is not ‘Eureka!’ but ‘That’s funny…’” -Isaac Asimov</p>
-<ul>
-<li><a href="https://youtu.be/fSgEeI2Xpdc">Remembering Good Principles</a></li>
-<li><a href="https://www.youtube.com/embed/coNDCIMH8bk?start=628">Rauser view on time and data</a> - 10:28 to 17:50</li>
-</ul>
-</section><section id="edward-tufte" class="slide level2">
-<h2>Edward Tufte</h2>
-<blockquote>
-<p>Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space</p>
-</blockquote>
-<blockquote>
-<p>Edward Tufte</p>
-</blockquote>
+<!---------------------
+
+```r
+my_stocks <- c()
+price_data <- tq_get(my_stocks,
+       get = "stock.prices",
+       from = "2020-09-14")
+#You can add "to = " also
+```
+
+
+## tidyquant examples
+
+Write out what this function is doing.
+
+----------------------------->
+<!-- significance of tq_mutate vs. tq_transmute -->
+<!--------------------------------------
+
+```r
+price_data %>% 
+tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = "daily",
+               type = "arithmetic")
+```
+
+**Hint:** Read about `quantmod::periodReturn()`
+
+## tidyquant examples
+
+Write out what this function is doing.
+
+
+```r
+return_data %>% 
+  tq_portfolio(assets_col=symbol,
+               returns_col=daily.returns,
+               weights = tibble(asset.names = my_stocks, weight = c(0.190,.534,.207,.069)),
+               wealth.index = T)
+```
+
+**Hint:** Read about `PerformanceAnalytics::Return.portfolio()`
+--------------------------------------->
+<!--------------
+## Task 19
+
+# Settling In {data-background=#e8c35d}
+
+## Remember the Goal
+
+"The most exciting phrase to hear in science, the one that heralds new discoveries, is not 'Eureka!' but 'That's funny...'" -Isaac Asimov
+
+> - [Remembering Good Principles](https://youtu.be/fSgEeI2Xpdc)
+> - [Rauser view on time and data](https://www.youtube.com/embed/coNDCIMH8bk?start=628) - 10:28 to 17:50
+
+## Edward Tufte
+
+> Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space
+
+> Edward Tufte
+
+-------------->
 <!--------------
 
-# Next Class {data-background=#f7d754}
+# Next Class {data-background=#e8c35d}
 
 ## dygraphs: R connection to dygraphs JavaScript charting library
 
 Open the [dygraphs help website](http://rstudio.github.io/dygraphs/index.html) and implement one of their examples in your local R session.
 
----------------->
-</section></section>
+----------------></section>
     </div>
   </div>
 
