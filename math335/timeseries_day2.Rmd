@@ -22,6 +22,19 @@ library(tidyverse)
 
 [The Ethical Data Scientist](https://slate.com/technology/2016/02/how-to-bring-better-ethics-to-data-science.html)
 
+## Reading Discussion
+
+<br>
+
+- "If the data scientist's goal is to create automated processes that affect people's lives, then he or she should regularly consider ethics in a way that academics in computer science and statistics, generally speaking, do not."
+- "The ethical data scientist would strive to improve the world, not repeat it. That would mean deploying tools to explicitly construct fair processes. As long as our world is not perfect, and as long as data is being collected on that world, we will not be building models that are improvements on our past unless we specifically set out to do so."
+
+## Reading Discussion
+
+<br>
+
+![](images/great_power.gif)
+
 ## RStudio Connect Problems
 
 ## Next Week's Schedule
