@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="" />
+  <title>Last Day</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Last Day</h1>
+</section>
+
+<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1></section><section id="the-peace-and-hope-of-easter" class="slide level2">
+<h2>The Peace and Hope of Easter</h2>
+<p><br></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bACX8BXHuEs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</section><section id="reading-discussion" class="slide level2">
+<h2>Reading Discussion</h2>
+<p><br></p>
+<p><a href="https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67">The Data Science Process</a></p>
+</section><section id="rstudio-connect-problems" class="slide level2">
+<h2>RStudio Connect Problems</h2>
+</section></section>
+<section><section id="semester-project" class="title-slide slide level1" data-background="#e8c35d"><h1>Semester Project</h1></section><section id="wednesday" class="slide level2">
+<h2>Wednesday</h2>
+<p><br></p>
+<p>Remember Wednesday is a work day. I will be on zoom (but not in the classroom) to answer questions during class.</p>
+</section><section id="presentation-outline" class="slide level2">
+<h2>Presentation Outline</h2>
+<p><br></p>
+<p>Friday we will <strong>all meet on zoom</strong>. In your breakout room, take turns presenting projects.</p>
+<ul>
+<li class="fragment">Share your screen.</li>
+<li class="fragment">You get 5 minutes to present.</li>
+<li class="fragment">Then 1 or 2 minutes to answer questions from the group.</li>
+</ul>
+</section><section id="presentation-outline-1" class="slide level2">
+<h2>Presentation Outline</h2>
+<p><br></p>
+<p>What should you talk about for 5 minutes?</p>
+<ul>
+<li class="fragment">Introduce your project/goals/questions</li>
+<li class="fragment">Where did you find your data?</li>
+<li class="fragment">What problems did you have with your data?</li>
+<li class="fragment">How did you wrangle your data?
+<ul>
+<li class="fragment">Did you learn anything new?</li>
+<li class="fragment">What was your wrangling goal?</li>
+</ul></li>
+<li class="fragment">What visualizations did you choose to make?
+<ul>
+<li class="fragment">How do they help answer your original question?</li>
+<li class="fragment">Did you learn any new methods/functions?</li>
+<li class="fragment">Did you gain any insights into your data?</li>
+</ul></li>
+<li class="fragment">What theories/ideas do you have to explain what you saw in your data?</li>
+<li class="fragment">If you kept working on this project, what would be the “next steps”?</li>
+</ul>
+</section><section id="presentation-tips" class="slide level2">
+<h2>Presentation Tips</h2>
+<p><br></p>
+<p>Think about good and bab presentations you have seen. (TED talks, class lectures, general conference, etc.)</p>
+<p>What made the good ones “good” and the bad ones “bad”?</p>
+</section><section id="how-to-write-a-github-issue" class="slide level2">
+<h2>How to write a GitHub issue</h2>
+<p><br></p>
+<p>As part of the semester project, you will need to provide feedback to at least one of the students in your breakout room. The feedback needs to be in a GitHub “issue”.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=TJlYiMp8FuY">Video: What is a GitHub issue?</a></li>
+<li>Good and Bad Examples <a href="https://upthemes.com/blog/2014/02/writing-useful-github-issues/">1</a> and <a href="https://wiredcraft.com/blog/how-we-write-our-github-issues/">2</a></li>
+<li><a href="https://github.com/tidyverse/ggplot2/issues/4379">ggplot2 example</a></li>
+<li>Class Example</li>
+</ul>
+</section></section>
+<section><section id="your-future" class="title-slide slide level1" data-background="#e8c35d"><h1>Your Future</h1></section><section id="what-are-your-goals" class="slide level2">
+<h2>What are your goals?</h2>
+<ul>
+<li class="fragment">Where do you want to be in a week? A month? A year? 5 years? 10 years?</li>
+<li class="fragment">How do you get there?</li>
+</ul>
+</section><section id="hustle-culture" class="slide level2">
+<h2>Hustle culture</h2>
+<p><a href="https://www.nytimes.com/2019/01/26/business/against-hustle-culture-rise-and-grind-tgim.html">Why are young people pretending to love work?</a></p>
+</section><section id="workism-is-making-americans-miserable" class="slide level2">
+<h2><a href="https://www.theatlantic.com/ideas/archive/2019/02/religion-workism-making-americans-miserable/583441/?fbclid=IwAR1CiPDQJ8WpE7IyxwXBB_-cyy2gLo3Ecvhjbl3ude9_JRU5XcHTlcVtGKI">Workism Is Making Americans Miserable</a></h2>
+<section style="text-align: left;">
+<ul>
+<li class="fragment">In the past century, the American conception of work has shifted from jobs to careers to callings - from necessity to status to meaning. In an agrarian or early-manufacturing economy, where tens of millions of people perform similar routinized tasks, there are no delusions about the higher purpose of, say, planting corn or screwing bolts: It’s just a job.</li>
+<li class="fragment">The rise of the professional class and corporate bureaucracies in the early 20th century created the modern journey of a career, a narrative arc bending toward a set of precious initials: VP, SVP, CEO. The upshot is that for today’s workists, <strong>anything short of finding one’s vocational soul mate means a wasted life.</strong></li>
+<li class="fragment">“We’ve created this idea that the meaning of life should be found in work,” says Oren Cass, the author of the book The Once and Future Worker. “We tell young people that their work should be their passion. ‘Don’t give up until you find a job that you love!’ we say. ‘You should be changing the world!’ we tell them. That is the message in commencement addresses, in pop culture, and frankly, in media, including The Atlantic.”</li>
+<li class="fragment"><strong>But our desks were never meant to be our altars.</strong></li>
+<li class="fragment">The problem with this gospel - Your dream job is out there, so never stop hustling - is that it’s a blueprint for spiritual and physical exhaustion. Long hours don’t make anybody more productive or creative; they make people stressed, tired and bitter.</li>
+</ul>
+</section>
+</section><section id="its-a-wonderful-life" class="slide level2">
+<h2>It’s a Wonderful Life</h2>
+<p><br></p>
+<p><a href="https://youtu.be/Casf9U2gaOI?t=76">Video.</a></p>
+</section><section id="its-a-wonderful-life-1" class="slide level2">
+<h2>It’s a Wonderful Life</h2>
+<p><br></p>
+<p><strong>George:</strong> I couldn’t face being cooped up for the rest of my life in a shabby little office…I’d go crazy. I want to do something big and something important.</p>
+<p><strong>Dad:</strong> You know, George, I fell that in a small way we <em>are</em> doing something important.</p>
+</section><section id="personal-revelation" class="slide level2">
+<h2>Personal Revelation</h2>
+<p><br></p>
+<p><a href="https://www.churchofjesuschrist.org/study/general-conference/2018/04/revelation-for-the-church-revelation-for-our-lives?lang=eng">Advice from the prophet.</a></p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="externals/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="externals/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: true,
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+        // Transition style
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: '100%',
+        height: '100%',
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 1,
+        maxScale: 3,
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'externals/reveal.js-3.3.0.1/plugin/search/search.js', async: true },
+          { src: 'externals/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

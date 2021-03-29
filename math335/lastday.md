@@ -8,11 +8,7 @@ params:
   dtype: none
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 
-library(tidyverse)
-```
 
 # Welcome to class! {data-background=#e8c35d}
 
