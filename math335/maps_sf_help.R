@@ -1,3 +1,5 @@
+#------------------------------------------------------------------
+
 # RESOURCES and EXAMPLES
 #
 # http://search.r-project.org/library/ggplot2/html/stat_sf_coordinates.html
@@ -11,6 +13,9 @@ library(tidyverse)
 nc <- sf::st_read(system.file("shape/nc.shp", package="sf"))
 
 View(nc)
+
+nc$geometry[1]
+st_crs(nc)
 
 plot(nc$geometry)
 

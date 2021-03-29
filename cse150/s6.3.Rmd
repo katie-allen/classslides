@@ -2,7 +2,7 @@
 title: "Building a Story: Visual Crit"
 ---
 
-# Good Reads {data-background=#6897bb}
+# Good Reads {data-background=#e8c35d}
 
 ## Visual Crit
 
@@ -58,6 +58,6 @@ Work through the left chart on your own (15 minutes).
 
 
 
-# Case Study {data-background=#6897bb}
+# Case Study {data-background=#e8c35d}
 
 

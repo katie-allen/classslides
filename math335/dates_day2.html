@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
+  <meta name="author" content="" />
   <title>dates_day2.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -442,92 +443,72 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
-    <script src="externals/header-attrs-2.1/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 
-<section id="welcome-to-class" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Welcome to class!</h1>
-
-</section>
-
-<section id="reading-discussion" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Reading Discussion</h1>
-
-</section>
-
-<section>
-<section id="how-to-visualize-time" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">How to Visualize Time</h1>
-
-</section>
-<section id="time-visualization-examples" class="slide level2">
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1></section>
+<section><section id="how-to-visualize-time" class="title-slide slide level1" data-background="#e8c35d"><h1>How to Visualize Time</h1></section><section id="time-visualization-examples" class="slide level2">
 <h2>Time Visualization examples</h2>
 <p><a href="https://plotlyblog.tumblr.com/post/117105992082/time-series-graphs-eleven-stunning-ways-you-can">Plotly Blog</a></p>
-</section>
-<section id="the-march-visualization" class="slide level2">
+</section><section id="the-march-visualization" class="slide level2">
 <h2>The March Visualization</h2>
 <p>In his iconic flow map of Napoleon’s catastrophic 1812 invasion of Russia, Charles Joseph Minard blends and bends temporal and spatial representations. The path and number of outward-bound soldiers is represented by an initially thick tan ribbon while the dwindling numbers of retreating survivors are represented by a narrowing black band. In this visualization, the time it took to march into Russia is not clear. The only time stamps shown are for the return trip and progressing from right to left. In a sense, time is “bent” to advance the impact of the visual narrative.</p>
 <ul>
 <li><a href="http://uxmag.com/sites/default/files/uploads/whitney-its-about-time/Minard.png">The Image</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard_Update.png">In English</a></li>
 </ul>
-</section>
-<section id="the-walmart-march-visualization" class="slide level2">
+</section><section id="the-walmart-march-visualization" class="slide level2">
 <h2>The Walmart March Visualization</h2>
 <ul>
 <li><a href="http://excelcharts.com/wp-content/uploads/2012/06/walmart-growth-micromaps1.png">Small multiples and time</a></li>
 <li><a href="http://excelcharts.com/wp-content/uploads/2012/06/walmart-reorderable-matrix.png">Without spatial</a></li>
 </ul>
-</section>
-<section id="the-wind-march" class="slide level2">
+</section><section id="the-wind-march" class="slide level2">
 <h2>The wind march</h2>
 <ul>
 <li><a href="http://hint.fm/wind/">Current Wind</a></li>
 </ul>
 </section></section>
-<section>
-<section id="questions-and-work-time" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Questions and Work Time</h1>
+<section id="questions-and-work-time" class="title-slide slide level1" data-background="#e8c35d"><h1>Questions and Work Time</h1><!----------
+## Time Before Christ
 
-</section>
-<section id="time-before-christ" class="slide level2">
-<h2>Time Before Christ</h2>
-<p>Summary: It’s harder than I thought. Don’t worry about it unless you have to.</p>
-<ul>
-<li>?as.Date says: “Years before 1CE (aka 1AD) will probably not be handled correctly.”</li>
-<li><a href="https://github.com/tidyverse/lubridate/issues/2">lubridate issue</a></li>
-<li><a href="https://stackoverflow.com/questions/877366/what-is-the-best-way-to-handle-dates-before-christ-in-c-net">advice on stackoverflow</a></li>
-</ul>
-</section>
-<section id="dates-in-r-behind-the-scenes" class="slide level2">
-<h2>Dates in R: behind the scenes</h2>
-<p><a href="https://en.wikipedia.org/wiki/Unix_time">Unix time</a> is the number of seconds that have elapsed since the <strong>Unix epoch</strong>, which is January 1 1970.</p>
-<pre><code>library(lubridate)
+Summary: It's harder than I thought. Don't worry about it unless you have to.
+
+>- ?as.Date says: "Years before 1CE (aka 1AD) will probably not be handled correctly."
+>- [lubridate issue](https://github.com/tidyverse/lubridate/issues/2)
+>- [advice on stackoverflow](https://stackoverflow.com/questions/877366/what-is-the-best-way-to-handle-dates-before-christ-in-c-net)
+
+## Dates in R: behind the scenes
+
+[Unix time](https://en.wikipedia.org/wiki/Unix_time) is the number of seconds that have elapsed since the **Unix epoch**, which is January 1 1970.
+
+```
+library(lubridate)
 
 as_date(9910)
-## [1] &quot;1997-02-18&quot;
+## [1] "1997-02-18"
 
 as_date(0)
-## [1] &quot;1970-01-01&quot;
+## [1] "1970-01-01"
 
 as_date(-678)
-## [1] &quot;1968-02-23&quot;
+## [1] "1968-02-23"
 
-as.numeric(date(&quot;1970-01-01&quot;))
-## [1] 0</code></pre>
-</section>
-<section id="default-lubridate-time-zone-utc" class="slide level2">
-<h2>default lubridate time zone: UTC</h2>
-<p><a href="">Coordinated Universal Time (UTC)</a> is the default time zone in lubridate. If you load date data or convert something to a date without specifiying the time zone, UTC is used.</p>
-</section>
-<section id="move-into-r" class="slide level2">
-<h2>Move into R</h2>
-<p><a href="http://ktoutloud.github.io/classslides/math335/dates_day2_notes.R">code</a></p>
-</section></section>
+as.numeric(date("1970-01-01"))
+## [1] 0
+```
+
+## default lubridate time zone: UTC
+
+[Coordinated Universal Time (UTC)]() is the default time zone in lubridate. If you load date data or convert something to a date without specifiying the time zone, UTC is used.
+
+## Move into R
+
+[code](http://ktoutloud.github.io/classslides/math335/dates_day2_notes.R)
+----------------------></section>
     </div>
   </div>
 

@@ -443,45 +443,53 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
-    <script src="externals/header-attrs-2.5/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 
-<section id="goodness-of-fit-test" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Goodness of Fit Test</h1>
-<p>Welcome to class!</p>
-</section>
-
-<section>
-<section id="supplemental-reading" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Supplemental Reading</h1>
-
-</section>
-<section id="chi-squared-goodness-of-fit-test" class="slide level2">
-<h2><a href="https://byuistats.github.io/BYUI_CSE150_StatBook/inferential-decision-making.html#chi-squared-goodness-of-fit-test">Chi-Squared Goodness of Fit Test</a></h2>
-</section>
-<section id="goodness-of-fit-google-sheet" class="slide level2">
+<section><section id="goodness-of-fit-test" class="title-slide slide level1" data-background="#e8c35d"><h1>Goodness of Fit Test</h1><p>Welcome to class!</p></section><section id="expected-distributions" class="slide level2">
+<h2>Expected Distributions</h2>
+<p><br></p>
+<p>“There are many different ways data can be distributed. Often data will naturally adhere to predefined distributions. Heights and weights generally follow a normal distribution, repeated rolls of a fair die will follow a uniform distribution (no possibility is more likely than another), etc. The point is, given a particular scenario, we can often expect how data will be distributed. Suppose I flipped a coin 100 times and ask you to guess how many times the coin would land on a head. You would probably guess close to 50. This is because you’re familiar with the expected distribution of coin toss results.”</p>
+</section><section id="candy-example" class="slide level2">
+<h2>Candy Example</h2>
+</section><section id="height-example" class="slide level2">
+<h2>Height Example</h2>
+</section><section id="chi-squared-goodness-of-fit-test" class="slide level2">
+<h2>Chi-Squared Goodness of Fit Test</h2>
+<p><br></p>
+<ul>
+<li>“We gain a lot of power in statistics when we know the properties of the distribution of data, so it is very beneficial for us to know whether or not the population follows a known or expected distribution. Remember though, that it’s very likely that the data we’ll have access to will only be a sample of the population. Even if the sample data follows an expected distribution the population may not, and vice versa.”</li>
+</ul>
+<p><br></p>
+<ul>
+<li>“This is where the Chi-Squared Goodness of Fit Test comes into play. It allows us to infer whether or not data follow a particular distribution using the observed values we already have and the values we would expect if it does follow that assumed distribution.”</li>
+</ul>
+</section><section id="goodness-of-fit-google-sheet" class="slide level2">
 <h2><a href="https://docs.google.com/spreadsheets/d/1MKIIJ6bi0tQSvSvqvbimGxy9TredQAUhd3XGTDl_QNQ/template/preview">Goodness of Fit (Google Sheet)</a></h2>
-</section>
-<section id="the-counts-and-percentage-of-last-digits-for-college-students-asked-to-pick-random-numbers" class="slide level2">
-<h2>The counts and percentage of last digits for college students asked to pick random numbers</h2>
-<p>Let’s try our <a href="https://docs.google.com/spreadsheets/d/1MKIIJ6bi0tQSvSvqvbimGxy9TredQAUhd3XGTDl_QNQ/template/preview">goodness of fit tool</a></p>
+</section><section id="college-students-and-random-numbers" class="slide level2">
+<h2>College students and “random” numbers</h2>
+</section><section id="statistical-power-the-chi-square-distribution" class="slide level2">
+<h2>Statistical Power &amp; The Chi-Square Distribution</h2>
+<p><br></p>
 <ul>
-<li><a href="https://docs.google.com/spreadsheets/d/1TasFdyWr9xN7uWiWw0PkaFDwHYgQiC3y41YKR9CFRlA/edit#gid=0">Raw Data</a></li>
+<li class="fragment">The Chi-Square Goodness of Fit test is not very “powerful”. When in fact the Null Hypothesis is wrong, the test needs a lot of data to tell the difference.</li>
+<li class="fragment">All tests can tell the difference with enough samples. Statistical power is a key element in driving a sample size.</li>
 </ul>
-<ul>
-<li><a href="https://docs.google.com/spreadsheets/d/14dik9IbVtxpEIaG9QvnOEKX-EjcefDXAB2XwZlIYOtE/edit?usp=sharing">pick_random_data4</a></li>
-</ul>
-</section>
-<section id="understanding-benfords-distribution" class="slide level2">
+<!-------------
+- [Type I, Type II, and Power](https://www.simplypsychology.org/type_I_and_type_II_errors.html)
+- [What is power?](https://www.statisticsteacher.org/2017/09/15/what-is-power/)
+------------->
+</section></section>
+<section><section id="case-study" class="title-slide slide level1" data-background="#e8c35d"><h1>Case Study</h1></section><section id="understanding-benfords-distribution" class="slide level2">
 <h2>Understanding Benford’s distribution</h2>
+<p><br></p>
 <p><img data-src="images/sr/benfords.png" /></p>
-</section>
-<section id="statistical-tests-and-visualizations" class="slide level2">
+</section><section id="statistical-tests-and-visualizations" class="slide level2">
 <h2>Statistical tests and visualizations</h2>
+<p><br></p>
 <ul>
 <li>Let’s use the <a href="https://docs.google.com/spreadsheets/d/14-ERiaeVo5ljqBYHoa-O5HrfsykWVxFaiM2c2yq0zNA/edit?usp=sharing">benford_data4</a> file and look at the cities data in the data column.</li>
 </ul>
@@ -504,24 +512,9 @@ sum([Benford Percent]) * TOTAL(sum([N]))
 <!------
 ## Tableau Calculated Field
 ------->
-</section>
-<section id="statistical-power-the-chi-square-distribution" class="slide level2">
-<h2>Statistical Power &amp; The Chi-Square Distribution</h2>
-<p>The Chi-Square test is not very powerful. When in fact the the Null Hypothesis is wrong, the test can’t tell it is wrong. All tests can tell the difference with enough samples. Statistical power is a key element in driving a sample size.</p>
-<!-------------
-- [Type I, Type II, and Power](https://www.simplypsychology.org/type_I_and_type_II_errors.html)
-- [What is power?](https://www.statisticsteacher.org/2017/09/15/what-is-power/)
-------------->
-</section></section>
-<section>
-<section id="case-study" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Case Study</h1>
-
-</section>
-<section id="catch-me-if-you-can" class="slide level2">
+</section><section id="catch-me-if-you-can" class="slide level2">
 <h2><a href="https://byuistats.github.io/CSE150/project.html#Case_Study_6:_Catch_me,_if_you_can">Catch me, if you can?</a></h2>
-</section>
-<section id="background" class="slide level2">
+</section><section id="background" class="slide level2">
 <h2>Background</h2>
 <p>You have recently been hired by the U.S. internal revenue service (IRS) to catch corporate cheaters. You have been given three companies to investigate. You will need to decide if the IRS should build a legal case to investigate the institution for fraud.</p>
 <ul>
@@ -529,13 +522,11 @@ sum([Benford Percent]) * TOTAL(sum([N]))
 <li class="fragment"><strong>Government Entity:</strong> A dataset containing the card transactions for a government entity - 2010.</li>
 <li class="fragment"><strong>General Motors:</strong> The amounts paid to vendors for the 90 days preceding General Motor’s 2009 liquidation.</li>
 </ul>
-</section>
-<section id="our-challenge" class="slide level2">
+</section><section id="our-challenge" class="slide level2">
 <h2>Our challenge</h2>
 <p>You will be responsible to report as much evidence as you can with the data provided for each institution above. The government entity has more available data than the other two which will require you to dig deeper to find additional clues.</p>
 <p>You have many data files available to you. You will need to use more than one of the data sets provided but you are <strong>not expected to use them all.</strong></p>
-</section>
-<section id="deliverables" class="slide level2">
+</section><section id="deliverables" class="slide level2">
 <h2>Deliverables</h2>
 <ul>
 <li class="fragment">A 8-12 slide presentation to your IRS managers on the case against each entity.</li>
@@ -544,8 +535,7 @@ sum([Benford Percent]) * TOTAL(sum([N]))
 <li class="fragment">At least one slide for one of the institutions that compares the last digit distribution to what would be expected.</li>
 <li class="fragment">Multiple visualizations of the Government Entity data to find other interesting insights.</li>
 </ul>
-</section>
-<section id="lets-look-at-the-data" class="slide level2">
+</section><section id="lets-look-at-the-data" class="slide level2">
 <h2>Let’s look at the data</h2>
 </section></section>
     </div>

@@ -15,11 +15,11 @@ library(tidyverse)
 library(lubridate)
 ```
 
-# Working with Time {data-background=#f7d754}
+# Working with Time {data-background=#e8c35d}
 
 Welcome to class!
 
-## Case Study Presentations
+## Case Studies
 
 
 <!---------
@@ -33,7 +33,7 @@ What do we like? dislike?
 
 
 <!--------------
-# The truthful Art by Alberto Cairo {data-background=#f7d754}
+# The truthful Art by Alberto Cairo {data-background=#e8c35d}
 
 ## Data Ethics
 
@@ -87,15 +87,19 @@ Data always vary randomly because the object of our inquiries, nature itself, is
 
 --------------->
 
-# Dates and Times {data-background=#f7d754}
+# Dates and Times {data-background=#e8c35d}
 
 ## Can you answer these questions?
+
+<br>
 
 - Does every year have 365 days?
 - Does every day have 24 hours?
 - Does every minute have 60 seconds?
 
 ## Other fun things to consider
+
+<br>
 
 - Hawaii does not observe Daylight Saving Time and neither does Arizona (although the Navajo Nation, in northeastern Arizona, does). 
 - For many years, most of Indiana did not observe Daylight Saving Time with the exception of 10 counties. 
@@ -109,9 +113,11 @@ In 2005, we want to know how much electricity is being consumed at 4:00 pm on Mo
 > - [A little history on daylight saving time](https://www.msn.com/en-us/news/us/10-things-you-might-not-know-about-daylight-saving-time/ss-BBK4azQ#image=9)
 ---------->
 
-# The lubridate package {data-background=#f7d754}
+# The lubridate package {data-background=#e8c35d}
 
 ## Types of Time
+
+<br>
 
 - A date
 - A time within a day (`hms` package)
@@ -119,21 +125,29 @@ In 2005, we want to know how much electricity is being consumed at 4:00 pm on Mo
 
 ## Creator Functions
 
+<br>
+
 For dates:
 
-> - ymd(), mdy(), dmy(), ydm()
-> - make_date()
+> - `ymd()`, `mdy()`, `dmy()`, `ydm()`
+> - `make_date()`
+
+<br>
 
 For date-times:
 
-> - ymd_hms(), etc.
-> - make_datetime()
+> - `ymd_hms()`, etc.
+> - `make_datetime()`
 
 ## Creator Functions
 
-Open R-Studio and Convert the following strings to date objects.
+<br>
 
-Try `ymd()`, `mdy()`, `dmy()`, `ydm()`
+Open R-Studio and convert the following strings to date objects.
+
+Try using `ymd()`, `mdy()`, `dmy()`, `ydm()`
+
+<br>
 
 > - "January 21st, 2017"
 > - "2012-01-01"
@@ -141,16 +155,21 @@ Try `ymd()`, `mdy()`, `dmy()`, `ydm()`
 
 ## Creator Functions
 
+<br>
+
 Try `make_date()` and `make_datetime()`.
 
 ```{r datecode, eval=FALSE, echo=TRUE}
 library(tidyverse)
 library(lubridate)
+?make_date
+
+# Try this one first.
 date_cols <- tibble(month = c(1, 3, 7), 
                     day = c(23, 18, 1), 
                     year = c(2017, 2017, 2016))
 
-# Will this one work in make_date()?
+# Then try this one. Will it work in make_date()?
 date_cols <- tibble(month = c("Jaunary", "March", "July"), 
                     day = c(23, 18, 1), 
                     year = c(2017, 2017, 2016))
@@ -160,13 +179,15 @@ date_cols <- tibble(month = c("Jaunary", "March", "July"),
 
 ## Accessor Functions
 
-You can pull out individual parts of the date with the accessor functions
+<br>
 
-> - year(), month()
-> - mday() (*day of the month*)
-> - yday() (*day of the year*)
-> - wday() (*day of the week*)
-> - hour(), minute(), second()
+You can pull out individual parts of the date with the accessor functions:
+
+> - `year()`, `month()`
+> - `mday()` (*day of the month*)
+> - `yday()` (*day of the year*)
+> - `wday()` (*day of the week*)
+> - `hour()`, `minute()`, `second()`
 
 **Challenge**
 
@@ -175,11 +196,13 @@ You can pull out individual parts of the date with the accessor functions
 
 ## Rounding Functions
 
+<br>
+
 Read the help files to figure out what unit you want to round to.
 
-> - floor_date() 
-> - round_date() 
-> - ceiling_date()
+> - `floor_date()`
+> - `round_date()`
+> - `ceiling_date()`
 
 <!--------
 ## Challenge
@@ -197,10 +220,12 @@ jan31 <- ymd("2013-01-31")
 
 ## Time Zones
 
+<br>
+
 > - Your computer's time zone: `Sys.timezone(location = TRUE)`
 > - List of timezones: `OlsonNames()`
-> - with_tz(): Changes the time to match the new timezone.
-> - force_tz(): Keeps the time, but forces a new timezone label.
+> - `with_tz()`: Changes the time to match the new timezone.
+> - `force_tz()`: Keeps the time, but forces a new timezone label.
 
 <!--------
 ```{r}
@@ -212,6 +237,8 @@ force_tz(meeting, "America/Chicago")
 
 ## Challenge
 
+<br>
+
 > 1. Tell me what quarter this value is in. While the time is recorded in UTC, it is a transaction that happened in the mountain time zone.
 
 2. Now suppose that the time read into R as UTC but that you know those times are actually recorded in the mountian time zone.
@@ -221,6 +248,8 @@ x <- ymd_hms("2009-07-01 2:01:59.23")
 ```
 
 ## Just in case:
+
+<br>
 
 Note that when you use date-times in a numeric context (like in a histogram), 1 means 1 second, so a binwidth of 86400 means one day. For dates, 1 means 1 day.
 

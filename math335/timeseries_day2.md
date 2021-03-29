@@ -10,11 +10,45 @@ params:
 
 
 
-# Welcome to class! {data-background=#f7d754}
+# Welcome to class! {data-background=#e8c35d}
 
 ## Reading Discussion
 
+<br>
 
+[The Ethical Data Scientist](https://slate.com/technology/2016/02/how-to-bring-better-ethics-to-data-science.html)
+
+## Reading Discussion
+
+<br>
+
+- "If the data scientist's goal is to create automated processes that affect people's lives, then he or she should regularly consider ethics in a way that academics in computer science and statistics, generally speaking, do not."
+- "The ethical data scientist would strive to improve the world, not repeat it. That would mean deploying tools to explicitly construct fair processes. As long as our world is not perfect, and as long as data is being collected on that world, we will not be building models that are improvements on our past unless we specifically set out to do so."
+
+## Reading Discussion
+
+<br>
+
+![](images/great_power.gif)
+
+## RStudio Connect Problems
+
+## Next Week's Schedule
+
+<br>
+
+>- **Monday:**
+>   - How to write issues in GitHub (part of the semester project)
+>   - Presentations tips
+>   - What else do you want to talk about??
+>- **Wednesday:**
+>   - Work day (no offical class)
+>- **Friday:**
+>   - Semester project presentations!
+
+
+
+<!--------------------
 ## View Data at the Atomic Level
 
 "None of us would admit now that we didn't realize...there...had to be spread in the data; we...just didn't realize how big it could be."
@@ -24,8 +58,11 @@ params:
 >   - values above 100%
 >   - increasing # of patients at 100%
 > - The Mean is Not the Distribution
+-------------------------------------------->
 
-# Interactive Graphs {data-background=#f7d754}
+
+<!------------------------
+# Interactive Graphs {data-background=#e8c35d}
 
 ## Example: `library(DT)`
 
@@ -55,6 +92,8 @@ Then, try knitting and pushing the files to GitHub
 ## Example: `library(DT)`
 
 Look at the [DT: An R interface to the DataTables library](http://rstudio.github.io/DT/) website and find one or two modifications that you could make to your table output to move beyond the default.
+-------------------------------->
+
 
 <!-- Putting information in your file [My interactive](https://shiny.byui.edu/connect/#/apps/3/access) -->
 
@@ -63,9 +102,14 @@ Look at the [DT: An R interface to the DataTables library](http://rstudio.github
 
 
 
-# Task 20 {data-background=#f7d754}
+# Case Study {data-background=#e8c35d}
 
-# Remember the Goal {data-background=#f7d754}
+##
+
+> - [Rauser view on time and data](https://www.youtube.com/embed/coNDCIMH8bk?start=628) - 10:28 to 17:50
+
+<!----------------------
+# Remember the Goal {data-background=#e8c35d}
 
 ##
 
@@ -79,3 +123,5 @@ Look at the [DT: An R interface to the DataTables library](http://rstudio.github
 > Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space
 
 > Edward Tufte
+
+------------------------------------>
