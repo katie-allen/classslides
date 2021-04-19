@@ -13,37 +13,53 @@ params:
 
 ## Wrangle
 
+<br>
+
 Oxford Dictionary: "round up, herd, or take charge of (livestock)"
 
 ![](images/wrangle_sheep.jpg)
 
 ## Visualize
 
+<br>
+
 Oxford Dictionary: "form a mental image of; imagine; make visible to the eye"
 
 ![](images/visualize_data.png)
 
-## Course Outcomes 
-
-To develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities[.](https://www.byui.edu/about/mission-statement)
-
-<!--- Big L vs. little l leader --->
-
 ## Course Outcomes
 
-1. Convert data from varied formats or structures to a desirable format for analysis and visualization.
-2. Clean, transform and merge data attributes/variables appropriately.
-3. Effectively display and communicate meaning from spatial, temporal, and textual data.
-4. Articulate the process, benefits, and challenges of Big Data manipulation.
-5. Use current analysis, presentation, and collaboration tools in the data science field (R, Python, D3.js, GitHub). 
+<br>
+
+1. Adapt data from various formats and structures to a desirable format for analysis and visualization.
+2. Create effective visualizations of large and messy datasets using the grammar of graphics with programming.
+3. Use current analysis, presentation, and collaboration tools in the data science field (R, Slack, GitHub,etc.) to communicate with data scientists and other parties.
+4. Develop confidence in and strategies for completing ambiguous requests.
+5. Describe where data wrangling and visualization resides within the data science profession.
 
 ## Course Outcomes (Short Version)
 
+<br>
+
 Start with data. End with insights.
+
+## Course Outcomes 
+
+<br>
+
+To develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities[.](https://www.byui.edu/about/mission-statement)
+
+<br>
+
+- [What (or who) is truth?](https://www.churchofjesuschrist.org/study/scriptures/nt/john/14.6?lang=eng#p6#6)
+
+<!--- Big L vs. little l leader --->
 
 # Why I Love Data {data-background=#e8c35d}
 
 ## Introduction to Sister Larson
+
+<br>
 
 When I was little, I wanted to be...
 
@@ -57,19 +73,25 @@ When I was little, I wanted to be...
 
 ## Introduction to Sister Larson
 
+<br>
+
 What I did instead:
 
 - Undergraduate in Applied Mathematics at BYU-Idaho
 - Masters degree in Statistics at BYU
-- Biostatistician at Myriad Genetics doing cancer research
+- Biostatistician at Myriad Genetics doing cancer research.
 - Then back to BYU-Idaho!
 
 ## Using Data to Gain Insight
+
+<br>
 
 - Everything we do generates data.
 - If you have the right tools, you can use those data to answer important questions...and some very silly questions.
 
 ## Examples 
+
+<br>
 
 <!--- On a scale of silly to serious ---->
 
@@ -87,21 +109,28 @@ What I did instead:
 
 ## Weekly Format
 
+<br>
+
 ![](images/weekly.png)
 
-- Doing Readings: Learn the *how* of data science
-- Being Readings: Learn the *why* and *so what* of data science
-- Tasks: Practice doing what you've learned (Get messy! Make mistakes!)
-- Case Studies: Practice finding insights and clearly explaining insights
+- **Doing Readings:** Learn the *how* of data science
+- **Being Readings:** Learn the *why* and *so what* of data science (Perusall)
+- **Tasks:** Practice doing what you've learned (Get messy! Make mistakes!)
+- **Case Studies:** Practice finding insights and clearly explaining insights
 
 ## Other Assignments
 
-- Semester Project: A "choose your own adventure" case study that you'll present to the class.
-- Coding Challenges: A chance for you to show me what you've learned.
+<br>
+
+- **Semester Project:** A "choose your own adventure" case study that you'll present to the class.
+- **Coding Challenges:** A chance for you to show me what you've learned.
+- **Team Lead:** Help "teach one another" by leading a group or class discussion.
 
 ## Grading Philosophy
 
-- In a specifications-grading system all tasks are evaluated on a high-standards pass/fail basis using detailed checklists of task requirements and expectations. 
+<br>
+
+- In a **specifications-grading** system all tasks are evaluated on a high-standards pass/fail basis using detailed checklists of task requirements and expectations. 
 - Letter grades are earned by passing marks on a set of tasks. 
 - This system provides for a variety of choice and is closer to how learning, and work, is done outside of a classroom.
 - It will be easy for us to tell if work is complete, done in good faith, and consistent with the requirements.
@@ -177,31 +206,32 @@ You don't do **B** work on all the tasks and case studies - You do **A** work on
 
 # Looking Ahead {data-background=#e8c35d}
 
-## Task 2 (Thursday)
+## Task 1 (Tuesday)
+
+<br>
 
 - Get R and RStudio working on your computer
-- Join Slack and introduce yourself in the #general_w21_larson channel
+- Join Slack and introduce yourself in the #cse350_s21_larson channel
 - Create an account on GitHub and tell me your username
 
+## On Wednesday
+
+<br>
+
+- Answer course/syllabus questions
+- Intro to R programming
+
+## Task 2 (Thursday)
+
+<br>
+
+- "Doing" Readings
+- Answer R coding questions
+
 ## Being Reading (Thursday)
+
+<br>
 
 - Click on the link in I-Learn
 - Read the article in Perusall
 - Leave two comments
-
-## On Friday
-
-- Reading Discussion
-- Answer course/syllabus questions
-- Intro to R
-
-## Case Study 1 (Saturday)
-
-- Doing Readings
-- Answer R coding questions
-
-## Questions for me?
-
-## My family
-
-![](images/crazy_family.jpg)
