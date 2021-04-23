@@ -448,187 +448,105 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 
-<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1></section><section id="todays-outline" class="slide level2">
-<h2>Today’s Outline:</h2>
-<ul>
-<li>Housekeeping and Questions</li>
-<li>Reading Discussion</li>
-<li>RStudio and R Markdown</li>
-<li>Practice in R</li>
-</ul>
-</section><section id="before-sister-larson-forgets" class="slide level2">
-<h2>Before Sister Larson forgets:</h2>
-<ul>
-<li class="fragment">GitHub</li>
-<li class="fragment">Comments in Perusall</li>
-<li class="fragment">“On time”</li>
-<li class="fragment">Face-to-face</li>
-<li class="fragment">Zoom
-<ul>
-<li class="fragment">How can we help remote students feel included and engaged?</li>
-</ul></li>
-<li class="fragment">Please be respectful</li>
-</ul>
-</section><section id="questions" class="slide level2">
-<h2>Questions?</h2>
-<ul>
-<li>Syllabus</li>
-<li>R, RStudio, Slack, GitHub</li>
-<li>Anything else</li>
-</ul>
-</section><section id="try-and-then-ask-questions" class="slide level2">
-<h2>Try, and then ask questions!</h2>
-<p><img data-src="images/ask_questions.png" /></p>
-</section></section>
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1><!---------- winter 2021 -------------
+## Today's Outline:
+
+>- Housekeeping and Questions
+>- Reading Discussion
+>- RStudio and R Markdown
+>- Practice in R
+
+## Before Sister Larson forgets:
+
+- GitHub
+- Comments in Perusall
+- "On time"
+- Face-to-face
+- Zoom
+  - How can we help remote students feel included and engaged?
+- Please be respectful
+
+## Questions?
+
+>- Syllabus
+>- R, RStudio, Slack, GitHub
+>- Anything else
+
+## Try, and then ask questions!
+
+![](images/ask_questions.png)
+------------------------------></section>
 <section><section id="reading-discussion" class="title-slide slide level1" data-background="#e8c35d"><h1>Reading Discussion</h1></section><section id="the-data-science-process" class="slide level2">
 <h2><a href="https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67">The Data Science Process</a></h2>
+<p><br></p>
 <p>What are your thoughts?</p>
+<p>Get into groups of 2 or 3 and share.</p>
 </section><section id="the-data-science-process-1" class="slide level2">
 <h2>The Data Science Process</h2>
+<p><br></p>
 <blockquote>
-<p>I realized that despite the variation in the details of different projects, the steps that data scientists use to work through a complex business problem remain more or less the same.</p>
+<p>“I realized that despite the variation in the details of different projects, the steps that data scientists use to work through a complex business problem remain more or less the same.”</p>
 </blockquote>
+<p><a href="https://strimas.com/">One of my favorite examples.</a></p>
 </section><section id="the-data-science-process-2" class="slide level2">
 <h2>The Data Science Process</h2>
-<ul>
-<li class="fragment">Frame the problem</li>
+<p><br></p>
+<ol type="1">
+<li class="fragment">Frame the problem (translation)</li>
 <li class="fragment">Collect the raw data needed to solve the problem</li>
 <li class="fragment">Process the data (data wrangling)</li>
 <li class="fragment">Explore the data</li>
 <li class="fragment">Perform in-depth analysis (machine learning, statistical models, algorithms)</li>
-<li class="fragment">Communicate results of the analysis</li>
-</ul>
+<li class="fragment">Communicate results of the analysis (translation)</li>
+</ol>
 </section></section>
-<section><section id="r-rstudio-and-r-markdown" class="title-slide slide level1" data-background="#e8c35d"><h1>R, RStudio, and R Markdown</h1></section><section id="r-vs.-rstudio" class="slide level2">
-<h2>R vs. RStudio</h2>
-</section><section id="knitting-an-r-markdown-document" class="slide level2">
-<h2>“Knitting” an R Markdown document</h2>
-</section><section id="data-types" class="slide level2">
-<h2><a href="https://www.geeksforgeeks.org/r-data-types/">Data Types</a></h2>
+<section><section id="r-rstudio-markdown-and-r-markdown" class="title-slide slide level1" data-background="#e8c35d"><h1>R, RStudio, Markdown, and R Markdown</h1></section><section id="r-vs-r-scripts" class="slide level2">
+<h2>R vs R Scripts</h2>
+</section><section id="markdown" class="slide level2">
+<h2>Markdown</h2>
+<p><br></p>
+<p>Example in Slack.</p>
+</section><section id="r-markdown" class="slide level2">
+<h2>R Markdown</h2>
+<p><br></p>
+<p><a href="https://rmarkdown.rstudio.com/lesson-1.html">What is R Markdown?</a></p>
+<p>“A reproducible record of your work.”</p>
+</section><section id="why-do-we-care-about-reproducibility" class="slide level2">
+<h2>Why do we care about reproducibility?</h2>
+</section><section id="reproducibility" class="slide level2">
+<h2>Reproducibility</h2>
+<p><br></p>
+<p>Let’s do an experiment. Close your eyes.</p>
 <ul>
-<li class="fragment">Each variable in R has an associated data type</li>
-<li class="fragment">Each data type requires different amounts of memory</li>
-<li class="fragment">Each data type has some specific operations which can be performed over it
-<ul>
-<li class="fragment"><strong>Numeric:</strong> Set of all real numbers</li>
-<li class="fragment"><strong>Integer:</strong> Set of all integers</li>
-<li class="fragment"><strong>Logical:</strong> TRUE and FALSE</li>
-<li class="fragment"><strong>Complex:</strong> Set of complex numbers</li>
-<li class="fragment"><strong>Character:</strong> “a”, “BYU-Idaho”, “lions and tigers and bears”, “@”, “3”</li>
-</ul></li>
+<li class="fragment">Those two recordings were made 20 years apart.</li>
 </ul>
-</section><section id="vectors" class="slide level2">
-<h2><a href="http://adv-r.had.co.nz/Data-structures.html">Vectors</a></h2>
+</section><section id="reproducibility-1" class="slide level2">
+<h2>Reproducibility</h2>
+<p><br></p>
+<p>The music was written around 1804.</p>
+<p><img data-src="images/Ludwig-van-Beethoven-Symphony-No-5-C-Minor-Op-67-Breitkopf-Haertel-Leipzig-1862.png" /></p>
+</section><section id="possibilities-with-r-markdown" class="slide level2">
+<h2>Possibilities with R Markdown</h2>
+<p><br></p>
 <ul>
-<li class="fragment">The basic data structure in R is the vector</li>
-<li class="fragment">Vectors come in two flavors: atomic vectors and lists</li>
-<li class="fragment">Atomic vectors and lists have three common properties:
-<ul>
-<li class="fragment"><strong>Type:</strong> typeof(), what it is.</li>
-<li class="fragment"><strong>Length:</strong> length(), how many elements it contains.</li>
-<li class="fragment"><strong>Attributes:</strong> attributes(), additional arbitrary metadata.</li>
-</ul></li>
-<li class="fragment">They differ in the types of their elements:
-<ul>
-<li class="fragment">All elements of an atomic vector must be the same type</li>
-<li class="fragment">The elements of a list can have different types.</li>
-</ul></li>
+<li>Microsoft Word document</li>
+<li>Slide show</li>
+<li>Html slides</li>
+<li>Website</li>
+<li>Blog</li>
+<li>PDF report</li>
+<li>Dashboard</li>
 </ul>
-</section><section id="practice-in-r" class="slide level2">
-<h2>Practice in R</h2>
-<!--------------------------------
-
-## What is data science?
-
-Answer: A venn diagram ( [here](https://www.omnisci.com/learn/data-science), [here](https://data36.com/what-is-data-science/), and [here](https://www.innoarchitech.com/blog/what-is-data-science-does-data-scientist-do))
-
-["The Business of Data" video](https://www.youtube.com/watch?v=eMOY79x6drA)
-
-Hadley Wickham's [diagram](https://r4ds.had.co.nz/)
-
-# Syllabus (continued from Day 1)  {data-background=#e8c35d}
-
-## Specifications Grading
-
-![](images/grade_sets.png)
-
-## Workload to get an "A"
-
-![](intro_day3_files/figure-revealjs/unnamed-chunk-1-1.png)
-
-
-## To get a "B"
-
-You don't do **B** work on all the tasks and case studies - You do **A** work on half of them.
-
-* Focus on the first 5-weeks material. Pick and choose work after the foundation material.
-* I know everyone can earn a B or higher.
-
-## How to get help
-
-> - Slack 
-> - R-Lab
-> - My office hours
-
-## Questions about the syllabus?
-
-# Task 1 {data-background=#e8c35d}
-
-## Questions about R and/or R-Studio?
-
-## Getting R-Studio under control
-
-# Reading Discussion  {data-background=#e8c35d}
-
-## How Humans See Data
-
-[John Rauser Video](https://www.youtube.com/embed/fSgEeI2Xpdc?rel=0&amp;start=0){target="blank"}
-
-[Class comments.](https://docs.google.com/spreadsheets/d/1Dfj68hm77XwnQgV5mSw3ja3cRTJgcOYYEDKD5RmKjBY/edit?usp=sharing)
-
-> - What did you learn?
-> - Were you surprised by anything?
-> - Do you disagree with anything he said?
-
-## 7 methods of encoding data
-
-#### Ordered by accuracy of perceptual estimation.
-
-1. Position along a common scale
-2. Position on common, non-aligned scale
-3. Length
-4. Angle or slope
-5. Area
-6. Volume/density/saturation of "color"
-7. Color hue
-
-## Quote from Tufte
-
-> Above all else, show the data
-
-## [Being a Better Online Reader](https://www.newyorker.com/science/maria-konnikova/being-a-better-online-reader)
-
-What do you agree with? Disagree?
-
-What's your plan to succeed this semester?
-
-# Looking Ahead {data-background=#e8c35d}
-
-## Task 2
-
-> - Github
-> - Professional Photo
-> - Data Science Society
-
-## Before next class...
-> - Sign up for a one-on-one interview with Sister Larson
-> - Finish Task 2
-> - Look over Case Study 1
-
-
-
-
------------------------------->
+<p><img data-src="images/rmarkdownflow.png" /></p>
+</section><section id="examples" class="slide level2">
+<h2>Examples</h2>
+<p><br></p>
+<ul>
+<li class="fragment">R “chunks”</li>
+<li class="fragment">YAML (yet another markup language)</li>
+<li class="fragment">How to keep <code>.md</code> file</li>
+<li class="fragment"><strong>When to use R script vs. R Markdown?</strong></li>
+</ul>
 </section></section>
     </div>
   </div>

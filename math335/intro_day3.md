@@ -9,6 +9,7 @@ params:
 
 # Welcome to class! {data-background=#e8c35d}
 
+<!---------- winter 2021 -------------
 ## Today's Outline:
 
 >- Housekeeping and Questions
@@ -35,150 +36,95 @@ params:
 ## Try, and then ask questions!
 
 ![](images/ask_questions.png)
-
+------------------------------>
 
 
 # Reading Discussion {data-background=#e8c35d}
 
 ## [The Data Science Process](https://medium.springboard.com/the-data-science-process-the-complete-laymans-guide-to-what-a-data-scientist-actually-does-ca3e166b7c67)
 
+<br>
+
 What are your thoughts?
 
-## The Data Science Process
-
-> I realized that despite the variation in the details of different projects, the steps that data scientists use to work through a complex business problem remain more or less the same.
+Get into groups of 2 or 3 and share.
 
 ## The Data Science Process
 
-- Frame the problem
-- Collect the raw data needed to solve the problem
-- Process the data (data wrangling)
-- Explore the data
-- Perform in-depth analysis (machine learning, statistical models, algorithms)
-- Communicate results of the analysis
+<br>
 
-# R, RStudio, and R Markdown {data-background=#e8c35d}
+> "I realized that despite the variation in the details of different projects, the steps that data scientists use to work through a complex business problem remain more or less the same."
 
-## R vs. RStudio
+[One of my favorite examples.](https://strimas.com/)
 
-## "Knitting" an R Markdown document
+## The Data Science Process
 
-## [Data Types](https://www.geeksforgeeks.org/r-data-types/)
+<br>
 
-- Each variable in R has an associated data type
-- Each data type requires different amounts of memory
-- Each data type has some specific operations which can be performed over it
-  - **Numeric:** Set of all real numbers
-  - **Integer:** Set of all integers
-  - **Logical:** TRUE and FALSE
-  - **Complex:** Set of complex numbers
-  - **Character:** "a", "BYU-Idaho", "lions and tigers and bears", "@", "3"
+1. Frame the problem (translation)
+1. Collect the raw data needed to solve the problem
+1. Process the data (data wrangling)
+1. Explore the data
+1. Perform in-depth analysis (machine learning, statistical models, algorithms)
+1. Communicate results of the analysis (translation)
 
-## [Vectors](http://adv-r.had.co.nz/Data-structures.html)
+# R, RStudio, Markdown, and R Markdown {data-background=#e8c35d}
 
-- The basic data structure in R is the vector
-- Vectors come in two flavors: atomic vectors and lists
-- Atomic vectors and lists have three common properties:
-  - **Type:** typeof(), what it is.
-  - **Length:** length(), how many elements it contains.
-  - **Attributes:** attributes(), additional arbitrary metadata.
-- They differ in the types of their elements: 
-  - All elements of an atomic vector must be the same type
-  - The elements of a list can have different types.
+## R vs R Scripts
 
-## Practice in R
+## Markdown
 
+<br>
 
-<!--------------------------------
+Example in Slack.
 
-## What is data science?
+## R Markdown
 
-Answer: A venn diagram ( [here](https://www.omnisci.com/learn/data-science), [here](https://data36.com/what-is-data-science/), and [here](https://www.innoarchitech.com/blog/what-is-data-science-does-data-scientist-do))
+<br>
 
-["The Business of Data" video](https://www.youtube.com/watch?v=eMOY79x6drA)
+[What is R Markdown?](https://rmarkdown.rstudio.com/lesson-1.html)
 
-Hadley Wickham's [diagram](https://r4ds.had.co.nz/)
+"A reproducible record of your work."
 
-# Syllabus (continued from Day 1)  {data-background=#e8c35d}
+## Why do we care about reproducibility?
 
-## Specifications Grading
+## Reproducibility
 
-![](images/grade_sets.png)
+<br>
 
-## Workload to get an "A"
+Let's do an experiment. Close your eyes.
 
-![](intro_day3_files/figure-revealjs/unnamed-chunk-1-1.png)
+- Those two recordings were made 20 years apart.
 
+## Reproducibility
 
-## To get a "B"
+<br>
 
-You don't do **B** work on all the tasks and case studies - You do **A** work on half of them.
+The music was written around 1804.
 
-* Focus on the first 5-weeks material. Pick and choose work after the foundation material.
-* I know everyone can earn a B or higher.
+![](images/Ludwig-van-Beethoven-Symphony-No-5-C-Minor-Op-67-Breitkopf-Haertel-Leipzig-1862.png)
 
-## How to get help
+## Possibilities with R Markdown
 
-> - Slack 
-> - R-Lab
-> - My office hours
+<br>
 
-## Questions about the syllabus?
+>- Microsoft Word document
+>- Slide show
+>- Html slides
+>- Website
+>- Blog
+>- PDF report
+>- Dashboard
 
-# Task 1 {data-background=#e8c35d}
+![](images/rmarkdownflow.png)
 
-## Questions about R and/or R-Studio?
+## Examples
 
-## Getting R-Studio under control
+<br>
 
-# Reading Discussion  {data-background=#e8c35d}
-
-## How Humans See Data
-
-[John Rauser Video](https://www.youtube.com/embed/fSgEeI2Xpdc?rel=0&amp;start=0){target="blank"}
-
-[Class comments.](https://docs.google.com/spreadsheets/d/1Dfj68hm77XwnQgV5mSw3ja3cRTJgcOYYEDKD5RmKjBY/edit?usp=sharing)
-
-> - What did you learn?
-> - Were you surprised by anything?
-> - Do you disagree with anything he said?
-
-## 7 methods of encoding data
-
-#### Ordered by accuracy of perceptual estimation.
-
-1. Position along a common scale
-2. Position on common, non-aligned scale
-3. Length
-4. Angle or slope
-5. Area
-6. Volume/density/saturation of "color"
-7. Color hue
-
-## Quote from Tufte
-
-> Above all else, show the data
-
-## [Being a Better Online Reader](https://www.newyorker.com/science/maria-konnikova/being-a-better-online-reader)
-
-What do you agree with? Disagree?
-
-What's your plan to succeed this semester?
-
-# Looking Ahead {data-background=#e8c35d}
-
-## Task 2
-
-> - Github
-> - Professional Photo
-> - Data Science Society
-
-## Before next class...
-> - Sign up for a one-on-one interview with Sister Larson
-> - Finish Task 2
-> - Look over Case Study 1
+- R "chunks"
+- YAML (yet another markup language)
+- How to keep `.md` file
+- **When to use R script vs. R Markdown?**
 
 
-
-
------------------------------->
