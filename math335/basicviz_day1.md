@@ -14,6 +14,7 @@ params:
 
 Basic Visualizations: Day 1
 
+<!-------------------------------
 ## Task 6 says to push the `.Rmd`, `.md`, and the `.html`
 
 <br>
@@ -25,6 +26,7 @@ Basic Visualizations: Day 1
 <br>
 
 [Example.](https://github.com/BYUI335/M335_WI21_Paxman_Tayl/tree/master/week_02_data_science/task_03)
+----------------------------------->
 
 # The `ggplot2` package {data-background=#e8c35d}
 
@@ -35,6 +37,18 @@ Basic Visualizations: Day 1
 <br>
 
 `ggplot2` uses a "grammar of graphics" that helps us put graphical elements together in a way that makes sense.
+
+## aka: lasagna
+
+<br>
+
+![](images/lasagna_ingredients.jpg)
+
+## aka: lasagna
+
+<br>
+
+![](images/lasagna_layers.jpg)
 
 ## aka: lasagna
 
