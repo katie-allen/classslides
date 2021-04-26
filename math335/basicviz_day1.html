@@ -449,7 +449,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 
-<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1><p>Basic Visualizations: Day 1</p>
+<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1><p>Basic Visualizations: Day 1</p>
 <!-------------------------------
 ## Task 6 says to push the `.Rmd`, `.md`, and the `.html`
 
@@ -462,23 +462,39 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <br>
 
 [Example.](https://github.com/BYUI335/M335_WI21_Paxman_Tayl/tree/master/week_02_data_science/task_03)
------------------------------------></section>
+-----------------------------------></section><section id="spiritual-thought" class="slide level2">
+<h2>Spiritual Thought</h2>
+<p><br></p>
+<p><a href="https://www.churchofjesuschrist.org/study/general-conference/2014/10/receiving-a-testimony-of-light-and-truth?lang=eng">Receiving a Testimony of Light and Truth</a></p>
+</section><section id="activity" class="slide level2">
+<h2>Activity</h2>
+<p><br></p>
+<p>Look at this data and tell me about the relationship between x and y.</p>
+<p><a href="https://github.com/ktoutloud/classslides/raw/master/math335/data/data1.csv">Link.</a></p>
+</section><section id="activity-1" class="slide level2">
+<h2>Activity</h2>
+<p><br></p>
+<p>What about the relationship in this data?</p>
+<p><a href="https://github.com/ktoutloud/classslides/raw/master/math335/data/data2.csv">Link.</a></p>
+</section><section id="why-is-it-important-to-visualize-data" class="slide level2">
+<h2>Why is it important to visualize data?</h2>
+</section></section>
 <section><section id="the-ggplot2-package" class="title-slide slide level1" data-background="#e8c35d"><h1>The <code>ggplot2</code> package</h1></section><section id="what-is-grammar." class="slide level2">
 <h2>What is grammar?<a href="https://www.google.com/search?q=grammar&amp;rlz=1C1GCEJ_enUS882US882&amp;oq=grammar&amp;aqs=chrome..69i57j0i67i457j0i67i395i433l2j0i67i395j69i60j69i61l2.1229j1j7&amp;sourceid=chrome&amp;ie=UTF-8">.</a></h2>
 </section><section id="the-grammar-of-graphics" class="slide level2">
 <h2>The Grammar of Graphics</h2>
 <p><br></p>
 <p><code>ggplot2</code> uses a “grammar of graphics” that helps us put graphical elements together in a way that makes sense.</p>
-</section><section id="aka-lasagna" class="slide level2">
-<h2>aka: lasagna</h2>
+</section><section id="section" class="slide level2">
+<h2></h2>
 <p><br></p>
 <p><img data-src="images/lasagna_ingredients.jpg" /></p>
-</section><section id="aka-lasagna-1" class="slide level2">
-<h2>aka: lasagna</h2>
+</section><section id="section-1" class="slide level2">
+<h2></h2>
 <p><br></p>
 <p><img data-src="images/lasagna_layers.jpg" /></p>
-</section><section id="aka-lasagna-2" class="slide level2">
-<h2>aka: lasagna</h2>
+</section><section id="section-2" class="slide level2">
+<h2></h2>
 <p><br></p>
 <p><img data-src="images/lasagna_final.jpg" /></p>
 </section><section id="ggplot2-vs.-tidyverse" class="slide level2">
@@ -488,10 +504,9 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <pre><code>install.packages(&quot;tidyverse&quot;)
 library(tidyverse)</code></pre>
 <p>What do you see in your R console?</p>
-</section><section id="how-can-i-get-with-with-ggplot2." class="slide level2">
-<h2>How can I get with with <code>ggplot2</code>?.</h2>
+</section><section id="how-do-i-use-ggplot2" class="slide level2">
+<h2>How do I use <code>ggplot2</code>?</h2>
 <p><br></p>
-<p>Use the <a href="https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf">cheatsheet</a>.</p>
 <p>You always start with a <code>ggplot()</code> layer. Then you can add on:</p>
 <ul>
 <li class="fragment">a <code>geom_*()</code> layer (required)</li>
@@ -501,15 +516,23 @@ library(tidyverse)</code></pre>
 <li class="fragment">a <code>theme_*()</code> layer</li>
 <li class="fragment">and more!</li>
 </ul>
+</section><section id="how-can-i-get-help-with-ggplot2" class="slide level2">
+<h2>How can I get help with <code>ggplot2</code>?</h2>
+<p><br></p>
+<ul>
+<li>Read the <a href="https://r4ds.had.co.nz/data-visualisation.html">textbook</a>!</li>
+<li>Use the <a href="https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf">cheatsheet</a>!</li>
+<li>Look at the <a href="https://ggplot2.tidyverse.org/index.html">documentation</a>! (Or <code>?ggplot()</code>)</li>
+</ul>
 </section><section id="more-help." class="slide level2">
 <h2>More help.</h2>
 <p><br></p>
 <p>Layers can get complicated. For example, <a href="https://ggplot2.tidyverse.org/reference/theme.html">themes</a>.</p>
-<p>It is easier to google questions and find answer if you know what things are called.</p>
+<p>It is easier to google questions and find answers if you know what things are called.</p>
 <ul>
-<li class="fragment"><a href="https://henrywang.nl/ggplot2-theme-elements-demonstration/">Theme elements</a></li>
-<li class="fragment"><a href="https://isabella-b.com/blog/ggplot2-theme-elements-reference/">More theme elements</a></li>
-<li class="fragment">Google image search</li>
+<li><a href="https://henrywang.nl/ggplot2-theme-elements-demonstration/">Theme elements</a></li>
+<li><a href="https://isabella-b.com/blog/ggplot2-theme-elements-reference/">More theme elements</a></li>
+<li>Google image search.</li>
 </ul>
 </section><section id="lets-practice" class="slide level2">
 <h2>Let’s practice!</h2>

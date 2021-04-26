@@ -28,6 +28,31 @@ Basic Visualizations: Day 1
 [Example.](https://github.com/BYUI335/M335_WI21_Paxman_Tayl/tree/master/week_02_data_science/task_03)
 ----------------------------------->
 
+## Spiritual Thought
+
+<br>
+
+[Receiving a Testimony of Light and Truth](https://www.churchofjesuschrist.org/study/general-conference/2014/10/receiving-a-testimony-of-light-and-truth?lang=eng)
+
+
+## Activity
+
+<br>
+
+Look at this data and tell me about the relationship between x and y.
+
+[Link.](https://github.com/ktoutloud/classslides/raw/master/math335/data/data1.csv)
+
+## Activity
+
+<br>
+
+What about the relationship in this data?
+
+[Link.](https://github.com/ktoutloud/classslides/raw/master/math335/data/data2.csv)
+
+## Why is it important to visualize data?
+
 # The `ggplot2` package {data-background=#e8c35d}
 
 ## What is grammar?[.](https://www.google.com/search?q=grammar&rlz=1C1GCEJ_enUS882US882&oq=grammar&aqs=chrome..69i57j0i67i457j0i67i395i433l2j0i67i395j69i60j69i61l2.1229j1j7&sourceid=chrome&ie=UTF-8)
@@ -38,19 +63,19 @@ Basic Visualizations: Day 1
 
 `ggplot2` uses a "grammar of graphics" that helps us put graphical elements together in a way that makes sense.
 
-## aka: lasagna
+##
 
 <br>
 
 ![](images/lasagna_ingredients.jpg)
 
-## aka: lasagna
+##
 
 <br>
 
 ![](images/lasagna_layers.jpg)
 
-## aka: lasagna
+##
 
 <br>
 
@@ -69,11 +94,9 @@ library(tidyverse)
 
 What do you see in your R console?
 
-## How can I get with with `ggplot2`?.
+## How do I use `ggplot2`?
 
 <br>
-
-Use the [cheatsheet](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf).
 
 You always start with a `ggplot()` layer. Then you can add on:
 
@@ -84,17 +107,25 @@ You always start with a `ggplot()` layer. Then you can add on:
 - a `theme_*()` layer
 - and more!
 
+## How can I get help with `ggplot2`?
+
+<br>
+
+> - Read the [textbook](https://r4ds.had.co.nz/data-visualisation.html)! 
+> - Use the [cheatsheet](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf)!
+> - Look at the [documentation](https://ggplot2.tidyverse.org/index.html)! (Or `?ggplot()`)
+
 ## More help.
 
 <br>
 
 Layers can get complicated. For example, [themes](https://ggplot2.tidyverse.org/reference/theme.html).
 
-It is easier to google questions and find answer if you know what things are called.
+It is easier to google questions and find answers if you know what things are called.
 
-- [Theme elements](https://henrywang.nl/ggplot2-theme-elements-demonstration/)
-- [More theme elements](https://isabella-b.com/blog/ggplot2-theme-elements-reference/)
-- Google image search
+> - [Theme elements](https://henrywang.nl/ggplot2-theme-elements-demonstration/)
+> - [More theme elements](https://isabella-b.com/blog/ggplot2-theme-elements-reference/)
+> - Google image search.
 
 ## Let's practice!
 
