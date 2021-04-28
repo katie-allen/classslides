@@ -449,41 +449,70 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 
-<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1><p>Basic Visualizations: Day 2</p></section><section id="goals-for-today" class="slide level2">
-<h2>Goals for today:</h2>
+<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1></section><section id="how-i-use-ggplot2-layers" class="slide level2">
+<h2>How I use <code>ggplot2</code> layers</h2>
+<p><br></p>
 <ul>
-<li>Syllabus Update</li>
-<li>Team Leads</li>
-<li>Reading Discussion</li>
-<li>Case Study Discussion</li>
-<li>Questions from Task 6</li>
-<li>Work time for Case Study 3</li>
+<li class="fragment"><code>ggplot()</code>: I want to make a chart.</li>
+<li class="fragment"><code>geom_*()</code>: I want my data in this shape.</li>
+<li class="fragment"><code>facet_*()</code>: I want many small charts instead of one big chart.</li>
+<li class="fragment"><code>scale_*()</code>: I want to change the way my data is represented on a number line.</li>
+<li class="fragment"><code>theme_*()</code>: I want to change the way my chart (not my data) looks.</li>
 </ul>
-</section><section id="reading-discussion" class="slide level2">
-<h2>Reading Discussion</h2>
-</section><section id="task-6" class="slide level2">
-<h2>Task 6</h2>
-</section><section id="case-study-3" class="slide level2">
-<h2>Case Study 3</h2>
+</section><section id="how-can-i-get-help-with-ggplot2" class="slide level2">
+<h2>How can I get help with <code>ggplot2</code>?</h2>
+<p><br></p>
 <ul>
-<li><a href="https://github.com/jennybc/gapminder/issues/9">Kuwait</a></li>
-<li><a href="https://www.r-graph-gallery.com/">Need ideas?</a></li>
+<li>Read the <a href="https://r4ds.had.co.nz/data-visualisation.html">textbook</a>!</li>
+<li>Use the <a href="https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf">cheatsheet</a>!</li>
+<li>Look at the <a href="https://ggplot2.tidyverse.org/index.html">documentation</a>! (Or <code>?ggplot()</code>)</li>
 </ul>
-</section></section>
-<section><section id="very-quick-intro-to-data-wrangling" class="title-slide slide level1" data-background="#e8c35d"><h1>(Very Quick) Intro to Data Wrangling</h1></section><section id="data-manipulation-verbs-from-dplyr" class="slide level2">
-<h2>Data Manipulation Verbs from <code>dplyr</code></h2>
+</section><section id="more-help." class="slide level2">
+<h2>More help.</h2>
+<p><br></p>
+<p>Layers can get complicated. For example, <a href="https://ggplot2.tidyverse.org/reference/theme.html">themes</a>.</p>
+<p>It is easier to google questions and find answers if you know what things are called.</p>
 <ul>
-<li><code>filter</code> - filter your data to a smaller set of important rows.</li>
-<li><code>sort</code> - Organize the row order of my data</li>
-<li><code>select</code> - select specific columns to keep or remove</li>
-<li><code>mutate</code> - add new mutated (changed) variables as columns to my data.</li>
+<li><a href="https://henrywang.nl/ggplot2-theme-elements-demonstration/">Theme elements</a></li>
+<li><a href="https://isabella-b.com/blog/ggplot2-theme-elements-reference/">More theme elements</a></li>
+<li>Google image search.</li>
 </ul>
-</section><section id="data-manipulation-verbs-for-summaries" class="slide level2">
-<h2>Data Manipulation Verbs for Summaries</h2>
-<ul>
-<li><code>summarise</code> - build summaries of the columns specified</li>
-<li><code>group_by</code> - divide your data into groups. Often used with <code>summarise</code></li>
-</ul>
+<!------------------------------------------------
+Basic Visualizations: Day 2
+
+## Goals for today:
+
+> - Syllabus Update
+> - Team Leads
+    - Reading Discussion
+    - Case Study Discussion
+> - Questions from Task 6
+> - Work time for Case Study 3
+
+## Reading Discussion
+
+## Task 6
+
+## Case Study 3
+
+>- [Kuwait](https://github.com/jennybc/gapminder/issues/9)
+>- [Need ideas?](https://www.r-graph-gallery.com/)
+
+# (Very Quick) Intro to Data Wrangling {data-background=#e8c35d}
+
+## Data Manipulation Verbs from `dplyr`
+
+> - `filter`  - filter your data to a smaller set of important rows.
+> - `sort` - Organize the row order of my data
+> - `select`  - select specific columns to keep or remove 
+> - `mutate`  - add new mutated (changed) variables as columns to my data.
+
+
+## Data Manipulation Verbs for Summaries
+
+> - `summarise` - build summaries of the columns specified
+> - `group_by`  - divide your data into groups. Often used with `summarise`
+------------------------------------------------------>
 </section></section>
     </div>
   </div>
