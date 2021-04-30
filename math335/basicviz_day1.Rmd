@@ -104,11 +104,11 @@ What do you see in your R console?
 
 You always start with a `ggplot()` layer. Then you can add on:
 
-- a `geom_*()` layer (required)
-- a `coord_*()` layer
-- a `facet_*()` layer
-- a `scale_*()` layer
-- a `theme_*()` layer
+- `geom_*()` layer (required)
+- `coord_*()` layer
+- `facet_*()` layer
+- `scale_*()` layer
+- `theme_*()` layer
 - and more!
 
 ## How can I get help with `ggplot2`?

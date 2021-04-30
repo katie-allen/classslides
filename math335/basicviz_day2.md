@@ -12,6 +12,39 @@ params:
 
 # Welcome to class! {data-background=#e8c35d}
 
+## How I use `ggplot2` layers
+
+<br>
+
+- `ggplot()`: I want to make a chart.
+- `geom_*()`: I want my data in this shape.
+- `facet_*()`: I want many small charts instead of one big chart.
+- `scale_*()`: I want to change the way my data is represented on a number line.
+- `theme_*()`: I want to change the way my chart (not my data) looks.
+
+## How can I get help with `ggplot2`?
+
+<br>
+
+> - Read the [textbook](https://r4ds.had.co.nz/data-visualisation.html)! 
+> - Use the [cheatsheet](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf)!
+> - Look at the [documentation](https://ggplot2.tidyverse.org/index.html)! (Or `?ggplot()`)
+
+## More help.
+
+<br>
+
+Layers can get complicated. For example, [themes](https://ggplot2.tidyverse.org/reference/theme.html).
+
+It is easier to google questions and find answers if you know what things are called.
+
+> - [Theme elements](https://henrywang.nl/ggplot2-theme-elements-demonstration/)
+> - [More theme elements](https://isabella-b.com/blog/ggplot2-theme-elements-reference/)
+> - Google image search.
+
+
+
+<!------------------------------------------------
 Basic Visualizations: Day 2
 
 ## Goals for today:
@@ -46,6 +79,6 @@ Basic Visualizations: Day 2
 
 > - `summarise` - build summaries of the columns specified
 > - `group_by`  - divide your data into groups. Often used with `summarise`
-
+------------------------------------------------------>
 
 

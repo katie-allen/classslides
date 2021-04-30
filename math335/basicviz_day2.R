@@ -1,4 +1,91 @@
 #####################################
+##   Research and Creative WOrks   ##
+#####################################
+
+# the two packages you need (or load the tidyverse)
+library(readr)
+library(ggplot2)
+
+# load the data
+rcw <- read_csv("https://byuistats.github.io/M335/data/rcw.csv", 
+                col_types = cols(Semester_Date = col_date(format = "%m/%d/%y"), 
+                                 Semester = col_factor(levels = c("Winter", "Spring", "Fall"))))
+
+# different ways to view your data
+head(rcw)
+View(rcw)
+
+
+
+#####################################
+# NYC Flights
+#####################################
+
+install.packages("nycflights13")
+library(nycflights13)
+
+# think - pair - share
+
+?flights
+View(flights)
+glimpse(flights)
+
+# QQ -----------------------
+ggplot(flights) + geom_histogram(aes(dep_time))
+ggplot(flights) + geom_histogram(aes(dep_delay))
+
+ggplot(flights) + geom_boxplot(aes(dep_time))
+ggplot(flights) + geom_boxplot(aes(dep_delay))
+
+
+# how many points????
+dim(flights)
+ggplot(flights) + geom_point(aes(dep_time, dep_delay))
+
+ggplot(flights) + geom_bin2d(aes(dep_time, dep_delay))
+ggplot(flights) + geom_hex(aes(dep_time, dep_delay))
+
+
+
+# QC -----------------------
+
+ggplot(flights) + geom_histogram(aes(dep_delay))
+ggplot(flights) + geom_bar(aes(origin))
+
+ggplot(flights) + geom_point(aes(origin, dep_delay))
+
+ggplot(flights) + geom_boxplot(aes(x=origin, y=dep_delay))
+ggplot(flights) + geom_violin(aes(x=origin, y=dep_delay))
+
+
+
+#####################################
+# Case Study 
+#####################################
+
+install.packages("gapminder")
+library(gapminder)
+
+?gapminder
+View(gapminder)
+glimpse(gapminder)
+
+gap <- filter(.data = gapminder, country != "Kuwait")
+
+
+
+#
+
+
+
+
+
+
+
+
+
+
+#####################################
 ##             TASK 6              ##
 #####################################
 
