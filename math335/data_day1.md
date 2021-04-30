@@ -17,32 +17,14 @@ that tells them to find the data for their project
 
 # Welcome to class! {data-background=#e8c35d}
 
-## Announcements
-
-## Git Demo
-
-## Team Activity
-
-<br>
-
-1. Open up the [every_flavor_start.csv]() file in excel.
-
-<!-------------------------------
 Try to recreate this plot using the `airquality` dataset in R.
 
 ![](images\try\try_airquality.png)
 
-```{r eval=FALSE, include = FALSE}
-airquality %>% 
-  ggplot() +
-  geom_point(aes(x = Temp, y = Ozone, color = Wind), size = 6, alpha = .3) +
-  scale_color_gradient(low = "red", high = "blue") +
-  facet_wrap(vars(Month)) +
-  labs(title = "New York City Ozone Levels")
-```
+
 
 ## Case Study Groups
------------------------------------------------>
+
 
 
 
@@ -58,22 +40,22 @@ From the official documentation:
 
 > "**dplyr** is a grammar of data manipulation, providing a consistent set of verbs that help you solve the most common data manipulation challenges."
 
-## Remember:
+## Remember...
 
 <br>
 
 Hadley Wickham, the author of the dplyr package, says:
 
-> "Whenever you're learning a new tool, for a long time you're going to suck. But the good news is, that is typical, that's something that happens to everyone, and it's only temporary."
+> "Whenever you're learning a new tool, for a long time you're going to suck. But the good news is that is typical, that's something that happens to everyone, and it's only temporary."
 
 ## Data manipulation verbs
 
 <br>
 
-- `filter`  - filter data to a smaller set of important rows
-- `arrange` - organize the row order of data
+- `filter`  - filter your data to a smaller set of important rows
+- `arrange` - organize the row order of my data
 - `select`  - select specific columns to keep or remove 
-- `mutate`  - add new mutated (changed) variables as columns to data
+- `mutate`  - add new mutated (changed) variables as columns to my data
 
 
 ## Data manipulation verbs for summaries
@@ -81,30 +63,7 @@ Hadley Wickham, the author of the dplyr package, says:
 <br>
 
 - `summarise` - build summaries of the columns specified
-- `group_by`  - divide data into groups and change the "scope" of other verbs
-
-## Using multiple verbs in a row
-
-<br>
-
-The "pipe" operator `%>%` can be used to connect `dplyr` verbs (and other functions!) together.
-
-## Using multiple verbs in a row
-
-<br>
-
-```
-iris2 <- filter(iris, Species == "setosa")
-iris3 <- mutate(iris2, new_column = Sepal.Length - 2)
-answer <- summarize(iris3, new_avg = mean(new_column))
-answer
-
-answer <- iris %>% 
-  filter(Species == "setosa") %>% 
-  mutate(new_column = Sepal.Length - 2) %>% 
-  summarise(new_avg = mean(new_column))
-answer
-```
+- `group_by`  - divide your data into groups and change the "scope" of other verbs
 
 ## Data verbs practice
 
@@ -119,7 +78,8 @@ answer
 
 With a partner (or in the Zoom chat), write this code out in an English paragraph.
 
-```{r weirdname, eval=FALSE, echo=TRUE}
+
+```r
 delays <- flights %>% 
   group_by(dest) %>% 
   summarise(
@@ -141,22 +101,7 @@ Use the six data verbs to tackle the following challenges.
 > 3. Create a new table that has the mean and standard deviation for petal width for each Species.
 > 4. Read about the `?summarise_all()` function and get a new table with the means and standard deviations for all the variables for each Species.
 
-```{r eval=FALSE, include = FALSE}
-#1
-iris %>% arrange(Sepal.Length) %>% head()
-iris %>% arrange(Sepal.Length) %>% top_n(6)
 
-#2
-testdat <- iris %>% select(Species, Petal.Width)
-
-#3
-iris %>% group_by(Species) %>% mutate(mn = mean(Petal.Width), std = sd(Petal.Width))
-iris %>% group_by(Species) %>% summarise(mn = mean(Petal.Width), std = sd(Petal.Width))
-
-#4
-iris %>% group_by(Species) %>% summarise_all(list(mean, sd))
-iris %>% group_by(Species) %>% summarise_all(list(~mean(.), ~sd(.)))
-```
 
 ## Use the dplyr cheatsheet
 
