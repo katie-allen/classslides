@@ -523,9 +523,33 @@ There is a task in a few weeks (task 11???)
 that tells them to find the data for their project
 -------------------------->
 </section>
-<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1><p>Try to recreate this plot using the <code>airquality</code> dataset in R.</p>
-<p><img data-src="images/try/try_airquality.png" /></p></section><section id="case-study-groups" class="slide level2">
-<h2>Case Study Groups</h2>
+<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1></section><section id="announcements" class="slide level2">
+<h2>Announcements</h2>
+</section><section id="git-demo" class="slide level2">
+<h2>Git Demo</h2>
+</section><section id="team-activity" class="slide level2">
+<h2>Team Activity</h2>
+<p><br></p>
+<ol type="1">
+<li class="fragment">Open up the <a href="">every_flavor_start.csv</a> file in excel.</li>
+<li class="fragment">With a buddy, manipulate the data to match the image below. You are allowed to:</li>
+</ol>
+<ul>
+<li class="fragment">Delete columns</li>
+<li class="fragment">Create new column</li>
+<li class="fragment">Select rows, following a specific rule</li>
+<li class="fragment">Rearrange rows, following a specific rule</li>
+</ul>
+<p><img data-src="images/every_flavor_END.png" /></p>
+<!-------------------------------
+Try to recreate this plot using the `airquality` dataset in R.
+
+![](images\try\try_airquality.png)
+
+
+
+## Case Study Groups
+----------------------------------------------->
 </section></section>
 <section><section id="data-wrangling-with-dplyr" class="title-slide slide level1" data-background="#e8c35d"><h1>Data wrangling with dplyr</h1></section><section id="the-dplyr-package" class="slide level2">
 <h2>The dplyr package</h2>
@@ -535,28 +559,45 @@ that tells them to find the data for their project
 <p>“<strong>dplyr</strong> is a grammar of data manipulation, providing a consistent set of verbs that help you solve the most common data manipulation challenges.”</p>
 </blockquote>
 </section><section id="remember" class="slide level2">
-<h2>Remember…</h2>
+<h2>Remember:</h2>
 <p><br></p>
 <p>Hadley Wickham, the author of the dplyr package, says:</p>
 <blockquote>
-<p>“Whenever you’re learning a new tool, for a long time you’re going to suck. But the good news is that is typical, that’s something that happens to everyone, and it’s only temporary.”</p>
+<p>“Whenever you’re learning a new tool, for a long time you’re going to suck. But the good news is, that is typical, that’s something that happens to everyone, and it’s only temporary.”</p>
 </blockquote>
 </section><section id="data-manipulation-verbs" class="slide level2">
 <h2>Data manipulation verbs</h2>
 <p><br></p>
 <ul>
-<li class="fragment"><code>filter</code> - filter your data to a smaller set of important rows</li>
-<li class="fragment"><code>arrange</code> - organize the row order of my data</li>
+<li class="fragment"><code>filter</code> - filter data to a smaller set of important rows</li>
+<li class="fragment"><code>arrange</code> - organize the row order of data</li>
 <li class="fragment"><code>select</code> - select specific columns to keep or remove</li>
-<li class="fragment"><code>mutate</code> - add new mutated (changed) variables as columns to my data</li>
+<li class="fragment"><code>mutate</code> - add new mutated (changed) variables as columns to data</li>
 </ul>
 </section><section id="data-manipulation-verbs-for-summaries" class="slide level2">
 <h2>Data manipulation verbs for summaries</h2>
 <p><br></p>
 <ul>
 <li class="fragment"><code>summarise</code> - build summaries of the columns specified</li>
-<li class="fragment"><code>group_by</code> - divide your data into groups and change the “scope” of other verbs</li>
+<li class="fragment"><code>group_by</code> - divide data into groups and change the “scope” of other verbs</li>
 </ul>
+</section><section id="using-multiple-verbs-in-a-row" class="slide level2">
+<h2>Using multiple verbs in a row</h2>
+<p><br></p>
+<p>The “pipe” operator <code>%&gt;%</code> can be used to connect <code>dplyr</code> verbs (and other functions!) together.</p>
+</section><section id="using-multiple-verbs-in-a-row-1" class="slide level2">
+<h2>Using multiple verbs in a row</h2>
+<p><br></p>
+<pre><code>iris2 &lt;- filter(iris, Species == &quot;setosa&quot;)
+iris3 &lt;- mutate(iris2, new_column = Sepal.Length - 2)
+answer &lt;- summarize(iris3, new_avg = mean(new_column))
+answer
+
+answer &lt;- iris %&gt;% 
+  filter(Species == &quot;setosa&quot;) %&gt;% 
+  mutate(new_column = Sepal.Length - 2) %&gt;% 
+  summarise(new_avg = mean(new_column))
+answer</code></pre>
 </section><section id="data-verbs-practice" class="slide level2">
 <h2>Data verbs practice</h2>
 <p><br></p>
@@ -565,14 +606,14 @@ that tells them to find the data for their project
 <h2>Practice reading code</h2>
 <p><br></p>
 <p>With a partner (or in the Zoom chat), write this code out in an English paragraph.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>delays &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="st">  </span><span class="kw">group_by</span>(dest) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="st">  </span><span class="kw">summarise</span>(</span>
-<span id="cb1-4"><a href="#cb1-4"></a>    <span class="dt">count =</span> <span class="kw">n</span>(),</span>
-<span id="cb1-5"><a href="#cb1-5"></a>    <span class="dt">dist =</span> <span class="kw">mean</span>(distance, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</span>
-<span id="cb1-6"><a href="#cb1-6"></a>    <span class="dt">delay =</span> <span class="kw">mean</span>(arr_delay, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb1-7"><a href="#cb1-7"></a>  ) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="st">  </span><span class="kw">filter</span>(count <span class="op">&gt;</span><span class="st"> </span><span class="dv">20</span>, dest <span class="op">!=</span><span class="st"> &quot;HNL&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>delays &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="st">  </span><span class="kw">group_by</span>(dest) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="st">  </span><span class="kw">summarise</span>(</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="dt">count =</span> <span class="kw">n</span>(),</span>
+<span id="cb2-5"><a href="#cb2-5"></a>    <span class="dt">dist =</span> <span class="kw">mean</span>(distance, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</span>
+<span id="cb2-6"><a href="#cb2-6"></a>    <span class="dt">delay =</span> <span class="kw">mean</span>(arr_delay, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb2-7"><a href="#cb2-7"></a>  ) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="st">  </span><span class="kw">filter</span>(count <span class="op">&gt;</span><span class="st"> </span><span class="dv">20</span>, dest <span class="op">!=</span><span class="st"> &quot;HNL&quot;</span>)</span></code></pre></div>
 </section><section id="practice-writing-code" class="slide level2">
 <h2>Practice writing code</h2>
 <p>Use the six data verbs to tackle the following challenges.</p>

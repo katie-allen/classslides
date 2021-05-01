@@ -17,6 +17,26 @@ that tells them to find the data for their project
 
 # Welcome to class! {data-background=#e8c35d}
 
+## Announcements
+
+## Git Demo
+
+## Team Activity
+
+<br>
+
+1. Open up the [every_flavor_start.csv]() file in excel.
+2. With a buddy, manipulate the data to match the image below. You are allowed to:
+  - Delete columns
+  - Create new column
+  - Select rows, following a specific rule
+  - Rearrange rows, following a specific rule
+  
+![](images/every_flavor_END.png)
+  
+
+
+<!-------------------------------
 Try to recreate this plot using the `airquality` dataset in R.
 
 ![](images\try\try_airquality.png)
@@ -24,7 +44,7 @@ Try to recreate this plot using the `airquality` dataset in R.
 
 
 ## Case Study Groups
-
+----------------------------------------------->
 
 
 
@@ -40,22 +60,22 @@ From the official documentation:
 
 > "**dplyr** is a grammar of data manipulation, providing a consistent set of verbs that help you solve the most common data manipulation challenges."
 
-## Remember...
+## Remember:
 
 <br>
 
 Hadley Wickham, the author of the dplyr package, says:
 
-> "Whenever you're learning a new tool, for a long time you're going to suck. But the good news is that is typical, that's something that happens to everyone, and it's only temporary."
+> "Whenever you're learning a new tool, for a long time you're going to suck. But the good news is, that is typical, that's something that happens to everyone, and it's only temporary."
 
 ## Data manipulation verbs
 
 <br>
 
-- `filter`  - filter your data to a smaller set of important rows
-- `arrange` - organize the row order of my data
+- `filter`  - filter data to a smaller set of important rows
+- `arrange` - organize the row order of data
 - `select`  - select specific columns to keep or remove 
-- `mutate`  - add new mutated (changed) variables as columns to my data
+- `mutate`  - add new mutated (changed) variables as columns to data
 
 
 ## Data manipulation verbs for summaries
@@ -63,7 +83,30 @@ Hadley Wickham, the author of the dplyr package, says:
 <br>
 
 - `summarise` - build summaries of the columns specified
-- `group_by`  - divide your data into groups and change the "scope" of other verbs
+- `group_by`  - divide data into groups and change the "scope" of other verbs
+
+## Using multiple verbs in a row
+
+<br>
+
+The "pipe" operator `%>%` can be used to connect `dplyr` verbs (and other functions!) together.
+
+## Using multiple verbs in a row
+
+<br>
+
+```
+iris2 <- filter(iris, Species == "setosa")
+iris3 <- mutate(iris2, new_column = Sepal.Length - 2)
+answer <- summarize(iris3, new_avg = mean(new_column))
+answer
+
+answer <- iris %>% 
+  filter(Species == "setosa") %>% 
+  mutate(new_column = Sepal.Length - 2) %>% 
+  summarise(new_avg = mean(new_column))
+answer
+```
 
 ## Data verbs practice
 

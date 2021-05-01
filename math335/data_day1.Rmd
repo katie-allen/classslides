@@ -26,6 +26,15 @@ that tells them to find the data for their project
 <br>
 
 1. Open up the [every_flavor_start.csv]() file in excel.
+2. With a buddy, manipulate the data to match the image below. You are allowed to:
+  - Delete columns
+  - Create new column
+  - Select rows, following a specific rule
+  - Rearrange rows, following a specific rule
+  
+![](images/every_flavor_END.png)
+  
+
 
 <!-------------------------------
 Try to recreate this plot using the `airquality` dataset in R.
