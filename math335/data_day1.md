@@ -5,16 +5,6 @@ params:
   pbackground: true
   dtype: "none"
 ---
-
-<!-----------------------
-Note:
-want to students to focus on picking a TOPIC and QUESTION,
-rather than finding the perfect data right now.
-
-There is a task in a few weeks (task 11???)
-that tells them to find the data for their project
--------------------------->
-
 # Welcome to class! {data-background=#e8c35d}
 
 ## Announcements
@@ -25,7 +15,7 @@ that tells them to find the data for their project
 
 <br>
 
-1. Open up the [every_flavor_start.csv]() file in excel.
+1. Open up the [every_flavor_start.csv](https://raw.githubusercontent.com/ktoutloud/classslides/master/math335/data/every_flavor_START.csv) file in excel.
 2. With a buddy, manipulate the data to match the image below. You are allowed to:
   - Delete columns
   - Create new column
@@ -45,10 +35,6 @@ Try to recreate this plot using the `airquality` dataset in R.
 
 ## Case Study Groups
 ----------------------------------------------->
-
-
-
-
 
 # Data wrangling with dplyr  {data-background=#e8c35d}
 
@@ -95,19 +81,9 @@ The "pipe" operator `%>%` can be used to connect `dplyr` verbs (and other functi
 
 <br>
 
-```
-iris2 <- filter(iris, Species == "setosa")
-iris3 <- mutate(iris2, new_column = Sepal.Length - 2)
-answer <- summarize(iris3, new_avg = mean(new_column))
-answer
+(Example in R)
 
-answer <- iris %>% 
-  filter(Species == "setosa") %>% 
-  mutate(new_column = Sepal.Length - 2) %>% 
-  summarise(new_avg = mean(new_column))
-answer
-```
-
+<!-----------------------------
 ## Data verbs practice
 
 <br>
@@ -132,6 +108,7 @@ delays <- flights %>%
   ) %>% 
   filter(count > 20, dest != "HNL")
 ```
+---------------------------------->
 
 ## Practice writing code
 
@@ -149,3 +126,5 @@ Use the six data verbs to tackle the following challenges.
 ## Use the dplyr cheatsheet
 
 https://github.com/rstudio/cheatsheets/blob/master/data-transformation.pdf
+
+## Task 5
