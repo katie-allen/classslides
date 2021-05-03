@@ -4,6 +4,7 @@ dd <- read_csv("https://raw.githubusercontent.com/ktoutloud/classslides/master/m
 
 head(dd)
 
+
 dd1 <- filter(dd, grepl("chocolate", category))
 dd1$Rhett_percent = dd1$Rhett / dd1$total
 dd1$Link_percent = dd1$Link / dd1$total
@@ -11,6 +12,19 @@ dd2 <- filter(dd1, Rhett_percent > .5)
 dd3 <- arrange(dd2, total)
 dd4 <- select(dd3, food, category, flavor, total, Rhett_percent, Link_percent)
 dd4
+
+#
+
+
+
+
+
+
+
+
+
+
+
 
 dd %>% 
   filter(grepl("chocolate", category)) %>% 
