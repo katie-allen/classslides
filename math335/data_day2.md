@@ -1,10 +1,28 @@
 ---
-title: ""
 params:
   ptitle: true
   pbackground: true
   dtype: "none"
 ---
+
+# Welcome to class! {data-background=#e8c35d}
+
+## Sign up for "Team Lead"
+
+<br>
+
+Which we are now calling "Discussion Lead".
+[Sign up here.](https://docs.google.com/spreadsheets/d/1aPmKWGRJMTKnofBXryUb-UsrIvh9rK7Y4yA6uDfFnms/edit?usp=sharing)
+
+## dplyr Verb Groups
+
+<br>
+
+With your group, study your assigned function and use the `gapminder` data to create an example for the class.
+
+![](images/dplyr_verbs.png)
+
+## Task 6
 
 <!-----------------------
 Note:
@@ -15,12 +33,7 @@ There is a task in a few weeks (task 11???)
 that tells them to find the data for their project
 -------------------------->
 
-# Welcome to class! {data-background=#e8c35d}
-
-## Practice reading code
-
-<br>
-
+<!---------------------
 With a partner (or in the Zoom chat), write this code out in an English paragraph.
 
 
@@ -34,4 +47,4 @@ delays <- flights %>%
   ) %>% 
   filter(count > 20, dest != "HNL")
 ```
-
+------------------------->
