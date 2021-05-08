@@ -23,51 +23,13 @@ Tidy Data: Day 1
 > - [Slides by Julie Lowndes and Allison Horst](https://www.openscapes.org/blog/2020/10/12/tidy-data/)
 > - [Example of untidy and "wild" data](https://sharlagelfand.netlify.app/posts/tidying-toronto-open-data/)
 
-## tidyr Functions: Pivoting
+## `tidyr` Functions: Character vectors
 
 <br>
 
-> - `pivot_longer()` pivots data from wide to long
-> - `pivot_wider()` pivots data from long to wide
-
-
-## tidyr Functions: Pivoting
-
-<br>
-
-Start with `relig_income` and `pivot_longer` to create two new columns: income and count
-
-```
-library(tidyverse)
-relig_income
-```
-
-## tidyr Functions: Pivoting
-
-<br>
-
-Start with `fish_encounters` and `pivot_wider` to create a new column for each station. Fill in missing values with 999.
-
-```
-library(tidyverse)
-fish_encounters
-```
-
-## tidyr Functions: Pivoting
-
-<br>
-
-> - [Helpful illustration](https://bookdown.org/ansellbr/WEHI_tidyR_course_book/reading-tidying-joining-data.html#pivot_wider)
-> - [More illustrations](https://swcarpentry.github.io/r-novice-gapminder/14-tidyr/)
-
-
-## tidyr Functions: Character vectors
-
-<br>
-
-> - `separate()` separates a character column into multiple columns with a regular expression or numeric locations
-> - `unite()` unites multiple columns into one by pasting strings together
-> - `extract()` extracts a character column into multiple columns using regular expression groups
+- `separate()` separates a character column into multiple columns (using regular expression or numeric locations)
+- `extract()` extracts text from a character column into multiple columns (using regular expression groups)
+- `unite()` unites multiple columns into one by pasting strings together
 
 
 <!-----------
@@ -80,7 +42,45 @@ Usually such patterns are used by string-searching algorithms for "find" or "fin
 [regex101.com](https://regex101.com/)
 ------------->
 
-## dyplr and tidyr
+## `tidyr` Functions: Pivoting
+
+<br>
+
+- `pivot_longer()` pivots data from wide to long
+- `pivot_wider()` pivots data from long to wide
+
+
+## `tidyr` Functions: Pivoting
+
+<br>
+
+Start with `relig_income` and `pivot_longer` to create two new columns: income and count
+
+```
+library(tidyverse)
+relig_income
+```
+
+## `tidyr` Functions: Pivoting
+
+<br>
+
+Start with `fish_encounters` and `pivot_wider` to create a new column for each station. Fill in missing values with 999.
+
+```
+library(tidyverse)
+fish_encounters
+```
+
+## `tidyr` Functions: Pivoting
+
+<br>
+
+> - [Helpful illustration](https://bookdown.org/ansellbr/WEHI_tidyR_course_book/reading-tidying-joining-data.html#pivot_wider)
+> - [More illustrations](https://swcarpentry.github.io/r-novice-gapminder/14-tidyr/)
+
+
+## `dyplr` and `tidyr`
 
 <br>
 
