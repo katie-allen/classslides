@@ -8,8 +8,6 @@ params:
 
 # Welcome to class! {data-background=#e8c35d}
 
-Tidy Data: Day 1
-
 # Case Study Presentations {data-background=#e8c35d}
 
 # Tidy Data  {data-background=#e8c35d}
