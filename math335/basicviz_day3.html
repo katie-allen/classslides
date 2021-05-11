@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>day_2.utf8</title>
+  <meta name="author" content="" />
+  <title>basicviz_day3.utf8</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -442,139 +443,21 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
-    <script src="externals/header-attrs-2.1/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 
-<section>
-<section id="welcome-to-class" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Welcome to class!</h1>
-
-</section>
-<section id="todays-outline" class="slide level2">
-<h2>Today’s Outline:</h2>
-<ul>
-<li>Finish syllabus review</li>
-<li>Questions from Task 1/Setting up R-Studio</li>
-<li>Reading discussion</li>
-<li>Prepare for Task 2 and Case Study</li>
-</ul>
-</section>
-<section id="my-family" class="slide level2">
-<h2>My family</h2>
-<p><img data-src="images/crazy_family.jpg" /></p>
-</section>
-<section id="what-is-data-science" class="slide level2">
-<h2>What is data science?</h2>
-<p>Answer: A venn diagram ( <a href="https://www.omnisci.com/learn/data-science">here</a>, <a href="https://data36.com/what-is-data-science/">here</a>, and <a href="https://www.innoarchitech.com/blog/what-is-data-science-does-data-scientist-do">here</a>)</p>
-<p><a href="https://www.youtube.com/watch?v=eMOY79x6drA">“The Business of Data” video</a></p>
-<p>Hadley Wickham’s <a href="https://r4ds.had.co.nz/">diagram</a></p>
-</section></section>
-<section>
-<section id="syllabus-continued-from-day-1" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Syllabus (continued from Day 1)</h1>
-
-</section>
-<section id="specifications-grading" class="slide level2">
-<h2>Specifications Grading</h2>
-<p><img data-src="images/grade_sets.png" /></p>
-</section>
-<section id="workload-to-get-an-a" class="slide level2">
-<h2>Workload to get an “A”</h2>
-<p><img data-src="day_2_files/figure-revealjs/unnamed-chunk-1-1.png" /></p>
-</section>
-<section id="to-get-a-b" class="slide level2">
-<h2>To get a “B”</h2>
-<p>You don’t do <strong>B</strong> work on all the tasks and case studies - You do <strong>A</strong> work on half of them.</p>
-<ul>
-<li class="fragment">Focus on the first 5-weeks material. Pick and choose work after the foundation material.</li>
-<li class="fragment">I know everyone can earn a B or higher.</li>
-</ul>
-</section>
-<section id="how-to-get-help" class="slide level2">
-<h2>How to get help</h2>
-<ul>
-<li>Slack</li>
-<li>R-Lab</li>
-<li>My office hours</li>
-</ul>
-</section>
-<section id="questions-about-the-syllabus" class="slide level2">
-<h2>Questions about the syllabus?</h2>
-</section></section>
-<section>
-<section id="task-1" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Task 1</h1>
-
-</section>
-<section id="questions-about-r-andor-r-studio" class="slide level2">
-<h2>Questions about R and/or R-Studio?</h2>
-</section>
-<section id="getting-r-studio-under-control" class="slide level2">
-<h2>Getting R-Studio under control</h2>
-</section></section>
-<section>
-<section id="reading-discussion" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Reading Discussion</h1>
-
-</section>
-<section id="how-humans-see-data" class="slide level2">
-<h2>How Humans See Data</h2>
-<p><a href="https://www.youtube.com/embed/fSgEeI2Xpdc?rel=0&amp;start=0" target="blank">John Rauser Video</a></p>
-<p><a href="https://docs.google.com/spreadsheets/d/1Dfj68hm77XwnQgV5mSw3ja3cRTJgcOYYEDKD5RmKjBY/edit?usp=sharing">Class comments.</a></p>
-<ul>
-<li>What did you learn?</li>
-<li>Were you surprised by anything?</li>
-<li>Do you disagree with anything he said?</li>
-</ul>
-</section>
-<section id="methods-of-encoding-data" class="slide level2">
-<h2>7 methods of encoding data</h2>
-<h4 id="ordered-by-accuracy-of-perceptual-estimation.">Ordered by accuracy of perceptual estimation.</h4>
-<ol type="1">
-<li class="fragment">Position along a common scale</li>
-<li class="fragment">Position on common, non-aligned scale</li>
-<li class="fragment">Length</li>
-<li class="fragment">Angle or slope</li>
-<li class="fragment">Area</li>
-<li class="fragment">Volume/density/saturation of “color”</li>
-<li class="fragment">Color hue</li>
-</ol>
-</section>
-<section id="quote-from-tufte" class="slide level2">
-<h2>Quote from Tufte</h2>
-<blockquote>
-<p>Above all else, show the data</p>
-</blockquote>
-</section>
-<section id="being-a-better-online-reader" class="slide level2">
-<h2><a href="https://www.newyorker.com/science/maria-konnikova/being-a-better-online-reader">Being a Better Online Reader</a></h2>
-<p>What do you agree with? Disagree?</p>
-<p>What’s your plan to succeed this semester?</p>
-</section></section>
-<section>
-<section id="looking-ahead" class="title-slide slide level1" data-background="#f7d754">
-<h1 data-background="#f7d754">Looking Ahead</h1>
-
-</section>
-<section id="task-2" class="slide level2">
-<h2>Task 2</h2>
-<ul>
-<li>Github</li>
-<li>Professional Photo</li>
-<li>Data Science Society</li>
-</ul>
-</section>
-<section id="before-next-class" class="slide level2">
-<h2>Before next class…</h2>
-<ul>
-<li>Sign up for a one-on-one interview with Sister Larson</li>
-<li>Finish Task 2</li>
-<li>Look over Case Study 1</li>
-</ul>
+<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1></section><section id="what-is-git" class="slide level2">
+<h2>What is Git?</h2>
+<p><a href="https://www.youtube.com/watch?v=2ReR1YJrNOM">Great question.</a></p>
+</section><section id="what-is-github" class="slide level2">
+<h2>What is GitHub?</h2>
+<p><a href="https://www.youtube.com/watch?v=w3jLJU7DT5E">Another great question.</a></p>
+</section><section id="git-and-github" class="slide level2">
+<h2>Git and GitHub</h2>
+<p><img data-src="images/Git_workflow_diagram.png" /></p>
 </section></section>
     </div>
   </div>

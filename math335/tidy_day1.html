@@ -448,7 +448,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 
-<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1><p>Tidy Data: Day 1</p></section>
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1></section>
 <section id="case-study-presentations" class="title-slide slide level1" data-background="#e8c35d"><h1>Case Study Presentations</h1></section>
 <section><section id="tidy-data" class="title-slide slide level1" data-background="#e8c35d"><h1>Tidy Data</h1></section><section id="what-is-tidy-data" class="slide level2">
 <h2>What is tidy data?</h2>
@@ -459,39 +459,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li><a href="https://www.openscapes.org/blog/2020/10/12/tidy-data/">Slides by Julie Lowndes and Allison Horst</a></li>
 <li><a href="https://sharlagelfand.netlify.app/posts/tidying-toronto-open-data/">Example of untidy and “wild” data</a></li>
 </ul>
-</section><section id="tidyr-functions-pivoting" class="slide level2">
-<h2>tidyr Functions: Pivoting</h2>
-<p><br></p>
-<ul>
-<li><code>pivot_longer()</code> pivots data from wide to long</li>
-<li><code>pivot_wider()</code> pivots data from long to wide</li>
-</ul>
-</section><section id="tidyr-functions-pivoting-1" class="slide level2">
-<h2>tidyr Functions: Pivoting</h2>
-<p><br></p>
-<p>Start with <code>relig_income</code> and <code>pivot_longer</code> to create two new columns: income and count</p>
-<pre><code>library(tidyverse)
-relig_income</code></pre>
-</section><section id="tidyr-functions-pivoting-2" class="slide level2">
-<h2>tidyr Functions: Pivoting</h2>
-<p><br></p>
-<p>Start with <code>fish_encounters</code> and <code>pivot_wider</code> to create a new column for each station. Fill in missing values with 999.</p>
-<pre><code>library(tidyverse)
-fish_encounters</code></pre>
-</section><section id="tidyr-functions-pivoting-3" class="slide level2">
-<h2>tidyr Functions: Pivoting</h2>
-<p><br></p>
-<ul>
-<li><a href="https://bookdown.org/ansellbr/WEHI_tidyR_course_book/reading-tidying-joining-data.html#pivot_wider">Helpful illustration</a></li>
-<li><a href="https://swcarpentry.github.io/r-novice-gapminder/14-tidyr/">More illustrations</a></li>
-</ul>
 </section><section id="tidyr-functions-character-vectors" class="slide level2">
-<h2>tidyr Functions: Character vectors</h2>
+<h2><code>tidyr</code> Functions: Character vectors</h2>
 <p><br></p>
 <ul>
-<li><code>separate()</code> separates a character column into multiple columns with a regular expression or numeric locations</li>
-<li><code>unite()</code> unites multiple columns into one by pasting strings together</li>
-<li><code>extract()</code> extracts a character column into multiple columns using regular expression groups</li>
+<li class="fragment"><code>separate()</code> separates a character column into multiple columns (using regular expression or numeric locations)</li>
+<li class="fragment"><code>extract()</code> extracts text from a character column into multiple columns (using regular expression groups)</li>
+<li class="fragment"><code>unite()</code> unites multiple columns into one by pasting strings together</li>
 </ul>
 <!-----------
 ## regular expressions
@@ -502,8 +476,34 @@ Usually such patterns are used by string-searching algorithms for "find" or "fin
 
 [regex101.com](https://regex101.com/)
 ------------->
+</section><section id="tidyr-functions-pivoting" class="slide level2">
+<h2><code>tidyr</code> Functions: Pivoting</h2>
+<p><br></p>
+<ul>
+<li class="fragment"><code>pivot_longer()</code> pivots data from wide to long</li>
+<li class="fragment"><code>pivot_wider()</code> pivots data from long to wide</li>
+</ul>
+</section><section id="tidyr-functions-pivoting-1" class="slide level2">
+<h2><code>tidyr</code> Functions: Pivoting</h2>
+<p><br></p>
+<p>Start with <code>relig_income</code> and <code>pivot_longer</code> to create two new columns: income and count</p>
+<pre><code>library(tidyverse)
+relig_income</code></pre>
+</section><section id="tidyr-functions-pivoting-2" class="slide level2">
+<h2><code>tidyr</code> Functions: Pivoting</h2>
+<p><br></p>
+<p>Start with <code>fish_encounters</code> and <code>pivot_wider</code> to create a new column for each station. Fill in missing values with 999.</p>
+<pre><code>library(tidyverse)
+fish_encounters</code></pre>
+</section><section id="tidyr-functions-pivoting-3" class="slide level2">
+<h2><code>tidyr</code> Functions: Pivoting</h2>
+<p><br></p>
+<ul>
+<li><a href="https://bookdown.org/ansellbr/WEHI_tidyR_course_book/reading-tidying-joining-data.html#pivot_wider">Helpful illustration</a></li>
+<li><a href="https://swcarpentry.github.io/r-novice-gapminder/14-tidyr/">More illustrations</a></li>
+</ul>
 </section><section id="dyplr-and-tidyr" class="slide level2">
-<h2>dyplr and tidyr</h2>
+<h2><code>dyplr</code> and <code>tidyr</code></h2>
 <p><br></p>
 <p>The six data verbs from <code>dyplr</code> and the tidy tools from <code>tidyr</code> should be used hand-in-hand to wrangle data until it is tidy.</p>
 <p><a href="https://www.youtube.com/watch?v=ry55--J4_VQ">What it might feel like.</a></p>

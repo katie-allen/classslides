@@ -23,14 +23,7 @@ Try to recreate this plot using the `airquality` dataset in R.
 
 ![](images\try\try_airquality.png)
 
-```{r eval=FALSE, include = FALSE}
-airquality %>% 
-  ggplot() +
-  geom_point(aes(x = Temp, y = Ozone, color = Wind), size = 6, alpha = .3) +
-  scale_color_gradient(low = "red", high = "blue") +
-  facet_wrap(vars(Month)) +
-  labs(title = "New York City Ozone Levels")
-```
+
 
 ## Case Study Groups
 ----------------------------------------------->
@@ -96,7 +89,8 @@ The "pipe" operator `%>%` can be used to connect `dplyr` verbs (and other functi
 
 With a partner (or in the Zoom chat), write this code out in an English paragraph.
 
-```{r weirdname, eval=FALSE, echo=TRUE}
+
+```r
 delays <- flights %>% 
   group_by(dest) %>% 
   summarise(
@@ -117,21 +111,6 @@ Use the six data verbs to tackle the following challenges. (The dplyr cheatsheet
 > 3. Create a new table that has the mean and standard deviation for petal width for each Species.
 > 4. Read about the `?summarise_all()` function and get a new table with the means and standard deviations for all the variables for each Species.
 
-```{r eval=FALSE, include = FALSE}
-#1
-iris %>% arrange(Sepal.Length) %>% head()
-iris %>% arrange(Sepal.Length) %>% top_n(6)
 
-#2
-testdat <- iris %>% select(Species, Petal.Width)
-
-#3
-iris %>% group_by(Species) %>% mutate(mn = mean(Petal.Width), std = sd(Petal.Width))
-iris %>% group_by(Species) %>% summarise(mn = mean(Petal.Width), std = sd(Petal.Width))
-
-#4
-iris %>% group_by(Species) %>% summarise_all(list(mean, sd))
-iris %>% group_by(Species) %>% summarise_all(list(~mean(.), ~sd(.)))
-```
 
 ## Task 5
