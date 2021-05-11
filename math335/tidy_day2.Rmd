@@ -8,8 +8,17 @@ params:
 
 # Welcome to class! {data-background=#e8c35d}
 
-Tidy Data: Day 2
+# This Week I Learned...
 
+# Task 7
+
+> - Take two minutes to review your work for Task 7. Answer one of these questions:
+>   - What new skill did you learn? or
+>   - What question do you have about the task?
+> - In pairs, share what you learned or what question you have.
+
+
+<!----------------------------------------------------
 ## Task 9
 
 <br>
@@ -71,7 +80,7 @@ In Slack: Who wants to be a lead for this Friday's reading discussion?
 4 online, 3 face-to-face
 
 ## Task 10!
-
+--------------------------------------------------->
 
 
 
