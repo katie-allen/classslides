@@ -12,6 +12,19 @@ params:
 
 # Task 7 {data-background=#e8c35d}
 
+## Task 7
+
+<br>
+
+> - Take two minutes to review your work for Task 7. Answer one of these questions:
+>   - What new skill did you learn? or
+>   - What question do you have about the task?
+> - In pairs, share what you learned or what question you have.
+
+## Task 7
+
+<br>
+
 pivots, case_when, and factors
 
 # Task 8 {data-background=#e8c35d}
