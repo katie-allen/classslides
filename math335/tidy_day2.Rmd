@@ -8,21 +8,13 @@ params:
 
 # Welcome to class! {data-background=#e8c35d}
 
-Tidy Data: Day 2
+# This Week I Learned {data-background=#e8c35d}
 
-## Task 9
+# Task 7 {data-background=#e8c35d}
 
-<br>
+pivots, case_when, and factors
 
-Anyone want to share your table and/or chart?
-
-## tidyr Functions: Character vectors
-
-<br>
-
-- `separate()` separates a character column into multiple columns with a regular expression or numeric locations
-- `extract()` extracts a character column into multiple columns using regular expression groups
-- `unite()` unites multiple columns into one by pasting strings together
+# Task 8 {data-background=#e8c35d}
 
 ## Data frame vs Tibble
 
@@ -54,6 +46,7 @@ attributes(iris)
 attr(iris, "my_attribute") <- 42
 attributes(iris)
 ```
+
 ## readr package
 
 <br>
@@ -62,21 +55,7 @@ The [readr package](https://readr.tidyverse.org/) provides "a fast and friendly 
 
 How is `read.csv()` different from `read_csv()`? And [why do we care](https://r4ds.had.co.nz/data-import.html#compared-to-base-r)?
 
-## Sign up to lead
-
-<br>
-
-In Slack: Who wants to be a lead for this Friday's reading discussion?
-
-4 online, 3 face-to-face
-
-## Task 10!
-
-
-
-
-
-
+## What does it mean for two data sets to be equal?
 
 <!-----------
 ## regular expressions
