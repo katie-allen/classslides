@@ -512,29 +512,44 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <div class="slides">
 
 
-<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1><p>Tidy Data: Day 3</p></section>
-<section><section id="reading-discussion" class="title-slide slide level1" data-background="#e8c35d"><h1>Reading Discussion</h1></section><section id="john-rauser-how-humans-see-data" class="slide level2">
-<h2>John Rauser: How Humans See Data</h2>
-</section><section id="visual-operations" class="slide level2">
-<h2>3 visual operations</h2>
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1></section>
+<section><section id="reading-discussion" class="title-slide slide level1" data-background="#e8c35d"><h1>Reading Discussion</h1></section><section id="tidy-data" class="slide level2">
+<h2>Tidy Data</h2>
 <p><br></p>
-<ol type="1">
-<li class="fragment">Detection</li>
-<li class="fragment">Assumbly</li>
-<li class="fragment">Estimation</li>
-</ol>
-</section><section id="methods-of-encoding-data-ordered-by-accuracy-of-perceptual-estimation" class="slide level2">
-<h2>7 methods of encoding data, ordered by accuracy of perceptual estimation</h2>
+<ul>
+<li class="fragment">A “philosophy of data”</li>
+<li class="fragment">“A standard makes initial data cleaning easier because you don’t need to start from scratch and reinvent the wheel every time.”</li>
+<li class="fragment">“Tidy datasets and tidy tools work hand in hand to make data analysis easier, allowing you to focus on the interesting domain problem, not on the uninteresting logistics of data.”</li>
+</ul>
+</section><section id="bad-data" class="slide level2">
+<h2>Bad Data</h2>
 <p><br></p>
-<ol type="1">
-<li class="fragment">Position along a common scale</li>
-<li class="fragment">Position on common, non-aligned scale</li>
-<li class="fragment">Length</li>
-<li class="fragment">Angle or slope</li>
-<li class="fragment">Area</li>
-<li class="fragment">Volume/density/saturation of “color”</li>
-<li class="fragment">Color hue</li>
-</ol>
+<ul>
+<li class="fragment">“By familiarizing yourself with the kinds of issues you are likely to encounter, you will have a better chance of identifying an issue before it causes you to make a mistake.”</li>
+</ul>
+<!--------------------------------------
+## John Rauser: How Humans See Data
+
+## 3 visual operations
+
+<br>
+
+1. Detection
+2. Assumbly
+3. Estimation
+
+## 7 methods of encoding data, ordered by accuracy of perceptual estimation
+
+<br>
+
+1. Position along a common scale
+2. Position on common, non-aligned scale
+3. Length
+4. Angle or slope
+5. Area
+6. Volume/density/saturation of "color"
+7. Color hue
+--------------------------------------------->
 <!----------------------------
 
 # Vectors {data-background=#e8c35d}
@@ -666,7 +681,7 @@ as.numeric(levels(f))[f]
 
 -------------------------------->
 </section></section>
-<section><section id="importing-data" class="title-slide slide level1" data-background="#e8c35d"><h1>Importing Data</h1><!-----------
+<section><section id="importing-the-right-type-of-data" class="title-slide slide level1" data-background="#e8c35d"><h1>Importing (the right type of) data</h1><!-----------
 
 ## Data formats
 
@@ -693,22 +708,30 @@ as.numeric(levels(f))[f]
 <pre><code>money &lt;- c(&#39;4,554,25&#39;, &#39;$45&#39;, &#39;8025.33cents&#39;, &#39;288f45&#39;)</code></pre>
 <p><br></p>
 <ul>
-<li>Apply <code>as.numeric(money)</code>. What happens?</li>
-<li>Apply <code>parse_number(money)</code> and compare the results.</li>
+<li>Run <code>as.numeric(money)</code>. What happens?</li>
+<li>Run <code>parse_number(money)</code> and compare the results.</li>
 </ul>
 </section><section id="using-read_csv-with-parsers" class="slide level2">
 <h2>Using <code>read_csv()</code> with parsers</h2>
 <p><br></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>challenge &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">readr_example</span>(<span class="st">&quot;challenge.csv&quot;</span>))</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">problems</span>(challenge)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>challenge &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">readr_example</span>(<span class="st">&quot;challenge.csv&quot;</span>))</span></code></pre></div>
 <ol type="1">
 <li>Run the code above.</li>
 <li>Look at the errors using <code>problems(challenge)</code>.</li>
-<li>Find more clues using the <code>head()</code>, and <code>tail()</code> of your <code>challenge</code> object. What formats should they be?</li>
-<li>Now review <a href="http://r4ds.had.co.nz/data-import.html#problems">11.4.2 of our textbook</a> and <code>?read_csv()</code> to fix the read in.</li>
+<li>Find more clues by opening the <code>challenge.csv</code> file in Excel. What formats should the columns be?</li>
+<li>Read <a href="http://r4ds.had.co.nz/data-import.html#problems">11.4.2 of our textbook</a> and <code>?read_csv()</code> to fix the errors.</li>
 </ol>
 </section></section>
-<section id="work-time" class="title-slide slide level1" data-background="#e8c35d"><h1>Work Time</h1></section>
+<section><section id="case-study-4" class="title-slide slide level1" data-background="#e8c35d"><h1>Case Study 4</h1></section><section id="background" class="slide level2">
+<h2>Background</h2>
+<p><a href="https://byui.instructure.com/courses/134980/assignments/5757961?module_item_id=15579084">Who want to read?</a></p>
+</section><section id="data-sets-5-groups" class="slide level2">
+<h2>5 data sets, 5 groups</h2>
+<p><br></p>
+<p>Work with your group to import a data set into R.</p>
+<p>Notice where you get stuck, and how you find answers.</p>
+<p>Then your group will teach the class!</p>
+</section></section>
     </div>
   </div>
 

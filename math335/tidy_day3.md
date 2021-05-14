@@ -8,13 +8,23 @@ params:
 
 # Welcome to class! {data-background=#e8c35d}
 
-Tidy Data: Day 3
-
-
-
-
 # Reading Discussion {data-background=#e8c35d}
 
+## Tidy Data
+
+<br>
+
+- A "philosophy of data"
+- "A standard makes initial data cleaning easier because you don't need to start from scratch and reinvent the wheel every time."
+- "Tidy datasets and tidy tools work hand in hand to make data analysis easier, allowing you to focus on the interesting domain problem, not on the uninteresting logistics of data."
+
+## Bad Data
+
+<br>
+
+- "By familiarizing yourself with the kinds of issues you are likely to encounter, you will have a better chance of identifying an issue before it causes you to make a mistake."
+
+<!--------------------------------------
 ## John Rauser: How Humans See Data
 
 ## 3 visual operations
@@ -36,7 +46,7 @@ Tidy Data: Day 3
 5. Area
 6. Volume/density/saturation of "color"
 7. Color hue
-
+--------------------------------------------->
 
 
 
@@ -176,7 +186,7 @@ as.numeric(levels(f))[f]
 
 -------------------------------->
 
-# Importing Data {data-background=#e8c35d}
+# Importing (the right type of) data {data-background=#e8c35d}
 
 
 <!-----------
@@ -215,8 +225,8 @@ money <- c('4,554,25', '$45', '8025.33cents', '288f45')
 
 <br>
 
->- Apply `as.numeric(money)`. What happens?
->- Apply `parse_number(money)` and compare the results.
+>- Run `as.numeric(money)`. What happens?
+>- Run `parse_number(money)` and compare the results.
 
 
 
@@ -227,14 +237,27 @@ money <- c('4,554,25', '$45', '8025.33cents', '288f45')
 
 ```r
 challenge <- read_csv(readr_example("challenge.csv"))
-problems(challenge)
 ```
 
 > 1. Run the code above.
 > 2. Look at the errors using `problems(challenge)`.
-> 3. Find more clues using the `head()`, and `tail()` of your `challenge` object.  What formats should they be?
-> 4. Now review [11.4.2 of our textbook](http://r4ds.had.co.nz/data-import.html#problems) and `?read_csv()` to fix the read in.
+> 3. Find more clues by opening the `challenge.csv` file in Excel. What formats should the columns be?
+> 4. Read [11.4.2 of our textbook](http://r4ds.had.co.nz/data-import.html#problems) and `?read_csv()` to fix the errors.
 
 
 
-# Work Time {data-background=#e8c35d}
+# Case Study 4 {data-background=#e8c35d}
+
+## Background
+
+[Who want to read?](https://byui.instructure.com/courses/134980/assignments/5757961?module_item_id=15579084)
+
+## 5 data sets, 5 groups
+
+<br>
+
+Work with your group to import a data set into R.
+
+Notice where you get stuck, and how you find answers.
+
+Then your group will teach the class! 
