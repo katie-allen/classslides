@@ -10,9 +10,8 @@ params:
 
 
 
-# Visualizations for Presentation {data-background=#e8c35d}
+# Welcome to class! {data-background=#e8c35d}
 
-Welcome to class!
 
 ## Case Study Review
 
@@ -68,7 +67,7 @@ Get the above code working, and use either the boxplot or the scatter plot in yo
 >- Group two: [28.3 Annotations](https://r4ds.had.co.nz/graphics-for-communication.html#annotations)
 >- Group three: [28.4 Scales](https://r4ds.had.co.nz/graphics-for-communication.html#scales)
 
-## Task 11
+## Task 9
 
 
 <!-------------
