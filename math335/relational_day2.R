@@ -3,9 +3,9 @@ library(nycflights13)
 
 #-----------------------------------------------
 
-# if tables have the same columns and the same units
+# if tables have the same *columns* and the same *units*
 # (aka, rows are measuring the same thing)
-# then we can simply row bind the tables
+# then we can simply "bind" the rows together
 
 table1 <- tibble(id = c(1,2,3,4),
                  x = c(15,8,8,13),
@@ -21,7 +21,7 @@ bind_rows(table1, table2)
 
 #-----------------------------------------------
 
-# if the tables have the same rows
+# if the tables have the same *rows*
 # (the same people, or the same observations)
 # but one table contains new information,
 # then bind the columns together
@@ -40,8 +40,8 @@ bind_cols(table1, table2)
 
 #-----------------------------------------------
 
-# if the tables have different units
-# (are measuring different thigns)
+# if the tables have *different units*
+# (are measuring different things)
 # then we need to "join" them instead of simply binding
 
 # example from yesterday
