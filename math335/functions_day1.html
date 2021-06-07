@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="" />
-  <title>functions_day1.utf8</title>
+  <title>functions_day1</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -443,31 +442,44 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
+    <script src="externals/header-attrs-2.8/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 
-<section><section id="functions-day-1" class="title-slide slide level1" data-background="#e8c35d"><h1>Functions: Day 1</h1><p>Welcome to class!</p></section><section id="case-study-review" class="slide level2">
-<h2>Case Study Review</h2>
-</section><section id="semester-project-examples" class="slide level2">
-<h2>Semester Project Examples</h2>
+<section>
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Welcome to class!</h1>
+
+</section>
+<section id="case-study-presentations" class="slide level2">
+<h2>Case Study Presentations</h2>
+</section>
+<section id="semester-project-format" class="slide level2">
+<h2>Semester Project Format</h2>
 <p><br></p>
-<p>On Wednesday. In the meantime…</p>
 <ul>
 <li><a href="https://r4ds.had.co.nz/r-markdown-formats.html">R Markdown Formats</a></li>
 <li><a href="https://www.datadreaming.org/post/r-markdown-theme-gallery/">R Markdown Themes</a></li>
 </ul>
 </section></section>
-<section><section id="introduction-to-functions" class="title-slide slide level1" data-background="#e8c35d"><h1>Introduction to Functions</h1></section><section id="what-is-a-function" class="slide level2">
+<section>
+<section id="introduction-to-functions" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Introduction to Functions</h1>
+
+</section>
+<section id="what-is-a-function" class="slide level2">
 <h2>What is a function?</h2>
-</section><section id="what-is-a-function-1" class="slide level2">
+</section>
+<section id="what-is-a-function-1" class="slide level2">
 <h2>What is a function?</h2>
 <p><br></p>
 <p>Math 108 Definition:</p>
 <p>“A function is a rule that assigns the input value(s) to a single output value.”</p>
-</section><section id="how-to-write-a-function-in-r" class="slide level2">
+</section>
+<section id="how-to-write-a-function-in-r" class="slide level2">
 <h2>How to write a function in R</h2>
 <p><br></p>
 <ol type="1">
@@ -476,35 +488,40 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li class="fragment">Write the steps of your function in the <strong>body</strong>, a <code>{</code> block immediately following <code>function()</code></li>
 <li class="fragment">The function will <strong>return</strong> the value of the last line in the body. You can make this return value explicit using <code>return()</code>.</li>
 </ol>
-</section><section id="example" class="slide level2">
+</section>
+<section id="example" class="slide level2">
 <h2>Example</h2>
 <p><br></p>
 <pre><code>count_threes &lt;- function(a_number_vector){
    is_three &lt;- a_number_vector == 3
    sum(is_three)
 }</code></pre>
-</section><section id="example-1" class="slide level2">
+</section>
+<section id="example-1" class="slide level2">
 <h2>Example</h2>
 <p><br></p>
 <pre><code>count_threes &lt;- function(a_number_vector){
    is_three &lt;- a_number_vector == 3
    return(sum(is_three))
 }</code></pre>
-</section><section id="question-why-use-functions" class="slide level2">
+</section>
+<section id="question-why-use-functions" class="slide level2">
 <h2>Question: Why use functions?</h2>
 <p><br></p>
 <p>Answer:</p>
 <blockquote>
 <p>One of the best ways to improve your reach as a data scientist is to write functions. Functions allow you to automate common tasks in a more powerful and general way than copy-and-pasting.</p>
 </blockquote>
-</section><section id="question-when-to-use-a-function" class="slide level2">
+</section>
+<section id="question-when-to-use-a-function" class="slide level2">
 <h2>Question: When to use a function?</h2>
 <p><br></p>
 <p>Answer:</p>
 <blockquote>
 <p>When you’ve copied and pasted a block of code more than twice.</p>
 </blockquote>
-</section><section id="three-big-advantages" class="slide level2">
+</section>
+<section id="three-big-advantages" class="slide level2">
 <h2><a href="https://r4ds.had.co.nz/functions.html">Three Big Advantages</a></h2>
 <p><br></p>
 <ol type="1">
@@ -512,7 +529,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li class="fragment">As requirements change, you only need to update code in one place, instead of many.</li>
 <li class="fragment">You eliminate the chance of making incidental mistakes when you copy and paste (i.e. updating a variable name in one place, but not in another)</li>
 </ol>
-</section><section id="remember" class="slide level2">
+</section>
+<section id="remember" class="slide level2">
 <h2>Remember:</h2>
 <p><br></p>
 <blockquote>
@@ -542,7 +560,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 ```
 ```
 ----------------------------------------------------->
-</section><section id="your-turn" class="slide level2">
+</section>
+<section id="your-turn" class="slide level2">
 <h2>Your turn:</h2>
 <p><br></p>
 <p>Figure out what this function does, and think of a better name for it.</p>
@@ -559,7 +578,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
   if (length(x) &lt;= 1) return(NULL)
   x[-length(x)]
 }</code></pre>
-</section><section id="your-turn-1" class="slide level2">
+</section>
+<section id="your-turn-1" class="slide level2">
 <h2>Your turn:</h2>
 <p><br></p>
 <p>Write a function that:</p>
@@ -567,7 +587,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>Takes a name (a character string) as input</li>
 <li>Returns “Hello [name]!”</li>
 </ul>
-</section><section id="your-turn-2" class="slide level2">
+</section>
+<section id="your-turn-2" class="slide level2">
 <h2>Your turn:</h2>
 <p><br></p>
 <p>Write a function that:</p>
@@ -578,7 +599,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>Otherwise, returns “Hello.”</li>
 </ul>
 <p><em>Hint: Check the “conditional statements” section in the reading.</em></p>
-</section><section id="your-turn-3" class="slide level2">
+</section>
+<section id="your-turn-3" class="slide level2">
 <h2>Your turn:</h2>
 <p><br></p>
 <p>Write a function that:</p>
@@ -587,7 +609,12 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>Calculates the average of all numbers from both vectors combined</li>
 </ul>
 </section></section>
-<section><section id="task-17-waitlisted" class="title-slide slide level1" data-background="#e8c35d"><h1>Task 17: Waitlisted</h1></section><section id="assigned-reading" class="slide level2">
+<section>
+<section id="task-17-waitlisted" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Task 17: Waitlisted</h1>
+
+</section>
+<section id="assigned-reading" class="slide level2">
 <h2>Assigned reading</h2>
 <p><br></p>
 <p>Chapter 19: Functions</p>
@@ -599,20 +626,23 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li class="fragment">Introduction to conditional statements (super cool! super useful!)</li>
 <li class="fragment">Guidelines for having good coding style (aka, how to make sure other programmers don’t hate you)</li>
 </ul>
-</section><section id="some-good-advice" class="slide level2">
+</section>
+<section id="some-good-advice" class="slide level2">
 <h2>Some good advice</h2>
 <p><br></p>
 <blockquote>
 <p>It’s easier to start with working code and turn it into a function; it’s harder to create a function and then try to make it work.</p>
 </blockquote>
-</section><section id="two-functions" class="slide level2">
+</section>
+<section id="two-functions" class="slide level2">
 <h2>Two functions</h2>
 <p><br></p>
 <ul>
 <li class="fragment"><strong>Function 1</strong>: Create a function that calculates the % of currently registered students who were at one time on the waitlist.</li>
 <li class="fragment"><strong>Function 2</strong>: Create a function that calculates the % of students who were ever on the waitlist that are currently registered for for the class.</li>
 </ul>
-</section><section id="two-fractions" class="slide level2">
+</section>
+<section id="two-fractions" class="slide level2">
 <h2>Two fractions</h2>
 <p><br></p>
 <p><img data-src="images/functions_venn.PNG" /></p>
@@ -620,11 +650,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <ul>
 <li class="fragment"><strong>Function 1</strong> is B/A and <strong>Function 2</strong> is B/C</li>
 </ul>
-</section><section id="load-the-data" class="slide level2">
+</section>
+<section id="load-the-data" class="slide level2">
 <h2>Load the data</h2>
 <p><br></p>
 <pre><code>class_data_all &lt;- read_csv(&quot;https://byuistats.github.io/M335/data/waitlist_DP_108.csv&quot;)</code></pre>
-</section><section id="the-first-function" class="slide level2">
+</section>
+<section id="the-first-function" class="slide level2">
 <h2>The first function</h2>
 <p><br></p>
 <p>Make sure you understand the goal before you start coding the solution!</p>

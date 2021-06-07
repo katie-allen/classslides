@@ -10,17 +10,13 @@ params:
 
 
 
-# Functions: Day 1 {data-background=#e8c35d}
+# Welcome to class! {data-background=#e8c35d}
 
-Welcome to class!
+## Case Study Presentations
 
-## Case Study Review
-
-## Semester Project Examples
+## Semester Project Format
 
 <br>
-
-On Wednesday. In the meantime...
 
 >- [R Markdown Formats](https://r4ds.had.co.nz/r-markdown-formats.html)
 >- [R Markdown Themes](https://www.datadreaming.org/post/r-markdown-theme-gallery/)
