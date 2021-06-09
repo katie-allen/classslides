@@ -12,6 +12,8 @@ params:
 
 # Welcome to class! {data-background=#e8c35d}
 
+## This week I learned...
+
 # Functions and purrr {data-background=#e8c35d}
 
 ![](images/programming_cat.gif)
