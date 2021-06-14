@@ -10,9 +10,10 @@ params:
 
 
 
-# Text Data: Day 1 {data-background=#e8c35d}
+# Welcome to class! {data-background=#e8c35d}
 
-Welcome to class!
+<!--------------- 
+Text Data: Day 1 
 
 ## Spiritual Thought
 
@@ -40,6 +41,9 @@ Elder Bednar
 install.packages("devtools")
 devtools::install_github("dylanjm/Rtemplates", subdir = "StatsBYUI")
 ```
+
+---------------------------->
+
 # Case Study Sharing {data-background=#e8c35d}
 
 <!----------
@@ -59,7 +63,7 @@ devtools::install_github("dylanjm/Rtemplates", subdir = "StatsBYUI")
 
 How would you tell a computer to extract the year from this column of information?
 
-Type your answer in English in Slack (no code).
+<!----- Type your answer in English in Slack (no code).-------->
 
 ```
 April 15, 2020
@@ -71,7 +75,7 @@ May 1, 2020
 
 <br>
 
-What about now? Again, type your answer in Slack.
+<!----- What about now? Again, type your answer in Slack.--->
 
 ```
 4/15/2020 12:36
@@ -89,7 +93,9 @@ Base R (aka, functions included with default R installation) has a lot of useful
 
 The tidyverse `stringr` package does even more. (Use the [cheatsheet](https://stringr.tidyverse.org/) this week!)
 
-- Remember: *Anything you want to do someone has done before, and probably posted about it online.*
+<br>
+
+- Remember: *Anything you want to do, someone has done before, and probably posted about it online.*
 - Helpful to know: I use the words text, character, and string the same.
 
 ## Coding Example

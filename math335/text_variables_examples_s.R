@@ -60,7 +60,7 @@ my_strings <- c("The woods are lovely, dark and deep,",
                 "And miles to go before I sleep,",
                 "And miles to go before I sleep.")
 
-# Goal: count the number of vowels
+#-------  Goal: count the number of vowels  -------
 
 # Try searching for "a" first
 
@@ -76,7 +76,11 @@ library(stringr)
 # Look at the cheat sheet, and tell me how to count the number of vowels
 # https://github.com/rstudio/cheatsheets/blob/master/strings.pdf
 
-# New goal: Count all letters 
+
+
+
+#-------  New goal: Count all letters  -------
+
 # (alphabet, not including white space, puncuation, or digits/numbers)
 
 
@@ -91,20 +95,33 @@ library(stringr)
 # https://regex101.com/
 
 
-# Using double escapes
 
 
-# Quick example of why we have to use double escape (double backslash)
 
-#my_string <- ""Hello!" she said."
-my_string <- "\"Hello!\" she said."
-my_string
-cat(my_string)
+
+#-------  Using double escapes  -------
+
+str_count(my_strings, "\w")
+
+str_count(my_strings, "\\w")
+str_view_all(my_strings, "\\w")
+
+str_count(my_strings, "\\W")
+str_view_all(my_strings, "\\W")
+
+
+
+#-------  Quantifiers  -------
 
 # Want to search for a repeating pattern? Use quantifiers
 
 str_count(my_strings, "[aeiou]")    # exactly one
 str_view_all(my_strings, "[aeiou]")
+
+str_count(my_strings, "[aeiou]?")   # zero or one
+str_view_all(my_strings, "[aeiou]?")
+
+# etc
 
 
 
@@ -118,7 +135,7 @@ my_strings <- c("The woods are lovely, dark and deep,",
                 "And miles to go before I sleep.")
 
 
-### SUBSET STRINGS
+#------- SUBSET STRINGS -------
 
 # subset
 str_sub(my_strings, 1, 5)    # a bunch of letters
@@ -135,7 +152,7 @@ str_extract_all(my_strings, "a")
 str_extract_all(my_strings, "a", simplify = TRUE)
 
 
-###  MUTATE STRINGS
+#-------  MUTATE STRINGS -------
 
 # substitute with set locations (indices)
 temp <- my_strings
@@ -153,7 +170,7 @@ str_replace_all(my_strings, "a", "")
 str_remove(my_strings, "a")
 
 
-### JOIN AND SPLIT
+#------- JOIN AND SPLIT -------
 
 # If you have multiple columns or vectors or strings
 # join
