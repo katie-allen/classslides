@@ -14,10 +14,11 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 library(tidyverse)
 ```
 
-# Text Data: Day 2 {data-background=#e8c35d}
+# Welcome to class! {data-background=#e8c35d}
 
-Welcome to class!
+# This week I learned...  {data-background=#e8c35d}
 
+<!----------------------
 # Coding Challenge #1 {data-background=#e8c35d}
 
 ## Some Notes
@@ -38,18 +39,18 @@ Welcome to class!
   - R is a "vectorized" language
   - `group_by()`
 - The danger of joins dropping rows. Are you *sure* your keys match up? What happens if  they don't?
+----------------------->
 
 # Working with Strings {data-background=#e8c35d}
 
-## Task 15
+## Task 17
 
 <br>
 
-Should we do a problem together in class?
+Any questions?
 
-## Task 16
+## Task 18
 
 <br>
 
 What regular expression ("regex") could you use to count the number of words in a string?
-
