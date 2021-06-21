@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="" />
-  <title>timeseries_day1.utf8</title>
+  <title>timeseries_day1.knit</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -12,19 +11,19 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -44,7 +43,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {  background-color: #f8f8f8; }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ef2929; } /* Alert */
 code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
@@ -507,24 +506,35 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
+    <script src="externals/header-attrs-2.8/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 
-<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1><!-----
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Welcome to class!</h1>
+<!-----
 ## Case Study Presentations
-------></section>
-<section><section id="r-studio-and-interactive-graphs" class="title-slide slide level1" data-background="#e8c35d"><h1>R-Studio and Interactive Graphs</h1></section><section id="making-an-interactive-document" class="slide level2">
+------>
+</section>
+
+<section>
+<section id="r-studio-and-interactive-graphs" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">R-Studio and Interactive Graphs</h1>
+
+</section>
+<section id="making-an-interactive-document" class="slide level2">
 <h2>Making an interactive document</h2>
 <p><br></p>
 <p>Make a new Rmd file that just has the following in it (including the default yaml).</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">echo =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">library</span>(DT)</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="co"># un-comment this line</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="co">#datatable(iris)</span></span></code></pre></div>
-</section><section id="setting-up-r-studio" class="slide level2">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># un-comment this line</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#datatable(iris)</span></span></code></pre></div>
+</section>
+<section id="setting-up-r-studio" class="slide level2">
 <h2>Setting up R-Studio</h2>
 <p><br></p>
 <p>Time to set up our R-Studio to share interactive documents.</p>
@@ -569,9 +579,15 @@ datatable(iris)
 * The Mean is Not the Distribution
 ------------------>
 </section></section>
-<section><section id="time-series-data" class="title-slide slide level1" data-background="#e8c35d"><h1>Time Series Data</h1></section><section id="what-is-a-time-series" class="slide level2">
+<section>
+<section id="time-series-data" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Time Series Data</h1>
+
+</section>
+<section id="what-is-a-time-series" class="slide level2">
 <h2>What is a “time series”?</h2>
-</section><section id="ts-and-xts-and-zoos-oh-my" class="slide level2">
+</section>
+<section id="ts-and-xts-and-zoos-oh-my" class="slide level2">
 <h2>ts and xts and zoos, oh my!</h2>
 <p>We are not going to take the time to get into the weeds of ts, xts, zoo.</p>
 <p>Here are two locations where you can read till your heart is content: <a href="https://faculty.washington.edu/ezivot/econ424/Working%20with%20Time%20Series%20Data%20in%20R.pdf">Link 1</a>, and <a href="https://www.datacamp.com/courses/manipulating-time-series-data-in-r-with-xts-zoo">Link 2</a>.</p>
@@ -584,7 +600,8 @@ datatable(iris)
 <!-- zoo is a separate package. Irregularly spaced time periods and can use most common index classes. has more functions -->
 <!-- xts -->
 <!-- xts offer additional functions beyond what zoo has by making reasonable constraints on the data types. -->
-</section><section id="why-xts" class="slide level2">
+</section>
+<section id="why-xts" class="slide level2">
 <h2>Why xts?</h2>
 <p><br></p>
 <p><strong>Q: Why should I use xts rather than zoo or another time-series package?</strong></p>
@@ -593,7 +610,12 @@ datatable(iris)
 <!-- **Q: Why is xts implemented as a matrix rather than a data frame?** -->
 <!-- xts uses a matrix rather than data.frame because: 1) xts is a subclass of zoo, and that's how zoo objects are structured; and 2) matrix objects have much better performance than data.frames. -->
 </section></section>
-<section><section id="the-tidyquant-package" class="title-slide slide level1" data-background="#e8c35d"><h1>The tidyquant Package</h1></section><section id="tidyquant-overview" class="slide level2">
+<section>
+<section id="the-tidyquant-package" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">The tidyquant Package</h1>
+
+</section>
+<section id="tidyquant-overview" class="slide level2">
 <h2>tidyquant overview</h2>
 <p><br></p>
 <ul>
@@ -608,7 +630,12 @@ datatable(iris)
 <li>analyze: <code>tq_portfolio()</code> and <code>tq_performance()</code></li>
 </ul>
 </section></section>
-<section><section id="the-dygraphs-package" class="title-slide slide level1" data-background="#e8c35d"><h1>The dygraphs Package</h1></section><section id="dygraphs" class="slide level2">
+<section>
+<section id="the-dygraphs-package" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">The dygraphs Package</h1>
+
+</section>
+<section id="dygraphs" class="slide level2">
 <h2>dygraphs</h2>
 <p><br></p>
 <blockquote>
@@ -616,7 +643,9 @@ datatable(iris)
 </blockquote>
 <p><a href="https://rstudio.github.io/dygraphs/index.html">dygraphs website and examples</a></p>
 </section></section>
-<section id="example" class="title-slide slide level1" data-background="#e8c35d"><h1>Example</h1><!--------------------------------
+<section id="example" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Example</h1>
+<!--------------------------------
 ## Getting Financial Data
 
 `tq_get()`
@@ -706,7 +735,8 @@ return_data %>%
 
 Open the [dygraphs help website](http://rstudio.github.io/dygraphs/index.html) and implement one of their examples in your local R session.
 
-----------------></section>
+---------------->
+</section>
     </div>
   </div>
 

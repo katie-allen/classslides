@@ -179,9 +179,7 @@ date_cols <- tibble(month = c("Jaunary", "March", "July"),
 You can pull out individual parts of the date with the accessor functions:
 
 > - `year()`, `month()`
-> - `mday()` (*day of the month*)
-> - `yday()` (*day of the year*)
-> - `wday()` (*day of the week*)
+> - `mday()`, `yday()`, `wday()`
 > - `hour()`, `minute()`, `second()`
 
 **Challenge**
@@ -247,9 +245,9 @@ force_tz(meeting, "America/Chicago")
 
 <br>
 
-> 1. Tell me what quarter this value is in. While the time is recorded in UTC, it is a transaction that happened in the mountain time zone.
+> 1. Convert this datetime to "US/Mountain" time zone and tell me what quarter it is in.
 
-2. Now suppose that the time read into R as UTC but that you know those times are actually recorded in the mountian time zone.
+2. Now suppose that the time read into R as UTC but that you know those times are actually recorded in the mountain time zone.
 
 
 ```r

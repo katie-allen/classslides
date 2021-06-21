@@ -6,23 +6,24 @@ ymd("2012-01-01")
 myd("March 2016 - 23")
 
 
-
-
-
-
 ?make_date
+
 
 # First try this.
 date_cols <- tibble(month = c(1, 3, 7), 
                     day = c(23, 18, 1), 
                     year = c(2017, 2017, 2016))
+date_cols
+
 date_cols %>% mutate(my_date = make_date(year, month, day))
 date_cols %>% mutate(my_date = make_datetime(year, month, day))
+
 
 # Then try this. Will this one work in make_date()?
 date_cols <- tibble(month = c("Jaunary", "March", "July"), 
                     day = c(23, 18, 1), 
                     year = c(2017, 2017, 2016))
+date_cols
 
 date_cols %>% mutate(my_date = make_date(year, month, day))
 

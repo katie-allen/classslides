@@ -16,9 +16,7 @@ library(tidyverse)
 
 # Welcome to class! {data-background=#e8c35d}
 
-<!-----
-## Case Study Presentations
------->
+# Case Study Presentations {data-background=#e8c35d}
 
 # R-Studio and Interactive Graphs {data-background=#e8c35d}
 
