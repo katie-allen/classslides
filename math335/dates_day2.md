@@ -12,6 +12,8 @@ params:
 
 # Welcome to class! {data-background=#e8c35d}
 
+# This week I learned... {data-background=#e8c35d}
+
 # How to Visualize Time {data-background=#e8c35d}
 
 ## Time Visualization examples
@@ -36,7 +38,6 @@ In his iconic flow map of Napoleon's catastrophic 1812 invasion of Russia, Charl
 
 # Questions and Work Time {data-background=#e8c35d}
 
-<!----------
 ## Time Before Christ
 
 Summary: It's harder than I thought. Don't worry about it unless you have to.
@@ -65,6 +66,7 @@ as.numeric(date("1970-01-01"))
 ## [1] 0
 ```
 
+<!----------
 ## default lubridate time zone: UTC
 
 [Coordinated Universal Time (UTC)]() is the default time zone in lubridate. If you load date data or convert something to a date without specifiying the time zone, UTC is used.
