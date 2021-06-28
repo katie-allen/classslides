@@ -10,16 +10,20 @@ params:
 
 
 
-# Maps: Day 1 {data-background=#e8c35d}
+# Welcome to class! {data-background=#e8c35d}
 
-Welcome to class!
+Maps and Spatial Data
 
+## Case Study Sharing
+
+<!---------------------
 ## Reading Discussion
 
 <br>
 
 > - How to Become a Data Scientist in 2020
 > - Do I need to code in my free time to be a good developer?
+----------------------->
 
 <!-------------
 
@@ -93,7 +97,7 @@ https://www.boston.com/sports/boston-celtics/2017/08/23/heres-why-kyrie-irving-t
 The continental 48 states or the country of Brazil?
 
 - [Answer](http://www.comparea.org/USA48+BRA)
-- While a few basketbal players may think the earth is flat, is education feeding us stuff that isn't true?
+- Is education teaching us stuff that isn't true?
 - [Boston has concerns about our map education](https://www.theguardian.com/education/2017/mar/19/boston-public-schools-world-map-mercator-peters-projection)
 
 
@@ -124,16 +128,15 @@ http://www.gdal.org
 
 <br>
 
-"Here, you can take that, that's the final map of the numbers," Trump said, according to Reuters.  "It's pretty good, right? The red is obviously us." [1](http://www.businessinsider.com/trump-2016-electoral-map-reuters-interview-xi-jinping-china-2017-4)
+<!-----------"Here, you can take that, that's the final map of the numbers," Trump said, according to Reuters.  "It's pretty good, right? The red is obviously us." [1](http://www.businessinsider.com/trump-2016-electoral-map-reuters-interview-xi-jinping-china-2017-4)----------->
 
-<img src="/images/Ch7_maps_area_trump.png"  height="100" width="200">
-[](/images/Ch7_maps_area_trump.png)
+![](images/Ch7_maps_area_trump.png)
 
 ## Montana-Manhattan Problem
 
 <br>
 
-[](/images/Ch7_maps_area_combined.png)
+![](images/Ch7_maps_area_combined.png)
 
 ## How could we spatially depict the variable of interest?
 
