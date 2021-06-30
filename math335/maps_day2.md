@@ -10,15 +10,15 @@ params:
 
 
 
-# Maps: Day 2 {data-background=#e8c35d}
+# Welcome to class! {data-background=#e8c35d}
 
-Welcome to class!
+# Tyler Craig {data-background=#e8c35d}
 
-## Reading Discussion (All together)
+# This week I learned... {data-background=#e8c35d}
 
 ## [xkcd](https://imgs.xkcd.com/comics/mercator_projection.png)
 
-# Prep for Case Study {data-background=#e8c35d}
+# Prep for Upcoming Task {data-background=#e8c35d}
 
 ## What is a Geographic CRS?
 
