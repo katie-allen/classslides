@@ -27,8 +27,7 @@ library(sf)
 
 ## Practice Using Leaflet for Interactive Maps 
 
-- We will use leaflet to create interactive maps of the cumulative confirmed cases of COVID-19.
-- First, we will plot the cities with the most confirmed cases.
+We will use `leaflet` to create interactive maps of the cumulative confirmed cases of COVID-19. First we will plot the cities with the most confirmed cases.
 
 Note, rather than doing copying and pasting, you may learn more by actually typing things out. This will force your mind to actually read over and digest the syntax.
 
@@ -36,11 +35,8 @@ Read in the COVID data. Replace the stars with yesterday's date m/d/y. This will
 
 ```{r load_data}
 # Use this R-Chunk to import all your datasets!
-covid <- read_csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv")
-
-covid <- covid %>% 
-  rowwise() %>% 
-  mutate(confirmed = sum(c_across(`1/22/20`:`7/6/21`)))
+covid <- read_csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv") %>% 
+  rename(confirmed = `*/*/*`)
 ```
 
 ## Plotting the Top Cities
