@@ -51,11 +51,9 @@ Don't forget to fill in the other blank in the code below.
 
 ```{r tidy_data}
 # Use this R-Chunk to clean & wrangle your data!
-covid_top_cities <- covid %>% 
-  select(confirmed, UID:Combined_Key) %>% 
-  slice_______(order_by = _______, n = _____)
-head(covid_top_cities)
+covid_top_cities<- covid %>% arrange(____(confirmed)) %>% top_n(__) %>% select(confirmed, everything())
 ```
+
 
 Now create a plot with a marker placed in the location of each of the top cities.
 Note the use of the ~ in order to reference a column name.
@@ -73,7 +71,7 @@ leaflet(data=covid_top_cities) %>% addTiles() %>%
   addMarkers(lng = ~Long_, lat = ~Lat)
 ```
 
-Let's add labels to the markers so we know the name of the city and the cumulative # of confirmed cases. In addition to blanks, this code has 3 errors in it. One will prevent the code from running, the others are formatting mistakes. Can you find and correct them?
+Let's add labels to the markers so we know the name of the city and the cumulative # of confirmed cases. In addition to blanks, this code has 3 errors in it. One will prevent the code from running, the others are just mistake. Can you find and correct them?
 
 ```{r}
 leaflet(data=covid_top_cities) %>% addTiles() %>% 
