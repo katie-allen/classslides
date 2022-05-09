@@ -4,14 +4,6 @@ title: ""
 
 # Welcome to class!  {data-background=#e8c35d}
 
-## In your breakout rooms:
-
-<br>
-
-What have you learned about data and the process of collecting data?
-
-Your group needs to list 3 things in Slack.
-
 ## Tidy Data Practice
 
 <br>
@@ -20,11 +12,29 @@ What data do we need to make this chart?[.]()
 
 ![](images/tidydata/tidy_popcorn.png)
 
+## Case Study Presentations
+
+In your groups:
+
+> - Give each person about 3 minutes to present.
+> - Provide feedback to that person. What did you like? What could be better?
+
+<!-----------
+## In your breakout rooms:
+
+<br>
+
+What have you learned about data and the process of collecting data?
+
+Your group needs to list 3 things in Slack.
+
 ## EdConnect
 
 >- Record a video and hit the green submit button.
 >  - Your video might not show up right away
 >  - Click on the class group name (left panel) to get it to refresh
+
+---------->
 
 # Good Charts {data-background=#e8c35d}
 
@@ -111,9 +121,13 @@ Bring questions to class on Thursday.
 
 [What Good Marathons and Bad Investments Have in Common](https://www.nytimes.com/2014/04/23/upshot/what-good-marathons-and-bad-investments-have-in-common.html)
 
-## Let's try it!
-
 ## Case Study Deliverables
+
+## Let's practice!
+
+> - How to download data
+> - Data "dictionary"
+
 
 <!----------------
 ## Running marathons

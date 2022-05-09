@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>s3.1.utf8</title>
+  <title>s3.1.knit</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -443,31 +443,54 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
+    <script src="externals/header-attrs-2.13/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 
-<section><section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to class!</h1></section><section id="in-your-breakout-rooms" class="slide level2">
-<h2>In your breakout rooms:</h2>
-<p><br></p>
-<p>What have you learned about data and the process of collecting data?</p>
-<p>Your group needs to list 3 things in Slack.</p>
-</section><section id="tidy-data-practice" class="slide level2">
+<section>
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Welcome to class!</h1>
+
+</section>
+<section id="tidy-data-practice" class="slide level2">
 <h2>Tidy Data Practice</h2>
 <p><br></p>
 <p>What data do we need to make this chart?<a href="">.</a></p>
 <p><img data-src="images/tidydata/tidy_popcorn.PNG" /></p>
-</section><section id="edconnect" class="slide level2">
-<h2>EdConnect</h2>
+</section>
+<section id="case-study-presentations" class="slide level2">
+<h2>Case Study Presentations</h2>
+<p>In your groups:</p>
 <ul>
-<li>Record a video and hit the green submit button.</li>
-<li>Your video might not show up right away</li>
-<li>Click on the class group name (left panel) to get it to refresh</li>
+<li>Give each person about 3 minutes to present.</li>
+<li>Provide feedback to that person. What did you like? What could be better?</li>
 </ul>
+<!-----------
+## In your breakout rooms:
+
+<br>
+
+What have you learned about data and the process of collecting data?
+
+Your group needs to list 3 things in Slack.
+
+## EdConnect
+
+>- Record a video and hit the green submit button.
+>  - Your video might not show up right away
+>  - Click on the class group name (left panel) to get it to refresh
+
+---------->
 </section></section>
-<section><section id="good-charts" class="title-slide slide level1" data-background="#e8c35d"><h1>Good Charts</h1></section><section id="chapter-5-refine-to-impress-pg.-109-120" class="slide level2">
+<section>
+<section id="good-charts" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Good Charts</h1>
+
+</section>
+<section id="chapter-5-refine-to-impress-pg.-109-120" class="slide level2">
 <h2>Chapter 5: Refine to impress (Pg. 109-120)</h2>
 <p><br></p>
 <p><strong>The ambiguity is paralyzing! People don’t want to crash into your chart.</strong></p>
@@ -495,11 +518,13 @@ With bad charts, instead of using the chart to guide the meeting, each member ha
 </div>
 
 ---->
-</section><section id="look-up-effect-limit-eye-travel" class="slide level2">
+</section>
+<section id="look-up-effect-limit-eye-travel" class="slide level2">
 <h2>Look-up Effect (Limit eye travel)</h2>
 <p><br></p>
 <p><em>Which was better - 2014 East or 2018 South?</em></p>
-</section><section id="look-up-effect-limit-eye-travel-1" class="slide level2">
+</section>
+<section id="look-up-effect-limit-eye-travel-1" class="slide level2">
 <h2>Look-up Effect (Limit eye travel)</h2>
 <p><br></p>
 <p><em>Which was better - 2014 East or 2018 South?</em></p>
@@ -530,14 +555,25 @@ Bring questions to class on Thursday.
 *Why would we change the bin size?*
 ------------------->
 </section></section>
-<section><section id="case-study" class="title-slide slide level1" data-background="#e8c35d"><h1>Case Study</h1></section><section id="data-journalism" class="slide level2">
+<section>
+<section id="case-study" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Case Study</h1>
+
+</section>
+<section id="data-journalism" class="slide level2">
 <h2>Data Journalism</h2>
 <p><br></p>
 <p><a href="https://www.nytimes.com/2014/04/23/upshot/what-good-marathons-and-bad-investments-have-in-common.html">What Good Marathons and Bad Investments Have in Common</a></p>
-</section><section id="lets-try-it" class="slide level2">
-<h2>Let’s try it!</h2>
-</section><section id="case-study-deliverables" class="slide level2">
+</section>
+<section id="case-study-deliverables" class="slide level2">
 <h2>Case Study Deliverables</h2>
+</section>
+<section id="lets-practice" class="slide level2">
+<h2>Let’s practice!</h2>
+<ul>
+<li>How to download data</li>
+<li>Data “dictionary”</li>
+</ul>
 <!----------------
 ## Running marathons
 
@@ -564,20 +600,52 @@ Let's make a histogram.
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+        // Display a presentation progress bar
+        progress: true,
         // Display the page number of the current slide
         slideNumber: true,
         // Push each slide change to the browser history
         history: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
         // Vertical centering of slides
         center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Loop the presentation
+        loop: false,
+        // Change the presentation direction to be RTL
+        rtl: false,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
         // Enable slide navigation via mouse wheel
         mouseWheel: true,
         // Opens links in an iframe preview overlay
         previewLinks: false,
         // Transition style
         transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
         // Transition style for full page slide backgrounds
         backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
