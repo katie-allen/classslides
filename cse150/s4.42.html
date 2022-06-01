@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>s4.42.knit</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="externals/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="custom.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="externals/header-attrs-2.13/header-attrs.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Welcome to class!</h1>
+
+</section>
+
+<section>
+<section id="tableau-challenge" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Tableau Challenge</h1>
+
+</section>
+<section id="can-you-make-this-chart" class="slide level2">
+<h2>Can you make this chart?</h2>
+<p><br></p>
+<p><img data-src="images/popular_marathons2.png" /> <br></p>
+<p>Resources:</p>
+<ul>
+<li>marathon_2010_data4.csv</li>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/grouping">Grouping</a></li>
+<li><a href="https://www.tableau.com/learn/tutorials/on-demand/ways-filter">Filtering</a></li>
+<li><a href="https://help.tableau.com/current/pro/desktop/en-us/annotations_annotations_add.htm">Annotations</a></li>
+</ul>
+</section></section>
+<section>
+<section id="good-charts" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Good Charts</h1>
+
+</section>
+<section id="chapter-7-persuasion-or-manipulation-truncated-axes" class="slide level2">
+<h2>Chapter 7: Persuasion or Manipulation? (Truncated Axes)</h2>
+<p><br></p>
+<ul>
+<li><strong>The truncated axes:</strong> complicated, and should be used with thought.</li>
+</ul>
+<p><img data-src="images/gc/Ch7_truncated_2.png" /></p>
+</section>
+<section id="chapter-7-persuasion-or-manipulation-dual-axes" class="slide level2">
+<h2>Chapter 7: Persuasion or Manipulation? (Dual Axes)</h2>
+<p><br></p>
+<ul>
+<li>It creates a relationship by <a href="https://www.google.com/search?sxsrf=ALeKk01gVeWIh-n6E7yRv4vuGSwK3Ggy8A%3A1590605433288&amp;ei=ebbOXoaMEbbP0PEP_LGc8AU&amp;q=fiat+definition&amp;oq=fiat+def&amp;gs_lcp=CgZwc3ktYWIQAxgAMgoIABCRAhBGEPkBMgUIABCRAjICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAOgQIABBHOgQIABBDOgcIABAUEIcCUPEzWOg-YJdSaABwAXgAgAFbiAHQApIBATSYAQCgAQGqAQdnd3Mtd2l6&amp;sclient=psy-ab">fiat</a></li>
+<li><a href="https://www.tylervigen.com/spurious-correlations">Spurious correlations</a></li>
+</ul>
+<p><img data-src="images/gc/Ch7_dual%20Axes.png" /></p>
+</section>
+<section id="chapter-7-persuasion-or-manipulation-maps" class="slide level2">
+<h2>Chapter 7: Persuasion or Manipulation? (Maps)</h2>
+<p><br></p>
+<p><img data-src="images/gc/Ch7_maps_area_combined.png" /></p>
+</section>
+<section id="chapter-8-present-to-persuade" class="slide level2">
+<h2>Chapter 8: Present to Persuade</h2>
+<p><br></p>
+<p><strong>When it’s time to talk, don’t read the picture.</strong></p>
+<p><img data-src="images/gc/Ch8_explainVinsight.png" /> <!----------------------
+## Hans Rosling's Idea Discussion
+
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jbkSRLYSojo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+-------------------------></p>
+</section>
+<section id="telling-stories" class="slide level2">
+<h2>Telling Stories</h2>
+<p><br></p>
+<p><a href="http://www.fallen.io/ww2/">fallen.io</a></p>
+<ul>
+<li class="fragment"><em>One million, six million, seventy million. Spoken or written, these numbers become a buszz. Incomprehensible. Presented graphically, they hit closer to the heart. As the Soviet losses climbed, I thought my browser had frozen. Surely the top of the column bust have been reached by now, I thought.</em></li>
+</ul>
+</section>
+<section id="present-to-persuade-summary" class="slide level2">
+<h2>Present to Persuade Summary</h2>
+<ul>
+<li>Show the chart and stop talking</li>
+<li>Don’t read the picture</li>
+<li>For unusual visual forms, guide the audience</li>
+<li>Use <a href="https://projects.fivethirtyeight.com/tom-brady-touchdown-passes/">reference charts</a></li>
+<li>Show something simple, leave behind more detail</li>
+<li>Tell stories</li>
+</ul>
+</section>
+<section id="voxs-chart-discussion" class="slide level2">
+<h2>Vox’s Chart discussion</h2>
+<p><br></p>
+<p><strong>Has Scott Berinato (Good Charts) oversold not explaining the chart?</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O-3Mlj3MQ_Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</section></section>
+<section>
+<section id="supplemental-reading-probability-sampling" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Supplemental Reading: <a href="https://byuistats.github.io/BYUI_CSE150_StatBook/probability-sampling-and-confidence-intervals.html">Probability &amp; Sampling</a></h1>
+
+</section>
+<section id="what-is-probability" class="slide level2">
+<h2>What is probability?</h2>
+</section>
+<section id="understanding-probability" class="slide level2">
+<h2>Understanding Probability</h2>
+<p><br></p>
+<p><strong>One die probability</strong></p>
+<p>What is x? What do the 1 and 6 represent?</p>
+<p><span class="math display">\[p(x) = \frac{1}{6} \approx 0.1667\]</span></p>
+<p><br></p>
+<p><strong>What does it mean that rolling a die is a “random process”?</strong></p>
+<p><a href="https://istats.shinyapps.io/RandomNumbers/">Simulation</a></p>
+</section>
+<section id="understanding-probability-1" class="slide level2">
+<h2>Understanding Probability</h2>
+<p><br></p>
+<p><strong>Sum of two dice probability</strong></p>
+<p>What is <span class="math inline">\(x\)</span> or the event now?</p>
+<ul>
+<li class="fragment"><a href="images/other/catan_tokens.jpg">Catan Tokens</a></li>
+<li class="fragment"><a href="images/other/sum_of_two_dice.jpg">Sum of two dice</a></li>
+</ul>
+</section>
+<section id="sampling-and-probability" class="slide level2">
+<h2>Sampling and Probability</h2>
+<p><br></p>
+<p>A study was done on the heights of BYU and BYU-Idaho students to find the probability of a student being over 6 feet tall.</p>
+<p>The results:</p>
+<ul>
+<li class="fragment"><em>The probability of a BYU-Idaho student being taller than 6 feet is 20%.</em></li>
+<li class="fragment"><em>The probability of a BYU student being taller than 6 feet is 100%.</em></li>
+</ul>
+<p><br></p>
+<ul>
+<li class="fragment">Do you believe this data? What might be the problem?</li>
+<li class="fragment">10 students were sampled from both schools.</li>
+<li class="fragment">The BYU-Idaho students were randomly selected from the student population. (SRS)</li>
+<li class="fragment">The BYU students were selected off the basketball court. (Convenience)</li>
+</ul>
+</section>
+<section id="sampling-and-probability-1" class="slide level2">
+<h2>Sampling and Probability</h2>
+<p><br></p>
+<p>What makes a collection of data a good example or representative of the general population?</p>
+</section>
+<section id="sampling-from-a-population" class="slide level2">
+<h2>Sampling from a Population</h2>
+<p>You have 150 students that graduated from a major in 2019 and you want to take a sample of 25 of them to estimate starting salaries.</p>
+<p>Review the <a href="https://byuistats.github.io/BYUI_CSE150_StatBook/probability-and-sampling.html">Section 3.2</a> and describe the way you would do each sampling method for the scenario above.</p>
+<ul>
+<li>Convenience sample</li>
+<li>Simple random sample (SRS)</li>
+<li>Systematic random sample</li>
+<li>Clustered random sample</li>
+<li>Stratified random sample</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="externals/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="externals/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+        // Display a presentation progress bar
+        progress: true,
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Loop the presentation
+        loop: false,
+        // Change the presentation direction to be RTL
+        rtl: false,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: true,
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: '100%',
+        height: '100%',
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 1,
+        maxScale: 3,
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'externals/reveal.js-3.3.0.1/plugin/search/search.js', async: true },
+          { src: 'externals/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
