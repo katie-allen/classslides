@@ -10,7 +10,7 @@ title: ""
 
 <br>
 
-Sister Larson's favorite quotes
+Sister Allen's favorite quotes
 
 - "Programs visualize data. People visualize ideas."
 - The Talk and Listen step will "be the most revelatory, but also possibly the least natural."
@@ -45,11 +45,11 @@ What do you need to submit in I-Learn?
 
 <br>
 
-Due on Saturday, but you can't complete it until other people post their case studies.
+Due date moved to *Monday*.
 
-1. Share a "tool tip" in EdConnect
-1. Present your case study in EdConnect
-1. Comment on another student's case study in EdConnect
+1. Share a "tool tip" in Slack.
+1. Present your case study to a classmate and get feedback (in class).
+1. Provide feedback on another student's case study (in class).
 
 ## Let's practice!
 

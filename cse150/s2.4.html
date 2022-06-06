@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>s2.4.utf8</title>
+  <title>s2.4.knit</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -443,24 +443,39 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
+    <script src="externals/header-attrs-2.13/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 
-<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d"><h1>Welcome to Class!</h1></section>
-<section><section id="good-charts" class="title-slide slide level1" data-background="#e8c35d"><h1>Good Charts</h1></section><section id="chapter-4-better-charts-in-a-couple-of-hours" class="slide level2">
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Welcome to Class!</h1>
+
+</section>
+
+<section>
+<section id="good-charts" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Good Charts</h1>
+
+</section>
+<section id="chapter-4-better-charts-in-a-couple-of-hours" class="slide level2">
 <h2>Chapter 4: Better charts in a couple of hours</h2>
 <p><br></p>
-<p>Sister Larson’s favorite quotes</p>
+<p>Sister Allen’s favorite quotes</p>
 <ul>
 <li class="fragment">“Programs visualize data. People visualize ideas.”</li>
 <li class="fragment">The Talk and Listen step will “be the most revelatory, but also possibly the least natural.”</li>
 <li class="fragment">“Sketching is generative; it’s meant to bring up ideas. Prototyping is iterative; it’s meant to hone good ones.”</li>
 </ul>
 </section></section>
-<section><section id="making-charts-in-tableau" class="title-slide slide level1" data-background="#e8c35d"><h1>Making Charts in Tableau</h1></section><section id="workflow" class="slide level2">
+<section>
+<section id="making-charts-in-tableau" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Making Charts in Tableau</h1>
+
+</section>
+<section id="workflow" class="slide level2">
 <h2>Workflow</h2>
 <p><br></p>
 <p>For each case study, you should…</p>
@@ -471,7 +486,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li class="fragment">Save your Tableau workbook often</li>
 <li class="fragment">Export your final charts and create a presentation</li>
 </ol>
-</section><section id="case-study-2" class="slide level2">
+</section>
+<section id="case-study-2" class="slide level2">
 <h2>Case Study 2</h2>
 <p><br></p>
 <p>What do you need to submit in I-Learn?</p>
@@ -483,16 +499,18 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li class="fragment">Do not just paste your charts into the slides. You also have to write a description.</li>
 </ul></li>
 </ul>
-</section><section id="teach-one-another-quiz" class="slide level2">
+</section>
+<section id="teach-one-another-quiz" class="slide level2">
 <h2>Teach One Another Quiz</h2>
 <p><br></p>
-<p>Due on Saturday, but you can’t complete it until other people post their case studies.</p>
+<p>Due date moved to <em>Monday</em>.</p>
 <ol type="1">
-<li class="fragment">Share a “tool tip” in EdConnect</li>
-<li class="fragment">Present your case study in EdConnect</li>
-<li class="fragment">Comment on another student’s case study in EdConnect</li>
+<li class="fragment">Share a “tool tip” in Slack.</li>
+<li class="fragment">Present your case study to a classmate and get feedback (in class).</li>
+<li class="fragment">Provide feedback on another student’s case study (in class).</li>
 </ol>
-</section><section id="lets-practice" class="slide level2">
+</section>
+<section id="lets-practice" class="slide level2">
 <h2>Let’s practice!</h2>
 <p><br></p>
 <p>Remind me to show you:</p>
@@ -514,20 +532,52 @@ document.getElementsByTagName('head')[0].appendChild(style);
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+        // Display a presentation progress bar
+        progress: true,
         // Display the page number of the current slide
         slideNumber: true,
         // Push each slide change to the browser history
         history: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
         // Vertical centering of slides
         center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Loop the presentation
+        loop: false,
+        // Change the presentation direction to be RTL
+        rtl: false,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
         // Enable slide navigation via mouse wheel
         mouseWheel: true,
         // Opens links in an iframe preview overlay
         previewLinks: false,
         // Transition style
         transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
         // Transition style for full page slide backgrounds
         backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
