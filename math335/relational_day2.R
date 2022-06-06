@@ -49,11 +49,14 @@ bind_cols(table1, table2)
 glimpse(flights)
 glimpse(airlines)
 
+# does order matter?
+
 glimpse(flights %>% left_join(airlines, by = "carrier"))
-glimpse(airlines %>% left_join(flights, by = "carrier"))
+View(airlines %>% left_join(flights, by = "carrier"))
+
+# check if keys are in both tables
 
 table(flights$carrier %in% airlines$carrier)
-
 table(airlines$carrier %in% flights$carrier)
 
 #-----------------------------------------------
@@ -88,9 +91,13 @@ table1 %>% full_join(table2)
 
 # Checking for unique keys
 
+# the "tailnum" columns uniquely identifies 
+# each row in "planes"
 glimpse(planes)
 planes %>% count(tailnum) %>% filter(n > 1)
 
+# the "flight" column does NOT uniquely identify 
+# each row in "flights" table
 glimpse(flights)
 flights %>% count(flight) %>% filter(n > 1)
 
