@@ -2,18 +2,17 @@
 title: ""
 ---
 
-# From Data Decisions to Population Decisions {data-background=#e8c35d}
-
-Welcome to class!
+# Welcome to class! {data-background=#e8c35d}
+<!--- # From Data Decisions to Population Decisions ---->
 
 ## Case Study Presentations
 
 <br>
 
-In your breakout groups:
+In your groups:
 
-- Present your case study to your group members. 
-- (If you did not finish your case study, then tell your group members what your game plan is to finish it.)
+- Go around in a circle and introduce yourselves. 
+- Present your case study to your group members. (If you did not finish your case study, then tell your group members what your game plan is to finish it.)
 - Provide your group members with feedback after they present.
 - Remember to post a Tool Tip in Slack!
 
@@ -28,9 +27,10 @@ In your breakout groups:
 The goal of statistical analysis is to determine if what we see in a **sample** is likely to occur in the **population**. 
 
 - For example, if we observe a common trend among 100 BYU-Idaho students can we assume that that trend will hold for all BYU-Idaho students? 
-- Or as a made-up larger scale example, assume that 1000 Toyota Camrys are tested and 1% of them are found to have a defect in the braking system. 
-- Can Toyota assume that 1% of all Toyota Camrys will have the same defect? 
-- *Through statistical analysis we are able to answer to these questions.*
+- Or as a made-up, larger scale example:
+    - Assume that 1000 Toyota Camrys are tested and 1% of them are found to have a defect in the braking system. 
+    - Can Toyota assume that 1% of all Toyota Camrys will have the same defect? 
+- **Statistical analysis allows us to answer to these questions.**
 
 ## Descriptive vs. Inferential Statistics
 
