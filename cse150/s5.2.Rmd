@@ -2,12 +2,9 @@
 title: ""
 ---
 
-# Comparing Birthdays in Sports {data-background=#e8c35d}
+# Welcome to class! {data-background=#e8c35d}
 
-Welcome to class!
-
-
-
+<!----------------
 # Case Study 5 {data-background=#e8c35d}
 
 ## The Matthew Effect
@@ -27,7 +24,7 @@ How can hypothesis testing help us understand the Matthew Effect?
 - How do we tell the difference between a good story and general truth?
 
 - Our case study is built to keep telling Malcom Gladwell's story of the Matthew effect with data (not more anecdotes).
-
+--------------------------->
 
 # Confidence Intervals {data-background=#e8c35d}
 
@@ -35,33 +32,47 @@ How can hypothesis testing help us understand the Matthew Effect?
 
 [How to calculate a confidence interval.](https://docs.google.com/presentation/d/1bUIpOFhvoDJKxnArZ1IUW8SSDUL9iFaeugiIE12O0Uo/edit?usp=sharing)
 
-[Google Sheets Tool](https://docs.google.com/spreadsheets/d/1KUq-7qEHB642UB9olN7Fw0Yp9pYoKyCQIhs1TCPP198/template/preview)
+## Estimating a Proportion
 
-# Estimating a Proportion {data-background=#e8c35d}
+<br>
 
-##
+What is the proportion of January births among hockey players?
 
-What is the proportion of all hockey players born in January?
+[Google Sheets Tool](https://docs.google.com/spreadsheets/d/1iflMgShhkm9fgVqjc_xxzG4zPfXxqXt2PI-R5oTcry8/edit?usp=sharing)
 
 # Comparing Proportions {data-background=#e8c35d}
 
 ## Comparing 1 Proportion to a Constant 
+
+<br>
 
 If there was no Matthew Effect, what proportion would we expect to see for hockey players born in January?
 
 <br>
 
 - The Null Hypothesis (What I currently belive):
-  - Ho: The proportion of hockey players born in January **is equal to** 1/12.
+  - Ho: The proportion of January births among hockey players **is equal to** 1/12.
 
 <br>
 
 - The Alternative Hypothesis (The new idea being proposed):  
-  - Ha: The proportion of hockey players born in January **is greater than** 1/12.
+  - Ha: The proportion of January births among hockey players **is greater than** 1/12.
+
+## In Tableau:
+
+<br>
+
+What is the proportion of January births among hockey players?
+
+<br>
+
+What is the proportion of January births in the US?
 
 ## Comparing 2 Proportions
 
-Is the proportion of hockey players born in January the same as the proportion of January births in the US?
+<br>
+
+Is the proportion of January births among hockey players the same as the proportion of January births in the US?
 
 <br>
 
@@ -71,12 +82,14 @@ Is the proportion of hockey players born in January the same as the proportion o
 
 ## Comparing 2 Proportions
 
-Is the proportion of hockey players born in January the same as the proportion of January births in the US?
+<br>
+
+Is the proportion of January births among hockey players the same as the proportion of January births in the US?
 
 <br>
 
-- Ho: The proportion of hockey players born in January **is the same as** the proportion of January births in the entire US.
-- Ha: The proportion of hockey players born in January **is greater than** the proportion of January births in the entire us. (Matthew Effect)
+- Ho: The proportion of January births among hockey players **is the same as** the proportion of January births in the entire US.
+- Ha: The proportion of January births among hockey players **is greater than** the proportion of January births in the entire us. (Matthew Effect)
 
 <!---------------------
 ## Can you explain it?
@@ -107,9 +120,6 @@ Confidence intervals are like coin flips, just that the probabilities move from 
 - [Interval Estimators](https://en.wikipedia.org/wiki/Interval_estimation): Why do we need interval estimators? 
 ---------------------------->
 
-
-
-
 # The Matthew Effect {data-background=#e8c35d}
 
 ## What is the Matthew Effect?
@@ -120,25 +130,20 @@ Confidence intervals are like coin flips, just that the probabilities move from 
 
 ##
 
-> The more he looked, the more Barnsley
-came to believe that what he was seeing was not a chance occurrence but an iron law of Canadian
-hockey: in any elite group of hockey players - the very best of the best - 40 percent of the players
-will have been born between January and March, 30 percent between April and June, 20 percent
-between October and December.
+"The more he looked, the more Barnsley came to believe that what he was seeing was not a chance occurrence but an iron law of Canadian hockey: in any elite group of hockey players - the very best of the best - 40 percent of the players will have been born between January and March, 30 percent between April and June, 20 percent between October and December."
 
 ##
 
-> "In all my years in psychology, I have never run into an effect this large," Barnsley says. "You
-don't even need to do any statistical analysis. You just look at it."
+"In all my years in psychology, I have never run into an effect this large," Barnsley says. "You don't even need to do any statistical analysis. You just look at it."
 
 ##
 
-> The explanation for this is quite simple. It has nothing to do with astrology, nor is there
-anything magical about the first three months of the year. It's simply that in Canada the eligibility
-cutoff for age-class hockey is January 1. A boy who turns ten on January 2, then, could be playing 
-alongside someone who doesn't turn ten until the end of the year - and at that age, in
-preadolescence, a twelve-month gap in age represents an enormous difference in physical maturity.
+"The explanation for this is quite simple. It has nothing to do with astrology, nor is there anything magical about the first three months of the year. It's simply that in Canada the eligibility cutoff for age-class hockey is January 1. 
 
+A boy who turns ten on January 2, then, could be playing 
+alongside someone who doesn't turn ten until the end of the year - and at that age, in preadolescence, a twelve-month gap in age represents an enormous difference in physical maturity."
+
+## Case Study 5 Deliverables
 
 <!------------------------
 

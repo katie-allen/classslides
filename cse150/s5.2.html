@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>s5.2.utf8</title>
+  <title>s5.2.knit</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -443,66 +443,100 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
+    <script src="externals/header-attrs-2.13/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 
-<section id="comparing-birthdays-in-sports" class="title-slide slide level1" data-background="#e8c35d"><h1>Comparing Birthdays in Sports</h1><p>Welcome to class!</p></section>
-<section><section id="case-study-5" class="title-slide slide level1" data-background="#e8c35d"><h1>Case Study 5</h1></section><section id="the-matthew-effect" class="slide level2">
-<h2>The Matthew Effect</h2>
-<p><br></p>
-<p>How can hypothesis testing help us understand the Matthew Effect?</p>
-</section><section id="from-an-idea-to-a-conclusion." class="slide level2">
-<h2>From an idea to a conclusion.</h2>
-<p><br></p>
-<ul>
-<li class="fragment"><p>“The plural of anecdote is not data.”</p></li>
-<li class="fragment"><p>What is an <a href="https://www.google.com/search?q=anecdote&amp;oq=anecdote&amp;aqs=chrome..69i57j69i60.1926j0j4&amp;sourceid=chrome&amp;ie=UTF-8">anecdote</a>?</p></li>
-<li class="fragment"><p>How do we tell the difference between a good story and general truth?</p></li>
-<li class="fragment"><p>Our case study is built to keep telling Malcom Gladwell’s story of the Matthew effect with data (not more anecdotes).</p></li>
-</ul>
-</section></section>
-<section><section id="confidence-intervals" class="title-slide slide level1" data-background="#e8c35d"><h1>Confidence Intervals</h1></section><section id="section" class="slide level2">
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Welcome to class!</h1>
+<!----------------
+# Case Study 5 {data-background=#e8c35d}
+
+## The Matthew Effect
+
+<br>
+
+How can hypothesis testing help us understand the Matthew Effect?
+
+## From an idea to a conclusion.
+
+<br>
+
+- "The plural of anecdote is not data."
+
+- What is an [anecdote](https://www.google.com/search?q=anecdote&oq=anecdote&aqs=chrome..69i57j69i60.1926j0j4&sourceid=chrome&ie=UTF-8)?
+
+- How do we tell the difference between a good story and general truth?
+
+- Our case study is built to keep telling Malcom Gladwell's story of the Matthew effect with data (not more anecdotes).
+--------------------------->
+</section>
+
+<section>
+<section id="confidence-intervals" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Confidence Intervals</h1>
+
+</section>
+<section id="section" class="slide level2">
 <h2></h2>
 <p><a href="https://docs.google.com/presentation/d/1bUIpOFhvoDJKxnArZ1IUW8SSDUL9iFaeugiIE12O0Uo/edit?usp=sharing">How to calculate a confidence interval.</a></p>
-<p><a href="https://docs.google.com/spreadsheets/d/1KUq-7qEHB642UB9olN7Fw0Yp9pYoKyCQIhs1TCPP198/template/preview">Google Sheets Tool</a></p>
+</section>
+<section id="estimating-a-proportion" class="slide level2">
+<h2>Estimating a Proportion</h2>
+<p><br></p>
+<p>What is the proportion of January births among hockey players?</p>
+<p><a href="https://docs.google.com/spreadsheets/d/1iflMgShhkm9fgVqjc_xxzG4zPfXxqXt2PI-R5oTcry8/edit?usp=sharing">Google Sheets Tool</a></p>
 </section></section>
-<section><section id="estimating-a-proportion" class="title-slide slide level1" data-background="#e8c35d"><h1>Estimating a Proportion</h1></section><section id="section-1" class="slide level2">
-<h2></h2>
-<p>What is the proportion of all hockey players born in January?</p>
-</section></section>
-<section><section id="comparing-proportions" class="title-slide slide level1" data-background="#e8c35d"><h1>Comparing Proportions</h1></section><section id="comparing-1-proportion-to-a-constant" class="slide level2">
+<section>
+<section id="comparing-proportions" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Comparing Proportions</h1>
+
+</section>
+<section id="comparing-1-proportion-to-a-constant" class="slide level2">
 <h2>Comparing 1 Proportion to a Constant</h2>
+<p><br></p>
 <p>If there was no Matthew Effect, what proportion would we expect to see for hockey players born in January?</p>
 <p><br></p>
 <ul>
 <li class="fragment">The Null Hypothesis (What I currently belive):
 <ul>
-<li class="fragment">Ho: The proportion of hockey players born in January <strong>is equal to</strong> 1/12.</li>
+<li class="fragment">Ho: The proportion of January births among hockey players <strong>is equal to</strong> 1/12.</li>
 </ul></li>
 </ul>
 <p><br></p>
 <ul>
 <li class="fragment">The Alternative Hypothesis (The new idea being proposed):
 <ul>
-<li class="fragment">Ha: The proportion of hockey players born in January <strong>is greater than</strong> 1/12.</li>
+<li class="fragment">Ha: The proportion of January births among hockey players <strong>is greater than</strong> 1/12.</li>
 </ul></li>
 </ul>
-</section><section id="comparing-2-proportions" class="slide level2">
+</section>
+<section id="in-tableau" class="slide level2">
+<h2>In Tableau:</h2>
+<p><br></p>
+<p>What is the proportion of January births among hockey players?</p>
+<p><br></p>
+<p>What is the proportion of January births in the US?</p>
+</section>
+<section id="comparing-2-proportions" class="slide level2">
 <h2>Comparing 2 Proportions</h2>
-<p>Is the proportion of hockey players born in January the same as the proportion of January births in the US?</p>
+<p><br></p>
+<p>Is the proportion of January births among hockey players the same as the proportion of January births in the US?</p>
 <p><br></p>
 <p><strong>If we find enough evidence to say “no”, then our data supports Malcolm Gladwell’s claims about the Matthew Effect!</strong></p>
 <p><img data-src="images/mind_blown.gif" /></p>
-</section><section id="comparing-2-proportions-1" class="slide level2">
+</section>
+<section id="comparing-2-proportions-1" class="slide level2">
 <h2>Comparing 2 Proportions</h2>
-<p>Is the proportion of hockey players born in January the same as the proportion of January births in the US?</p>
+<p><br></p>
+<p>Is the proportion of January births among hockey players the same as the proportion of January births in the US?</p>
 <p><br></p>
 <ul>
-<li class="fragment">Ho: The proportion of hockey players born in January <strong>is the same as</strong> the proportion of January births in the entire US.</li>
-<li class="fragment">Ha: The proportion of hockey players born in January <strong>is greater than</strong> the proportion of January births in the entire us. (Matthew Effect)</li>
+<li class="fragment">Ho: The proportion of January births among hockey players <strong>is the same as</strong> the proportion of January births in the entire US.</li>
+<li class="fragment">Ha: The proportion of January births among hockey players <strong>is greater than</strong> the proportion of January births in the entire us. (Matthew Effect)</li>
 </ul>
 <!---------------------
 ## Can you explain it?
@@ -533,26 +567,33 @@ Confidence intervals are like coin flips, just that the probabilities move from 
 - [Interval Estimators](https://en.wikipedia.org/wiki/Interval_estimation): Why do we need interval estimators? 
 ---------------------------->
 </section></section>
-<section><section id="the-matthew-effect-1" class="title-slide slide level1" data-background="#e8c35d"><h1>The Matthew Effect</h1></section><section id="what-is-the-matthew-effect" class="slide level2">
+<section>
+<section id="the-matthew-effect" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">The Matthew Effect</h1>
+
+</section>
+<section id="what-is-the-matthew-effect" class="slide level2">
 <h2>What is the Matthew Effect?</h2>
-</section><section id="section-2" class="slide level2">
+</section>
+<section id="section-1" class="slide level2">
 <h2></h2>
 <p><img data-src="images/hockey_roster_outliers.png" /></p>
-</section><section id="section-3" class="slide level2">
+</section>
+<section id="section-2" class="slide level2">
 <h2></h2>
-<blockquote>
-<p>The more he looked, the more Barnsley came to believe that what he was seeing was not a chance occurrence but an iron law of Canadian hockey: in any elite group of hockey players - the very best of the best - 40 percent of the players will have been born between January and March, 30 percent between April and June, 20 percent between October and December.</p>
-</blockquote>
-</section><section id="section-4" class="slide level2">
+<p>“The more he looked, the more Barnsley came to believe that what he was seeing was not a chance occurrence but an iron law of Canadian hockey: in any elite group of hockey players - the very best of the best - 40 percent of the players will have been born between January and March, 30 percent between April and June, 20 percent between October and December.”</p>
+</section>
+<section id="section-3" class="slide level2">
 <h2></h2>
-<blockquote>
 <p>“In all my years in psychology, I have never run into an effect this large,” Barnsley says. “You don’t even need to do any statistical analysis. You just look at it.”</p>
-</blockquote>
-</section><section id="section-5" class="slide level2">
+</section>
+<section id="section-4" class="slide level2">
 <h2></h2>
-<blockquote>
-<p>The explanation for this is quite simple. It has nothing to do with astrology, nor is there anything magical about the first three months of the year. It’s simply that in Canada the eligibility cutoff for age-class hockey is January 1. A boy who turns ten on January 2, then, could be playing alongside someone who doesn’t turn ten until the end of the year - and at that age, in preadolescence, a twelve-month gap in age represents an enormous difference in physical maturity.</p>
-</blockquote>
+<p>“The explanation for this is quite simple. It has nothing to do with astrology, nor is there anything magical about the first three months of the year. It’s simply that in Canada the eligibility cutoff for age-class hockey is January 1.</p>
+<p>A boy who turns ten on January 2, then, could be playing alongside someone who doesn’t turn ten until the end of the year - and at that age, in preadolescence, a twelve-month gap in age represents an enormous difference in physical maturity.”</p>
+</section>
+<section id="case-study-5-deliverables" class="slide level2">
+<h2>Case Study 5 Deliverables</h2>
 <!------------------------
 
 # Case Study {data-background=#e8c35d}
@@ -577,20 +618,52 @@ Confidence intervals are like coin flips, just that the probabilities move from 
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+        // Display a presentation progress bar
+        progress: true,
         // Display the page number of the current slide
         slideNumber: true,
         // Push each slide change to the browser history
         history: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
         // Vertical centering of slides
         center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Loop the presentation
+        loop: false,
+        // Change the presentation direction to be RTL
+        rtl: false,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
         // Enable slide navigation via mouse wheel
         mouseWheel: true,
         // Opens links in an iframe preview overlay
         previewLinks: false,
         // Transition style
         transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
         // Transition style for full page slide backgrounds
         backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
