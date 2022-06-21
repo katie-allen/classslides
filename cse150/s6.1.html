@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title>s6.1.utf8</title>
+  <title>s6.1.knit</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -443,21 +443,34 @@ style.innerHTML = style_script;
 document.getElementsByTagName('head')[0].appendChild(style);
 </script>
 
+    <script src="externals/header-attrs-2.13/header-attrs.js"></script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 
-<section><section id="goodness-of-fit-test" class="title-slide slide level1" data-background="#e8c35d"><h1>Goodness of Fit Test</h1><p>Welcome to class!</p></section><section id="expected-distributions" class="slide level2">
+<section>
+<section id="welcome-to-class" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Welcome to class!</h1>
+
+</section>
+<section id="expected-distributions" class="slide level2">
 <h2>Expected Distributions</h2>
 <p><br></p>
-<p>“There are many different ways data can be distributed. Often data will naturally adhere to predefined distributions. Heights and weights generally follow a normal distribution, repeated rolls of a fair die will follow a uniform distribution (no possibility is more likely than another), etc. The point is, given a particular scenario, we can often expect how data will be distributed. Suppose I flipped a coin 100 times and ask you to guess how many times the coin would land on a head. You would probably guess close to 50. This is because you’re familiar with the expected distribution of coin toss results.”</p>
-</section><section id="candy-example" class="slide level2">
-<h2>Candy Example</h2>
-</section><section id="height-example" class="slide level2">
-<h2>Height Example</h2>
-</section><section id="chi-squared-goodness-of-fit-test" class="slide level2">
+<ul>
+<li class="fragment"><p>“There are many different ways data can be distributed. Often data will naturally adhere to predefined distributions. Heights and weights generally follow a normal distribution, repeated rolls of a fair die will follow a uniform distribution (no possibility is more likely than another), etc.</p></li>
+<li class="fragment"><p>The point is, given a particular scenario, we can often expect how data will be distributed.</p></li>
+<li class="fragment"><p>Suppose I flipped a coin 100 times and ask you to guess how many times the coin would land on a head. You would probably guess close to 50. This is because you’re familiar with the expected distribution of coin toss results.”</p></li>
+</ul>
+<!----------------------------------
+## Candy Example
+
+
+## Height Example
+------------------------------------->
+</section>
+<section id="chi-squared-goodness-of-fit-test" class="slide level2">
 <h2>Chi-Squared Goodness of Fit Test</h2>
 <p><br></p>
 <ul>
@@ -467,11 +480,25 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <ul>
 <li>“This is where the Chi-Squared Goodness of Fit Test comes into play. It allows us to infer whether or not data follow a particular distribution using the observed values we already have and the values we would expect if it does follow that assumed distribution.”</li>
 </ul>
-</section><section id="goodness-of-fit-google-sheet" class="slide level2">
-<h2><a href="https://docs.google.com/spreadsheets/d/1MKIIJ6bi0tQSvSvqvbimGxy9TredQAUhd3XGTDl_QNQ/template/preview">Goodness of Fit (Google Sheet)</a></h2>
-</section><section id="college-students-and-random-numbers" class="slide level2">
+</section>
+<section id="goodness-of-fit-test" class="slide level2">
+<h2>Goodness of Fit Test</h2>
+<p><br></p>
+<ul>
+<li class="fragment">Null Hypothesis: The data are consistent with a specified distribution.</li>
+<li class="fragment">Alternative Hypothesis: The data are <em>not</em> consistent with a specified distribution.</li>
+<li class="fragment"><a href="https://docs.google.com/spreadsheets/d/1iflMgShhkm9fgVqjc_xxzG4zPfXxqXt2PI-R5oTcry8/edit?usp=sharing">Google Sheets Calculator</a></li>
+</ul>
+</section>
+<section id="college-students-and-random-numbers" class="slide level2">
 <h2>College students and “random” numbers</h2>
-</section><section id="statistical-power-the-chi-square-distribution" class="slide level2">
+<p><br></p>
+<ul>
+<li><a href="https://docs.google.com/spreadsheets/d/1V3a-lyeCz-GopFagCKGTT0dT6NXK_lvDskGdt3OBrkg/edit?usp=sharing">Can you pick a random nummber?</a></li>
+<li><a href="https://www.reddit.com/r/dataisbeautiful/comments/acow6y/asking_over_8500_students_to_pick_a_random_number/">Results from almost 9,000 college students.</a></li>
+</ul>
+</section>
+<section id="statistical-power-the-chi-square-distribution" class="slide level2">
 <h2>Statistical Power &amp; The Chi-Square Distribution</h2>
 <p><br></p>
 <ul>
@@ -483,15 +510,22 @@ document.getElementsByTagName('head')[0].appendChild(style);
 - [What is power?](https://www.statisticsteacher.org/2017/09/15/what-is-power/)
 ------------->
 </section></section>
-<section><section id="case-study" class="title-slide slide level1" data-background="#e8c35d"><h1>Case Study</h1></section><section id="understanding-benfords-distribution" class="slide level2">
+<section>
+<section id="case-study" class="title-slide slide level1" data-background="#e8c35d">
+<h1 data-background="#e8c35d">Case Study</h1>
+
+</section>
+<section id="understanding-benfords-distribution" class="slide level2">
 <h2>Understanding Benford’s distribution</h2>
 <p><br></p>
-<p><img data-src="images/sr/benfords.png" /></p>
-</section><section id="statistical-tests-and-visualizations" class="slide level2">
+<p><img data-src="images/sr/benfords.png" /> <br></p>
+<p><a href="https://www.youtube.com/watch?v=42fGFDNs-0A">Video explanation.</a></p>
+</section>
+<section id="statistical-tests-and-visualizations" class="slide level2">
 <h2>Statistical tests and visualizations</h2>
 <p><br></p>
 <ul>
-<li>Let’s use the <a href="https://docs.google.com/spreadsheets/d/14-ERiaeVo5ljqBYHoa-O5HrfsykWVxFaiM2c2yq0zNA/edit?usp=sharing">benford_data4</a> file and look at the cities data in the data column.</li>
+<li>Let’s use the <a href="https://docs.google.com/spreadsheets/d/14-ERiaeVo5ljqBYHoa-O5HrfsykWVxFaiM2c2yq0zNA/edit?usp=sharing">benford</a> file and look at the cities data in the data column.</li>
 </ul>
 <!--------------
 Expected count under Benford's law (Tableau Calculated Field)
@@ -499,34 +533,44 @@ Expected count under Benford's law (Tableau Calculated Field)
 ```
 sum([Benford Percent]) * TOTAL(sum([N]))
 ```
+
+A data frame with columns:
+
+> - **data** - The data object used to calculate digit counts
+> - **country** - The location or group within each data object
+> - **first** - The first digit number
+> - **n** - The count of numbers that started with that digit
+> - **percent** - The percent of the total for each data and country group
+> - **benford_percent** - The expected proportion under Benford's law
 ---------------->
-<p>A data frame with columns:</p>
-<ul>
-<li><strong>data</strong> - The data object used to calculate digit counts</li>
-<li><strong>country</strong> - The location or group within each data object</li>
-<li><strong>first</strong> - The first digit number</li>
-<li><strong>n</strong> - The count of numbers that started with that digit</li>
-<li><strong>percent</strong> - The percent of the total for each data and country group</li>
-<li><strong>benford_percent</strong> - The expected proportion under Benford’s law</li>
-</ul>
-<!------
-## Tableau Calculated Field
-------->
-</section><section id="catch-me-if-you-can" class="slide level2">
+</section>
+<section id="tableau-calculated-field" class="slide level2">
+<h2>Tableau Calculated Field</h2>
+</section>
+<section id="catch-me-if-you-can" class="slide level2">
 <h2><a href="https://byuistats.github.io/CSE150/project.html#Case_Study_6:_Catch_me,_if_you_can">Catch me, if you can?</a></h2>
-</section><section id="background" class="slide level2">
+</section>
+<section id="background" class="slide level2">
 <h2>Background</h2>
+<p><br></p>
 <p>You have recently been hired by the U.S. internal revenue service (IRS) to catch corporate cheaters. You have been given three companies to investigate. You will need to decide if the IRS should build a legal case to investigate the institution for fraud.</p>
 <ul>
 <li class="fragment"><strong>Sino Forest Corporation:</strong> You have the values from the financial statement numbers of Sino Forest Corporation’s 2010 Report.</li>
 <li class="fragment"><strong>Government Entity:</strong> A dataset containing the card transactions for a government entity - 2010.</li>
 <li class="fragment"><strong>General Motors:</strong> The amounts paid to vendors for the 90 days preceding General Motor’s 2009 liquidation.</li>
 </ul>
-</section><section id="our-challenge" class="slide level2">
+</section>
+<section id="our-challenge" class="slide level2">
 <h2>Our challenge</h2>
-<p>You will be responsible to report as much evidence as you can with the data provided for each institution above. The government entity has more available data than the other two which will require you to dig deeper to find additional clues.</p>
-<p>You have many data files available to you. You will need to use more than one of the data sets provided but you are <strong>not expected to use them all.</strong></p>
-</section><section id="deliverables" class="slide level2">
+<p><br></p>
+<ul>
+<li class="fragment">You will be responsible to report as much evidence as you can with the data provided for each institution above.</li>
+<li class="fragment">The government entity has more available data than the other two which will require you to dig deeper to find additional clues.</li>
+<li class="fragment">You have many data files available to you. You will need to use more than one of the data sets provided but you are <strong>not expected to use them all.</strong></li>
+<li class="fragment"><a href="https://docs.google.com/presentation/d/1BfNhYmbANxJvq5x3TjHMDni2gOAZTWkcthllHwXPxps/edit?usp=sharing">Data Slides</a></li>
+</ul>
+</section>
+<section id="deliverables" class="slide level2">
 <h2>Deliverables</h2>
 <ul>
 <li class="fragment">A 8-12 slide presentation to your IRS managers on the case against each entity.</li>
@@ -535,8 +579,9 @@ sum([Benford Percent]) * TOTAL(sum([N]))
 <li class="fragment">At least one slide for one of the institutions that compares the last digit distribution to what would be expected.</li>
 <li class="fragment">Multiple visualizations of the Government Entity data to find other interesting insights.</li>
 </ul>
-</section><section id="lets-look-at-the-data" class="slide level2">
-<h2>Let’s look at the data</h2>
+</section>
+<section id="lets-look-at-the-data" class="slide level2">
+<h2>Let’s look at the data!</h2>
 </section></section>
     </div>
   </div>
@@ -549,20 +594,52 @@ sum([Benford Percent]) * TOTAL(sum([N]))
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+        // Display a presentation progress bar
+        progress: true,
         // Display the page number of the current slide
         slideNumber: true,
         // Push each slide change to the browser history
         history: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
         // Vertical centering of slides
         center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Loop the presentation
+        loop: false,
+        // Change the presentation direction to be RTL
+        rtl: false,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
         // Enable slide navigation via mouse wheel
         mouseWheel: true,
         // Opens links in an iframe preview overlay
         previewLinks: false,
         // Transition style
         transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
         // Transition style for full page slide backgrounds
         backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
