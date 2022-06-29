@@ -1,0 +1,94 @@
+---
+title: ""
+---
+
+# Welcome to class! {data-background=#e8c35d}
+
+# Building a Story: Visual Crit {data-background=#e8c35d}
+
+## Visual Crit
+
+<br>
+
+> 1. Make a note of the first few things you see.
+> 2. Make a note of the first idea that forms in your mind and then search for more.
+> 3. Make notes on likes, dislikes, and wish-I-saws.
+> 4. Find three things you'd change and briefly say why.
+> 5. Sketch and/or prototype your own version, and critique yourself.
+
+[Link to book text](images/gc/ch9_vcsteps.png)
+
+<br>
+
+This is practice for part of our visualization challenge! Let's work through the steps together. Get ready...
+
+## [Crit 1](https://fivethirtyeight.com/features/the-haters-are-losing-the-war-on-nfl-kickers/)
+
+![](images/VisCrit/morris-kicking-11.png)
+
+## 
+
+<br>
+
+Here comes another one...
+
+## [Crit 2](https://www.ncei.noaa.gov/cag/national/time-series/110/pcp/all/1/2000-2022?base_prd=true&begbaseyear=1901&endbaseyear=2000)
+
+![](images/VisCrit/noaa_rain.png)
+
+## Practice Your Crit Skills
+
+<br>
+
+> - [The Economist: Graphic Detail](https://www.economist.com/graphic-detail)
+> - [The New York Times: Upshot](https://www.nytimes.com/section/upshot)
+> - [Five Thirty Eight](https://fivethirtyeight.com/tag/data-visualization/)
+
+## Practice Visualization Challenge
+
+<br>
+
+[Link.](https://docs.google.com/document/d/1K9-ckIvpnJkj9ec6iqbl9oHpkoPsPhkwvuIK3VNW8eY/edit?usp=sharing)
+
+# Case Study {data-background=#e8c35d}
+
+## What can we do to tell a compelling story to the IRS?
+
+<br>
+
+The first few slides need to provide a background. Always include a chart, if possible, on each slide.
+
+- Who are the companies?
+- Which company are you going to focus in on, and why?
+- More details about the focus company.
+
+## What can we do to help them understand Benford's law and our statistical test?
+
+<br>
+
+We need to give them a background on the Benfords distribution and the Chi-Square Goodness of Fit Test.
+
+- How does it work?
+- A short explanation of each.
+- Visuals for each of our companies.
+
+## What additional evidence can we provide for the "Government Entity"?
+
+<br>
+
+Can we guide the IRS where to search?
+
+- Additional Benford plots withing sub-categories.
+- Other visualizations?
+
+## Last-digit expectations
+
+<br>
+
+Benford's law tells us what to expect for first digits. What about last digits?
+
+## A conclusions slide
+
+<br>
+
+Wrap it up.  Make conclusions and recommendations based on the work you have done.
